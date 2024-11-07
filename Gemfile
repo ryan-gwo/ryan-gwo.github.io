@@ -8,4 +8,8 @@ group :jekyll_plugins do
   gem 'webrick', '~> 1.8'
 end
 
+source "https://rubygems.pkg.github.com/mihajlonesic" do
+  gem "jekyll-pdf-embed", "1.1.1"
+end
+
 gem 'github-pages'

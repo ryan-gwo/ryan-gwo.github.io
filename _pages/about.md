@@ -17,6 +17,8 @@ I am currently an undergraduate student majoring in physics at the School of Phy
 
 I have also been participating in research training since April 2024, supervised by Professor Wei Wang from Department of Astronomy of our School. We are working on the modeling and estimation of a rotating neutron star distorted by its own strong magnetic field; this type of objects is one of the most promising source of continuous gravitational radiation detectable.
 
+More can be found in my [CV](https://ryan-gwo.github.io/cv/).
+
 Other Interest
 ======
 I am also interested in astronomy outside research. I have been studying astronomy and astrophysics since high school, and was the heads of the astronomy associations of both my high school and university. I have also competed in national and international astronomy competitions, and was the gold medalist in the XIV International Olympiad on Astronomy and Astrophysics (IOAA 2021).

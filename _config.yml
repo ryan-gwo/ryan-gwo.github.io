@@ -45,12 +45,12 @@ author:
   codepen: # Username
   dribbble: # Username
   github: "ryan-gwo"
-  kaggle: # Username
+  kaggle: "Yuze Guo" # Username
   stackoverflow: # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
   # Social media
   bluesky: #"bsky.app" # Replace this with you Bluesky username
-  facebook: # Username
+  facebook: "Yuze Guo" # Username
   flickr: # Username
   foursquare: # Username
   goodreads: # Username
@@ -69,10 +69,10 @@ author:
   twitter: # Username for X / Twitter
   vine: # Username
   weibo: # Username
-  wikipedia: # Username
+  wikipedia: "Ryan Gwo" # Username
   xing: # Username
   youtube: # Username
-  zhihu: # Username
+  zhihu: "落霞孤鹜" # Username
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:

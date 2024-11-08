@@ -20,8 +20,7 @@ My CV in English (PDF file) [here](https://ryan-gwo.github.io/files/cv.pdf).
 - **Spring 2024 - Present: Research Training**
   - Title: *Continuous Gravitational Radiation from Magnetically Deformed Neutron Star*
   - *Supervised by Prof. Wei Wang, School of Physics and Technology, Wuhan University*
-  - Aimed to estimate the deformation of a neutron star caused by the magnetic field and to calculate the
-gravitational wave signal emitted by the deformed neutron star.
+  - Aimed to estimate the deformation of a neutron star caused by the magnetic field and to calculate the gravitational wave signal emitted by the deformed neutron star.
 
 - **Summer 2024: Oxford Academic English Skills for Research**
   - *Supervised by Prof. Daniel Worthing, Oxford University Language Centre*
@@ -32,28 +31,36 @@ gravitational wave signal emitted by the deformed neutron star.
 ## Awards
 
 - **National Scholarship**, 2024
+
   *Ministry of Education of P.R.China*
 - **Outstanding Student Tier-1 Scholarship**, 2023 & 2024
+  
   *Wuhan University*
 - **Third Semester Exchange Scholarship**, 2023
+  
   *Wuhan University*
 - **School-Level Merit Student**, 2023 & 2024
+  
   *Wuhan University*
 
 ## Other Experiences
 
 - **Vice President and Head of the Academic Department**, 2023-2024
+  
   *Wuhan University Astronomy Association*
   - Assisted the president in managing the association
   - Organized the academic department to conduct activities such as compiling astronomical forecasts, writing academic popular science articles, and hosting science lectures
 
 - **Gold Medal**, 2021
+  
   *XIV Inteernational Olympiad on Astronomy and Astrophysics*
 
 - **First Prize**, 2024
+  
   *The 9th Hubei Provincial Competition of Innovative Design on Physics Experiments*
 
 - **Grand Prize**, 2024
+  
   *2024 National English Competition for College Students*
 
 ## Skills

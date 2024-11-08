@@ -21,7 +21,7 @@ When you are initially working your website, it is very useful to be able to pre
 
 1. Clone the repository and made updates as detailed above.
 1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
+   
     On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
     ```bash
     sudo apt install ruby-dev ruby-bundler nodejs
@@ -66,7 +66,7 @@ Unfortunately, one logistical issue with a template theme like Academic Pages th
 
 ---
 <div align="center">
-    
+
 ![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
 [![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
 [![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
@@ -74,4 +74,4 @@ Unfortunately, one logistical issue with a template theme like Academic Pages th
 
 [![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
 [![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+</div> 

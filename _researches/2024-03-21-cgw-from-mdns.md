@@ -1,8 +1,8 @@
 ---
 title: "Continuous Gravitational Waves from Magnetically Distorted Neutron Stars"
-collection: research
+collection: researches
 type: "Workshop"
-permalink: /research/2024-03-21-cgw-from-mdns
+permalink: /researches/2024-03-21-cgw-from-mdns
 venue: "School of Physics and Technology, Wuhan University"
 date: 2024-03-21
 location: "Wuhan, China"

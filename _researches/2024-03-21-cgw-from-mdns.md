@@ -6,7 +6,6 @@ permalink: /researches/2024-03-21-cgw-from-mdns
 venue: "School of Physics and Technology, Wuhan University"
 date: 2024-03-21
 location: "Wuhan, China"
-layout: research
 ---
 
 This is a ongoing research project serving as my undergraduate research training. Supervised by Prof. Wei Wang, we are investigating the continuous gravitational waves (CGWs) from magnetically distorted neutron stars (MDNSs). The majority of works are done on my own.

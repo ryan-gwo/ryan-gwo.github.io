@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Yuze Guo (郭雨泽). I was born in November 2003 and is happy and ready to spend rest of my life in the academic world.
+My name is Yuze Guo (郭雨泽). I was born in November 2003 and is happy and ready to devote myself to an accomplished academic career.
 
 My hometown is Guangzhou, or you can call it Canton. It's a beautiful city with leading infrastructures and public transportation. It's also an ancient city with a history of over two thousand years, and has always been the economic and cultural center in southern China.
 

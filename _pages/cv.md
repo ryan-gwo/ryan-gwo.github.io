@@ -14,6 +14,8 @@ My CV in English (PDF file) [here](https://ryan-gwo.github.io/files/cv.pdf).
 ## Education
 
 - BSc in Physics, Wuhan University, 2026 (Expected)
+  GPA: 3.94/4.0
+  Ranking: 2/250
 
 ## Research and Projects
 

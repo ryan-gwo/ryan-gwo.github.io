@@ -15,7 +15,7 @@ My CV in English (PDF file) [here](https://ryan-gwo.github.io/files/cv.pdf).
 
 - BSc in Physics, Wuhan University, 2026 (Expected)
   
-  GPA: 3.94/4.0
+  GPA: 3.95/4.0
   
   Ranking: 2/250
 
@@ -71,4 +71,4 @@ My CV in English (PDF file) [here](https://ryan-gwo.github.io/files/cv.pdf).
 - **Programming**: C, Python
 - **Developing Tools & Platforms**: Visual Studio Code, Gitlab
 - **Typesetting**: Microsoft Office, LaTeX, Markdown
-- **Languages**: English, Mandarin & Cantonese
+- **Languages**: English (IELTS: 8.0), Mandarin & Cantonese

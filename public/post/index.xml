@@ -225,7 +225,7 @@
 
 
 
-&lt;div id=&#34;chart-413659827&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-162983754&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -243,7 +243,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-413659827&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-162983754&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -473,7 +473,7 @@ Crash --&gt; [*]
 
 
 &lt;audio controls &gt;
-  &lt;source src=&#34;https://ryan-gwo.github.io/post/teach-courses/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+  &lt;source src=&#34;https://ryan-gwo.github.io/en/post/teach-courses/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
 &lt;/audio&gt;
 
 &lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;

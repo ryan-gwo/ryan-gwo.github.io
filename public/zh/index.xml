@@ -5,9 +5,9 @@
     <link>https://ryan-gwo.github.io/zh/</link>
       <atom:link href="https://ryan-gwo.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     <description>Yuze Guo&#39;s Personal Page</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hant</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://ryan-gwo.github.io/media/icon_hu_645fa481986063ef.png</url>
+      <url>https://ryan-gwo.github.io/media/icon_hu_95090218ee51862a.png</url>
       <title>Yuze Guo&#39;s Personal Page</title>
       <link>https://ryan-gwo.github.io/zh/</link>
     </image>
@@ -278,7 +278,7 @@
 
 
 
-&lt;div id=&#34;chart-186945732&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-158472693&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -296,7 +296,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-186945732&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-158472693&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

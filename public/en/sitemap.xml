@@ -2,16 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ryan-gwo.github.io/en/event/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/event/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/event/example/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/event/example/"
                 />
     <xhtml:link
@@ -20,24 +21,17 @@
                 href="https://ryan-gwo.github.io/event/example/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/event/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/event/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/event/"
                 />
     <xhtml:link
@@ -46,24 +40,17 @@
                 href="https://ryan-gwo.github.io/event/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/projects/</loc>
-    <lastmod>2024-05-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/projects/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/projects/"
                 />
     <xhtml:link
@@ -72,24 +59,17 @@
                 href="https://ryan-gwo.github.io/projects/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/projects/</loc>
-    <lastmod>2024-05-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/projects/</loc>
-    <lastmod>2024-05-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/post/get-started/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/post/get-started/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/get-started/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/get-started/"
                 />
     <xhtml:link
@@ -98,21 +78,18 @@
                 href="https://ryan-gwo.github.io/post/get-started/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/post/get-started/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/post/get-started/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/tags/academic/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/academic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/academic/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -120,16 +97,17 @@
                 href="https://ryan-gwo.github.io/tags/academic/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/post/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/post/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/"
                 />
     <xhtml:link
@@ -138,21 +116,18 @@
                 href="https://ryan-gwo.github.io/post/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/post/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/post/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/tags/hugo-blox/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/hugo-blox/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/hugo-blox/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -165,8 +140,13 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -179,7 +159,7 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/"
                 />
     <xhtml:link
@@ -198,8 +178,13 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -207,16 +192,17 @@
                 href="https://ryan-gwo.github.io/tags/hugo/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/project/pandas/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/project/pandas/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/pandas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/pandas/"
                 />
     <xhtml:link
@@ -225,21 +211,18 @@
                 href="https://ryan-gwo.github.io/project/pandas/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/project/pandas/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/project/pandas/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/project/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -247,16 +230,17 @@
                 href="https://ryan-gwo.github.io/project/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/project/pytorch/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/project/pytorch/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/pytorch/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/pytorch/"
                 />
     <xhtml:link
@@ -265,24 +249,17 @@
                 href="https://ryan-gwo.github.io/project/pytorch/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/project/pytorch/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/project/pytorch/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/project/scikit/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/project/scikit/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/scikit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/scikit/"
                 />
     <xhtml:link
@@ -291,21 +268,18 @@
                 href="https://ryan-gwo.github.io/project/scikit/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/project/scikit/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/project/scikit/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/tags/second-brain/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/second-brain/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/second-brain/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -318,8 +292,13 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/wowchemy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/wowchemy/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -327,16 +306,17 @@
                 href="https://ryan-gwo.github.io/tags/wowchemy/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/post/second-brain/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/post/second-brain/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/second-brain/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/second-brain/"
                 />
     <xhtml:link
@@ -345,24 +325,17 @@
                 href="https://ryan-gwo.github.io/post/second-brain/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/post/second-brain/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/post/second-brain/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/post/data-visualization/</loc>
-    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/post/data-visualization/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/data-visualization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/data-visualization/"
                 />
     <xhtml:link
@@ -371,24 +344,17 @@
                 href="https://ryan-gwo.github.io/post/data-visualization/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/post/data-visualization/</loc>
-    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/post/data-visualization/</loc>
-    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/post/teach-courses/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/post/teach-courses/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/teach-courses/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/teach-courses/"
                 />
     <xhtml:link
@@ -397,24 +363,17 @@
                 href="https://ryan-gwo.github.io/post/teach-courses/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/post/teach-courses/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/post/teach-courses/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/experience/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/experience/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/experience/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/experience/"
                 />
     <xhtml:link
@@ -423,21 +382,18 @@
                 href="https://ryan-gwo.github.io/experience/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/experience/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/experience/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/tags/hugo-blox-builder/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/hugo-blox-builder/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/hugo-blox-builder/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -450,8 +406,13 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/javascript/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/javascript/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -459,16 +420,17 @@
                 href="https://ryan-gwo.github.io/tags/javascript/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/teaching/js/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/teaching/js/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/teaching/js/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/teaching/js/"
                 />
     <xhtml:link
@@ -477,24 +439,17 @@
                 href="https://ryan-gwo.github.io/teaching/js/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/teaching/js/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/teaching/js/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/teaching/python/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/teaching/python/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/teaching/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/teaching/python/"
                 />
     <xhtml:link
@@ -503,21 +458,18 @@
                 href="https://ryan-gwo.github.io/teaching/python/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/teaching/python/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/teaching/python/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/tags/python/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/python/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -525,16 +477,17 @@
                 href="https://ryan-gwo.github.io/tags/python/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/teaching/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/teaching/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/teaching/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/teaching/"
                 />
     <xhtml:link
@@ -543,24 +496,17 @@
                 href="https://ryan-gwo.github.io/teaching/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/teaching/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/teaching/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/post/project-management/</loc>
-    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/post/project-management/</loc>
     <lastmod>2023-10-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/project-management/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/project-management/"
                 />
     <xhtml:link
@@ -569,22 +515,9 @@
                 href="https://ryan-gwo.github.io/post/project-management/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/post/project-management/</loc>
-    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/post/project-management/</loc>
-    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hant"
-                href="https://ryan-gwo.github.io/zh/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hant"
@@ -592,32 +525,26 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh"
+                href="https://ryan-gwo.github.io/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en-us"
                 href="https://ryan-gwo.github.io/"
                 />
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/</loc>
-    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/</loc>
-    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/</loc>
-    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://ryan-gwo.github.io/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/preprint/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/preprint/"
                 />
     <xhtml:link
@@ -626,21 +553,18 @@
                 href="https://ryan-gwo.github.io/publication/preprint/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/publication_types/article/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication_types/article/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -653,8 +577,13 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/large-language-models/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/large-language-models/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -667,7 +596,7 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/"
                 />
     <xhtml:link
@@ -681,16 +610,17 @@
                 href="https://ryan-gwo.github.io/publication_types/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/publication/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/"
                 />
     <xhtml:link
@@ -699,24 +629,17 @@
                 href="https://ryan-gwo.github.io/publication/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/en/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/publication/journal-article/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/journal-article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/journal-article/"
                 />
     <xhtml:link
@@ -725,21 +648,18 @@
                 href="https://ryan-gwo.github.io/publication/journal-article/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/publication_types/article-journal/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/article-journal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication_types/article-journal/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -752,8 +672,13 @@
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/source-themes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/source-themes/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -761,16 +686,17 @@
                 href="https://ryan-gwo.github.io/tags/source-themes/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/en/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/conference-paper/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/conference-paper/"
                 />
     <xhtml:link
@@ -779,21 +705,18 @@
                 href="https://ryan-gwo.github.io/publication/conference-paper/"
                 />
   </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://ryan-gwo.github.io/publication_types/paper-conference/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/paper-conference/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication_types/paper-conference/"
                 />
     <xhtml:link
                 rel="alternate"

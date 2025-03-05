@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 郭雨泽
+title: 郭雨澤
 
 # Name pronunciation (optional)
-name_pronunciation: Yuze Guo
+name_pronunciation: Yu Chak Kwok
 
 # Full name (for SEO)
-first_name: Yuze
-last_name: Guo
+first_name: Yu Chak
+last_name: Kwok
 
 # Status emoji
 status:
@@ -20,11 +20,11 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Undergraduate Student
+role: 本科生
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: School of Physics and Technology, Wuhan University
+  - name: 武漢大學 物理科學與技術學院
     url: https://physics.whu.edu.cn/
 
 # Social network links
@@ -47,27 +47,27 @@ profiles:
   #  url: https://orcid.org/
 
 interests:
-  - Gravitational Wave Astronomy
-  - Compact Objects
-  - Cosmology
+  - 重力波天文學
+  - 緻密天體
+  - 宇宙學
 
 education:
-  - area: BSc Physics
-    institution: Wuhan University
+  - area: 理學學士
+    institution: 武漢大學
     date_start: 2022-09-01
     date_end: 2026-06-30
     summary: |
       GPA: 3.95/4.0
       
-      Courses included:
-      - Classical Mechanics, Electrodynamics, Quantum Mechanics, Statistical Mechanics, General Astronomy, and Astrophysics;
-      - Calculus, Linear Algebra, Differential Equations, Theory of Probability and Mathematical Statistics, and Group Theory;
-      - C and Python Programming and Computational Physics.
+      主要課程:
+      - 經典力學、電動力學、量子力學、統計力學、普通天文學與天體物理；
+      - 微積分、線性代數、微分方程、機率與數理統計理論以及群論；
+      - C與Python程式設計及計算物理。
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: 計算機技能
     items:
       - name: Python
         description: ''
@@ -77,7 +77,7 @@ skills:
         description: ''
         percent: 30
         icon: devicon/c
-  - name: Typesettings
+  - name: 文字排版
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
@@ -95,11 +95,11 @@ skills:
         icon: devicon/windows11
 
 languages:
-  - name: English
+  - name: 英語
     percent: 89
-  - name: Chinese (Mandarin)
+  - name: 普通話
     percent: 100
-  - name: Chinese (Cantonese)
+  - name: 粵語
     percent: 50
 
 # Awards.
@@ -107,18 +107,16 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: National Scholarship
+  - title: 國家獎學金
     url: http://www.moe.gov.cn/srcsite/A05/s7505/202412/t20241230_1172663.html
     date: '2024-12-27'
-    awarder: Ministry of Education of the People's Republic of China
+    awarder: 中華人民共和國教育部
     icon: google-scholar
     summary: |
-      The National Scholarship is the highest award for Chinese students in China. It is awarded to students who have achieved outstanding academic performance and have made significant contributions to the development of the country.
+      國家獎學金是中國學生在國內獲得的最高獎項。它授予那些在學術上取得卓越成績併爲國家發展做出重大貢獻的學生。
   
 ---
 
-## About Me
+## 个人简介
 
-Yuze Guo was born in November 2003 and is currently an undergraduate student majoring in physics at the School of Physics and Technology, Wuhan University (a Project 985 institution) in China. He has excelled academically, earning the National Scholarship from the Ministry of Education of China. Since April 2024, he has been engaged in research training under the supervision of Professor Wei Wang from the Department of Astronomy, focusing on modeling and estimating the distortion of rotating neutron stars caused by their strong magnetic fields, which are promising sources of continuous gravitational radiation.
-
-Yuze has a deep passion for astronomy, which began in high school. He served as the head of the astronomy associations at both his high school and university and won a gold medal at the XIV International Olympiad on Astronomy and Astrophysics (IOAA 2021). Beyond academia, he is proficient in Chinese (Mandarin and Cantonese) and English, and is currently learning Japanese. He is also enthusiastic about rail transit systems, including metros, intercity trains, and high-speed rail, and enjoys Japanese anime. Born and raised in Guangzhou, a historic and vibrant city in southern China, Yuze is inspired by its blend of tradition and modernity, fueling his curiosity and dedication to interdisciplinary exploration.
+**郭雨澤（Yuze Guo）**，2003年11月生，現爲武漢大學物理科學與技術學院物理學專業本科生，學業表現優異，獲中國教育部國家獎學金。自2024年4月起，師從天文學系王偉教授開展中子星磁致形變與引力波輻射的建模研究，致力於探索連續引力波源的可探測性。其高中起深耕天文學，曾任中學及大學天文社團負責人，獲第十四屆國際天文與天體物理奧林匹克競賽（IOAA 2021）金牌。除學術外，精通中（普通話、粵語）、英文，研習日語，關注軌道交通發展，亦爲日本動漫愛好者。成長於歷史文化名城廣州，這座千年商都的開放與創新精神塑造了他對跨學科探索的熱忱。

@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   mode: system
-  color: emerald
+  color: blue
 
 # SEO
 marketing:
@@ -31,11 +31,13 @@ header:
   navbar:
     enable: true
     blox: "navbar"
+    align: "center"
     fixed_to_top: true
     show_search: true
     show_theme_chooser: true
     logo:
-      text: "Your Name"
+      text: "Yuze Guo's Page"
+      filename: "icon.png"
 
 # Site footer
 footer:
@@ -46,6 +48,7 @@ footer:
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
+  show_translations: true
 
 # Localization
 locale:
@@ -55,6 +58,6 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false

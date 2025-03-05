@@ -5,9 +5,9 @@
     <link>https://ryan-gwo.github.io/zh-hant/post/</link>
       <atom:link href="https://ryan-gwo.github.io/zh-hant/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-hant</language><lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://ryan-gwo.github.io/media/icon_hu_645fa481986063ef.png</url>
+      <url>https://ryan-gwo.github.io/media/icon_hu_95090218ee51862a.png</url>
       <title>Blog</title>
       <link>https://ryan-gwo.github.io/zh-hant/post/</link>
     </image>
@@ -22,7 +22,7 @@
 
 
 &lt;details class=&#34;print:hidden xl:hidden&#34; open&gt;
-  &lt;summary&gt;Table of Contents&lt;/summary&gt;
+  &lt;summary&gt;目錄&lt;/summary&gt;
   &lt;div class=&#34;text-sm&#34;&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -225,7 +225,7 @@
 
 
 
-&lt;div id=&#34;chart-469175238&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-763582419&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -243,7 +243,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-469175238&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-763582419&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

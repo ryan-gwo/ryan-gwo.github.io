@@ -12,7 +12,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/event/example/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/event/example/"
                 />
   </url><url>
@@ -26,7 +31,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/event/"
                 />
   </url><url>
@@ -40,7 +50,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/projects/"
                 />
   </url><url>
@@ -54,7 +69,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/get-started/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/get-started/"
                 />
   </url><url>
@@ -68,7 +88,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/academic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/academic/"
                 />
   </url><url>
@@ -82,7 +107,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/"
                 />
   </url><url>
@@ -96,7 +126,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/hugo-blox/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/hugo-blox/"
                 />
   </url><url>
@@ -110,7 +145,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/markdown/"
                 />
   </url><url>
@@ -129,7 +169,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/"
                 />
   </url><url>
@@ -143,7 +183,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/hugo/"
                 />
   </url><url>
@@ -157,7 +202,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/pandas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/pandas/"
                 />
   </url><url>
@@ -171,7 +221,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/"
                 />
   </url><url>
@@ -185,7 +240,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/pytorch/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/pytorch/"
                 />
   </url><url>
@@ -199,7 +259,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/project/scikit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/project/scikit/"
                 />
   </url><url>
@@ -213,7 +278,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/second-brain/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/second-brain/"
                 />
   </url><url>
@@ -227,7 +297,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/wowchemy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/wowchemy/"
                 />
   </url><url>
@@ -241,7 +316,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/second-brain/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/second-brain/"
                 />
   </url><url>
@@ -255,7 +335,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/data-visualization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/data-visualization/"
                 />
   </url><url>
@@ -269,7 +354,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/teach-courses/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/teach-courses/"
                 />
   </url><url>
@@ -283,7 +373,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/experience/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/experience/"
                 />
   </url><url>
@@ -297,7 +392,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/hugo-blox-builder/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/hugo-blox-builder/"
                 />
   </url><url>
@@ -311,7 +411,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/javascript/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/javascript/"
                 />
   </url><url>
@@ -325,7 +430,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/teaching/js/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/teaching/js/"
                 />
   </url><url>
@@ -339,7 +449,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/teaching/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/teaching/python/"
                 />
   </url><url>
@@ -353,7 +468,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/python/"
                 />
   </url><url>
@@ -367,7 +487,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/teaching/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/teaching/"
                 />
   </url><url>
@@ -381,7 +506,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/post/project-management/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/post/project-management/"
                 />
   </url><url>
@@ -400,7 +530,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/"
                 />
   </url><url>
@@ -414,7 +544,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/preprint/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/preprint/"
                 />
   </url><url>
@@ -428,7 +563,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication_types/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/article/"
                 />
   </url><url>
@@ -442,7 +582,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/large-language-models/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/large-language-models/"
                 />
   </url><url>
@@ -461,7 +606,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/"
                 />
   </url><url>
@@ -475,7 +620,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/"
                 />
   </url><url>
@@ -489,7 +639,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/journal-article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/journal-article/"
                 />
   </url><url>
@@ -503,7 +658,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication_types/article-journal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/article-journal/"
                 />
   </url><url>
@@ -517,7 +677,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/tags/source-themes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/tags/source-themes/"
                 />
   </url><url>
@@ -531,7 +696,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication/conference-paper/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication/conference-paper/"
                 />
   </url><url>
@@ -545,7 +715,12 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-Hant"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/publication_types/paper-conference/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
                 href="https://ryan-gwo.github.io/zh/publication_types/paper-conference/"
                 />
   </url>

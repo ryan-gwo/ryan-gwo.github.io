@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Yuze Guo&#39;s Personal Page</title>
-    <link>https://ryan-gwo.github.io/zh-hant/authors/</link>
-      <atom:link href="https://ryan-gwo.github.io/zh-hant/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/zh-hant/authors/</link>
+      <atom:link href="http://localhost:1313/zh-hant/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-hant</language>
     <image>
-      <url>https://ryan-gwo.github.io/media/icon_hu_645fa481986063ef.png</url>
+      <url>http://localhost:1313/media/icon_hu_95090218ee51862a.png</url>
       <title>Authors</title>
-      <link>https://ryan-gwo.github.io/zh-hant/authors/</link>
+      <link>http://localhost:1313/zh-hant/authors/</link>
     </image>
     
   </channel>

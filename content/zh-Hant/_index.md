@@ -16,8 +16,8 @@ sections:
       text: ""
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: Download CV
-        url: uploads/resume.pdf
+        text: 下載簡歷
+        url: uploads/cv_hk.pdf
     design:
       css_class: dark
       background:

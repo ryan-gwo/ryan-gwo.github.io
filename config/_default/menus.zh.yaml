@@ -4,7 +4,7 @@
   #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: 简介
+  - name: 首页
     url: /
     weight: 10
   - name: 论文

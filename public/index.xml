@@ -34,6 +34,14 @@
     </item>
     
     <item>
+      <title>Experience</title>
+      <link>https://ryan-gwo.github.io/experience/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://ryan-gwo.github.io/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>https://ryan-gwo.github.io/projects/</link>
       <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
@@ -278,7 +286,7 @@
 
 
 
-&lt;div id=&#34;chart-147385926&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-462783159&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -296,7 +304,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-147385926&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-462783159&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -581,14 +589,6 @@ data.head()
   &lt;/span&gt; Python&lt;/p&gt;
 &lt;h2 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Experience</title>
-      <link>https://ryan-gwo.github.io/experience/</link>
-      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://ryan-gwo.github.io/experience/</guid>
-      <description></description>
     </item>
     
     <item>

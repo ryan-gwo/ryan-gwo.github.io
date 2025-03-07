@@ -40,6 +40,25 @@
                 href="https://ryan-gwo.github.io/event/"
                 />
   </url><url>
+    <loc>https://ryan-gwo.github.io/experience/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/experience/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ryan-gwo.github.io/zh/experience/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ryan-gwo.github.io/experience/"
+                />
+  </url><url>
     <loc>https://ryan-gwo.github.io/projects/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -361,25 +380,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://ryan-gwo.github.io/post/teach-courses/"
-                />
-  </url><url>
-    <loc>https://ryan-gwo.github.io/experience/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hant"
-                href="https://ryan-gwo.github.io/zh-hant/experience/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ryan-gwo.github.io/zh/experience/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ryan-gwo.github.io/experience/"
                 />
   </url><url>
     <loc>https://ryan-gwo.github.io/tags/hugo-blox-builder/</loc>

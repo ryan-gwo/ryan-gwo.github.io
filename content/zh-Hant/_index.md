@@ -24,22 +24,20 @@ sections:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
+          filename: M41_Li_4000.jpg
           filters:
-            brightness: 1.0
+            brightness: 0.5
           size: cover
           position: center
           parallax: false
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: '🔭 我的研究'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        在王偉教授的指導下，我們正在研究磁畸變中子星的連續重力波。
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
+        旋轉中子星的重力輻射源於其質量分佈的軸向不對稱，變形中子星長期以來被認爲是這種輻射的一種有希望的來源。在這項工作中，爲了描述這種形變的中子星，建立了一個三軸橢球模型。我們的主要目標是計算由於恆星強磁場引起的畸變和重力波輻射。
     design:
       columns: '1'
   - block: collection

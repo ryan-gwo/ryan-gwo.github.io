@@ -24,9 +24,9 @@ sections:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
+          filename: M41_Li_4000.jpg
           filters:
-            brightness: 1.0
+            brightness: 0.5
           size: cover
           position: center
           parallax: false
@@ -35,11 +35,9 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        在王伟教授的指导下，我们正在研究磁畸变中子星的连续引力波。
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
+        旋转中子星的引力辐射源于其质量分布的轴向不对称，变形中子星长期以来被认为是这种辐射的一种有希望的来源。在这项工作中，为了描述这种形变的中子星，建立了一个三轴椭球模型。我们的主要目标是计算由于恒星强磁场引起的畸变和引力波辐射。
     design:
       columns: '1'
   - block: collection

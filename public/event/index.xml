@@ -5,7 +5,7 @@
     <link>https://ryan-gwo.github.io/event/</link>
       <atom:link href="https://ryan-gwo.github.io/event/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 05 May 2023 19:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ryan-gwo.github.io/media/icon_hu_95090218ee51862a.png</url>
       <title>Recent &amp; Upcoming Talks</title>
@@ -13,9 +13,9 @@
     </image>
     
     <item>
-      <title>Example Talk</title>
+      <title>Cosmic Microwave Background Radiation - Bridging the Glimmer between Science Fiction and Reality</title>
       <link>https://ryan-gwo.github.io/event/example/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 May 2023 19:00:00 +0000</pubDate>
       <guid>https://ryan-gwo.github.io/event/example/</guid>
       <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;

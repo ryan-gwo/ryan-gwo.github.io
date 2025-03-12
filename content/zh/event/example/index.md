@@ -1,28 +1,32 @@
 ---
-title: Example Talk
+title: 架连科幻与现实的微光——宇宙微波背景辐射正传
 
-event: Hugo Blox Builder Conference
-event_url: https://example.org
+event: GeoScience Café
+event_url: https://liesmars.whu.edu.cn/
 
-location: Hugo Blox Builder HQ
+location: 武汉大学测绘遥感信息工程国家重点实验室（LIESMARS）
 address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
+  street: 珞瑜路129号
+  city: 武汉
+  region: 湖北
+  postcode: '430079'
+  country: 中国
 
-summary: An example talk using Hugo Blox Builder's Markdown slides feature.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+summary: 与另一位本科生张浩同学合作，我们受武汉大学LIESMARS旗下的学生学术组织GeoScience Café邀请，就宇宙微波背景辐射（CMB）进行演讲。
+abstract: 科幻巨著《三体》曾描述：“整个宇宙会为你闪烁。”这里的“闪烁”并非指人眼可见的宇宙闪烁，而是指微波背景辐射的闪烁。微波背景辐射在现代宇宙学中扮演着关键角色，尤其是在大爆炸理论和早期宇宙的研究中。但微波背景辐射究竟是什么？它对人类理解宇宙的重要性又有多大？
+
+      来自武汉大学天文协会（WHUAA）的两位演讲者将引领观众揭开微波背景辐射的神秘面纱。他们将深入介绍其发现、起源、特性、前沿研究及其意义。从未来应用的视角（例如星际旅行），他们将强调这一辐射在连接科幻与现实之间所扮演的独特角色。
+
+      武汉大学天文协会，简称 WHUAA，是一个成立于2013年的学术组织。源自对星空的共同热爱，该协会致力于普及天文知识，成为引领星空探索的灯塔。它不仅是武汉大学天文爱好者的聚集地，也是来自不同地区和学校的志同道合者建立友谊的平台。
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2023-05-05T19:00:00Z'
+date_end: '2023-05-05T20:30:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2023-05-04T00:00:00Z'
 
 authors:
   - admin

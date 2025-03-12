@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks | Yuze Guo&#39;s Personal Page</title>
+    <title>近期與未來演講 | Yuze Guo&#39;s Personal Page</title>
     <link>https://ryan-gwo.github.io/zh-hant/event/</link>
       <atom:link href="https://ryan-gwo.github.io/zh-hant/event/index.xml" rel="self" type="application/rss+xml" />
-    <description>Recent &amp; Upcoming Talks</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-hant</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <description>近期與未來演講</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-hant</language><lastBuildDate>Fri, 05 May 2023 19:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ryan-gwo.github.io/media/icon_hu_95090218ee51862a.png</url>
-      <title>Recent &amp; Upcoming Talks</title>
+      <title>近期與未來演講</title>
       <link>https://ryan-gwo.github.io/zh-hant/event/</link>
     </image>
     
     <item>
-      <title>Example Talk</title>
+      <title>架連科幻與現實的微光——宇宙微波背景輻射正傳</title>
       <link>https://ryan-gwo.github.io/zh-hant/event/example/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 May 2023 19:00:00 +0000</pubDate>
       <guid>https://ryan-gwo.github.io/zh-hant/event/example/</guid>
       <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;

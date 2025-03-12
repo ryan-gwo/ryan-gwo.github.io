@@ -2,44 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ryan-gwo.github.io/zh-hant/event/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ryan-gwo.github.io/event/example/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ryan-gwo.github.io/zh/event/example/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hant"
-                href="https://ryan-gwo.github.io/zh-hant/event/example/"
-                />
-  </url><url>
-    <loc>https://ryan-gwo.github.io/zh-hant/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://ryan-gwo.github.io/event/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ryan-gwo.github.io/zh/event/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hant"
-                href="https://ryan-gwo.github.io/zh-hant/event/"
-                />
-  </url><url>
     <loc>https://ryan-gwo.github.io/zh-hant/experience/</loc>
     <lastmod>2025-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -513,6 +475,44 @@
                 rel="alternate"
                 hreflang="zh-hant"
                 href="https://ryan-gwo.github.io/zh-hant/post/project-management/"
+                />
+  </url><url>
+    <loc>https://ryan-gwo.github.io/zh-hant/event/example/</loc>
+    <lastmod>2023-05-05T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ryan-gwo.github.io/event/example/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ryan-gwo.github.io/zh/event/example/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/event/example/"
+                />
+  </url><url>
+    <loc>https://ryan-gwo.github.io/zh-hant/event/</loc>
+    <lastmod>2023-05-05T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ryan-gwo.github.io/event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ryan-gwo.github.io/zh/event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant"
+                href="https://ryan-gwo.github.io/zh-hant/event/"
                 />
   </url><url>
     <loc>https://ryan-gwo.github.io/zh-hant/</loc>

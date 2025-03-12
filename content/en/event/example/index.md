@@ -1,28 +1,32 @@
 ---
-title: Example Talk
+title: Cosmic Microwave Background Radiation - Bridging the Glimmer between Science Fiction and Reality
 
-event: Hugo Blox Builder Conference
-event_url: https://example.org
+event: GeoScience Café
+event_url: https://liesmars.whu.edu.cn/
 
-location: Hugo Blox Builder HQ
+location: State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing (LIESMARS), Wuhan University
 address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
+  street: 129 Luoyu Road
+  city: Wuhan
+  region: Hubei
+  postcode: '430079'
+  country: China
 
-summary: An example talk using Hugo Blox Builder's Markdown slides feature.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+summary: Collaborating with Hao Zhang, another undergraduate student, we are invited by GeoScience Cafe, an student academic organization under LIESMARS, Wuhan University, to give a talk on CMB.Collaborating with Hao Zhang, another undergraduate student, we are invited by GeoScience Cafe, an student academic organization under LIESMARS, Wuhan University, to give a talk on CMB.
+abstract: The science fiction masterpiece The Three-Body Problem once described, “The entire universe will flicker for you.” This “flicker” does not refer to the universe visibly flickering to the naked eye, but rather the flickering of the cosmic microwave background radiation (CMBR). CMBR plays a crucial role in modern cosmology, particularly in the study of the Big Bang theory and the early universe. But what exactly is the cosmic microwave background? How important is it for humanity’s understanding of the universe?
+
+          Two speakers from the Wuhan University Astronomy Association (WHUAA) will guide the audience to uncover the mysteries of the cosmic microwave background radiation. They will provide an in-depth introduction to its discovery, origin, characteristics, cutting-edge research, and significance. From the perspective of future applications, such as interstellar travel, they will emphasize its unique role as the light that bridges the gap between the starry sky of science fiction and the realities of Earth.
+
+          The Wuhan University Astronomy Association, abbreviated as WHUAA, is an academic organization founded in 2013. United by a shared love for the starry sky, it is dedicated to popularizing astronomy and serving as a guide under the stars. It is not only the home base for astronomy enthusiasts at Wuhan University but also a platform for like-minded individuals from different regions and schools to build friendships.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2023-05-05T19:00:00Z'
+date_end: '2023-05-05T20:30:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2023-05-04T00:00:00Z'
 
 authors:
   - admin

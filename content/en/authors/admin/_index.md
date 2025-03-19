@@ -48,7 +48,7 @@ profiles:
 
 interests:
   - Gravitational Wave Astronomy
-  - Compact Objects
+  - Compact Stars
   - Cosmology
 
 education:
@@ -62,7 +62,7 @@ education:
       Courses included:
       - Classical Mechanics, Electrodynamics, Quantum Mechanics, Statistical Mechanics, General Astronomy, and Astrophysics;
       - Calculus, Linear Algebra, Differential Equations, Theory of Probability and Mathematical Statistics, and Group Theory;
-      - C and Python Programming and Computational Physics.
+      - C, Python Programming and Computational Physics.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`

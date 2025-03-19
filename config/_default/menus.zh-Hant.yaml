@@ -19,9 +19,6 @@ main:
   - name: 經歷
     url: experience/
     weight: 20
-  - name: 項目
-    url: projects/
-    weight: 30
   - name: 資源
     url: resources/
     weight: 40

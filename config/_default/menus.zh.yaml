@@ -19,9 +19,6 @@ main:
   - name: 经历
     url: experience/
     weight: 20
-  - name: 项目
-    url: projects/
-    weight: 30
   - name: 资源
     url: resources/
     weight: 40

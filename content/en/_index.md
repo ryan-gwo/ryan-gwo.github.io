@@ -35,9 +35,9 @@ sections:
       title: '🔭 My Research'
       subtitle: ''
       text: |-
-        Supervised by Prof. Wei Wang, we are investigating the continuous gravitational waves (CGWs) from magnetically distorted neutron stars (MDNSs).
+        Supervised by Prof. Wei Wang, we are investigating the continuous gravitational waves (CGWs) from magnetically distorted neutron stars.
 
-        Gravitational radiation from rotating neutron stars originates from its axial asymmetry of mass distribution, and deformed neutron stars are long thought to be a type of promising source of such radiation. In this work, a triaxial ellipsoid model established in order to describe such a distorted neutron star. Our main goal is to calculate the distortion and GW due to the strong magnetic field of the star.
+        Gravitational radiation from rotating neutron stars originates from its axial asymmetry of mass distribution, and deformed neutron stars are long thought to be a type of promising source of such radiation. In this work, a triaxial ellipsoid model is established in order to describe such a distorted neutron star. Our main goal is to calculate the distortion and GW due to the strong magnetic field of the star.
 
         We have found a rotation-magnetic field coupling effect that can significantly enhance the GW signal from MDNSs, making it detectable by the next-generation GW detectors. Publication is under preparation.
     design:

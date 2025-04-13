@@ -119,6 +119,6 @@ awards:
 
 ## About Me
 
-Yuze Guo (born November 2003) is a physics undergraduate at Wuhan University (Project 985). A National Scholarship recipient from the Ministry of Education, he has been researching under Professor Wei Wang since April 2024 in the Department of Astronomy—modeling distortions in rotating neutron stars due to strong magnetic fields, potential sources of continuous gravitational waves.
+Yuze Guo (born November 2003) is a physics undergraduate at Wuhan University (Project 985). A National Scholarship recipient from the Chinese Ministry of Education, he has been researching under Professor Wei Wang since April 2024 in the Department of Astronomy—modeling distortions in rotating neutron stars due to strong magnetic fields, potential sources of continuous gravitational waves.
 
-Passionate about astronomy since high school, Yuze led the astronomy associations at both his high school and university, and won a gold medal at the XIV International Olympiad on Astronomy and Astrophysics (IOAA 2021). He is proficient in Mandarin, Cantonese, and English, and is currently learning Japanese. An enthusiast of rail transit systems and Japanese anime, Yuze draws inspiration from Guangzhou, his historic yet modern hometown.
+Passionate about astronomy since high school, Yuze led the astronomy associations at both his high school and university, and won a gold medal at the XIV International Olympiad on Astronomy and Astrophysics (IOAA 2021). He is proficient in Mandarin, Cantonese, and English, and is currently learning Japanese. An enthusiast of rail transit systems and Japanese anime, Yuze draws inspiration from Guangzhou (Canton), his historic yet modern hometown.

@@ -52,7 +52,7 @@ interests:
   - 宇宙学
 
 education:
-  - area: 理学学士
+  - area: 物理学 学士
     institution: 武汉大学
     date_start: 2022-09-01
     date_end: 2026-06-30
@@ -63,6 +63,9 @@ education:
       - 经典力学、电动力学、量子力学、统计力学、普通天文学和天体物理学；
       - 微积分、线性代数、微分方程、概率论与数理统计以及群论；
       - C 和 Python 编程及计算物理学。
+
+  - area: 天体物理学 博士
+    institution: 北京大学（预计）
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`

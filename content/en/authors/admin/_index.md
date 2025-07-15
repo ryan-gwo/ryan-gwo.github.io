@@ -52,7 +52,7 @@ interests:
   - Cosmology
 
 education:
-  - area: BSc Physics
+  - area: BSc in Physics
     institution: Wuhan University
     date_start: 2022-09-01
     date_end: 2026-06-30
@@ -63,7 +63,9 @@ education:
       - Classical Mechanics, Electrodynamics, Quantum Mechanics, Statistical Mechanics, General Astronomy, and Astrophysics;
       - Calculus, Linear Algebra, Differential Equations, Theory of Probability and Mathematical Statistics, and Group Theory;
       - C, Python Programming and Computational Physics.
-
+  
+  - area: PhD in Astrophysics
+    institution: Peking University (expected)
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:

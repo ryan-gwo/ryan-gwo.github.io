@@ -64,6 +64,9 @@ education:
       - 微積分、線性代數、微分方程、機率與數理統計理論以及群論；
       - C與Python程式設計及計算物理。
 
+  - area: 天體物理學 博士
+    institution: 北京大學（預計）
+
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:

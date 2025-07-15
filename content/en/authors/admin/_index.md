@@ -43,8 +43,8 @@ profiles:
   #  url: https://www.linkedin.com/
   #- icon: academicons/google-scholar
   #  url: https://scholar.google.com/
-  #- icon: academicons/orcid
-  #  url: https://orcid.org/
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0004-6676-1985
 
 interests:
   - Gravitational Wave Astronomy
@@ -52,6 +52,11 @@ interests:
   - Cosmology
 
 education:
+  - area: PhD in Astrophysics
+    institution: Peking University (expected)
+    date_start: 2026-09-01
+    date_end: 2031-06-30
+
   - area: BSc in Physics
     institution: Wuhan University
     date_start: 2022-09-01
@@ -64,8 +69,6 @@ education:
       - Calculus, Linear Algebra, Differential Equations, Theory of Probability and Mathematical Statistics, and Group Theory;
       - C, Python Programming and Computational Physics.
   
-  - area: PhD in Astrophysics
-    institution: Peking University (expected)
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
@@ -113,9 +116,15 @@ awards:
     url: http://www.moe.gov.cn/srcsite/A05/s7505/202412/t20241230_1172663.html
     date: '2024-12-27'
     awarder: Ministry of Education of the People's Republic of China
-    icon: google-scholar
+    icon: award
     summary: |
-      The National Scholarship is the highest award for Chinese students in China. It is awarded to students who have achieved outstanding academic performance and have made significant contributions to the development of the country.
+      The National Scholarship is aimed at motivating students from ordinary undergraduate colleges, higher vocational schools, and higher specialized schools to study diligently and strive for excellence. It encourages students to develop comprehensively in terms of morality, intelligence, physical fitness, and aesthetics, and is a scholarship funded by the central government to reward particularly outstanding students.
+  - title: 2024 Annual Scholarship of National Astronomical Observatories
+    date: '2024-12-01'
+    awarder: National Astronomical Observatories, Chinese Academy of Sciences
+    icon: award
+    summary: |
+      To promote the innovative development of astronomical research in our country, encourage students in school to work hard, be brave in innovation, and aspire to devote themselves to astronomical research, and to promote the rapid growth of outstanding talents in astronomy in our country, the National Astronomical Observatory of the Chinese Academy of Sciences has specially established the "National Astronomical Observatory of the Chinese Academy of Sciences Scholarship" to reward outstanding undergraduate students majoring in astronomy or related fields.
   
 ---
 

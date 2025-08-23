@@ -6,7 +6,7 @@ permalink: /
 subtitle: <a href='#'>School of Physics and Technology, Wuhan University</a>.
 
 profile:
-  align: left
+  align: right
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >

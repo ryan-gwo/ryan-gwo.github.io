@@ -1,18 +1,18 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Yuze Guo",
+    "label": "Undergraduate",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://george-gca.github.io/multi-language-al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "guoyuze@whu.edu.cn",
+    "phone": "(+86) 136-5075-9277",
+    "url": "https://ryan-gwo.github.io/",
+    "summary": "An undergraduate student majoring in physics while specializing in astrophysics",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "299 Bayi Rd.",
+      "postalCode": "430072",
+      "city": "Wuhan",
+      "countryCode": "CN",
+      "region": "Hubei"
     },
     "profiles": [
       {
@@ -22,49 +22,43 @@
       }
     ]
   },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "Peking University, Beijing, China",
+      "location": "Beijing, China",
+      "url": "https://www.pku.edu.cn/",
+      "area": "Astrophysics",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "startDate": "2026-09-01",
+      "endDate": "2031-06-01",
       "score": "10",
-      "courses": ["Theory of Relativity"]
+      "courses": ["General Relativity"]
+    },
+    {
+      "institution": "Wuhan University, Wuhan, China",
+      "location": "Wuhan, China",
+      "url": "https://www.whu.edu.cn/",
+      "area": "Physics",
+      "studyType": "BSc",
+      "startDate": "2022-09-01",
+      "endDate": "2026-06-01",
+      "score": "10",
+      "courses": ["General Physics"]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "National Scholarship",
+      "date": "2024-12-27",
+      "awarder": "Ministry of Education of the People's Republic of China",
+      "url": "http://www.moe.gov.cn/srcsite/A05/s7505/202412/t20241230_1172663.html",
+      "summary": "The National Scholarship is a award established by the Central Government to encourage students at regular undergraduate colleges, higher vocational colleges, and higher technical colleges to study diligently, strive for excellence, and develop comprehensively in terms of morality, intelligence, physical fitness, and aesthetics."
+    },
+    {
+      "title": "Annual Scholarship of National Astronomical Observatories, Chinese Academy of Sciences",
+      "date": "2024-12-01",
+      "awarder": "National Astronomical Observatories, CAS",
+      "summary": "To promote the innovative development of China's astronomical endeavors, encourage undergraduate students in study to be diligent, studious, courageous in innovation, and committed to dedicating themselves to the astronomical field, the National Astronomical Observatories of the Chinese Academy of Sciences has established the "Annual Scholarship of National Astronomical Observatories, Chinese Academy of Sciences" at multiple related domestic universities, to reward outstanding undergraduate students majoring in astronomy and related disciplines."
     }
   ],
   "certificates": [

@@ -3,16 +3,15 @@ page_id: about
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>School of Physics and Technology, Wuhan University</a>.
 
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>299 Bayi Road</p>
+    <p>Wuhan, China</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -28,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi! I'm currently a physics undergraduate student at the [School of Physics and Technology](http://physics.whu.edu.cn/), [Wuhan University](https://whu.edu.cn). Before this, I have completed both my middle and high school studies at [The Affiliated High School of South China Normal University](https://www.hsfz.net.cn/homepage/index.jsp) as a member of the Physics Olympiad Group.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/multi-language-al-folio/publications/) automatically.
+My research interest lies in high energy astrophysics, specifically, the study of gravitational waves, cosmology, and multi-messenger astronomy.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I started my systematic learning in astronomy during high school as a part of the activities related to [HFAA](https://mp.weixin.qq.com/s/c_5QRKZvjZMZ0oLyByOj6A) (The Astronomy Association of Affiliated High School of SCNU). Apart from amateur observations and lectures, I have also participated in astronomy Olympiads, and have obtained gold medals in both national ([CNAO 2020](https://mp.weixin.qq.com/s/PhGB4nSSOF43m1jnaHsBWQ)) and international ones ([IOAA 2021](https://web.archive.org/web/20211207205130/https://www.ioaa2021.com/)).

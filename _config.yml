@@ -344,11 +344,11 @@ external_links:
 # Jekyll Polyglot
 # -----------------------------------------------------------------------------
 
-languages: ["en-us", "zh-cn", "fr-ca"]
+languages: ["en-us", "zh-cn", "zh-hk"]
 default_lang: "en-us"
 exclude_from_localization: ["assets"]
 lang_from_path: true
-country_flag: true # set true for allowing flag symbol in language toggle
+country_flag: false # set true for allowing flag symbol in language toggle
 parallel_localization: false
 
 # -----------------------------------------------------------------------------

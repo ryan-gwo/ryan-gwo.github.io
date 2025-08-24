@@ -450,17 +450,17 @@ ninja.data = [{
           title: 'The Godfather',
           description: "",
           section: "",handler: () => {
-              window.location.href = "/zh-hk/books/en-us/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+              window.location.href = "/zh-hk/books/zh-hk/the_godfather/";
+            },},{id: "news-um-anúncio-simples-em-uma-linha",
+          title: 'Um anúncio simples em uma linha.',
           description: "",
-          section: "新鮮事",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "新鮮事",},{id: "news-um-anúncio-longo-com-detalhes",
+          title: 'Um anúncio longo com detalhes',
           description: "",
           section: "新鮮事",handler: () => {
-              window.location.href = "/zh-hk/news/en-us/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+              window.location.href = "/zh-hk/news/zh-hk/announcement_2/";
+            },},{id: "news-um-anúncio-simples-em-uma-linha-com-markdown-emoji-sparkles-smile",
+          title: 'Um anúncio simples em uma linha com Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "新鮮事",},{id: "projects-project-7",
           title: 'project 7',
@@ -481,32 +481,32 @@ ninja.data = [{
           title: 'project 1',
           description: "with background image",
           section: "項目",handler: () => {
-              window.location.href = "/zh-hk/projects/en-us/1_project/";
+              window.location.href = "/zh-hk/projects/zh-hk/1_project/";
             },},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
           section: "項目",handler: () => {
-              window.location.href = "/zh-hk/projects/en-us/2_project/";
+              window.location.href = "/zh-hk/projects/zh-hk/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
           title: 'project 3 with very long name',
           description: "a project that redirects to another website",
           section: "項目",handler: () => {
-              window.location.href = "/zh-hk/projects/en-us/3_project/";
+              window.location.href = "/zh-hk/projects/zh-hk/3_project/";
             },},{id: "projects-project-4",
           title: 'project 4',
           description: "another without an image",
           section: "項目",handler: () => {
-              window.location.href = "/zh-hk/projects/en-us/4_project/";
+              window.location.href = "/zh-hk/projects/zh-hk/4_project/";
             },},{id: "projects-project-5",
           title: 'project 5',
           description: "a project with a background image",
           section: "項目",handler: () => {
-              window.location.href = "/zh-hk/projects/en-us/5_project/";
+              window.location.href = "/zh-hk/projects/zh-hk/5_project/";
             },},{id: "projects-project-6",
           title: 'project 6',
           description: "a project with no image",
           section: "項目",handler: () => {
-              window.location.href = "/zh-hk/projects/en-us/6_project/";
+              window.location.href = "/zh-hk/projects/zh-hk/6_project/";
             },},{
         id: 'social-email',
         title: '發送電子郵件',

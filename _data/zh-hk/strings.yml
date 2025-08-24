@@ -1,164 +1,164 @@
 archive:
-  prefix: une archive de
-  category_suffix: dans cette catégorie
-  tag_suffix: avec ce tag
-  year_suffix: de cette année
+  prefix: 存檔
+  category_suffix: 此類
+  tag_suffix: 此標籤
+  year_suffix: 此年份起
 bibliography:
-  abstract: résumé
-  awarded: prix
-  blog: blogue
-  book_prefix: dans
-  code: code
-  last_author_prefix: et
-  poster: affiche
-  slides: diapos
-  supp: supp
-  video: vidéo
-  website: site web
+  abstract: 摘要
+  awarded: 獎項
+  blog: 部落格
+  book_prefix: 在
+  code: 代碼
+  last_author_prefix: 及
+  poster: 海報
+  slides: 幻燈片
+  supp: 補充材料
+  video: 影片
+  website: 網站
 blog:
-  navigation_title: blogue
+  navigation_title: 部落格
 categories:
-  fun: extra
-  work: travail
+  fun: 娛樂
+  work: 工作
 citation:
-  bibtex: "ou comme entrée BibTeX:"
-  introduction: "Si vous avez trouvé cela utile, veuillez le citer comme suit:"
+  bibtex: "或者作爲 BibTeX 的引用："
+  introduction: "如果您覺得這有用，請引用爲："
 collections:
-  books: livres
-  posts: articles
-contact_note: Vous pouvez même ajouter une petite note indiquant lequel de ces moyens est le meilleur pour vous joindre.
+  books: 書籍
+  posts: 文章
+contact_note: 您可以加一段說明，說明哪一種方式是最適合與您聯繫的。
 cv:
-  address: adresse
-  area: région
-  awarder: récipient(e)
-  awards: prixs
-  basics: informations générales
-  certificates: certificats
-  city: ville
-  countryCode: paysCode
-  courses: cours
-  date: date
-  education: éducation
-  email: courriel
-  endDate: date de fin
-  fluency: maîtrise
-  highlights: points clés
-  image: image
-  institution: institution
-  interests: intérêts
-  issuer: émetteur
-  keywords: mots-clés
-  label: poste
-  language: langue
-  languages: langues
-  level: niveau
-  location: emplacement
-  name: nom
-  network: réseau
-  organization: organisation
-  phone: téléphone
-  position: poste
-  postalCode: code postal
-  present: Présent
-  profiles: profils
-  projects: projets
-  publications: publications
-  publisher: éditeur
-  reference: référence
-  references: références
-  region: région
-  releaseDate: date de publication
-  score: score
-  skills: compétences
-  startDate: date de début
-  studyType: "domaine d'études"
-  summary: résumé
-  table_of_contents: table des matières
-  title: titre
-  url: site web
-  username: nom d'utilisateur
-  volunteer: bénévolat
-  work: travail
+  address: 地址
+  area: 地區
+  awarder: 授予者
+  awards: 獎項
+  basics: 基本信息
+  certificates: 證書
+  city: 城市
+  countryCode: 國家代碼
+  courses: 課程
+  date: 日期
+  education: 教育
+  email: 電子郵件
+  endDate: 結束日期
+  fluency: 流利程度
+  highlights: 突出亮點
+  image: 圖片
+  institution: 機構
+  interests: 興趣
+  issuer: 頒發者
+  keywords: 關鍵詞
+  label: 標題
+  language: 語言
+  languages: 語言
+  level: 等級
+  location: 位置
+  name: 姓名
+  network: 網絡
+  organization: 組織
+  phone: 電話
+  position: 職位
+  postalCode: 郵政編碼
+  present: 目前
+  profiles: 檔案
+  projects: 項目
+  publications: 發表
+  publisher: 出版社
+  reference: 參考文獻
+  references: 參考文獻
+  region: 地區
+  releaseDate: 發行日期
+  score: 分數
+  skills: 技能
+  startDate: 開始日期
+  studyType: 學習類型
+  summary: 摘要
+  table_of_contents: 目錄
+  title: 標題
+  url: 連結
+  username: 用戶名
+  volunteer: 志願者
+  work: 工作
 footer:
-  copyright: "Droits d'auteur"
-  last_updated: "Dernière mise à jour le "
+  copyright: 版權
+  last_updated: "最後更新:"
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
-  Propulsé par <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> avec le thème <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
-  Hébergé par <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos de <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-latest_posts: derniers articles
+  Desenvolvido em <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> com o tema <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
+  Hospedado por <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Fotos do <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+latest_posts: 最新文章
 months:
   long:
-    january: janvier
-    february: février
-    march: mars
-    april: avril
-    may: mai
-    june: juin
-    july: juillet
-    august: août
-    september: septembre
-    october: octobre
-    november: novembre
-    december: décembre
+    january: 1月
+    february: 2月
+    march: 3月
+    april: 4月
+    may: 5月
+    june: 6月
+    july: 7月
+    august: 8月
+    september: 9月
+    october: 10月
+    november: 11月
+    december: 12月
   short:
-    january: jan
-    february: fév
-    march: mar
-    april: avr
-    may: mai
-    june: jun
-    july: jul
-    august: aoû
-    september: sep
-    october: oct
-    november: nov
-    december: déc
-news: actualités
+    january: 1月
+    february: 2月
+    march: 3月
+    april: 4月
+    may: 5月
+    june: 6月
+    july: 7月
+    august: 8月
+    september: 9月
+    october: 10月
+    november: 11月
+    december: 12月
+news: 新鮮事
 newsletter:
-  back: retour
-  error: "Oups ! Quelque chose s'est mal passé, veuillez réessayer."
-  subscribe: "s'abonner"
-  subscribed: "Vous vous êtes abonné(e) à la newsletter avec succès."
-  subscribe_to_receive: "Abonnez-vous pour être informé(e) des prochains articles:"
-  too_many_signups: "Trop d'inscriptions, veuillez réessayer plus tard."
-  wait: "Veuillez patienter..."
-no_news: "Aucune actualité pour l'instant..."
-no_posts: "Aucun article pour le moment..."
+  back: 返回
+  error: "哎呀！出了點問題，請再試一次。"
+  subscribe: 訂閱
+  subscribed: "您已成功訂閱新聞通訊。"
+  subscribe_to_receive: "訂閱以接收未來文章的通知："
+  too_many_signups: "註冊人數過多，請稍後再試"
+  wait: "請稍候..."
+no_news: 目前沒有新消息...
+no_posts: "目前沒有文章..."
 pagination:
-  page: page
+  page: 頁
 post:
-  created_in: Créé le
-  created_by: par
-  last_updated: "Dernière mise à jour le "
-references: références
+  created_in: 創建於
+  created_by: 由
+  last_updated: 最後更新於
+references: 參考文獻
 related_posts:
-  description: "Voici d'autres articles que vous pourriez aimer lire ensuite :"
-  title: "Vous avez aimé lire cet article ?"
+  description: "這裏有一些您可能喜歡閱讀的相關文章："
+  title: "您喜歡閱讀這篇文章嗎？"
 search:
   dark_theme:
-    description: changer le thème du site en sombre
-    title: changer le thème en sombre
-  dropdown: déroulant
-  email: envoyer un courriel
+    description: "將網站主題更改爲深色"
+    title: "將主題更改爲深色"
+  dropdown: "其他選項"
+  email: 發送電子郵件
   footer:
-    close: fermer
-    navigate: naviguer
-    parent: revenir au parent
-    select: sélectionner
-  languages: langues
+    close: 關閉
+    navigate: 導航
+    parent: 返回上級
+    select: 選擇
+  languages: 語言
   light_theme:
-    description: changer le thème du site en clair
-    title: changer le thème en clair
-  navigation: menu de navigation
-  news: actualités
-  placeholder: Tapez pour commencer la recherche
-  posts: articles
-  projects: projets
-  socials: réseaux sociaux
+    description: "將網站主題更改爲淺色"
+    title: "將主題更改爲淺色"
+  navigation: "導航菜單"
+  news: 新鮮事
+  placeholder: "輸入以開始搜索"
+  posts: "文章"
+  projects: "項目"
+  socials: "社交媒體"
   system_theme:
-    description: changer le thème du site selon le système par défaut
-    title: utiliser le thème par défaut du système
-  theme: thème
-selected_publications: publications sélectionnées
-site_description: Un thème simple et épuré pour les académiques. Basé sur le design de [*folio](https://github.com/bogoli/-folio).
+    description: "將網站主題更改爲系統默認"
+    title: "使用系統默認主題"
+  theme: "主題"
+selected_publications: "精選發表"
+site_description: "一個簡單的學術主題。基於 [*folio](https://github.com/bogoli/-folio) 的設計。"

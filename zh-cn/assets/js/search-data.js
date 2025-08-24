@@ -27,43 +27,43 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh-cn/blog/";
           },
-        },{id: "nav-publicações",
-          title: "publicações",
+        },{id: "nav-发表",
+          title: "发表",
           description: "publicações por categoria em ordem cronológica reversa. gerado pelo jekyll-scholar.",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/publications/";
           },
-        },{id: "nav-projetos",
-          title: "projetos",
+        },{id: "nav-项目",
+          title: "项目",
           description: "Uma crescente coleção de seus projetos interessantes.",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/projects/";
           },
-        },{id: "nav-repositórios",
-          title: "repositórios",
+        },{id: "nav-仓库",
+          title: "仓库",
           description: "Edite o `_data/repositories.yml` e mude as listas `github_users` e `github_repos` para incluir seu próprio perfil do GitHub e repositórios.",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/repositories/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "Esta é uma descrição da página. Você pode modificá-la em &#39;_pages/cv.md&#39;. Também pode alterar ou remover o botão no topo de download de pdf.",
+        },{id: "nav-简历",
+          title: "简历",
+          description: "我的简历如下供参考。另外还有格式化的PDF版本可供下载。",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/cv/";
           },
-        },{id: "nav-ensino",
-          title: "ensino",
+        },{id: "nav-教学",
+          title: "教学",
           description: "Materiais de cursos que você ministrou. Substitua esse texto com sua descrição.",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/teaching/";
           },
-        },{id: "nav-membros",
-          title: "membros",
+        },{id: "nav-人员",
+          title: "人员",
           description: "membros do grupo de pesquisa ou laboratório",
           section: "导航菜单",
           handler: () => {

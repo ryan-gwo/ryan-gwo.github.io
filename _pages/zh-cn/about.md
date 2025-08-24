@@ -30,4 +30,4 @@ latest_posts:
 
 我的研究兴趣在于高能天体物理，具体包括引力波、宇宙学和多信使天文学的研究。
 
-我在高中时期作为华附（[HFAA](https://mp.weixin.qq.com/s/c_5QRKZvjZMZ0oLyByOj6A)）活动的一部分开始了系统的天文学学习。除了业余观测和讲座，我还参加了天文学奥林匹克竞赛，并在国家级（[CNAO 2020](https://mp.weixin.qq.com/s/PhGB4nSSOF43m1jnaHsBWQ)）和国际级（[IOAA 2021](https://web.archive.org/web/20211207205130/https://www.ioaa2021.com/)）比赛中均获得金牌。
+我在高中时期作为华附天文社（[HFAA](https://mp.weixin.qq.com/s/c_5QRKZvjZMZ0oLyByOj6A)）活动的一部分开始了系统的天文学学习。除了业余观测和讲座，我还参加了天文学奥林匹克竞赛，并在国家级（[CNAO 2020](https://mp.weixin.qq.com/s/PhGB4nSSOF43m1jnaHsBWQ)）和国际级（[IOAA 2021](https://web.archive.org/web/20211207205130/https://www.ioaa2021.com/)）比赛中均获得金牌。

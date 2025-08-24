@@ -2,8 +2,8 @@
 page_id: profiles
 layout: profiles
 permalink: /people/
-title: People
-description: members of the lab or group
+title: 人員
+description: 實驗室或團隊成員
 nav: true
 nav_order: 7
 

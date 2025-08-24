@@ -1,9 +1,9 @@
 ---
 page_id: projects
 layout: page
-title: Projects
+title: 項目
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: 一個不斷增長的酷項目集合。
 nav: true
 nav_order: 3
 display_categories: [work, fun]

@@ -1,16 +1,16 @@
 ---
 page_id: about
 layout: about
-title: About
+title: 關於
 permalink: /
-subtitle: <a href='#'>School of Physics and Technology, Wuhan University</a>.
+subtitle: <a href='#'>武漢大學物理科學與技術學院</a>.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Photo taken at Balliol College, University of Oxford, UK</p>
+    <p>攝於英國牛津大學巴利奧爾學院</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,8 +26,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I'm currently a physics undergraduate student at the [School of Physics and Technology](http://physics.whu.edu.cn/), [Wuhan University](https://whu.edu.cn). Before this, I have completed both my middle and high school studies at [The Affiliated High School of South China Normal University](https://www.hsfz.net.cn/homepage/index.jsp) as a member of the Physics Olympiad Group.
+嗨！我目前是[武漢大學](https://whu.edu.cn)[物理科學與技術學院](http://physics.whu.edu.cn/)的一名物理學專業本科生。在此之前，我作爲物理競賽組的一員，在[華南師范大學附屬中學](https://www.hsfz.net.cn/homepage/index.jsp)完成了我的初中和高中學業。
 
-My research interest lies in high energy astrophysics, specifically, the study of gravitational waves, cosmology, and multi-messenger astronomy.
+我的研究興趣在於高能天體物理，具體包括引力波、宇宙學和多信使天文學的研究。
 
-I started my systematic learning in astronomy during high school as a part of the activities related to [HFAA](https://mp.weixin.qq.com/s/c_5QRKZvjZMZ0oLyByOj6A) (The Astronomy Association of Affiliated High School of SCNU). Apart from amateur observations and lectures, I have also participated in astronomy Olympiads, and have obtained gold medals in both national ([CNAO 2020](https://mp.weixin.qq.com/s/PhGB4nSSOF43m1jnaHsBWQ)) and international ones ([IOAA 2021](https://web.archive.org/web/20211207205130/https://www.ioaa2021.com/)).
+我在高中時期作爲華附天文社（[HFAA](https://mp.weixin.qq.com/s/c_5QRKZvjZMZ0oLyByOj6A)）活動的一部分開始了系統的天文學學習。除了業餘觀測和講座，我還參加了天文學奧林匹克競賽，並在國家級（[CNAO 2020](https://mp.weixin.qq.com/s/PhGB4nSSOF43m1jnaHsBWQ)）和國際級（[IOAA 2021](https://web.archive.org/web/20211207205130/https://www.ioaa2021.com/)）比賽中均獲得金牌。

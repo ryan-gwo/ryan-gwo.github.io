@@ -26,7 +26,7 @@ citation:
 collections:
   books: 书籍
   posts: 文章
-contact_note: 您可以添加一小段说明，说明哪种方式是与您联系的最佳方式。
+contact_note: 欢迎交流！
 cv:
   address: 地址
   area: 地区
@@ -42,7 +42,7 @@ cv:
   email: 电子邮件
   endDate: 结束日期
   fluency: 流利程度
-  highlights: 突出亮点
+  highlights: 亮点
   image: 图片
   institution: 机构
   interests: 兴趣
@@ -83,9 +83,8 @@ footer:
   copyright: 版权
   last_updated: "最后更新:"
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
-  Desenvolvido em <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> com o tema <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
-  Hospedado por <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Fotos do <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  由 <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> 和 <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a> 主题驱动.
+  由 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 托管.
 latest_posts: 最新文章
 months:
   long:

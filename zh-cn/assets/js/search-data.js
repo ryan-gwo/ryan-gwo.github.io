@@ -50,7 +50,7 @@ ninja.data = [{
           },
         },{id: "nav-简历",
           title: "简历",
-          description: "我的简历如下供参考。另外还有格式化的PDF版本可供下载。",
+          description: "我的简历如下供参考。另外还有PDF版本可供下载。",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/cv/";

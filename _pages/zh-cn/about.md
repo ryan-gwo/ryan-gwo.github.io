@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-嗨！我目前是[武汉大学](https://whu.edu.cn)[物理科学与技术学院](http://physics.whu.edu.cn/)的一名物理学专业本科生。在此之前，我作为物理竞赛组的一员，在[华南师范大学附属中学](https://www.hsfz.net.cn/homepage/index.jsp)完成了我的初中和高中学业。
+嗨！我是郭雨泽，目前是[武汉大学](https://whu.edu.cn)[物理科学与技术学院](http://physics.whu.edu.cn/)的一名物理学专业本科生。在此之前，我作为物理竞赛组的一员，在[华南师范大学附属中学](https://www.hsfz.net.cn/homepage/index.jsp)完成了我的初中和高中学业。我预计在2026年秋开始在北京大学读天文物理博士。
 
 我的研究兴趣在于高能天体物理，具体包括引力波、宇宙学和多信使天文学的研究。
 

@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-嗨！我目前是[武漢大學](https://whu.edu.cn)[物理科學與技術學院](http://physics.whu.edu.cn/)的一名物理學專業本科生。在此之前，我作爲物理競賽組的一員，在[華南師范大學附屬中學](https://www.hsfz.net.cn/homepage/index.jsp)完成了我的初中和高中學業。
+嗨！我是郭雨澤，目前是[武漢大學](https://whu.edu.cn)[物理科學與技術學院](http://physics.whu.edu.cn/)的一名物理學專業本科生。在此之前，我作爲物理競賽組的一員，在[華南師范大學附屬中學](https://www.hsfz.net.cn/homepage/index.jsp)完成了我的初中和高中學業。我預期於2026年秋開始在北京大學攻讀天文物理博士學位。
 
 我的研究興趣在於高能天體物理，具體包括引力波、宇宙學和多信使天文學的研究。
 

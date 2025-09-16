@@ -55,13 +55,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh-hk/cv/";
           },
-        },{id: "nav-教學",
-          title: "教學",
-          description: "Materials for courses you taught. Replace this text with your description.",
-          section: "導航菜單",
-          handler: () => {
-            window.location.href = "/zh-hk/teaching/";
-          },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
               description: "",
@@ -69,12 +62,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/zh-hk/books/";
               },
-            },{id: "dropdown-blog",
-              title: "blog",
+            },{id: "dropdown-teaching",
+              title: "teaching",
               description: "",
               section: "其他選項",
               handler: () => {
-                window.location.href = "/zh-hk/blog/";
+                window.location.href = "/zh-hk/teaching/";
               },
             },{id: "post-a-post-with-plotly-js",
         

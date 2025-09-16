@@ -55,13 +55,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh-cn/cv/";
           },
-        },{id: "nav-教学",
-          title: "教学",
-          description: "Materiais de cursos que você ministrou. Substitua esse texto com sua descrição.",
-          section: "导航菜单",
-          handler: () => {
-            window.location.href = "/zh-cn/teaching/";
-          },
         },{id: "dropdown-publicações",
               title: "publicações",
               description: "",
@@ -76,12 +69,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/zh-cn/projects/";
               },
-            },{id: "dropdown-blog",
-              title: "blog",
+            },{id: "dropdown-teaching",
+              title: "teaching",
               description: "",
               section: "其他选项",
               handler: () => {
-                window.location.href = "/zh-cn/blog/";
+                window.location.href = "/zh-cn/teaching/";
               },
             },{id: "post-a-post-with-plotly-js",
         

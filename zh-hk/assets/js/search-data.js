@@ -43,7 +43,7 @@ ninja.data = [{
           },
         },{id: "nav-倉庫",
           title: "倉庫",
-          description: "編輯 `_data/repositories.yml`，並更改 `github_users` 和 `github_repos` 列表以包含您自己的 GitHub 個人資料和倉庫。",
+          description: "",
           section: "導航菜單",
           handler: () => {
             window.location.href = "/zh-hk/repositories/";

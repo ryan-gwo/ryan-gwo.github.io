@@ -3,7 +3,7 @@ page_id: repositories
 layout: page
 permalink: /repositories/
 title: 仓库
-description: Edite o `_data/repositories.yml` e mude as listas `github_users` e `github_repos` para incluir seu próprio perfil do GitHub e repositórios.
+description: # 编辑 `_data/repositories.yml` 文件，并将 `github_users` 和 `github_repos` 列表更改为包含您自己的 GitHub 个人资料和仓库。
 nav: true
 nav_order: 4
 ---

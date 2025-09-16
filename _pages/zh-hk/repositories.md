@@ -3,7 +3,7 @@ page_id: repositories
 layout: page
 permalink: /repositories/
 title: 倉庫
-description: 編輯 `_data/repositories.yml`，並更改 `github_users` 和 `github_repos` 列表以包含您自己的 GitHub 個人資料和倉庫。
+description: # 編輯 `_data/repositories.yml`，並更改 `github_users` 和 `github_repos` 列表以包含您自己的 GitHub 個人資料和倉庫。
 nav: true
 nav_order: 4
 ---

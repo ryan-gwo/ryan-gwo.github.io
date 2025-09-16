@@ -12,6 +12,6 @@ children:
   - title: projetos
     permalink: /projects/
   - title: divider
-  - title: blog
-    permalink: /blog/
+  - title: teaching
+    permalink: /teaching/
 ---

@@ -62,13 +62,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh-hk/teaching/";
           },
-        },{id: "nav-人員",
-          title: "人員",
-          description: "實驗室或團隊成員",
-          section: "導航菜單",
-          handler: () => {
-            window.location.href = "/zh-hk/people/";
-          },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
               description: "",

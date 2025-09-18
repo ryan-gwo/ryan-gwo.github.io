@@ -20,6 +20,9 @@ blog:
 categories:
   fun: 娱乐
   work: 工作
+resource_categories:
+  astronomy-olympiad-papers: 天文奥赛真题
+  olympiad-study-materials: 奥赛学习资料
 citation:
   bibtex: "或者作为 BibTeX 的引用："
   introduction: "如果您觉得这有用，请引用为："

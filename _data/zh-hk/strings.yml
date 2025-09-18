@@ -20,6 +20,9 @@ blog:
 categories:
   fun: 娛樂
   work: 工作
+resource_categories:
+  astronomy-olympiad-papers: 天文奧賽真題
+  olympiad-study-materials: 奧賽學習資料
 citation:
   bibtex: "或者作爲 BibTeX 的引用："
   introduction: "如果您覺得這有用，請引用爲："

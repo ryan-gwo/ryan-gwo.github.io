@@ -23,6 +23,9 @@ categories:
 resource_categories:
   astronomy-olympiad-papers: Astronomy Olympiad Papers
   olympiad-study-materials: Olympiad Study Materials
+resource_categories:
+  astronomy-olympiad-papers: Astronomy Olympiad Papers
+  olympiad-study-materials: Olympiad Study Materials
 citation:
   bibtex: "or as a BibTeX entry:"
   introduction: "If you found this useful, please cite this as:"

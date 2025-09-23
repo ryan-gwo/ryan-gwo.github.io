@@ -14,7 +14,7 @@ nav_order: 7
   
   <div class="row">
     <div class="col-md-12">
-      <p>Here you can find various downloadable files and resources related to my work and research.</p>
+      <p>Here you can find various downloadable files and resources related to my work and research. Note that the languages for the materials may depend on the language of the website.</p>
     </div>
   </div>
 

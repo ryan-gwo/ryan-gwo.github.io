@@ -39,7 +39,7 @@ nav_order: 7
         <li><a href="/assets/pdf/zh-cn/CNAO_2023_ans.pdf" target="_blank"><i class="fas fa-file-pdf"></i> 2022-2023学年全国中学生天文知识竞赛决赛试题（含答案）</a></li>
         <li><a href="/assets/pdf/zh-cn/CNAO_2022.pdf" target="_blank"><i class="fas fa-file-pdf"></i> 2021-2022学年全国中学生天文知识竞赛决赛试题</a></li>
         <li><a href="/assets/pdf/zh-cn/CNAO_2022.mp4" target="_blank"><i class="fas fa-file-video"></i> 2021-2022学年全国中学生天文知识竞赛决赛试题视频</a></li>
-        <li><a href="/assets/pdf/zh-cn/CNAO_2002_to_2020.pdf" target="_blank"><i class="fas fa-file-pdf"></i> CNAO 2002-2020决赛理论笔试&国家集训队选拔赛试题及部分解答</a></li>
+        <li><a href="/assets/pdf/zh-cn/CNAO_2002_to_2020.pdf" target="_blank"><i class="fas fa-file-pdf"></i> CNAO 2002-2020决赛&国家集训队选拔赛试题及部分解答</a></li>
         <!-- 在此添加更多演示文稿 -->
       </ul>
     </div>

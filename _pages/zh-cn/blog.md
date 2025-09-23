@@ -2,7 +2,7 @@
 page_id: blog
 layout: default
 permalink: /blog/
-title: blog
+title: 博客
 blog_name: 日常博客
 description: 思想、故事和想法。
 nav: true

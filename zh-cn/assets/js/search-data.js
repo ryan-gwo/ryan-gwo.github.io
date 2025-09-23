@@ -444,16 +444,8 @@ ninja.data = [{
           description: "",
           section: "",handler: () => {
               window.location.href = "/zh-cn/books/zh-cn/the_godfather/";
-            },},{id: "news-um-anúncio-simples-em-uma-linha",
-          title: 'Um anúncio simples em uma linha.',
-          description: "",
-          section: "新鲜事",},{id: "news-um-anúncio-longo-com-detalhes",
-          title: 'Um anúncio longo com detalhes',
-          description: "",
-          section: "新鲜事",handler: () => {
-              window.location.href = "/zh-cn/news/zh-cn/announcement_2/";
-            },},{id: "news-um-anúncio-simples-em-uma-linha-com-markdown-emoji-sparkles-smile",
-          title: 'Um anúncio simples em uma linha com Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-本个人主页建立",
+          title: '本个人主页建立！',
           description: "",
           section: "新鲜事",},{id: "projects-project-7",
           title: 'project 7',

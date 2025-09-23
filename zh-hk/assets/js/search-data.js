@@ -69,11 +69,11 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/zh-hk/teaching/";
               },
-            },{id: "post-你的博客文章標題",
+            },{id: "post-度規概念的初步感悟",
         
-          title: "你的博客文章標題",
+          title: "度規概念的初步感悟",
         
-        description: "你的博客文章描述",
+        description: "對於度規這一概念的初步理解",
         section: "文章",
         handler: () => {
           

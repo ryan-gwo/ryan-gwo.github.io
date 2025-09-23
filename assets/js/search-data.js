@@ -69,11 +69,11 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/teaching/";
               },
-            },{id: "post-your-blog-post-title",
+            },{id: "post-initial-insights-into-the-concept-of-the-metric",
         
-          title: "Your Blog Post Title",
+          title: "Initial insights into the concept of the metric.",
         
-        description: "Your blog post description",
+        description: "Preliminary understanding of the concept of metric",
         section: "Posts",
         handler: () => {
           

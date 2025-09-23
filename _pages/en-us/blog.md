@@ -3,8 +3,8 @@ page_id: blog
 layout: default
 permalink: /blog/
 title: Blog
-blog_name: al-folio in english
-description: a simple whitespace theme for academics
+blog_name: Daily Blog
+description: Thoughts, stories and ideas.
 nav: true
 nav_order: 1
 pagination:

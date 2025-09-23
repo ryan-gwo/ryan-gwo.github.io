@@ -20,37 +20,19 @@ nav_order: 7
 
   <div class="row mt-4">
     <div class="col-md-6">
-      <h3>學術論文</h3>
+      <h3>IOAA 2025试题</h3>
       <ul class="list-unstyled">
-        <li><a href="/assets/pdf/sample-paper.pdf" target="_blank"><i class="fas fa-file-pdf"></i> 範例學術論文</a></li>
-        <!-- 在此新增更多學術論文 -->
+        <li><a href="/assets/pdf/zh-cn/IOAA_2025_Theory_zh.pdf" target="_blank"><i class="fas fa-file-pdf"></i> IOAA 2025理论试题</a></li>
+        <li><a href="/assets/pdf/zh-cn/IOAA_2025_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf"></i> IOAA 2025数据分析试题</a></li>
+        <!-- 在此添加更多学术论文 -->
       </ul>
     </div>
     
     <div class="col-md-6">
-      <h3>簡報文稿</h3>
+      <h3>CNAO试题</h3>
       <ul class="list-unstyled">
-        <li><a href="/assets/pdf/sample-presentation.pdf" target="_blank"><i class="fas fa-file-powerpoint"></i> 範例簡報文稿</a></li>
-        <!-- 在此新增更多簡報文稿 -->
+        <li><a href="/assets/pdf/zh-cn/CNAO_2025.pdf" target="_blank"><i class="fas fa-file-powerpoint"></i> 2024-2025学年全国中学生天文知识竞赛决赛试题</a></li>
+        <!-- 在此添加更多演示文稿 -->
       </ul>
     </div>
   </div>
-
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <h3>程式碼與資料</h3>
-      <ul class="list-unstyled">
-        <li><a href="/assets/data/sample-dataset.zip" target="_blank"><i class="fas fa-file-archive"></i> 範例資料集</a></li>
-        <!-- 在此新增更多程式碼和資料檔案 -->
-      </ul>
-    </div>
-    
-    <div class="col-md-6">
-      <h3>其他資源</h3>
-      <ul class="list-unstyled">
-        <li><a href="/assets/pdf/sample-document.pdf" target="_blank"><i class="fas fa-file-text"></i> 範例文檔</a></li>
-        <!-- 在此新增更多其他資源 -->
-      </ul>
-    </div>
-  </div>
-</div>

@@ -55,6 +55,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-resources",
+          title: "Resources",
+          description: "Downloadable files and resources.",
+          section: "Navigation menu",
+          handler: () => {
+            window.location.href = "/resources/";
+          },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
               description: "",
@@ -71,7 +78,7 @@ ninja.data = [{
               },
             },{id: "post-initial-insights-into-the-concept-of-the-metric",
         
-          title: "Initial insights into the concept of the metric.",
+          title: "Initial insights into the concept of the metric",
         
         description: "Preliminary understanding of the concept of metric",
         section: "Posts",

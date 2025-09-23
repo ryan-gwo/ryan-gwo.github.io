@@ -55,6 +55,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh-hk/cv/";
           },
+        },{id: "nav-資源下載",
+          title: "資源下載",
+          description: "可下載的檔案和資源。",
+          section: "導航菜單",
+          handler: () => {
+            window.location.href = "/zh-hk/resources/";
+          },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
               description: "",

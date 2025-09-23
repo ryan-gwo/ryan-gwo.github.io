@@ -154,6 +154,7 @@ search:
   placeholder: "输入以开始搜索"
   posts: "文章"
   projects: "项目"
+  resources: "资源"
   socials: "社交媒体"
   system_theme:
     description: "将网站主题更改为系统默认"

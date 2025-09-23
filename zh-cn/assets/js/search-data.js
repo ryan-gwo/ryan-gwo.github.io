@@ -22,7 +22,7 @@ ninja.data = [{
     },
   },{id: "nav-blog",
           title: "blog",
-          description: "um tema simples para acadêmicos",
+          description: "思想、故事和想法。",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/blog/";

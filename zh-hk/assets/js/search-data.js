@@ -22,7 +22,7 @@ ninja.data = [{
     },
   },{id: "nav-部落格",
           title: "部落格",
-          description: "a simple whitespace theme for academics",
+          description: "思想、故事和想法。",
           section: "導航菜單",
           handler: () => {
             window.location.href = "/zh-hk/blog/";

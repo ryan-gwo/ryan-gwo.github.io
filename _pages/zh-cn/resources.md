@@ -104,6 +104,28 @@ nav_order: 7
         </ul>
       </div>
     </div>
+
+    <div class="row">
+      <!-- IAO -->
+      <div class="col-md-6 mb-4">
+        <h4><i class="fas fa-star text-primary me-2"></i>国际天文奥林匹克竞赛 (IAO)</h4>
+        
+        <h5 class="mt-3 mb-2">历史资料</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IAO_1996_to_2021_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>IAO 1996-2021部分试题集</a></li>
+        </ul>
+      </div>
+      
+      <!-- APAO -->
+      <div class="col-md-6 mb-4">
+        <h4><i class="fas fa-globe text-info me-2"></i>亚太天文奥林匹克竞赛 (APAO)</h4>
+        
+        <h5 class="mt-3 mb-2">历史资料</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IOAA_2007_to_2019_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>IOAA 2007-2019理论&数据分析试题集</a></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- 学习笔记 -->

@@ -6,9 +6,9 @@ nav: true
 nav_order: 8
 dropdown: true
 children:
-  - title: bookshelf
+  - title: 書架
     permalink: /books/
   - title: divider
-  - title: teaching
+  - title: 教學
     permalink: /teaching/
 ---

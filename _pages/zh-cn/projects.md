@@ -3,7 +3,7 @@ page_id: projects
 layout: page
 title: 项目
 permalink: /projects/
-description: Uma crescente coleção de seus projetos interessantes.
+description: 一个日益增长的有趣项目集合。
 nav: true
 nav_order: 3
 display_categories: [work, fun]

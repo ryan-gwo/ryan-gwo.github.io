@@ -6,12 +6,9 @@ nav: true
 nav_order: 8
 dropdown: true
 children:
-  - title: publicações
-    permalink: /publications/
+  - title: 书架
+    permalink: /books/
   - title: divider
-  - title: projetos
-    permalink: /projects/
-  - title: divider
-  - title: teaching
+  - title: 教学
     permalink: /teaching/
 ---

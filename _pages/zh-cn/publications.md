@@ -3,7 +3,7 @@ page_id: publications
 layout: page
 permalink: /publications/
 title: 发表
-description: publicações por categoria em ordem cronológica reversa. gerado pelo jekyll-scholar.
+description: 按类别按时间倒序排列的发表。由jekyll-scholar生成。
 nav: true
 nav_order: 2
 ---

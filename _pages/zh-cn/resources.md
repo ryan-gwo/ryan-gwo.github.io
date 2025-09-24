@@ -6,6 +6,8 @@ permalink: /resources/
 description: 可下载的文件和资源。
 nav: true
 nav_order: 7
+toc:
+  sidebar: left
 ---
 
 <!-- pages/resources.md -->

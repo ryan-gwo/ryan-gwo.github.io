@@ -3,7 +3,7 @@ page_id: teaching
 layout: page
 permalink: /teaching/
 title: 教学
-description: Materiais de cursos que você ministrou. Substitua esse texto com sua descrição.
+description: 所教授课程的材料。
 nav: false
 nav_order: 6
 ---

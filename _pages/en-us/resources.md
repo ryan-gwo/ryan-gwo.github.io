@@ -18,15 +18,15 @@ nav_order: 7
     </div>
   </div>
 
-  <!-- Competition Materials -->
+  <!-- Olympiad Materials -->
   <section class="mt-5">
-    <h3><i class="fas fa-trophy text-warning me-2"></i>Competition Materials</h3>
+    <h3><i class="fas fa-trophy text-warning me-2"></i>Olympiad Materials</h3>
     <hr>
     
     <div class="row">
       <!-- IOAA -->
       <div class="col-md-6 mb-4">
-        <h4><i class="fas fa-globe text-info me-2"></i>International Astronomy Olympiad (IOAA)</h4>
+        <h4><i class="fas fa-globe text-info me-2"></i>International Olympiad on Astronomy and Astrophysics (IOAA)</h4>
         
         <h5 class="mt-3 mb-2">2024</h5>
         <ul class="list-unstyled ps-3">
@@ -39,7 +39,7 @@ nav_order: 7
       
       <!-- CNAO -->
       <div class="col-md-6 mb-4">
-        <h4><i class="fas fa-star text-primary me-2"></i>China National Astronomy Olympiad (CNAO)</h4>
+        <h4><i class="fas fa-star text-primary me-2"></i>Chinese National Astronomy Olympiad (CNAO)</h4>
         <p class="text-muted">CNAO materials are primarily in Chinese. Please refer to the Chinese versions of this site for detailed content.</p>
       </div>
     </div>

@@ -60,12 +60,27 @@ nav_order: 7
       
       <!-- IOAA -->
       <div class="col-md-6 mb-4">
-        <h4><i class="fas fa-globe text-info me-2"></i>国际天文奥林匹克 (IOAA)</h4>
+        <h4><i class="fas fa-globe text-info me-2"></i>国际天文与天体物理奥林匹克竞赛 (IOAA)</h4>
         
-        <h5 class="mt-3 mb-2">2025年</h5>
+        <h5 class="mt-3 mb-2">第十八届（2025）</h5>
         <ul class="list-unstyled ps-3">
           <li><a href="/assets/pdf/zh-cn/IOAA_2025_Theory_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理论试题</a></li>
           <li><a href="/assets/pdf/zh-cn/IOAA_2025_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>数据分析试题</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">第十七届（2024）</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IOAA_2024_Theory_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理论试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2024_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>数据分析试题</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">第十六届（2023）</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IOAA_2023_Theory_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理论试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2023_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>数据分析试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2023_Observation_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>观测试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2023_Planetarium_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>天象厅试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2023_Solutions_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-secondary me-2"></i>团队赛试题</a></li>
         </ul>
       </div>
     </div>

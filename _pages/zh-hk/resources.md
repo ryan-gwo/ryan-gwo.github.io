@@ -60,7 +60,7 @@ nav_order: 7
       
       <!-- IOAA -->
       <div class="col-md-6 mb-4">
-        <h4><i class="fas fa-globe text-info me-2"></i>國際天文奧林匹克 (IOAA)</h4>
+        <h4><i class="fas fa-globe text-info me-2"></i>國際天文與天體物理奧林匹克競賽 (IOAA)</h4>
         
         <h5 class="mt-3 mb-2">2025年</h5>
         <ul class="list-unstyled ps-3">

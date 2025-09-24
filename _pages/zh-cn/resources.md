@@ -20,9 +20,9 @@ toc:
     </div>
   </div>
 
-  <!-- 竞赛资料 -->
+  <!-- 竞赛试题 -->
   <section class="mt-5">
-    <h3><i class="fas fa-trophy text-warning me-2"></i>竞赛资料</h3>
+    <h3><i class="fas fa-trophy text-warning me-2"></i>竞赛试题</h3>
     <hr>
     
     <div class="row">
@@ -110,21 +110,51 @@ toc:
     <div class="row">
       <!-- IAO -->
       <div class="col-md-6 mb-4">
-        <h4><i class="fas fa-star text-primary me-2"></i>国际天文奥林匹克竞赛 (IAO)</h4>
+        <h4><i class="fas fa-globe text-primary me-2"></i>国际天文奥林匹克竞赛 (IAO)</h4>
         
         <h5 class="mt-3 mb-2">历史资料</h5>
         <ul class="list-unstyled ps-3">
           <li><a href="/assets/pdf/zh-cn/IAO_1996_to_2021_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>IAO 1996-2021部分试题集</a></li>
         </ul>
       </div>
-      
-      <!-- APAO -->
+    </div>
+  </section>
+
+  <!-- 竞赛材料 -->
+  <section class="mt-5">
+    <h3><i class="fas fa-book text-success me-2"></i>竞赛材料</h3>
+    <hr>
+    <div class="row">
+      <!-- GDC -->
       <div class="col-md-6 mb-4">
-        <h4><i class="fas fa-globe text-info me-2"></i>亚太天文奥林匹克竞赛 (APAO)</h4>
+        <h4><i class="fas fa-star text-primary me-2"></i>广东省赛</h4>
         
-        <h5 class="mt-3 mb-2">历史资料</h5>
+        <h5 class="mt-3 mb-2">2020年</h5>
         <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/IOAA_2007_to_2019_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>IOAA 2007-2019理论&数据分析试题集</a></li>
+          <li><a href="/assets/pdf/zh-cn/2020_GD_Training.pdf" target="_blank"><i class="fas fa-file-powerpoint text-info me-2"></i>2020年广东省赛初赛集训</a></li>
+          <li><a href="/assets/pdf/zh-cn/2020_GD_Pick_Out.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>2020年广东省赛备考–往年省赛&国初真题精选</a></li>
+          <li><a href="/assets/pdf/zh-cn/2020_GD_2nd_Round.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>2020年广东省赛复赛集训(讲义)</a></li>
+          <li><a href="/assets/pdf/zh-cn/2020_GD_2nd_Round_Solution.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>2020年广东省赛复赛集训(讲义答案)</a></li>
+          <li><a href="/assets/pdf/zh-cn/2020_GD_Simulation.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>2020年广东省天文知识竞赛复赛(实测理论)模拟练习</a></li>
+          <li><a href="/assets/pdf/zh-cn/2020_GD_Simulation_Solution.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>2020年广东省天文知识竞赛复赛(实测理论)模拟练习答案</a></li>
+          <li><a href="/assets/pdf/zh-cn/Data_Analysis_Bundle.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>天文奥赛实测合集</a></li>
+        </ul>
+      </div>
+
+      <!-- CNAO -->
+      <div class="col-md-6 mb-4">
+        <h4><i class="fas fa-star text-primary me-2"></i>国决&选拔赛</h4>
+        
+        <h5 class="mt-3 mb-2">2023年</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/CNAO_2023_preparation.pdf" target="_blank"><i class="fas fa-file-powerpoint text-info me-2"></i>国决与国家集训队选拔</a></li>
+          <li><a href="/assets/pdf/zh-cn/CNAO_2023_preparation_handout.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>国决与国家集训队选拔(讲义)</a></li>
+          <li><a href="/assets/pdf/zh-cn/Introductory Cosmology for Babies.pdf" target="_blank"><i class="fas fa-file-powerpoint text-info me-2"></i>通俗宇宙学简介</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">2024年</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/Cosmology_handout.pdf" target="_blank"><i class="fas fa-file-powerpoint text-info me-2"></i>天文奥赛教程: 宇宙学基础</a></li>
         </ul>
       </div>
     </div>

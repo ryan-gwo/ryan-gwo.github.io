@@ -29,14 +29,14 @@ ninja.data = [{
           },
         },{id: "nav-发表",
           title: "发表",
-          description: "publicações por categoria em ordem cronológica reversa. gerado pelo jekyll-scholar.",
+          description: "按类别按时间倒序排列的发表。由jekyll-scholar生成。",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/publications/";
           },
         },{id: "nav-项目",
           title: "项目",
-          description: "Uma crescente coleção de seus projetos interessantes.",
+          description: "一个日益增长的有趣项目集合。",
           section: "导航菜单",
           handler: () => {
             window.location.href = "/zh-cn/projects/";
@@ -62,22 +62,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh-cn/resources/";
           },
-        },{id: "dropdown-publicações",
-              title: "publicações",
+        },{id: "dropdown-书架",
+              title: "书架",
               description: "",
               section: "其他选项",
               handler: () => {
-                window.location.href = "/zh-cn/publications/";
+                window.location.href = "/zh-cn/books/";
               },
-            },{id: "dropdown-projetos",
-              title: "projetos",
-              description: "",
-              section: "其他选项",
-              handler: () => {
-                window.location.href = "/zh-cn/projects/";
-              },
-            },{id: "dropdown-teaching",
-              title: "teaching",
+            },{id: "dropdown-教学",
+              title: "教学",
               description: "",
               section: "其他选项",
               handler: () => {

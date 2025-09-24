@@ -62,15 +62,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh-hk/resources/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
+        },{id: "dropdown-書架",
+              title: "書架",
               description: "",
               section: "其他選項",
               handler: () => {
                 window.location.href = "/zh-hk/books/";
               },
-            },{id: "dropdown-teaching",
-              title: "teaching",
+            },{id: "dropdown-教學",
+              title: "教學",
               description: "",
               section: "其他選項",
               handler: () => {

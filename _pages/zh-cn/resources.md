@@ -100,7 +100,7 @@ nav_order: 7
 
         <h5 class="mt-3 mb-2">历史资料</h5>
         <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/IOAA_2007_to_2019_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>IOAA 2007-2019理论&数据分析试题集</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2007_to_2019_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>IOAA 2007-2019理论&数据分析试题集</a></li>
         </ul>
       </div>
     </div>

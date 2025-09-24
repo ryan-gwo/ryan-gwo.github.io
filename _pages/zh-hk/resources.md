@@ -30,31 +30,8 @@ nav_order: 7
         
         <h5 class="mt-3 mb-2">2024-2025學年</h5>
         <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/CNAO_2025.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>決賽試題</a></li>
-          <li><a href="/assets/pdf/zh-cn/CNAO_2025_ans.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>決賽試題（含答案）</a></li>
-        </ul>
-        
-        <h5 class="mt-3 mb-2">2023-2024學年</h5>
-        <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/CNAO_2024.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>決賽試題</a></li>
-          <li><a href="/assets/pdf/zh-cn/CNAO_2024_ans.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>決賽試題（含答案）</a></li>
-        </ul>
-        
-        <h5 class="mt-3 mb-2">2022-2023學年</h5>
-        <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/CNAO_2023.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>決賽試題</a></li>
-          <li><a href="/assets/pdf/zh-cn/CNAO_2023_ans.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>決賽試題（含答案）</a></li>
-        </ul>
-        
-        <h5 class="mt-3 mb-2">2021-2022學年</h5>
-        <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/CNAO_2022.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>決賽試題</a></li>
-          <li><a href="/assets/pdf/zh-cn/CNAO_2022.mp4" target="_blank"><i class="fas fa-file-video text-primary me-2"></i>決賽試題視頻</a></li>
-        </ul>
-        
-        <h5 class="mt-3 mb-2">歷史資料</h5>
-        <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/CNAO_2002_to_2020.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>CNAO 2002-2020決賽&國家集訓隊選拔賽試題及部分解答</a></li>
+          <li><a href="/assets/pdf/zh-hk/CNAO_2025_hk.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>決賽試題</a></li>
+          <li><a href="/assets/pdf/zh-hk/CNAO_2025_ans_hk.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>決賽試題（含答案）</a></li>
         </ul>
       </div>
       

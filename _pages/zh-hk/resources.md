@@ -39,10 +39,10 @@ nav_order: 7
       <div class="col-md-6 mb-4">
         <h4><i class="fas fa-globe text-info me-2"></i>國際天文與天體物理奧林匹克競賽 (IOAA)</h4>
         
-        <h5 class="mt-3 mb-2">2025年</h5>
+        <h5 class="mt-3 mb-2">第十八屆（2025）</h5>
         <ul class="list-unstyled ps-3">
-          <li><a href="/assets/pdf/zh-cn/IOAA_2025_Theory_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理論試題</a></li>
-          <li><a href="/assets/pdf/zh-cn/IOAA_2025_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>數據分析試題</a></li>
+          <li><a href="/assets/pdf/zh-hk/IOAA_2025_Theory_hk.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理論試題</a></li>
+          <li><a href="/assets/pdf/zh-hk/IOAA_2025_Data_hk.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>數據分析試題</a></li>
         </ul>
       </div>
     </div>

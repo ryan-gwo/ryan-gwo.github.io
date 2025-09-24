@@ -122,7 +122,7 @@ toc:
 
   <!-- 竞赛材料 -->
   <section class="mt-5">
-    <h3><i class="fas fa-book text-success me-2"></i>竞赛材料</h3>
+    <h3><i class="fas fa-book text-info me-2"></i>竞赛材料</h3>
     <hr>
     <div class="row">
       <!-- GDC -->
@@ -155,6 +155,17 @@ toc:
         <h5 class="mt-3 mb-2">2024年</h5>
         <ul class="list-unstyled ps-3">
           <li><a href="/assets/pdf/zh-cn/Cosmology_handout.pdf" target="_blank"><i class="fas fa-file-powerpoint text-info me-2"></i>天文奥赛教程: 宇宙学基础</a></li>
+        </ul>
+      </div>
+
+      <!-- IOAA&IAO -->
+      <div class="col-md-6 mb-4">
+        <h4><i class="fas fa-globe text-primary me-2"></i>国际赛</h4>
+        
+        <h5 class="mt-3 mb-2">2022年</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/Introduction_to_International_Olympiads.pdf" target="_blank"><i class="fas fa-file-powerpoint text-info me-2"></i>国际天文奥赛——简介、解答题和题外话</a></li>
+          <li><a href="/assets/pdf/zh-cn/Handouts_2022_winter.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>国际天文奥赛——简介、解答题和题外话(讲义)</a></li>
         </ul>
       </div>
     </div>

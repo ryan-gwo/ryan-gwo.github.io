@@ -80,7 +80,27 @@ nav_order: 7
           <li><a href="/assets/pdf/zh-cn/IOAA_2023_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>数据分析试题</a></li>
           <li><a href="/assets/pdf/zh-cn/IOAA_2023_Observation_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>观测试题</a></li>
           <li><a href="/assets/pdf/zh-cn/IOAA_2023_Planetarium_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>天象厅试题</a></li>
-          <li><a href="/assets/pdf/zh-cn/IOAA_2023_Solutions_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-secondary me-2"></i>团队赛试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2023_Group_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-secondary me-2"></i>团队赛试题</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">第十五届（2022）</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IOAA_2022_Theory_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理论试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2022_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>数据分析试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2022_Observation_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>观测试题</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">第十四届（2021）</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IOAA_2021_Theory_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理论试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2021_Data_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>数据分析试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2021_Observation_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>观测（太阳物理）试题</a></li>
+          <li><a href="/assets/pdf/zh-cn/IOAA_2021_Group_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-secondary me-2"></i>团队赛试题</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">历史资料</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IOAA_2007_to_2019_zh.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>IOAA 2007-2019理论&数据分析试题集</a></li>
         </ul>
       </div>
     </div>

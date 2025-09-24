@@ -169,6 +169,19 @@ toc:
         </ul>
       </div>
     </div>
+
+    <div class="row">
+      <!-- SELF -->
+      <div class="col-md-6 mb-4">
+        <h4><i class="fas fa-user text-primary me-2"></i>自编材料</h4>
+        <p>无聊的时候写着玩的</p>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/Spherical_Trigonometry.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>球面三角</a></li>
+          <li><a href="/assets/pdf/zh-cn/HFAA_Trip_to_M31.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>套题—HFAA的M31之旅</a></li>
+          <li><a href="/assets/pdf/zh-cn/HFAA_Trip_to_M31_Solution.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>套题—HFAA的M31之旅(答案)</a></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- 学习笔记 -->

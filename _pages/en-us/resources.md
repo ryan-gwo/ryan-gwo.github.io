@@ -28,12 +28,35 @@ nav_order: 7
       <div class="col-md-6 mb-4">
         <h4><i class="fas fa-globe text-info me-2"></i>International Olympiad on Astronomy and Astrophysics (IOAA)</h4>
         
-        <h5 class="mt-3 mb-2">2024</h5>
+        <h5 class="mt-3 mb-2">2024 (17th)</h5>
         <ul class="list-unstyled ps-3">
           <li><a href="/assets/pdf/en-us/IOAA_2024_Theory.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>Theory Problems</a></li>
           <li><a href="/assets/pdf/en-us/IOAA_2024_Data_Analysis.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>Data Analysis Problems</a></li>
           <li><a href="/assets/pdf/en-us/IOAA_2024_Observation.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Observation Problems</a></li>
           <li><a href="/assets/pdf/en-us/IOAA_2024_Planetarium.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Planetarium Problems</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">2023 (16th)</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/en-us/IOAA_2023_Theory.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>Theory Problems</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2023_Data.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>Data Analysis Problems</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2023_Observation.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Observation Problems</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2023_Planetarium.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Planetarium Problems</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2023_Group.pdf" target="_blank"><i class="fas fa-file-pdf text-secondary me-2"></i>Group Problems</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">2022 (15th)</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/en-us/IOAA_2022_Theory.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>Theory Problems</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2022_Data_1_sol.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>Data Analysis Problem 1 with Solution</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2022_Data_2_sol.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>Data Analysis Problem 2 with Solution</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2022_Observation_Night.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Nighttime Observation Problems</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2022_Observation_Day.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Daytime Observation Problems</a></li>
+        </ul>
+
+        <h5 class="mt-3 mb-2">Historical Materials</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/en-us/IOAA Problem Book.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>IOAA Problem Book (2007-2021)</a></li>
         </ul>
       </div>
       

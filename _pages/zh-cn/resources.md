@@ -111,6 +111,11 @@ toc:
       <!-- IAO -->
       <div class="col-md-6 mb-4">
         <h4><i class="fas fa-globe text-primary me-2"></i>国际天文奥林匹克竞赛 (IAO)</h4>
+
+        <h5 class="mt-3 mb-2">2021年（IRAO）</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/zh-cn/IAO_2021_Theory.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>理论试题</a></li>
+        </ul>
         
         <h5 class="mt-3 mb-2">历史资料</h5>
         <ul class="list-unstyled ps-3">

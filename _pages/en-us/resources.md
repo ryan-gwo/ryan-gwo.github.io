@@ -66,6 +66,34 @@ nav_order: 7
         <p class="text-muted">CNAO materials are primarily in Chinese. Please refer to the Chinese versions of this site for detailed content.</p>
       </div>
     </div>
+
+    <div class="row">
+      <!-- IAO -->
+      <div class="col-md-6 mb-4">
+        <h4><i class="fas fa-globe text-info me-2"></i>International Astronomy Olympiad (IAO)</h4>
+        
+        <h5 class="mt-3 mb-2">2015 (20th)</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/en-us/IAO_2015_Theory_a.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>Theory Round for Group α</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Theory_b.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>Theory Round for Group β</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Theory_Sup1.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Supplementary Material 1 for Theory Round</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Theory_Sup2.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Supplementary Material 2 for Theory Round (Tab. of Const.)</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Theory_Sup3.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Supplementary Material 3 for Theory Round</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Theory_Sup4.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Supplementary Material 4 for Theory Round</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Theory_Sup5.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Supplementary Material 5 for Theory Round (HR Diag. for Group β)</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Practical_a.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>Practical Round for Group α</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Practical_b.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>Practical Round for Group β</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Practical_Sup1.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Supplementary Material 1 for Practical Round (Group β)</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Observation_Planetarium.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Observational Round (Planetarium)</a></li>
+          <li><a href="/assets/pdf/en-us/IAO_2015_Observation_Cloudy.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Observational Round (Cloudy Sky)</a></li>
+        </ul>
+      </div>
+      
+      <!-- APAO -->
+      <div class="col-md-6 mb-4">
+        <h4><i class="fas fa-globe text-primary me-2"></i>Asian-Pacific Astronomy Olympiad (APAO)</h4>
+      </div>
+    </div>
   </section>
 
   <!-- Study Notes -->

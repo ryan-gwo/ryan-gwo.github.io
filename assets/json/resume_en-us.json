@@ -32,7 +32,7 @@
       "startDate": "2026-09-01",
       "endDate": "2031-06-01",
       "score": "10",
-      "courses": ["General Relativity"]
+      "courses": ["Not yet available"]
     },
     {
       "institution": "Wuhan University",
@@ -43,7 +43,7 @@
       "startDate": "2022-09-01",
       "endDate": "2026-06-01",
       "score": "10",
-      "courses": ["General Physics"]
+      "courses": ["General Physics","Theoretical Mechanics","Electrodynamics","Quantum Mechanics","Statistical Physics","Mathematical Methods for Physicists","Group Theory","General Astronomy","Astrophysics"]
     }
   ],
   "awards": [

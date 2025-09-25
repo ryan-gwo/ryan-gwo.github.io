@@ -24,7 +24,7 @@
   },
   "education": [
     {
-      "institution": "Peking University, Beijing, China",
+      "institution": "Peking University",
       "location": "Beijing, China",
       "url": "https://www.pku.edu.cn/",
       "area": "Astrophysics",
@@ -35,7 +35,7 @@
       "courses": ["General Relativity"]
     },
     {
-      "institution": "Wuhan University, Wuhan, China",
+      "institution": "Wuhan University",
       "location": "Wuhan, China",
       "url": "https://www.whu.edu.cn/",
       "area": "Physics",

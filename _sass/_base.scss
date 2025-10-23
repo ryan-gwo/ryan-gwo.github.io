@@ -2,10 +2,25 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
-// Typography
+// Typography with language-specific fonts
 
 body {
-  font-family: 'Noto Serif HK', 'Noto Serif TC', 'Noto Serif SC', serif;
+  font-family: 'Noto Serif TC', serif; // Default fallback
+}
+
+// Hong Kong Traditional Chinese
+html[lang="zh-hk"] body {
+  font-family: 'Noto Serif HK', 'Noto Serif TC', serif;
+}
+
+// Mainland Simplified Chinese
+html[lang="zh-cn"] body {
+  font-family: 'Noto Serif SC', 'Noto Serif TC', serif;
+}
+
+// English
+html[lang="en-us"] body {
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 p,
@@ -21,7 +36,7 @@ li,
 span,
 strong {
   color: var(--global-text-color);
-  font-family: 'Noto Serif HK', 'Noto Serif TC', 'Noto Serif SC', serif;
+  font-family: inherit; // Inherit from body based on language
 }
 
 hr {

@@ -5,19 +5,19 @@
 // Typography with language-specific fonts
 
 body {
-  font-family: 'Noto Serif TC', serif; // Default fallback
+  font-family: Georgia, 'Times New Roman', 'Noto Serif TC', serif; // Default fallback with Latin first
   font-weight: 400; // Normal weight
   font-size: 1.1rem; // Increase base font size (was 1rem)
 }
 
-// Hong Kong Traditional Chinese - using Chiron Sung HK
+// Hong Kong Traditional Chinese - Latin fonts first, then Chinese fonts
 html[lang="zh-hk"] body {
-  font-family: 'Chiron Sung HK', 'Chiron Sung HK WS', 'Noto Serif TC', serif;
+  font-family: Georgia, 'Times New Roman', 'Chiron Sung HK', 'Chiron Sung HK WS', 'Noto Serif TC', serif;
 }
 
-// Mainland Simplified Chinese
+// Mainland Simplified Chinese - Latin fonts first, then Chinese fonts
 html[lang="zh-cn"] body {
-  font-family: 'Noto Serif SC', 'Noto Serif TC', serif;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif SC', 'Noto Serif TC', serif;
 }
 
 // English

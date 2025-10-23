@@ -27,6 +27,17 @@ nav_order: 7
       <!-- IOAA -->
       <div class="col-md-6 mb-4">
         <h4><i class="fas fa-globe text-info me-2"></i>International Olympiad on Astronomy and Astrophysics (IOAA)</h4>
+
+        <h5 class="mt-3 mb-2">2025 (18th)</h5>
+        <ul class="list-unstyled ps-3">
+          <li><a href="/assets/pdf/en-us/IOAA_2025_Data_Sheet.pdf" target="_blank"><i class="fas fa-file-pdf text-secondary me-2"></i>Data Sheet</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2025_Theory.pdf" target="_blank"><i class="fas fa-file-pdf text-danger me-2"></i>Theory Bundle</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2025_Data_Analysis.pdf" target="_blank"><i class="fas fa-file-pdf text-warning me-2"></i>Data Analysis Bundle</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2025_Observation_Map.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Observation (Sky Map) Bundle</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2025_Observation_Telescope.pdf" target="_blank"><i class="fas fa-file-pdf text-info me-2"></i>Observation (Telescope) Bundle</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2025_Observation_Planetarium.pdf" target="_blank"><i class="fas fa-file-pdf text-success me-2"></i>Observation (Planetarium) Bundle</a></li>
+          <li><a href="/assets/pdf/en-us/IOAA_2025_Group.pdf" target="_blank"><i class="fas fa-file-pdf text-secondary me-2"></i>Group Bundle</a></li>
+        </ul>
         
         <h5 class="mt-3 mb-2">2024 (17th)</h5>
         <ul class="list-unstyled ps-3">

@@ -7,11 +7,12 @@
 body {
   font-family: 'Noto Serif TC', serif; // Default fallback
   font-weight: 400; // Normal weight
+  font-size: 1.1rem; // Increase base font size (was 1rem)
 }
 
-// Hong Kong Traditional Chinese
+// Hong Kong Traditional Chinese - using Chiron Sung HK
 html[lang="zh-hk"] body {
-  font-family: 'Noto Serif HK', 'Noto Serif TC', serif;
+  font-family: 'Chiron Sung HK', 'Chiron Sung HK WS', 'Noto Serif TC', serif;
 }
 
 // Mainland Simplified Chinese
@@ -37,6 +38,11 @@ li,
 span {
   color: var(--global-text-color);
   font-family: inherit; // Inherit from body based on language
+}
+
+// Paragraph spacing and line height for better readability
+p {
+  line-height: 1.8; // Increase line height for better readability
 }
 
 // Ensure headings have proper weight

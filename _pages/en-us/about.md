@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I'm Yuze Guo, currently a physics undergraduate student at the [School of Physics and Technology](http://physics.whu.edu.cn/), [Wuhan University](https://whu.edu.cn). Before this, I have completed both my middle and high school studies at [The Affiliated High School of South China Normal University](https://www.hsfz.net.cn/homepage/index.jsp) as a member of the Physics Olympiad Group. I expect to pursue my PhD degree in astrophysics at Peking University starting from fall 2026.
+Hi! I'm Yuze Guo, currently a physics undergraduate student at the [School of Physics and Technology](http://physics.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn). Before this, I have completed both my middle and high school studies at [The Affiliated High School of South China Normal University](https://www.hsfz.net.cn/homepage/index.jsp) as a member of the Physics Olympiad Group. I expect to pursue my PhD degree in astrophysics at the [Department of Astronomy](https://astro.pku.edu.cn), [School of Physics](https://english.phy.pku.edu.cn), [Peking University](https://english.pku.edu.cn) starting from fall 2026.
 
 My research interest lies in high energy astrophysics, specifically, the study of gravitational waves, cosmology, and multi-messenger astronomy.
 

@@ -2,15 +2,15 @@
 
 ## 1. Visual Theme & Atmosphere
 
-Apple's website is a masterclass in controlled drama — vast expanses of pure black and near-white serve as cinematic backdrops for products that are photographed as if they were sculptures in a gallery. The design philosophy is reductive to its core: every pixel exists in service of the product, and the interface itself retreats until it becomes invisible. This is not minimalism as aesthetic preference; it is minimalism as reverence for the object.
+Apple's website is a masterclass in controlled drama — but in modern releases, that drama is mostly carried by light, airy canvases and restrained contrast. Large pure-black sections are now used more selectively, mainly for professional products or deep technical storytelling. The design philosophy is reductive to its core: every pixel exists in service of the product, and the interface itself retreats until it becomes invisible.
 
 The typography anchors everything. San Francisco (SF Pro Display for large sizes, SF Pro Text for body) is Apple's proprietary typeface, engineered with optical sizing that automatically adjusts letterforms depending on point size. At display sizes (56px), weight 600 with a tight line-height of 1.07 and subtle negative letter-spacing (-0.28px) creates headlines that feel machined rather than typeset — precise, confident, and unapologetically direct. At body sizes (17px), the tracking loosens slightly (-0.374px) and line-height opens to 1.47, creating a reading rhythm that is comfortable without ever feeling slack.
 
-The color story is starkly binary. Product sections alternate between pure black (`#000000`) backgrounds with white text and light gray (`#f5f5f7`) backgrounds with near-black text (`#1d1d1f`). This creates a cinematic pacing — dark sections feel immersive and premium, light sections feel open and informational. The only chromatic accent is Apple Blue (`#0071e3`), reserved exclusively for interactive elements: links, buttons, and focus states. This singular accent color in a sea of neutrals gives every clickable element unmistakable visibility.
+The color story is now predominantly light. Most pages and sections lean on white (`#ffffff`) and soft light gray (`#f5f5f7`) with near-black text (`#1d1d1f`) for clarity and readability. Dark/black sections still exist, but are reserved for high-end or professional product narratives where dramatic contrast is intentional. The only chromatic accent remains Apple Blue (`#0071e3`), reserved for interactive elements: links, buttons, and focus states.
 
 **Key Characteristics:**
 - SF Pro Display/Text with optical sizing — letterforms adapt automatically to size context
-- Binary light/dark section rhythm: black (`#000000`) alternating with light gray (`#f5f5f7`)
+- Light-first section rhythm: white/light gray as default, black used selectively for pro storytelling
 - Single accent color: Apple Blue (`#0071e3`) reserved exclusively for interactive elements
 - Product-as-hero photography on solid color fields — no gradients, no textures, no distractions
 - Extremely tight headline line-heights (1.07-1.14) creating compressed, billboard-like impact
@@ -21,8 +21,8 @@ The color story is starkly binary. Product sections alternate between pure black
 ## 2. Color Palette & Roles
 
 ### Primary
-- **Pure Black** (`#000000`): Hero section backgrounds, immersive product showcases. The darkest canvas for the brightest products.
-- **Light Gray** (`#f5f5f7`): Alternate section backgrounds, informational areas. Not white — the slight blue-gray tint prevents sterility.
+- **Pure Black** (`#000000`): Reserved backgrounds for pro-level product moments and high-contrast storytelling.
+- **Light Gray** (`#f5f5f7`): Primary alternate section background for most informational areas.
 - **Near Black** (`#1d1d1f`): Primary text on light backgrounds, dark button fills. Slightly warmer than pure black for comfortable reading.
 
 ### Interactive
@@ -146,13 +146,13 @@ The color story is starkly binary. Product sections alternate between pure black
 - Hover: no standard hover state — cards are static, links within them are interactive
 
 ### Navigation
-- Background: `rgba(0, 0, 0, 0.8)` (translucent dark) with `backdrop-filter: saturate(180%) blur(20px)`
+- Background: `rgba(255, 255, 255, 0.72)` (translucent light) with `backdrop-filter: saturate(170%) blur(12px)`
 - Height: 48px (compact)
-- Text: `#ffffff` at 12px, weight 400
+- Text: `#1d1d1f` at 12px, weight 400
 - Active: underline on hover
 - Logo: Apple logomark (SVG) centered or left-aligned, 17x48px viewport
 - Mobile: collapses to hamburger with full-screen overlay menu
-- The nav floats above content, maintaining its dark translucent glass regardless of section background
+- The nav floats above content as a light glass layer, preserving clarity on light-first pages
 
 ### Image Treatment
 - Products on solid-color fields (black or white) — no backgrounds, no context, just the object
@@ -195,7 +195,7 @@ The color story is starkly binary. Product sections alternate between pure black
 
 ### Whitespace Philosophy
 - **Cinematic breathing room**: Each product section occupies a full viewport height (or close to it). The whitespace between products is not empty — it is the pause between scenes in a film.
-- **Vertical rhythm through color blocks**: Rather than using spacing alone to separate sections, Apple uses alternating background colors (black, `#f5f5f7`, white). Each color change signals a new "scene."
+- **Vertical rhythm through subtle tone shifts**: Rather than dramatic dark/light flips, modern Apple pages mostly use white and light gray transitions. Black sections are occasional emphasis scenes.
 - **Compression within, expansion between**: Text blocks are tightly set (negative letter-spacing, tight line-heights) while the space surrounding them is vast. This creates a tension between density and openness.
 
 ### Border Radius Scale
@@ -211,7 +211,7 @@ The color story is starkly binary. Product sections alternate between pure black
 | Level                 | Treatment                                                    | Use                                        |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------ |
 | Flat (Level 0)        | No shadow, solid background                                  | Standard content sections, text blocks     |
-| Navigation Glass      | `backdrop-filter: saturate(180%) blur(20px)` on `rgba(0,0,0,0.8)` | Sticky navigation bar — the glass effect   |
+| Navigation Glass      | `backdrop-filter: saturate(170%) blur(12px)` on `rgba(255,255,255,0.72)` | Sticky navigation bar — the light glass effect   |
 | Subtle Lift (Level 1) | `rgba(0, 0, 0, 0.22) 3px 5px 30px 0px`                       | Product cards, floating elements           |
 | Media Control         | `rgba(210, 210, 215, 0.64)` background with scale transforms | Play/pause buttons, carousel controls      |
 | Focus (Accessibility) | `2px solid #0071e3` outline                                  | Keyboard focus on all interactive elements |

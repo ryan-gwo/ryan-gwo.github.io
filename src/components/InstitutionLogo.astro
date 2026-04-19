@@ -1,0 +1,22 @@
+---
+const { institution } = Astro.props;
+
+const logos = {
+  whu: {
+    src: '/assets/logos/whu.png',
+  },
+  pku: {
+    src: '/assets/logos/pku.png',
+  },
+  hsfz: {
+    src: '/assets/logos/hsfz.png',
+  },
+};
+
+const logo = logos[institution];
+---
+
+<span class:list={['institution-logo', logo ? '' : 'institution-logo--text-only']}>
+  {logo && <img class="institution-logo__mark" src={logo.src} alt="" aria-hidden="true" />}
+  <span class="institution-logo__label"><slot /></span>
+</span>

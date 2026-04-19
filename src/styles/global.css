@@ -210,6 +210,31 @@ img {
     vertical-align: -0.12em;
 }
 
+.institution-logo {
+    margin-left: 0.28em;
+    display: inline;
+    white-space: nowrap;
+}
+
+.institution-logo__mark {
+    display: inline-block;
+    width: 1.05em;
+    height: 1.05em;
+    object-fit: contain;
+    flex: none;
+    vertical-align: -0.12em;
+    margin-right: 0.08em;
+}
+
+.institution-logo--text-only .institution-logo__mark {
+    display: none;
+}
+
+.institution-logo__label {
+    font: inherit;
+    line-height: inherit;
+}
+
 .lang-switcher a {
     opacity: 0.65;
 }

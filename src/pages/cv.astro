@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
+import InstitutionLogo from '../components/InstitutionLogo.astro';
 ---
 
 <BaseLayout title="CV" description="Curriculum Vitae" locale="en">
@@ -14,7 +15,7 @@ import Icon from '../components/Icon.astro';
 
       <div class="cv-hero-meta">
         <span class="cv-pill">Yuze Guo</span>
-        <span class="cv-pill">Wuhan University</span>
+        <span class="cv-pill"><InstitutionLogo institution="whu">Wuhan University</InstitutionLogo></span>
         <span class="cv-pill">Astrophysics</span>
       </div>
 
@@ -29,14 +30,14 @@ import Icon from '../components/Icon.astro';
     <div class="container">
       <h2 class="section-title">Academic Profile</h2>
       <p class="section-intro">
-        Physics undergraduate at Wuhan University, with long-term academic focus on astrophysics, cosmology, and gravitational waves.
+        Physics undergraduate at <InstitutionLogo institution="whu">Wuhan University</InstitutionLogo>, with long-term academic focus on astrophysics, cosmology, and gravitational waves.
       </p>
 
       <div class="cv-grid">
         <div class="cv-card">
           <h3>Current Position</h3>
           <p>
-            Undergraduate student majoring in Physics at the School of Physics and Technology, Wuhan University.
+            Undergraduate student majoring in Physics at the School of Physics and Technology, <InstitutionLogo institution="whu">Wuhan University</InstitutionLogo>.
           </p>
           <p class="cv-subtle">
             Email: guoyuze@whu.edu.cn<br />
@@ -67,7 +68,7 @@ import Icon from '../components/Icon.astro';
 
       <div class="cv-grid">
         <div class="cv-card dark">
-          <h3>Peking University</h3>
+          <h3><InstitutionLogo institution="pku">Peking University</InstitutionLogo></h3>
           <p class="cv-subtle">PhD in Astrophysics · Beijing · Expected from Fall 2026</p>
           <p>
             Planned doctoral study at the Department of Astronomy, School of Physics.
@@ -75,7 +76,7 @@ import Icon from '../components/Icon.astro';
         </div>
 
         <div class="cv-card dark">
-          <h3>Wuhan University</h3>
+          <h3><InstitutionLogo institution="whu">Wuhan University</InstitutionLogo></h3>
           <p class="cv-subtle">BSc in Physics · Wuhan · 2022–2026</p>
           <p>
             Coursework includes General Physics, Theoretical Mechanics, Electrodynamics, Quantum Mechanics,

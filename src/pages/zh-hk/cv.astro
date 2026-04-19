@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
+import InstitutionLogo from '../../components/InstitutionLogo.astro';
 ---
 
 <BaseLayout title="履歷" description="個人履歷" locale="zh-hk">
@@ -14,7 +15,7 @@ import Icon from '../../components/Icon.astro';
 
       <div class="cv-hero-meta">
         <span class="cv-pill">郭雨澤</span>
-        <span class="cv-pill">武漢大學</span>
+        <span class="cv-pill"><InstitutionLogo institution="whu">武漢大學</InstitutionLogo></span>
         <span class="cv-pill">天體物理方向</span>
       </div>
 
@@ -29,14 +30,14 @@ import Icon from '../../components/Icon.astro';
     <div class="container">
       <h2 class="section-title">學術概況</h2>
       <p class="section-intro">
-        目前就讀於武漢大學物理學專業，長期關注天體物理、宇宙學與引力波相關問題。
+        目前就讀於<InstitutionLogo institution="whu">武漢大學</InstitutionLogo>物理學專業，長期關注天體物理、宇宙學與引力波相關問題。
       </p>
 
       <div class="cv-grid">
         <div class="cv-card">
           <h3>當前身份</h3>
           <p>
-            武漢大學物理科學與技術學院物理學專業本科生。
+            <InstitutionLogo institution="whu">武漢大學</InstitutionLogo>物理科學與技術學院物理學專業本科生。
           </p>
           <p class="cv-subtle">
             郵箱：guoyuze@whu.edu.cn<br />
@@ -67,7 +68,7 @@ import Icon from '../../components/Icon.astro';
 
       <div class="cv-grid">
         <div class="cv-card dark">
-          <h3>北京大學</h3>
+          <h3><InstitutionLogo institution="pku">北京大學</InstitutionLogo></h3>
           <p class="cv-subtle">天體物理學博士 · 北京 · 預計 2026 年秋季起</p>
           <p>
             計劃在北京大學物理學院天文學系繼續攻讀天體物理博士學位。
@@ -75,7 +76,7 @@ import Icon from '../../components/Icon.astro';
         </div>
 
         <div class="cv-card dark">
-          <h3>武漢大學</h3>
+          <h3><InstitutionLogo institution="whu">武漢大學</InstitutionLogo></h3>
           <p class="cv-subtle">物理學學士 · 武漢 · 2022–2026</p>
           <p>
             核心課程包括普通物理、理論力學、電動力學、量子力學、統計物理、數學物理方法、群論、普通天文學與天體物理。

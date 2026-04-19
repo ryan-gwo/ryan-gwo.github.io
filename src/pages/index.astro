@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
+import InstitutionLogo from '../components/InstitutionLogo.astro';
 ---
 
 <BaseLayout
@@ -37,14 +38,13 @@ import Icon from '../components/Icon.astro';
         <div class="about-copy">
           <p>
             Hi! I’m Yuze Guo, currently a physics undergraduate student at the School of Physics and Technology,
-            Wuhan University.
+            <InstitutionLogo institution="whu">Wuhan University</InstitutionLogo>.
           </p>
           <p>
-            Before this, I completed both my middle and high school studies at The Affiliated High School
-            of South China Normal University as a member of the Physics Olympiad Group.
+            Before this, I completed both my middle and high school studies at <InstitutionLogo institution="hsfz">The Affiliated High School of South China Normal University</InstitutionLogo> as a member of the Physics Olympiad Group.
           </p>
           <p>
-            I expect to pursue my PhD degree in astrophysics at Peking University starting from fall 2026.
+            I expect to pursue my PhD degree in astrophysics at <InstitutionLogo institution="pku">Peking University</InstitutionLogo> starting from fall 2026.
             My research interest lies in high energy astrophysics, specifically gravitational waves,
             cosmology, and multi-messenger astronomy.
           </p>

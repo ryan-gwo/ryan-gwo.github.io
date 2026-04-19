@@ -3,21 +3,169 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="CV" description="Curriculum Vitae" locale="en">
-  <section class="section-light article-page">
-    <div class="container article-body">
-      <h1>CV</h1>
-      <div class="article-description">
-        My CV is listed here for reference. A formatted PDF version is also available for download.
-      </div>
-
-      <div class="cv-actions" style="justify-content:flex-start; margin: 28px 0 40px;">
-        <a class="button button-primary" href="/cv/cv_en.pdf" target="_blank" rel="noreferrer">Download PDF</a>
-      </div>
-
-      <p>
-        This page is the dedicated CV page for the English site. You can later replace this placeholder
-        with a full HTML version of your CV if you want.
+  <section class="section-dark hero">
+    <div class="container">
+      <p class="eyebrow">Curriculum Vitae</p>
+      <h1>Physics undergraduate focused on astrophysics, gravitational waves, and cosmology.</h1>
+      <p class="lead">
+        A redesigned CV page based on the original site content, presented in the Apple-inspired visual system.
       </p>
+
+      <div class="cv-hero-meta">
+        <span class="cv-pill">Yuze Guo</span>
+        <span class="cv-pill">Wuhan University</span>
+        <span class="cv-pill">Astrophysics</span>
+      </div>
+
+      <div class="actions">
+        <a class="button button-primary" href="/assets/pdf/en-us/cv_en.pdf" target="_blank" rel="noreferrer">Download PDF</a>
+        <a class="button button-link" href="/">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">Academic Profile</h2>
+      <p class="section-intro">
+        Physics undergraduate at Wuhan University, with long-term academic focus on astrophysics, cosmology, and gravitational waves.
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card">
+          <h3>Current Position</h3>
+          <p>
+            Undergraduate student majoring in Physics at the School of Physics and Technology, Wuhan University.
+          </p>
+          <p class="cv-subtle">
+            Email: guoyuze@whu.edu.cn<br />
+            Phone: (+86) 136-5075-9277<br />
+            Website: https://ryan-gwo.github.io/
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>Research Interests</h3>
+          <p>
+            High-energy astrophysics, especially gravitational waves, cosmology, and multi-messenger astronomy.
+          </p>
+          <p>
+            Systematic astronomy learning began in high school through HFAA activities, later extended into national and international olympiad competition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <p class="section-intro light">
+        Formal education trajectory reconstructed from the original resume data.
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card dark">
+          <h3>Peking University</h3>
+          <p class="cv-subtle">PhD in Astrophysics · Beijing · Expected from Fall 2026</p>
+          <p>
+            Planned doctoral study at the Department of Astronomy, School of Physics.
+          </p>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>Wuhan University</h3>
+          <p class="cv-subtle">BSc in Physics · Wuhan · 2022–2026</p>
+          <p>
+            Coursework includes General Physics, Theoretical Mechanics, Electrodynamics, Quantum Mechanics,
+            Statistical Physics, Mathematical Methods for Physicists, Group Theory, General Astronomy, and Astrophysics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">Honors & Awards</h2>
+      <p class="section-intro">
+        Selected awards recorded across the original resume and About page.
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card">
+          <h3>National Scholarship</h3>
+          <p class="cv-subtle">Ministry of Education of the People’s Republic of China · 2024</p>
+          <p>
+            National-level scholarship awarded for outstanding undergraduate academic performance and comprehensive development.
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>Annual Scholarship of National Astronomical Observatories, CAS</h3>
+          <p class="cv-subtle">National Astronomical Observatories, Chinese Academy of Sciences · 2024</p>
+          <p>
+            Scholarship awarded to outstanding undergraduate students in astronomy and related disciplines.
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>CNAO 2020 Gold Medal</h3>
+          <p class="cv-subtle">National Astronomy Olympiad</p>
+          <p>
+            Gold medal in a national astronomy olympiad competition.
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>IOAA 2021 Gold Medal</h3>
+          <p class="cv-subtle">International Olympiad on Astronomy and Astrophysics</p>
+          <p>
+            Gold medal in an international astronomy olympiad competition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">Skills & Languages</h2>
+      <p class="section-intro light">
+        A final section for the core capabilities retained from the original CV data.
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card dark">
+          <h3>Technical Skills</h3>
+          <ul class="cv-list">
+            <li>LaTeX — document preparation, academic writing, typesetting, bibliographies</li>
+          </ul>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>Languages</h3>
+          <ul class="cv-list">
+            <li>Chinese — Native speaker</li>
+            <li>English — Fluent</li>
+          </ul>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>Focus Areas</h3>
+          <ul class="cv-list">
+            <li>Astronomy</li>
+            <li>Astrophysics</li>
+            <li>Cosmology</li>
+            <li>Gravitational Waves</li>
+          </ul>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>Location</h3>
+          <p>Wuhan, Hubei, China</p>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

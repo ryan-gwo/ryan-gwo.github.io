@@ -473,3 +473,89 @@ img {
     line-height: 1.6;
     color: var(--muted-dark);
 }
+
+.cv-hero-meta {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cv-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 6px 12px;
+    border-radius: 980px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+
+.cv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cv-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+}
+
+.cv-card.dark {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    box-shadow: none;
+}
+
+.cv-card h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+
+.cv-card p {
+    margin: 0 0 12px;
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: -0.022em;
+    color: var(--muted-dark);
+}
+
+.cv-card.dark p,
+.cv-card.dark li,
+.cv-card.dark .cv-subtle {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.cv-subtle {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted-dark);
+}
+
+.cv-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.cv-list li {
+    margin: 8px 0;
+    font-size: 17px;
+    line-height: 1.55;
+    letter-spacing: -0.022em;
+}
+
+@media (max-width: 900px) {
+    .cv-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -3,20 +3,168 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="履歷" description="個人履歷" locale="zh-hk">
-  <section class="section-light article-page">
-    <div class="container article-body">
-      <h1>履歷</h1>
-      <div class="article-description">
-        這裡是繁體版網站對應的履歷頁，也提供 PDF 版本下載。
-      </div>
-
-      <div class="cv-actions" style="justify-content:flex-start; margin: 28px 0 40px;">
-        <a class="button button-primary" href="/cv/cv_hk.pdf" target="_blank" rel="noreferrer">下載 PDF</a>
-      </div>
-
-      <p>
-        這個頁面是繁體站點的專用履歷頁。之後如果需要，也可以再把 PDF 內容整理成 HTML 版線上履歷。
+  <section class="section-dark hero">
+    <div class="container">
+      <p class="eyebrow">個人履歷</p>
+      <h1>聚焦天體物理、引力波與宇宙學的物理學本科生。</h1>
+      <p class="lead">
+        基於原網站內容重新整理的履歷頁面，並按 DESIGN.md 所要求的 Apple 風格重新組織。
       </p>
+
+      <div class="cv-hero-meta">
+        <span class="cv-pill">郭雨澤</span>
+        <span class="cv-pill">武漢大學</span>
+        <span class="cv-pill">天體物理方向</span>
+      </div>
+
+      <div class="actions">
+        <a class="button button-primary" href="/assets/pdf/zh-hk/cv_hk.pdf" target="_blank" rel="noreferrer">下載 PDF</a>
+        <a class="button button-link" href="/zh-hk/">返回首頁</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">學術概況</h2>
+      <p class="section-intro">
+        目前就讀於武漢大學物理學專業，長期關注天體物理、宇宙學與引力波相關問題。
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card">
+          <h3>當前身份</h3>
+          <p>
+            武漢大學物理科學與技術學院物理學專業本科生。
+          </p>
+          <p class="cv-subtle">
+            郵箱：guoyuze@whu.edu.cn<br />
+            電話：(+86) 136-5075-9277<br />
+            個人網站：https://ryan-gwo.github.io/
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>研究興趣</h3>
+          <p>
+            主要興趣為高能天體物理，尤其包括引力波、宇宙學與多信使天文學。
+          </p>
+          <p>
+            高中階段即通過華附天文社相關活動開始系統學習天文學，之後進一步參加國家級與國際級天文奧賽。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">教育經歷</h2>
+      <p class="section-intro light">
+        根據原始履歷與個人主頁內容重新整理。
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card dark">
+          <h3>北京大學</h3>
+          <p class="cv-subtle">天體物理學博士 · 北京 · 預計 2026 年秋季起</p>
+          <p>
+            計劃在北京大學物理學院天文學系繼續攻讀天體物理博士學位。
+          </p>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>武漢大學</h3>
+          <p class="cv-subtle">物理學學士 · 武漢 · 2022–2026</p>
+          <p>
+            核心課程包括普通物理、理論力學、電動力學、量子力學、統計物理、數學物理方法、群論、普通天文學與天體物理。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">榮譽與獎項</h2>
+      <p class="section-intro">
+        選取原履歷和 About 頁面中的主要獎項信息。
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card">
+          <h3>國家獎學金</h3>
+          <p class="cv-subtle">中華人民共和國教育部 · 2024</p>
+          <p>
+            面向普通高校特別優秀學生設立的國家級獎學金。
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>中國科學院國家天文台獎學金</h3>
+          <p class="cv-subtle">中國科學院國家天文台 · 2024</p>
+          <p>
+            面向天文及相關專業優秀本科生設立的專項獎學金。
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>CNAO 2020 金牌</h3>
+          <p class="cv-subtle">全國中學生天文知識競賽</p>
+          <p>
+            在國家級天文奧賽中獲得金牌。
+          </p>
+        </div>
+
+        <div class="cv-card">
+          <h3>IOAA 2021 金牌</h3>
+          <p class="cv-subtle">國際天文與天體物理奧林匹克競賽</p>
+          <p>
+            在國際天文奧賽中獲得金牌。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">技能與語言</h2>
+      <p class="section-intro light">
+        保留原履歷中的核心能力信息，但以更簡潔的展示方式呈現。
+      </p>
+
+      <div class="cv-grid">
+        <div class="cv-card dark">
+          <h3>技能</h3>
+          <ul class="cv-list">
+            <li>LaTeX —— 文檔準備、學術寫作、排版、參考文獻整理</li>
+          </ul>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>語言能力</h3>
+          <ul class="cv-list">
+            <li>漢語 —— 母語</li>
+            <li>英語 —— 流利</li>
+          </ul>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>關注領域</h3>
+          <ul class="cv-list">
+            <li>天文學</li>
+            <li>天體物理學</li>
+            <li>宇宙學</li>
+            <li>引力波</li>
+          </ul>
+        </div>
+
+        <div class="cv-card dark">
+          <h3>所在地</h3>
+          <p>中國湖北武漢</p>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

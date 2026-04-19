@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
+import rehypeMathjax from 'rehype-mathjax/chtml';
 
 export default defineConfig({
   site: 'https://ryan-gwo.github.io',
@@ -13,6 +13,14 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [[rehypeMathjax, {
+      tex: {
+        tags: 'ams',
+        packages: { '[+]': ['boldsymbol'] },
+      },
+      chtml: {
+        fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
+      },
+    }]],
   },
 });

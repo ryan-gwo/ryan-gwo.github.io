@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Ryan Guo"
+  description="Ryan Guo's personal website"
+  locale="en"
+>
+  <section class="section-dark hero">
+    <div class="container">
+      <p class="eyebrow">Physics • Gravitational Waves • X-ray Polarization</p>
+      <h1>Researching compact objects, strong gravity, and the signals they leave behind.</h1>
+      <p class="lead">
+        I am Ryan Guo, a physics student at Wuhan University. This site presents my
+        research interests, selected work, and writing in a cleaner Apple-inspired format.
+      </p>
+      <div class="actions">
+        <a class="button button-primary" href="#research">Research</a>
+        <a class="button button-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <p class="section-intro">
+        My current interests include gravitational-wave astronomy, compact objects,
+        neutron stars, X-ray polarization, and strong-field astrophysics.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Gravitational Waves</h3>
+          <p>
+            Continuous gravitational waves, compact stars, and the astrophysical
+            information encoded in long-duration signals.
+          </p>
+        </div>
+        <div class="card">
+          <h3>X-ray Polarization</h3>
+          <p>
+            Black hole X-ray binaries, disk–corona geometry, QPO-related phenomena,
+            and polarization signatures from high-energy observations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing" class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">Writing</h2>
+      <p class="section-intro" style="color: rgba(255,255,255,0.72);">
+        I also write about astronomy, physics, and ideas that connect scientific
+        research with broader intellectual curiosity.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section-light content-section">
+    <div class="container contact-box">
+      <h2 class="section-title">Contact</h2>
+      <p>
+        You can reach me through GitHub for now, and I will add email / CV / selected
+        publications in the next iteration.
+      </p>
+      <p>
+        <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub Profile</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

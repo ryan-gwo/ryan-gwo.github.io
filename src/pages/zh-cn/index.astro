@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Ryan Guo"
+  description="Ryan Guo 的个人网站"
+  locale="zh-cn"
+>
+  <section class="section-dark hero">
+    <div class="container">
+      <p class="eyebrow">物理学 • 引力波 • X射线偏振</p>
+      <h1>关注致密天体、强引力，以及它们留下的可观测信号。</h1>
+      <p class="lead">
+        我是郭雨泽，武汉大学物理学专业学生。这个网站将以更简洁的 Apple 风格展示我的研究兴趣、代表性工作与写作。
+      </p>
+      <div class="actions">
+        <a class="button button-primary" href="#research">研究</a>
+        <a class="button button-link" href="#contact">联系</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">研究</h2>
+      <p class="section-intro">
+        目前主要关注引力波天文学、致密天体、中子星、黑洞X射线双星、X射线偏振以及强场天体物理中的相关问题。
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>引力波</h3>
+          <p>
+            包括连续引力波、致密星相关源以及长时间尺度信号中所携带的天体物理信息。
+          </p>
+        </div>
+        <div class="card">
+          <h3>X射线偏振</h3>
+          <p>
+            包括黑洞X射线双星、盘—冕结构、QPO相关现象，以及高能观测中的偏振特征。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing" class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">写作</h2>
+      <p class="section-intro" style="color: rgba(255,255,255,0.72);">
+        除研究之外，我也写一些关于天文学、物理学以及科学与思想之间联系的文字。
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section-light content-section">
+    <div class="container contact-box">
+      <h2 class="section-title">联系</h2>
+      <p>
+        当前可以先通过 GitHub 联系我；后续我会继续加入邮箱、CV 与代表性论文页面。
+      </p>
+      <p>
+        <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub 主页</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

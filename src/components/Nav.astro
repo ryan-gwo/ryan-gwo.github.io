@@ -1,0 +1,56 @@
+---
+const { locale = 'en' } = Astro.props;
+
+const homeHref = locale === 'en' ? '/' : `/${locale}/`;
+
+const text = {
+  'en': {
+    research: 'Research',
+    writing: 'Writing',
+    contact: 'Contact',
+    en: 'EN',
+    zhcn: '简',
+    zhhk: '繁',
+  },
+  'zh-cn': {
+    research: '研究',
+    writing: '写作',
+    contact: '联系',
+    en: 'EN',
+    zhcn: '简',
+    zhhk: '繁',
+  },
+  'zh-hk': {
+    research: '研究',
+    writing: '寫作',
+    contact: '聯絡',
+    en: 'EN',
+    zhcn: '简',
+    zhhk: '繁',
+  },
+}[locale];
+
+const langLinks = {
+  en: '/',
+  'zh-cn': '/zh-cn/',
+  'zh-hk': '/zh-hk/',
+};
+---
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href={homeHref}>Ryan Guo</a>
+
+    <nav class="nav-links">
+      <a href={`${homeHref}#research`}>{text.research}</a>
+      <a href={`${homeHref}#writing`}>{text.writing}</a>
+      <a href={`${homeHref}#contact`}>{text.contact}</a>
+    </nav>
+
+    <div class="lang-switcher">
+      <a class={locale === 'en' ? 'active' : ''} href={langLinks.en}>{text.en}</a>
+      <a class={locale === 'zh-cn' ? 'active' : ''} href={langLinks['zh-cn']}>{text.zhcn}</a>
+      <a class={locale === 'zh-hk' ? 'active' : ''} href={langLinks['zh-hk']}>{text.zhhk}</a>
+    </div>
+  </div>
+</header>

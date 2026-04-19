@@ -5,6 +5,8 @@ const base = locale === 'en' ? '/' : `/${locale}/`;
 
 const text = {
   en: {
+    menu: 'Menu',
+    close: 'Close',
     overview: 'Overview',
     writing: 'Writing',
     cv: 'CV',
@@ -15,6 +17,8 @@ const text = {
     zhhk: '繁',
   },
   'zh-cn': {
+    menu: '菜单',
+    close: '关闭',
     overview: '概览',
     writing: '写作',
     cv: '简历',
@@ -25,6 +29,8 @@ const text = {
     zhhk: '繁',
   },
   'zh-hk': {
+    menu: '選單',
+    close: '關閉',
     overview: '概覽',
     writing: '寫作',
     cv: '履歷',
@@ -41,6 +47,14 @@ const langLinks = {
   'zh-cn': '/zh-cn/',
   'zh-hk': '/zh-hk/',
 };
+
+const navItems = [
+  { href: `${base}#overview`, label: text.overview },
+  { href: `${base}#writing`, label: text.writing },
+  { href: `${base}cv/`, label: text.cv },
+  { href: `${base}resources/`, label: text.resources },
+  { href: 'https://github.com/ryan-gwo', label: text.github, external: true },
+];
 ---
 
 <header class="site-nav">
@@ -48,11 +62,11 @@ const langLinks = {
     <a class="brand" href={base}>Ryan Guo</a>
 
     <nav class="nav-links">
-      <a href={`${base}#overview`}>{text.overview}</a>
-      <a href={`${base}#writing`}>{text.writing}</a>
-      <a href={`${base}cv/`}>{text.cv}</a>
-      <a href={`${base}resources/`}>{text.resources}</a>
-      <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">{text.github}</a>
+      {navItems.map((item) => (
+        <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
+          {item.label}
+        </a>
+      ))}
     </nav>
 
     <div class="lang-switcher">
@@ -60,5 +74,60 @@ const langLinks = {
       <a class={locale === 'zh-cn' ? 'active' : ''} href={langLinks['zh-cn']}>{text.zhcn}</a>
       <a class={locale === 'zh-hk' ? 'active' : ''} href={langLinks['zh-hk']}>{text.zhhk}</a>
     </div>
+
+    <details class="mobile-menu">
+      <summary class="mobile-menu-toggle" aria-label={text.menu}>
+        <span class="mobile-menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+        <span class="menu-open-label">{text.menu}</span>
+        <span class="menu-close-label">{text.close}</span>
+      </summary>
+
+      <div class="mobile-menu-panel">
+        <nav class="mobile-menu-links">
+          {navItems.map((item) => (
+            <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div class="mobile-menu-langs">
+          <a class={locale === 'en' ? 'active' : ''} href={langLinks.en}>{text.en}</a>
+          <a class={locale === 'zh-cn' ? 'active' : ''} href={langLinks['zh-cn']}>{text.zhcn}</a>
+          <a class={locale === 'zh-hk' ? 'active' : ''} href={langLinks['zh-hk']}>{text.zhhk}</a>
+        </div>
+      </div>
+    </details>
   </div>
 </header>
+
+<script>
+  const menu = document.querySelector('.mobile-menu');
+
+  if (menu) {
+    const syncBodyState = () => {
+      document.body.classList.toggle('mobile-menu-open', menu.open);
+    };
+
+    menu.addEventListener('toggle', syncBodyState);
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.open = false;
+        syncBodyState();
+      });
+    });
+
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        syncBodyState();
+      }
+    });
+
+    syncBodyState();
+  }
+</script>

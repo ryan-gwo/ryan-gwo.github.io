@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
 ---
 
 <BaseLayout
@@ -16,7 +17,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         This site is a redesigned multilingual personal homepage built in a cleaner Apple-inspired style.
       </p>
       <div class="actions">
-        <a class="button button-primary" href="#about">About</a>
+        <a class="button button-primary" href="#about"><Icon name="info.circle" />About</a>
         <a class="button button-link" href="#writing">Latest writing</a>
       </div>
     </div>
@@ -126,7 +127,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </p>
     <div class="cv-actions">
       <a class="button button-primary" href="/cv/" rel="noreferrer">View CV</a>
-      <a class="button button-secondary" href="/resources/" rel="noreferrer">Downloads</a>
+      <a class="button button-secondary" href="/resources/" rel="noreferrer"><Icon name="download" />Downloads</a>
     </div>
   </div>
   </section>

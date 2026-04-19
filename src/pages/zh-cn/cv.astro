@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
 ---
 
 <BaseLayout title="简历" description="个人简历" locale="zh-cn">
@@ -18,8 +19,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <div class="actions">
-        <a class="button button-primary" href="/assets/pdf/zh-cn/cv_zh.pdf" target="_blank" rel="noreferrer">下载 PDF</a>
-        <a class="button button-link" href="/zh-cn/">返回首页</a>
+        <a class="button button-primary" href="/assets/pdf/zh-cn/cv_zh.pdf" target="_blank" rel="noreferrer"><Icon name="download" />下载 PDF</a>
+        <a class="button button-link" href="/zh-cn/"><Icon name="home" />返回首页</a>
       </div>
     </div>
   </section>

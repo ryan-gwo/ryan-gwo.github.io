@@ -1,0 +1,45 @@
+---
+const { name } = Astro.props;
+
+const commonAttributes = {
+  xmlns: 'http://www.w3.org/2000/svg',
+  viewBox: '0 0 24 24',
+  'aria-hidden': 'true',
+  focusable: 'false',
+};
+---
+
+{name === 'home' && (
+  <svg {...commonAttributes} class="icon icon-home">
+    <path
+      d="M4.5 11.5L12 5l7.5 6.5V19c0 .828-.672 1.5-1.5 1.5h-4.5V15h-3v5.5H6c-.828 0-1.5-.672-1.5-1.5v-7.5Z"
+      fill="currentColor"
+      fill-opacity="0.85"
+    />
+  </svg>
+)}
+
+{name === 'download' && (
+  <svg {...commonAttributes} class="icon icon-download">
+    <path
+      d="M12 2.5c.69 0 1.25.56 1.25 1.25v8.379l2.64-2.64a1.25 1.25 0 0 1 1.768 1.768l-4.77 4.77a1.25 1.25 0 0 1-1.768 0l-4.77-4.77a1.25 1.25 0 1 1 1.768-1.768l2.64 2.64V3.75c0-.69.56-1.25 1.25-1.25ZM4.5 17.5A1.5 1.5 0 0 1 6 16h12a1.5 1.5 0 0 1 0 3H6a1.5 1.5 0 0 1-1.5-1.5Z"
+      fill="currentColor"
+      fill-opacity="0.85"
+    />
+  </svg>
+)}
+
+{name === 'info.circle' && (
+  <svg {...commonAttributes} class="icon icon-info-circle">
+    <path
+      d="M12 2.5C6.753 2.5 2.5 6.753 2.5 12S6.753 21.5 12 21.5 21.5 17.247 21.5 12 17.247 2.5 12 2.5Zm0 17.5A8 8 0 1 1 12 4a8 8 0 0 1 0 16Z"
+      fill="currentColor"
+      fill-opacity="0.85"
+    />
+    <path
+      d="M12 10.5c.69 0 1.25.56 1.25 1.25v4.5a1.25 1.25 0 1 1-2.5 0v-4.5c0-.69.56-1.25 1.25-1.25Zm0-4a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7Z"
+      fill="currentColor"
+      fill-opacity="0.85"
+    />
+  </svg>
+)}

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
 ---
 
 <BaseLayout
@@ -16,7 +17,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         這個網站是基於舊個人主頁內容重新搭建的 Apple 風格三語個人網站。
       </p>
       <div class="actions">
-        <a class="button button-primary" href="#about">關於</a>
+        <a class="button button-primary" href="#about"><Icon name="info.circle" />關於</a>
         <a class="button button-link" href="#writing">最新文章</a>
       </div>
     </div>
@@ -107,7 +108,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </p>
     <div class="cv-actions">
       <a class="button button-primary" href="/zh-hk/cv/" rel="noreferrer">查看履歷</a>
-      <a class="button button-secondary" href="/zh-hk/resources/" rel="noreferrer">資源下載</a>
+      <a class="button button-secondary" href="/zh-hk/resources/" rel="noreferrer"><Icon name="download" />資源下載</a>
     </div>
   </div>
   </section>

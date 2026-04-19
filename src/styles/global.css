@@ -48,13 +48,11 @@ img {
     z-index: 1000;
     height: var(--nav-total-height);
     padding-top: var(--nav-safe-top);
-    background: rgba(0, 0, 0, 0.72);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.84);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     transition:
         background-color 240ms ease,
-        border-color 240ms ease,
-        backdrop-filter 240ms ease,
-        -webkit-backdrop-filter 240ms ease;
+        border-color 240ms ease;
 }
 
 @media (min-width: 835px) {
@@ -75,7 +73,7 @@ img {
         position: absolute;
         inset: -8px -10px;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.06);
         opacity: 0;
         transform: scale(0.92);
         transition:

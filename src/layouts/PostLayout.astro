@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import 'katex/dist/katex.min.css';
+
+const { frontmatter } = Astro.props;
+const locale = frontmatter.locale ?? 'en';
+---
+
+<BaseLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  locale={locale}
+>
+  <section class="section-light article-page">
+    <div class="container article-body">
+      <h1>{frontmatter.title}</h1>
+      {frontmatter.description && (
+        <div class="article-description">{frontmatter.description}</div>
+      )}
+      {frontmatter.dateText && (
+        <div class="article-date">{frontmatter.dateText}</div>
+      )}
+      <slot />
+    </div>
+  </section>
+</BaseLayout>

@@ -101,15 +101,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <section id="cv" class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">简历</h2>
-      <p class="section-intro">保留旧站中的三语 PDF 下载方式。</p>
-      <div class="cv-actions">
-        <a class="button button-primary" href="/cv/cv_en.pdf" target="_blank" rel="noreferrer">CV (EN)</a>
-        <a class="button button-secondary" href="/cv/cv_zh.pdf" target="_blank" rel="noreferrer">简历（简体）</a>
-        <a class="button button-secondary" href="/cv/cv_hk.pdf" target="_blank" rel="noreferrer">履历（繁体）</a>
-      </div>
+  <div class="container">
+    <h2 class="section-title">简历</h2>
+    <p class="section-intro">
+      中文页面优先展示简体中文版简历，其它可下载资料统一放到资源下载页面。
+    </p>
+    <div class="cv-actions">
+      <a class="button button-primary" href="/zh-cn/cv/" rel="noreferrer">查看简历</a>
+      <a class="button button-secondary" href="/zh-cn/resources/" rel="noreferrer">资源下载</a>
     </div>
+  </div>
   </section>
 
   <section id="contact" class="section-dark content-section">

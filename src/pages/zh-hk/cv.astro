@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="履歷" description="個人履歷" locale="zh-hk">
+  <section class="section-light article-page">
+    <div class="container article-body">
+      <h1>履歷</h1>
+      <div class="article-description">
+        這裡是繁體版網站對應的履歷頁，也提供 PDF 版本下載。
+      </div>
+
+      <div class="cv-actions" style="justify-content:flex-start; margin: 28px 0 40px;">
+        <a class="button button-primary" href="/cv/cv_hk.pdf" target="_blank" rel="noreferrer">下載 PDF</a>
+      </div>
+
+      <p>
+        這個頁面是繁體站點的專用履歷頁。之後如果需要，也可以再把 PDF 內容整理成 HTML 版線上履歷。
+      </p>
+    </div>
+  </section>
+</BaseLayout>

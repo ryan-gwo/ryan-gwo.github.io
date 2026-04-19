@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="CV" description="Curriculum Vitae" locale="en">
+  <section class="section-light article-page">
+    <div class="container article-body">
+      <h1>CV</h1>
+      <div class="article-description">
+        My CV is listed here for reference. A formatted PDF version is also available for download.
+      </div>
+
+      <div class="cv-actions" style="justify-content:flex-start; margin: 28px 0 40px;">
+        <a class="button button-primary" href="/cv/cv_en.pdf" target="_blank" rel="noreferrer">Download PDF</a>
+      </div>
+
+      <p>
+        This page is the dedicated CV page for the English site. You can later replace this placeholder
+        with a full HTML version of your CV if you want.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

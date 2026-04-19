@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="简历" description="个人简历" locale="zh-cn">
+  <section class="section-light article-page">
+    <div class="container article-body">
+      <h1>简历</h1>
+      <div class="article-description">
+        这里是简体中文页面对应的简历页，也提供 PDF 版本下载。
+      </div>
+
+      <div class="cv-actions" style="justify-content:flex-start; margin: 28px 0 40px;">
+        <a class="button button-primary" href="/cv/cv_zh.pdf" target="_blank" rel="noreferrer">下载 PDF</a>
+      </div>
+
+      <p>
+        这个页面是简体中文站点的专用简历页。后续如果你愿意，也可以把 PDF 内容逐步整理成 HTML 版在线简历。
+      </p>
+    </div>
+  </section>
+</BaseLayout>

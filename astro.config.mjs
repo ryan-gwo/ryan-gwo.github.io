@@ -16,6 +16,7 @@ export default defineConfig({
     rehypePlugins: [[rehypeMathjax, {
       tex: {
         tags: 'ams',
+        processRefs: true,
         packages: { '[+]': ['boldsymbol'] },
       },
       chtml: {

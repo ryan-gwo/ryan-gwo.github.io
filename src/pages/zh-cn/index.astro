@@ -7,38 +7,79 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   description="Ryan Guo 的个人网站"
   locale="zh-cn"
 >
-  <section class="section-dark hero">
+  <section id="overview" class="section-dark hero">
     <div class="container">
-      <p class="eyebrow">物理学 • 引力波 • X射线偏振</p>
-      <h1>关注致密天体、强引力，以及它们留下的可观测信号。</h1>
+      <p class="eyebrow">物理学 • 天体物理 • 引力波</p>
+      <h1>关注高能天体物理、宇宙学，以及宇宙中可观测信号所携带的信息。</h1>
       <p class="lead">
-        我是郭雨泽，武汉大学物理学专业学生。这个网站将以更简洁的 Apple 风格展示我的研究兴趣、代表性工作与写作。
+        我是郭雨泽，目前是武汉大学物理学专业本科生。
+        这个网站是基于旧个人主页内容重新搭建的 Apple 风格三语个人网站。
       </p>
       <div class="actions">
-        <a class="button button-primary" href="#research">研究</a>
-        <a class="button button-link" href="#contact">联系</a>
+        <a class="button button-primary" href="#about">关于</a>
+        <a class="button button-link" href="#writing">最新文章</a>
       </div>
     </div>
   </section>
 
-  <section id="research" class="section-light content-section">
+  <section id="about" class="section-light content-section">
     <div class="container">
-      <h2 class="section-title">研究</h2>
-      <p class="section-intro">
-        目前主要关注引力波天文学、致密天体、中子星、黑洞X射线双星、X射线偏振以及强场天体物理中的相关问题。
-      </p>
+      <h2 class="section-title">关于</h2>
+      <div class="about-shell">
+        <div class="profile-card">
+          <img src="/images/prof_pic.jpg" alt="郭雨泽个人照片" />
+          <div class="profile-caption">2023年摄于牛津大学贝利奥尔学院。</div>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            嗨！我是郭雨泽，目前是武汉大学物理科学与技术学院的一名物理学专业本科生。
+          </p>
+          <p>
+            在此之前，我作为物理竞赛组的一员，在华南师范大学附属中学完成了我的初中和高中学业。
+          </p>
+          <p>
+            我预计在 2026 年秋开始在北京大学物理学院天文学系攻读天体物理博士。
+            我的研究兴趣在于高能天体物理，具体包括引力波、宇宙学和多信使天文学。
+          </p>
+          <p>
+            我在高中时期作为华附天文社活动的一部分开始了系统的天文学学习。
+            除了业余观测和讲座，我还参加了天文学奥林匹克竞赛，并在国家级和国际级比赛中均获得金牌。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">研究兴趣</h2>
+      <p class="section-intro light">先复现旧站中真正属于你自己的内容，再逐步扩展新页面。</p>
       <div class="grid">
         <div class="card">
           <h3>引力波</h3>
-          <p>
-            包括连续引力波、致密星相关源以及长时间尺度信号中所携带的天体物理信息。
-          </p>
+          <p>包括连续引力波、致密天体以及长时间尺度观测中蕴含的天体物理信息。</p>
         </div>
         <div class="card">
-          <h3>X射线偏振</h3>
-          <p>
-            包括黑洞X射线双星、盘—冕结构、QPO相关现象，以及高能观测中的偏振特征。
-          </p>
+          <h3>宇宙学</h3>
+          <p>包括相对论时空、早期宇宙以及宏观结构相关的理论与概念问题。</p>
+        </div>
+        <div class="card">
+          <h3>多信使天文学</h3>
+          <p>通过引力、电磁辐射及其他观测通道的结合来理解天体物理过程。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="updates" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">动态</h2>
+      <p class="section-intro">这是对旧站 news 模块的极简重构。</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2025 年 9 月 23 日</div>
+          <div class="timeline-text">本个人主页建立！</div>
         </div>
       </div>
     </div>
@@ -47,18 +88,34 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section id="writing" class="section-dark content-section">
     <div class="container">
       <h2 class="section-title">写作</h2>
-      <p class="section-intro" style="color: rgba(255,255,255,0.72);">
-        除研究之外，我也写一些关于天文学、物理学以及科学与思想之间联系的文字。
-      </p>
+      <p class="section-intro light">旧站目前只有一篇个人文章，先将其作为精选文章展示。</p>
+      <div class="article-card">
+        <div class="article-meta">2025 年 9 月 23 日 • 力学 / 数学</div>
+        <h3>度规概念的初步感悟</h3>
+        <p>
+          从勾股定理出发，理解度规这一概念如何被视为无穷小距离上的推广。
+        </p>
+        <a class="button button-link" href="/zh-cn/writing/metric/">阅读文章</a>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="section-light content-section">
+  <section id="cv" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">简历</h2>
+      <p class="section-intro">保留旧站中的三语 PDF 下载方式。</p>
+      <div class="cv-actions">
+        <a class="button button-primary" href="/cv/cv_en.pdf" target="_blank" rel="noreferrer">CV (EN)</a>
+        <a class="button button-secondary" href="/cv/cv_zh.pdf" target="_blank" rel="noreferrer">简历（简体）</a>
+        <a class="button button-secondary" href="/cv/cv_hk.pdf" target="_blank" rel="noreferrer">履历（繁体）</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-dark content-section">
     <div class="container contact-box">
       <h2 class="section-title">联系</h2>
-      <p>
-        当前可以先通过 GitHub 联系我；后续我会继续加入邮箱、CV 与代表性论文页面。
-      </p>
+      <p>目前可先通过 GitHub 联系我；邮箱和更多学术页面可以在后续版本中加入。</p>
       <p>
         <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub 主页</a>
       </p>

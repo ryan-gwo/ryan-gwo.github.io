@@ -1,29 +1,32 @@
 ---
 const { locale = 'en' } = Astro.props;
 
-const homeHref = locale === 'en' ? '/' : `/${locale}/`;
+const base = locale === 'en' ? '/' : `/${locale}/`;
 
 const text = {
-  'en': {
-    research: 'Research',
+  en: {
+    overview: 'Overview',
     writing: 'Writing',
-    contact: 'Contact',
+    cv: 'CV',
+    github: 'GitHub',
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
   },
   'zh-cn': {
-    research: '研究',
+    overview: '概览',
     writing: '写作',
-    contact: '联系',
+    cv: '简历',
+    github: 'GitHub',
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
   },
   'zh-hk': {
-    research: '研究',
+    overview: '概覽',
     writing: '寫作',
-    contact: '聯絡',
+    cv: '履歷',
+    github: 'GitHub',
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
@@ -39,12 +42,13 @@ const langLinks = {
 
 <header class="site-nav">
   <div class="nav-inner">
-    <a class="brand" href={homeHref}>Ryan Guo</a>
+    <a class="brand" href={base}>Ryan Guo</a>
 
     <nav class="nav-links">
-      <a href={`${homeHref}#research`}>{text.research}</a>
-      <a href={`${homeHref}#writing`}>{text.writing}</a>
-      <a href={`${homeHref}#contact`}>{text.contact}</a>
+      <a href={`${base}#overview`}>{text.overview}</a>
+      <a href={`${base}#writing`}>{text.writing}</a>
+      <a href={`${base}#cv`}>{text.cv}</a>
+      <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">{text.github}</a>
     </nav>
 
     <div class="lang-switcher">

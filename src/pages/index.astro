@@ -7,42 +7,93 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Ryan Guo's personal website"
   locale="en"
 >
-  <section class="section-dark hero">
+  <section id="overview" class="section-dark hero">
     <div class="container">
-      <p class="eyebrow">Physics • Gravitational Waves • X-ray Polarization</p>
-      <h1>Researching compact objects, strong gravity, and the signals they leave behind.</h1>
+      <p class="eyebrow">Physics • Astrophysics • Gravitational Waves</p>
+      <h1>Studying high-energy astrophysics, cosmology, and the signals of the universe.</h1>
       <p class="lead">
-        I am Ryan Guo, a physics student at Wuhan University. This site presents my
-        research interests, selected work, and writing in a cleaner Apple-inspired format.
+        I am Yuze Guo, currently an undergraduate student in physics at Wuhan University.
+        This site is a redesigned multilingual personal homepage built in a cleaner Apple-inspired style.
       </p>
       <div class="actions">
-        <a class="button button-primary" href="#research">Research</a>
-        <a class="button button-link" href="#contact">Contact</a>
+        <a class="button button-primary" href="#about">About</a>
+        <a class="button button-link" href="#writing">Latest writing</a>
       </div>
     </div>
   </section>
 
-  <section id="research" class="section-light content-section">
+  <section id="about" class="section-light content-section">
     <div class="container">
-      <h2 class="section-title">Research</h2>
-      <p class="section-intro">
-        My current interests include gravitational-wave astronomy, compact objects,
-        neutron stars, X-ray polarization, and strong-field astrophysics.
+      <h2 class="section-title">About</h2>
+      <div class="about-shell">
+        <div class="profile-card">
+          <img src="/images/prof_pic.jpg" alt="Profile photo of Yuze Guo" />
+          <div class="profile-caption">
+            Photo taken in 2023 at Balliol College, University of Oxford, UK.
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            Hi! I’m Yuze Guo, currently a physics undergraduate student at the School of Physics and Technology,
+            Wuhan University.
+          </p>
+          <p>
+            Before this, I completed both my middle and high school studies at The Affiliated High School
+            of South China Normal University as a member of the Physics Olympiad Group.
+          </p>
+          <p>
+            I expect to pursue my PhD degree in astrophysics at Peking University starting from fall 2026.
+            My research interest lies in high energy astrophysics, specifically gravitational waves,
+            cosmology, and multi-messenger astronomy.
+          </p>
+          <p>
+            I started my systematic learning in astronomy during high school through activities related to HFAA.
+            Apart from amateur observations and lectures, I also participated in astronomy Olympiads and obtained
+            gold medals in both national and international competitions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">Research Interests</h2>
+      <p class="section-intro light">
+        A concise reconstruction of the non-template parts of the original site.
       </p>
       <div class="grid">
         <div class="card">
           <h3>Gravitational Waves</h3>
           <p>
-            Continuous gravitational waves, compact stars, and the astrophysical
-            information encoded in long-duration signals.
+            Continuous signals, compact objects, and the astrophysical information encoded in long-duration observations.
           </p>
         </div>
         <div class="card">
-          <h3>X-ray Polarization</h3>
+          <h3>Cosmology</h3>
           <p>
-            Black hole X-ray binaries, disk–corona geometry, QPO-related phenomena,
-            and polarization signatures from high-energy observations.
+            Conceptual and theoretical questions in relativistic spacetime, early-universe physics, and cosmic structure.
           </p>
+        </div>
+        <div class="card">
+          <h3>Multi-messenger Astronomy</h3>
+          <p>
+            Cross-disciplinary approaches that connect gravitational, electromagnetic, and other observational channels.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="updates" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">Updates</h2>
+      <p class="section-intro">A minimal replacement for the old homepage news block.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">September 23, 2025</div>
+          <div class="timeline-text">This personal homepage is established!</div>
         </div>
       </div>
     </div>
@@ -51,19 +102,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section id="writing" class="section-dark content-section">
     <div class="container">
       <h2 class="section-title">Writing</h2>
-      <p class="section-intro" style="color: rgba(255,255,255,0.72);">
-        I also write about astronomy, physics, and ideas that connect scientific
-        research with broader intellectual curiosity.
+      <p class="section-intro light">
+        The original site currently contains one personal blog post, so we recreate it as a featured article card.
       </p>
+      <div class="article-card">
+        <div class="article-meta">September 23, 2025 • Mechanics / Mathematics</div>
+        <h3>Initial insights into the concept of the metric</h3>
+        <p>
+          A short essay on understanding the metric as a generalization of the Pythagorean theorem
+          for infinitesimal distances.
+        </p>
+        <a class="button button-link" href="/writing/metric/">Read article</a>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="section-light content-section">
+  <section id="cv" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">CV</h2>
+      <p class="section-intro">
+        The old site provided downloadable PDF CV files in all three language versions. We keep that structure here.
+      </p>
+      <div class="cv-actions">
+        <a class="button button-primary" href="/cv/cv_en.pdf" target="_blank" rel="noreferrer">Download CV (EN)</a>
+        <a class="button button-secondary" href="/cv/cv_zh.pdf" target="_blank" rel="noreferrer">简历（简体）</a>
+        <a class="button button-secondary" href="/cv/cv_hk.pdf" target="_blank" rel="noreferrer">履歷（繁體）</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-dark content-section">
     <div class="container contact-box">
       <h2 class="section-title">Contact</h2>
       <p>
-        You can reach me through GitHub for now, and I will add email / CV / selected
-        publications in the next iteration.
+        Feel free to get in touch via GitHub for now. Email and additional academic pages can be added later,
+        once the core personal content has been fully migrated.
       </p>
       <p>
         <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub Profile</a>

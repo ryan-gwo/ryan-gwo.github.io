@@ -3,6 +3,54 @@ const { locale = 'en' } = Astro.props;
 
 const base = locale === 'en' ? '/' : `/${locale}/`;
 
+const normalizeRoute = (route) => {
+  if (route === '/') {
+    return '/';
+  }
+
+  return route.endsWith('/') ? route : `${route}/`;
+};
+
+const pageRoutes = new Set(
+  Object.keys(import.meta.glob('../pages/**/*.{astro,md,mdx}', { eager: true })).map((filePath) => {
+    const route = filePath.replace('../pages', '').replace(/\.(astro|mdx?|md)$/i, '');
+
+    if (route === '/index') {
+      return '/';
+    }
+
+    return normalizeRoute(route.replace(/\/index$/, ''));
+  }),
+);
+
+const localePrefixes = {
+  en: '',
+  'zh-cn': '/zh-cn',
+  'zh-hk': '/zh-hk',
+};
+
+const localeHomeLinks = {
+  en: '/',
+  'zh-cn': '/zh-cn/',
+  'zh-hk': '/zh-hk/',
+};
+
+const currentPath = normalizeRoute(Astro.url.pathname);
+
+const currentLocalePrefix = currentPath.startsWith('/zh-cn/') || currentPath === '/zh-cn/'
+  ? '/zh-cn'
+  : currentPath.startsWith('/zh-hk/') || currentPath === '/zh-hk/'
+    ? '/zh-hk'
+    : '';
+
+const pathWithoutLocale = currentLocalePrefix ? currentPath.slice(currentLocalePrefix.length) || '/' : currentPath;
+
+const localizedPath = (targetLocale) => {
+  const targetPath = normalizeRoute(`${localePrefixes[targetLocale]}${pathWithoutLocale}` || '/');
+
+  return pageRoutes.has(targetPath) ? targetPath : localeHomeLinks[targetLocale];
+};
+
 const text = {
   en: {
     menu: 'Menu',
@@ -40,9 +88,9 @@ const text = {
 }[locale];
 
 const langLinks = {
-  en: '/',
-  'zh-cn': '/zh-cn/',
-  'zh-hk': '/zh-hk/',
+  en: localizedPath('en'),
+  'zh-cn': localizedPath('zh-cn'),
+  'zh-hk': localizedPath('zh-hk'),
 };
 
 const navItems = [

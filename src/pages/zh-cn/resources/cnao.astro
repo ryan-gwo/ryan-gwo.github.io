@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
+
+const years = [
+  {
+    label: '2024-2025 学年',
+    links: [
+      { label: '决赛试题', href: '/assets/pdf/zh-cn/CNAO_2025.pdf' },
+      { label: '决赛试题（含答案）', href: '/assets/pdf/zh-cn/CNAO_2025_ans.pdf' },
+    ],
+  },
+  {
+    label: '2023-2024 学年',
+    links: [
+      { label: '决赛试题', href: '/assets/pdf/zh-cn/CNAO_2024.pdf' },
+      { label: '决赛试题（含答案）', href: '/assets/pdf/zh-cn/CNAO_2024_ans.pdf' },
+    ],
+  },
+  {
+    label: '2022-2023 学年',
+    links: [
+      { label: '决赛试题', href: '/assets/pdf/zh-cn/CNAO_2023.pdf' },
+      { label: '决赛试题（含答案）', href: '/assets/pdf/zh-cn/CNAO_2023_ans.pdf' },
+    ],
+  },
+  {
+    label: '2021-2022 学年',
+    links: [
+      { label: '决赛试题', href: '/assets/pdf/zh-cn/CNAO_2022.pdf' },
+      { label: '决赛试题视频', href: '/assets/pdf/zh-cn/CNAO_2022.mp4' },
+    ],
+  },
+  {
+    label: '历史资料',
+    links: [
+      { label: 'CNAO 2002-2020 决赛与国家集训队选拔赛试题及部分解答', href: '/assets/pdf/zh-cn/CNAO_2002_to_2020.pdf' },
+    ],
+  },
+];
+---
+
+<BaseLayout title="CNAO 资源" description="CNAO 资料按年份整理" locale="zh-cn">
+  <section class="section-light article-page">
+    <div class="container article-body resource-hub">
+      <section class="resource-category-panel resource-detail-shell resource-tone-competition">
+        <header class="resource-detail-header">
+          <div class="resource-detail-main">
+            <img class="resource-detail-main-logo" src="/assets/logos/cnao.png" alt="CNAO logo" loading="lazy" />
+            <div>
+              <p class="resource-category-eyebrow">竞赛页面</p>
+              <h1>CNAO 资源</h1>
+              <p class="resource-detail-description">按学年整理 CNAO 决赛资料。</p>
+            </div>
+          </div>
+          <a class="resource-back-link" href="/zh-cn/resources/">返回资源首页</a>
+        </header>
+
+        <div class="resource-year-stack">
+          {years.map((year) => (
+            <article class="resource-year-card">
+              <div class="resource-year-top">
+                {year.logo && <img class="resource-year-logo" src={year.logo} alt="" aria-hidden="true" loading="lazy" />}
+                <h2 class="resource-year-heading">{year.label}</h2>
+              </div>
+              <ul class="resource-download-list">
+                {year.links.map((link) => (
+                  <li>
+                    <a class="resource-download-link" href={link.href} target="_blank" rel="noreferrer">
+                      <Icon name="download" />
+                      <span>{link.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

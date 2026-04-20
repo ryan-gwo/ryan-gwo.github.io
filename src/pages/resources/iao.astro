@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+
+const years = [
+  {
+    label: '2015 (20th IAO)',
+    logo: '/assets/logos/iao/iao2015.png',
+    links: [
+      { label: 'Theory Round for Group alpha', href: '/assets/pdf/en-us/IAO_2015_Theory_a.pdf' },
+      { label: 'Theory Round for Group beta', href: '/assets/pdf/en-us/IAO_2015_Theory_b.pdf' },
+      { label: 'Supplementary Material 1 for Theory Round', href: '/assets/pdf/en-us/IAO_2015_Theory_Sup1.pdf' },
+      { label: 'Supplementary Material 2 for Theory Round (Tab. of Const.)', href: '/assets/pdf/en-us/IAO_2015_Theory_Sup2.pdf' },
+      { label: 'Supplementary Material 3 for Theory Round', href: '/assets/pdf/en-us/IAO_2015_Theory_Sup3.pdf' },
+      { label: 'Supplementary Material 4 for Theory Round', href: '/assets/pdf/en-us/IAO_2015_Theory_Sup4.pdf' },
+      { label: 'Supplementary Material 5 for Theory Round (HR Diagram, Group beta)', href: '/assets/pdf/en-us/IAO_2015_Theory_Sup5.pdf' },
+      { label: 'Practical Round for Group alpha', href: '/assets/pdf/en-us/IAO_2015_Practical_a.pdf' },
+      { label: 'Practical Round for Group beta', href: '/assets/pdf/en-us/IAO_2015_Practical_b.pdf' },
+      { label: 'Supplementary Material 1 for Practical Round (Group beta)', href: '/assets/pdf/en-us/IAO_2015_Practical_Sup1.pdf' },
+      { label: 'Observational Round (Planetarium)', href: '/assets/pdf/en-us/IAO_2015_Observation_Planetarium.pdf' },
+      { label: 'Observational Round (Cloudy Sky)', href: '/assets/pdf/en-us/IAO_2015_Observation_Cloudy.pdf' },
+    ],
+  },
+];
+---
+
+<BaseLayout title="IAO Resources" description="IAO materials organized by year" locale="en">
+  <section class="section-light article-page">
+    <div class="container article-body resource-hub">
+      <section class="resource-category-panel resource-detail-shell resource-tone-competition">
+        <header class="resource-detail-header">
+          <div class="resource-detail-main">
+            <img class="resource-detail-main-logo" src="/assets/logos/iao/iao.png" alt="IAO logo" loading="lazy" />
+            <div>
+              <p class="resource-category-eyebrow">Competition</p>
+              <h1>IAO Resources</h1>
+              <p class="resource-detail-description">Selected archive of available IAO files.</p>
+            </div>
+          </div>
+          <a class="resource-back-link" href="/resources/">Back to resources</a>
+        </header>
+
+        <div class="resource-year-stack">
+          {years.map((year) => (
+            <article class="resource-year-card">
+              <div class="resource-year-top">
+                <img class="resource-year-logo" src={year.logo} alt="" aria-hidden="true" loading="lazy" />
+                <h2 class="resource-year-heading">{year.label}</h2>
+              </div>
+              <ul class="resource-download-list">
+                {year.links.map((link) => (
+                  <li>
+                    <a class="resource-download-link" href={link.href} target="_blank" rel="noreferrer">
+                      <Icon name="download" />
+                      <span>{link.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

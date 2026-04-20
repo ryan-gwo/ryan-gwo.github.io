@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
+
+const sections = [
+  {
+    title: '广东省赛',
+    groups: [
+      {
+        label: '2020 年',
+        links: [
+          { label: '2020 年广东省赛初赛集训', href: '/assets/pdf/zh-cn/2020_GD_Training.pdf' },
+          { label: '2020 年广东省赛备考-往年省赛与国初真题精选', href: '/assets/pdf/zh-cn/2020_GD_Pick_Out.pdf' },
+          { label: '2020 年广东省赛复赛集训（讲义）', href: '/assets/pdf/zh-cn/2020_GD_2nd_Round.pdf' },
+          { label: '2020 年广东省赛复赛集训（讲义答案）', href: '/assets/pdf/zh-cn/2020_GD_2nd_Round_Solution.pdf' },
+          { label: '2020 年广东省天文知识竞赛复赛（实测理论）模拟练习', href: '/assets/pdf/zh-cn/2020_GD_Simulation.pdf' },
+          { label: '2020 年广东省天文知识竞赛复赛（实测理论）模拟练习答案', href: '/assets/pdf/zh-cn/2020_GD_Simulation_Solution.pdf' },
+          { label: '天文奥赛实测合集', href: '/assets/pdf/zh-cn/Data_Analysis_Bundle.pdf' },
+        ],
+      },
+    ],
+  },
+  {
+    title: '国决与选拔赛',
+    groups: [
+      {
+        label: '2023 年',
+        links: [
+          { label: '国决与国家集训队选拔', href: '/assets/pdf/zh-cn/CNAO_2023_preparation.pdf' },
+          { label: '国决与国家集训队选拔（讲义）', href: '/assets/pdf/zh-cn/CNAO_2023_preparation_handout.pdf' },
+          { label: '通俗宇宙学简介', href: '/assets/pdf/zh-cn/Introductory Cosmology for Babies.pdf' },
+        ],
+      },
+      {
+        label: '2024 年',
+        links: [
+          { label: '天文奥赛教程：宇宙学基础', href: '/assets/pdf/zh-cn/Cosmology_handout.pdf' },
+        ],
+      },
+    ],
+  },
+  {
+    title: '国际赛训练',
+    groups: [
+      {
+        label: '2022 年',
+        links: [
+          { label: '国际天文奥赛-简介、解答题和题外话', href: '/assets/pdf/zh-cn/Introduction_to_International_Olympiads.pdf' },
+          { label: '国际天文奥赛-简介、解答题和题外话（讲义）', href: '/assets/pdf/zh-cn/Handouts_2022_winter.pdf' },
+        ],
+      },
+    ],
+  },
+  {
+    title: '自编材料',
+    groups: [
+      {
+        label: '专题资料',
+        links: [
+          { label: '球面三角', href: '/assets/pdf/zh-cn/Spherical_Trigonometry.pdf' },
+          { label: '套题-HFAA 的 M31 之旅', href: '/assets/pdf/zh-cn/HFAA_Trip_to_M31.pdf' },
+          { label: '套题-HFAA 的 M31 之旅（答案）', href: '/assets/pdf/zh-cn/HFAA_Trip_to_M31_Solution.pdf' },
+        ],
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout title="竞赛讲义" description="竞赛训练材料按主题和年份整理" locale="zh-cn">
+  <section class="section-light article-page">
+    <div class="container article-body resource-hub">
+      <section class="resource-category-panel resource-detail-shell resource-tone-training">
+        <header class="resource-detail-header">
+          <div class="resource-detail-main">
+            <img class="resource-detail-main-logo" src="/assets/logos/cnao.png" alt="CNAO logo" loading="lazy" />
+            <div>
+              <p class="resource-category-eyebrow">竞赛讲义</p>
+              <h1>训练材料</h1>
+              <p class="resource-detail-description">按训练场景和年份整理的讲义与专题资料。</p>
+            </div>
+          </div>
+          <a class="resource-back-link" href="/zh-cn/resources/">返回资源首页</a>
+        </header>
+
+        <div class="resource-year-stack">
+          {sections.map((section) => (
+            <article class="resource-year-card">
+              <div class="resource-year-top">
+                <h2 class="resource-year-heading">{section.title}</h2>
+              </div>
+              {section.groups.map((group) => (
+                <section class="resource-year-block">
+                  <h3 class="resource-year-sub">{group.label}</h3>
+                  <ul class="resource-download-list">
+                    {group.links.map((link) => (
+                      <li>
+                        <a class="resource-download-link" href={link.href} target="_blank" rel="noreferrer">
+                          <Icon name="download" />
+                          <span>{link.label}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

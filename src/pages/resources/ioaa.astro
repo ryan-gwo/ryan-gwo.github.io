@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+
+const years = [
+  {
+    label: '2025 (18th IOAA)',
+    logo: '/assets/logos/ioaa/ioaa2025.png',
+    links: [
+      { label: 'Data Sheet', href: '/assets/pdf/en-us/IOAA_2025_Data_Sheet.pdf' },
+      { label: 'Theory Bundle', href: '/assets/pdf/en-us/IOAA_2025_Theory.pdf' },
+      { label: 'Data Analysis Bundle', href: '/assets/pdf/en-us/IOAA_2025_Data_Analysis.pdf' },
+      { label: 'Observation (Sky Map) Bundle', href: '/assets/pdf/en-us/IOAA_2025_Observation_Map.pdf' },
+      { label: 'Observation (Telescope) Bundle', href: '/assets/pdf/en-us/IOAA_2025_Observation_Telescope.pdf' },
+      { label: 'Observation (Planetarium) Bundle', href: '/assets/pdf/en-us/IOAA_2025_Observation_Planetarium.pdf' },
+      { label: 'Group Bundle', href: '/assets/pdf/en-us/IOAA_2025_Group.pdf' },
+    ],
+  },
+  {
+    label: '2024 (17th IOAA)',
+    logo: '/assets/logos/ioaa/ioaa2024.png',
+    links: [
+      { label: 'Theory Problems', href: '/assets/pdf/en-us/IOAA_2024_Theory.pdf' },
+      { label: 'Data Analysis Problems', href: '/assets/pdf/en-us/IOAA_2024_Data_Analysis.pdf' },
+      { label: 'Observation Problems', href: '/assets/pdf/en-us/IOAA_2024_Observation.pdf' },
+      { label: 'Planetarium Problems', href: '/assets/pdf/en-us/IOAA_2024_Planetarium.pdf' },
+    ],
+  },
+  {
+    label: '2023 (16th IOAA)',
+    logo: '/assets/logos/ioaa/ioaa2023.png',
+    links: [
+      { label: 'Theory Problems', href: '/assets/pdf/en-us/IOAA_2023_Theory.pdf' },
+      { label: 'Data Analysis Problems', href: '/assets/pdf/en-us/IOAA_2023_Data.pdf' },
+      { label: 'Observation Problems', href: '/assets/pdf/en-us/IOAA_2023_Observation.pdf' },
+      { label: 'Planetarium Problems', href: '/assets/pdf/en-us/IOAA_2023_Planetarium.pdf' },
+      { label: 'Group Problems', href: '/assets/pdf/en-us/IOAA_2023_Group.pdf' },
+    ],
+  },
+  {
+    label: '2022 (15th IOAA)',
+    logo: '/assets/logos/ioaa/ioaa2022.png',
+    links: [
+      { label: 'Theory Problems', href: '/assets/pdf/en-us/IOAA_2022_Theory.pdf' },
+      { label: 'Data Analysis Problem 1 with Solution', href: '/assets/pdf/en-us/IOAA_2022_Data_1_sol.pdf' },
+      { label: 'Data Analysis Problem 2 with Solution', href: '/assets/pdf/en-us/IOAA_2022_Data_2_sol.pdf' },
+      { label: 'Nighttime Observation Problems', href: '/assets/pdf/en-us/IOAA_2022_Observation_Night.pdf' },
+      { label: 'Daytime Observation Problems', href: '/assets/pdf/en-us/IOAA_2022_Observation_Day.pdf' },
+    ],
+  },
+  {
+    label: '2021 (14th IOAA, Chinese Translation)',
+    logo: '/assets/logos/ioaa/ioaa2021.png',
+    links: [
+      { label: 'Theory Problems (zh-cn)', href: '/assets/pdf/zh-cn/IOAA_2021_Theory_zh.pdf' },
+      { label: 'Data Analysis Problems (zh-cn)', href: '/assets/pdf/zh-cn/IOAA_2021_Data_zh.pdf' },
+      { label: 'Observation Problems (zh-cn)', href: '/assets/pdf/zh-cn/IOAA_2021_Observation_zh.pdf' },
+      { label: 'Group Problems (zh-cn)', href: '/assets/pdf/zh-cn/IOAA_2021_Group_zh.pdf' },
+    ],
+  },
+  {
+    label: 'Historical Materials',
+    logo: '/assets/logos/ioaa/ioaa.png',
+    links: [
+      { label: 'IOAA Problem Book (2007-2021)', href: '/assets/pdf/en-us/IOAA Problem Book.pdf' },
+    ],
+  },
+];
+---
+
+<BaseLayout title="IOAA Resources" description="IOAA materials organized by year" locale="en">
+  <section class="section-light article-page">
+    <div class="container article-body resource-hub">
+      <section class="resource-category-panel resource-detail-shell resource-tone-competition">
+        <header class="resource-detail-header">
+          <div class="resource-detail-main">
+            <img class="resource-detail-main-logo" src="/assets/logos/ioaa/ioaa.png" alt="IOAA logo" loading="lazy" />
+            <div>
+              <p class="resource-category-eyebrow">Competition</p>
+              <h1>IOAA Resources</h1>
+              <p class="resource-detail-description">Each year block includes the official files for that edition.</p>
+            </div>
+          </div>
+          <a class="resource-back-link" href="/resources/">Back to resources</a>
+        </header>
+
+        <div class="resource-year-stack">
+          {years.map((year) => (
+            <article class="resource-year-card">
+              <div class="resource-year-top">
+                <img class="resource-year-logo" src={year.logo} alt="" aria-hidden="true" loading="lazy" />
+                <h2 class="resource-year-heading">{year.label}</h2>
+              </div>
+              <ul class="resource-download-list">
+                {year.links.map((link) => (
+                  <li>
+                    <a class="resource-download-link" href={link.href} target="_blank" rel="noreferrer">
+                      <Icon name="download" />
+                      <span>{link.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
+
+const competitionCards = [
+  {
+    name: 'CNAO',
+    fullName: '全國中學生天文知識競賽',
+    description: '按學年整理的決賽試題。',
+    logo: '/assets/logos/cnao.png',
+    href: '/zh-hk/resources/cnao/',
+    tag: '國家級',
+  },
+  {
+    name: 'IOAA',
+    fullName: '國際天文與天體物理奧林匹克競賽',
+    description: '按屆次整理理論與數據分析題目。',
+    logo: '/assets/logos/ioaa/ioaa.png',
+    href: '/zh-hk/resources/ioaa/',
+    tag: '國際賽',
+  },
+  {
+    name: 'IAO',
+    fullName: '國際天文奧林匹克競賽',
+    description: '歷史資料入口（以中文版本為主）。',
+    logo: '/assets/logos/iao/iao.png',
+    href: '/zh-hk/resources/iao/',
+    tag: '歷史檔案',
+  },
+];
+
+const categoryBlocks = [
+  {
+    id: 'notes',
+    eyebrow: '學習筆記',
+    title: '筆記資料庫',
+    description: '將按主題與年份逐步整理公開。',
+    tone: 'resource-tone-notes',
+  },
+  {
+    id: 'papers',
+    eyebrow: '學術論文',
+    title: '論文資料庫',
+    description: '將按研究方向整理閱讀清單與參考文獻。',
+    tone: 'resource-tone-papers',
+  },
+  {
+    id: 'code',
+    eyebrow: '程式碼專案',
+    title: '程式碼資料庫',
+    description: '將按專案版本歸檔腳本與工具。',
+    tone: 'resource-tone-code',
+  },
+  {
+    id: 'slides',
+    eyebrow: '演示文檔',
+    title: '演示資料庫',
+    description: '按報告場景與時間整理講稿與簡報。',
+    tone: 'resource-tone-slides',
+  },
+];
+---
+
+<BaseLayout title="資源下載" description="可下載的檔案和資源" locale="zh-hk">
+  <section class="section-light content-section resource-hero-shell">
+    <div class="container resource-hub">
+      <header class="resource-hero">
+        <p class="resource-hero-eyebrow">資源庫</p>
+        <h1>資源下載</h1>
+        <p class="article-description">
+          按大類 section 分層組織，結構與簡歷頁一致。每個大類同級展示，再進入獨立頁查看屆次與文件。
+        </p>
+        <nav class="resource-quick-nav" aria-label="資源分類">
+          <a href="#competitions">競賽題庫</a>
+          <a href="#notes">學習筆記</a>
+          <a href="#papers">學術論文</a>
+          <a href="#code">程式碼專案</a>
+          <a href="#slides">演示文檔</a>
+        </nav>
+      </header>
+    </div>
+  </section>
+
+  <section id="competitions" class="section-light content-section resource-major-section resource-major-section-alt">
+    <div class="container resource-hub">
+      <h2 class="section-title">競賽題庫</h2>
+      <p class="section-intro">
+        競賽類按賽事分組。點擊卡片進入賽事獨立頁，再按年份查看和下載。
+      </p>
+
+      <div class="resource-major-grid resource-major-grid-3" role="list" aria-label="競賽卡片">
+        {competitionCards.map((card) => (
+          <article class="resource-entry-card" role="listitem">
+            <div class="resource-entry-head">
+              <div class="resource-entry-logo-stage">
+                <img class="resource-entry-logo" src={card.logo} alt="" aria-hidden="true" loading="lazy" />
+              </div>
+              <span class="resource-entry-tag">{card.tag}</span>
+            </div>
+            <h3>{card.name}</h3>
+            <p class="resource-entry-fullname">{card.fullName}</p>
+            <p>{card.description}</p>
+            <a class="resource-entry-link" href={card.href}>
+              <span>進入競賽頁面</span>
+              <Icon name="chevron.right" />
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {categoryBlocks.map((block, idx) => (
+    <section id={block.id} class:list={['section-light', 'content-section', 'resource-major-section', idx % 2 === 0 ? 'resource-major-section-base' : 'resource-major-section-alt']}>
+      <div class="container resource-hub">
+        <h2 class="section-title">{block.title}</h2>
+        <p class="section-intro">{block.description}</p>
+
+        <article class:list={['resource-major-card', 'resource-major-card-single', block.tone]}>
+          <p class="resource-category-eyebrow">{block.eyebrow}</p>
+          <h3>{block.title}</h3>
+          <p>{block.description}</p>
+        </article>
+      </div>
+    </section>
+  ))}
+</BaseLayout>

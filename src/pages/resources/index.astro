@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+
+const competitionCards = [
+  {
+    name: 'IOAA',
+    fullName: 'International Olympiad on Astronomy and Astrophysics',
+    description: 'Official papers grouped by olympiad edition.',
+    logo: '/assets/logos/ioaa/ioaa.png',
+    href: '/resources/ioaa/',
+    tag: '2007-present',
+  },
+  {
+    name: 'IAO',
+    fullName: 'International Astronomy Olympiad',
+    description: 'Selected archive and supplementary materials.',
+    logo: '/assets/logos/iao/iao.png',
+    href: '/resources/iao/',
+    tag: 'Archive',
+  },
+  {
+    name: 'CNAO',
+    fullName: 'Chinese National Astronomy Olympiad',
+    description: 'National finals archive with Chinese-first documents.',
+    logo: '/assets/logos/cnao.png',
+    href: '/resources/cnao/',
+    tag: 'Chinese-first',
+  },
+];
+
+const categoryBlocks = [
+  {
+    id: 'notes',
+    eyebrow: 'Study Notes',
+    title: 'Notes Library',
+    description: 'The notes archive is planned to be organized by topic and release year.',
+    tone: 'resource-tone-notes',
+  },
+  {
+    id: 'papers',
+    eyebrow: 'Academic Papers',
+    title: 'Paper Collection',
+    description: 'Reading lists and references will be grouped by research direction.',
+    tone: 'resource-tone-papers',
+  },
+  {
+    id: 'code',
+    eyebrow: 'Code Projects',
+    title: 'Code Archive',
+    description: 'Scripts and project releases will be maintained in this category.',
+    tone: 'resource-tone-code',
+  },
+  {
+    id: 'slides',
+    eyebrow: 'Presentation Documents',
+    title: 'Slides and Talks',
+    description: 'Talk decks and teaching slides will be sorted by event and timeline.',
+    tone: 'resource-tone-slides',
+  },
+];
+---
+
+<BaseLayout title="Resources" description="Downloadable files and resources" locale="en">
+  <section class="section-light content-section resource-hero-shell">
+    <div class="container resource-hub">
+      <header class="resource-hero">
+        <p class="resource-hero-eyebrow">Resource Library</p>
+        <h1>Resources</h1>
+        <p class="article-description">
+          A category-first library inspired by Apple-style hierarchy: each major section stands on its own, then leads to dedicated pages and year-level files.
+        </p>
+        <nav class="resource-quick-nav" aria-label="Resource categories">
+          <a href="#competitions">Competitions</a>
+          <a href="#notes">Notes</a>
+          <a href="#papers">Papers</a>
+          <a href="#code">Code</a>
+          <a href="#slides">Slides</a>
+        </nav>
+      </header>
+    </div>
+  </section>
+
+  <section id="competitions" class="section-light content-section resource-major-section resource-major-section-alt">
+    <div class="container resource-hub">
+      <h2 class="section-title">Competition Archive</h2>
+      <p class="section-intro">
+        The competition category is split by olympiad. Open a card to see files grouped year by year.
+      </p>
+
+      <div class="resource-major-grid resource-major-grid-3" role="list" aria-label="Competition cards">
+        {competitionCards.map((card) => (
+          <article class="resource-entry-card" role="listitem">
+            <div class="resource-entry-head">
+              <div class="resource-entry-logo-stage">
+                <img class="resource-entry-logo" src={card.logo} alt="" aria-hidden="true" loading="lazy" />
+              </div>
+              <span class="resource-entry-tag">{card.tag}</span>
+            </div>
+            <h3>{card.name}</h3>
+            <p class="resource-entry-fullname">{card.fullName}</p>
+            <p>{card.description}</p>
+            <a class="resource-entry-link" href={card.href}>
+              <span>Open competition page</span>
+              <Icon name="chevron.right" />
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {categoryBlocks.map((block, idx) => (
+    <section id={block.id} class:list={['section-light', 'content-section', 'resource-major-section', idx % 2 === 0 ? 'resource-major-section-base' : 'resource-major-section-alt']}>
+      <div class="container resource-hub">
+        <h2 class="section-title">{block.title}</h2>
+        <p class="section-intro">{block.description}</p>
+
+        <article class:list={['resource-major-card', 'resource-major-card-single', block.tone]}>
+          <p class="resource-category-eyebrow">{block.eyebrow}</p>
+          <h3>{block.title}</h3>
+          <p>{block.description}</p>
+        </article>
+      </div>
+    </section>
+  ))}
+</BaseLayout>

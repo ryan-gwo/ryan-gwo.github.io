@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
+
+const competitionCards = [
+  {
+    name: 'CNAO',
+    fullName: '全国中学生天文知识竞赛',
+    description: '国赛决赛试题与历史汇编，按学年整理。',
+    logo: '/assets/logos/cnao.png',
+    href: '/zh-cn/resources/cnao/',
+    tag: '国家级',
+  },
+  {
+    name: 'IOAA',
+    fullName: '国际天文与天体物理奥林匹克竞赛',
+    description: '按届次整理理论、数据分析与观测试题。',
+    logo: '/assets/logos/ioaa/ioaa.png',
+    href: '/zh-cn/resources/ioaa/',
+    tag: '国际赛',
+  },
+  {
+    name: 'IAO',
+    fullName: '国际天文奥林匹克竞赛',
+    description: '收录可用的历年赛题与整理资料。',
+    logo: '/assets/logos/iao/iao.png',
+    href: '/zh-cn/resources/iao/',
+    tag: '国际赛',
+  },
+];
+
+const categoryBlocks = [
+  {
+    id: 'training',
+    eyebrow: '竞赛讲义',
+    title: '训练材料',
+    description: '省赛、国决选拔、国际赛训练与专题讲义。',
+    tone: 'resource-tone-training',
+    link: '/zh-cn/resources/training/',
+    linkLabel: '进入讲义页面',
+  },
+  {
+    id: 'notes',
+    eyebrow: '学习笔记',
+    title: '笔记资料库',
+    description: '将按主题与年份逐步整理公开。',
+    tone: 'resource-tone-notes',
+  },
+  {
+    id: 'papers',
+    eyebrow: '学术论文',
+    title: '论文资料库',
+    description: '将按研究方向整理阅读清单与参考文献。',
+    tone: 'resource-tone-papers',
+  },
+  {
+    id: 'code',
+    eyebrow: '代码项目',
+    title: '代码资料库',
+    description: '将按项目版本归档脚本与工具。',
+    tone: 'resource-tone-code',
+  },
+  {
+    id: 'slides',
+    eyebrow: '演示文档',
+    title: '演示资料库',
+    description: '按报告场景与时间整理讲稿与幻灯片。',
+    tone: 'resource-tone-slides',
+  },
+];
+---
+
+<BaseLayout title="资源下载" description="可下载的文件和资源" locale="zh-cn">
+  <section class="section-light content-section resource-hero-shell">
+    <div class="container resource-hub">
+      <header class="resource-hero">
+        <p class="resource-hero-eyebrow">资源库</p>
+        <h1>资源下载</h1>
+        <p class="article-description">
+          按大类 section 分层组织，结构与简历页一致。每个大类同级展示，再进入独立页面查看届别与文件。
+        </p>
+        <nav class="resource-quick-nav" aria-label="资源分类">
+          <a href="#competitions">竞赛题库</a>
+          <a href="#training">竞赛讲义</a>
+          <a href="#notes">学习笔记</a>
+          <a href="#papers">学术论文</a>
+          <a href="#code">代码项目</a>
+          <a href="#slides">演示文档</a>
+        </nav>
+      </header>
+    </div>
+  </section>
+
+  <section id="competitions" class="section-light content-section resource-major-section resource-major-section-alt">
+    <div class="container resource-hub">
+      <h2 class="section-title">竞赛题库</h2>
+      <p class="section-intro">
+        竞赛类按赛事分组。点击卡片进入赛事独立页面，再按年份查看和下载。
+      </p>
+
+      <div class="resource-major-grid resource-major-grid-3" role="list" aria-label="竞赛卡片">
+        {competitionCards.map((card) => (
+          <article class="resource-entry-card" role="listitem">
+            <div class="resource-entry-head">
+              <div class="resource-entry-logo-stage">
+                <img class="resource-entry-logo" src={card.logo} alt="" aria-hidden="true" loading="lazy" />
+              </div>
+              <span class="resource-entry-tag">{card.tag}</span>
+            </div>
+            <h3>{card.name}</h3>
+            <p class="resource-entry-fullname">{card.fullName}</p>
+            <p>{card.description}</p>
+            <a class="resource-entry-link" href={card.href}>
+              <span>进入竞赛页面</span>
+              <Icon name="chevron.right" />
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {categoryBlocks.map((block, idx) => (
+    <section id={block.id} class:list={['section-light', 'content-section', 'resource-major-section', idx % 2 === 0 ? 'resource-major-section-base' : 'resource-major-section-alt']}>
+      <div class="container resource-hub">
+        <h2 class="section-title">{block.title}</h2>
+        <p class="section-intro">{block.description}</p>
+
+        <article class:list={['resource-major-card', 'resource-major-card-single', block.tone]}>
+          <p class="resource-category-eyebrow">{block.eyebrow}</p>
+          <h3>{block.title}</h3>
+          <p>{block.description}</p>
+          {block.link && <a class="resource-entry-link" href={block.link}>{block.linkLabel}</a>}
+        </article>
+      </div>
+    </section>
+  ))}
+</BaseLayout>

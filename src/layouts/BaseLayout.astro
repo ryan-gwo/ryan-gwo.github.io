@@ -6,28 +6,42 @@ const { title = 'Ryan Guo', description = '', locale = 'en' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? 'edPv1gDwvHyP6q_d4ZonnP1z4Taik4vZ43Tx_5-1xTA';
 const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION ?? 'FCAC5D6B1AAEA460C022D6876264FEA5';
+const buildDate = new Date();
 const currentYear = new Date().getFullYear();
+const dateLocale = {
+  en: 'en-US',
+  'zh-cn': 'zh-CN',
+  'zh-hk': 'zh-HK',
+}[locale] ?? 'en-US';
+const lastUpdatedAt = new Intl.DateTimeFormat(dateLocale, {
+  year: 'numeric',
+  month: 'long',
+}).format(buildDate);
 const footerText = {
   en: {
     rights: 'All rights reserved.',
+    updated: 'Last updated',
     builtWith: 'Built with',
     hostedOn: 'Hosted on',
     sourceCode: 'Source code',
   },
   'zh-cn': {
     rights: '保留所有权利。',
+    updated: '最近更新',
     builtWith: '使用',
     hostedOn: '托管于',
     sourceCode: '源代码',
   },
   'zh-hk': {
     rights: '保留所有權利。',
+    updated: '最近更新',
     builtWith: '使用',
     hostedOn: '託管於',
     sourceCode: '原始碼',
   },
 }[locale] ?? {
   rights: 'All rights reserved.',
+  updated: 'Last updated',
   builtWith: 'Built with',
   hostedOn: 'Hosted on',
   sourceCode: 'Source code',
@@ -55,6 +69,7 @@ const footerText = {
     <footer class="site-footer section-light">
       <div class="container footer-inner">
         <p class="footer-copy">© {currentYear} Yuze Guo. {footerText.rights}</p>
+        <p class="footer-copy footer-updated">{footerText.updated}: {lastUpdatedAt}</p>
         <p class="footer-meta">
           {footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>
           {' · '}

@@ -3,6 +3,21 @@ import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
 const locale = frontmatter.locale ?? 'en';
+
+const writingIndexByLocale = {
+  en: '/writings/',
+  'zh-cn': '/zh-cn/writings/',
+  'zh-hk': '/zh-hk/writings/'
+};
+
+const backLabelByLocale = {
+  en: 'Back to selected writing',
+  'zh-cn': '返回精选写作',
+  'zh-hk': '返回精選寫作'
+};
+
+const backHref = writingIndexByLocale[locale] ?? writingIndexByLocale.en;
+const backLabel = backLabelByLocale[locale] ?? backLabelByLocale.en;
 ---
 
 <BaseLayout
@@ -12,6 +27,10 @@ const locale = frontmatter.locale ?? 'en';
 >
   <section class="section-light article-page">
     <div class="container article-body">
+      <a class="article-back-link" href={backHref}>
+        <span aria-hidden="true">&lt;</span>
+        <span>{backLabel}</span>
+      </a>
       <h1>{frontmatter.title}</h1>
       {frontmatter.description && (
         <div class="article-description">{frontmatter.description}</div>

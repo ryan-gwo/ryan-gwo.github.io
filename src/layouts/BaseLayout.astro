@@ -25,6 +25,7 @@ const footerText = {
     builtWith: 'Built with',
     hostedOn: 'Hosted on',
     sourceCode: 'Source code',
+    backToTop: 'Back to top',
   },
   'zh-cn': {
     rights: '保留所有权利。',
@@ -33,6 +34,7 @@ const footerText = {
     builtWith: '使用',
     hostedOn: '托管于',
     sourceCode: '源代码',
+    backToTop: '回到顶部',
   },
   'zh-hk': {
     rights: '保留所有權利。',
@@ -41,6 +43,7 @@ const footerText = {
     builtWith: '使用',
     hostedOn: '託管於',
     sourceCode: '原始碼',
+    backToTop: '回到頂部',
   },
 }[locale] ?? {
   rights: 'All rights reserved.',
@@ -49,6 +52,7 @@ const footerText = {
   builtWith: 'Built with',
   hostedOn: 'Hosted on',
   sourceCode: 'Source code',
+  backToTop: 'Back to top',
 };
 ---
 
@@ -70,6 +74,9 @@ const footerText = {
     <main>
       <slot />
     </main>
+    <button class="back-to-top" type="button" aria-label={footerText.backToTop} title={footerText.backToTop}>
+      <span class="back-to-top__icon" aria-hidden="true"></span>
+    </button>
     <footer class="site-footer section-light">
       <div class="container footer-inner">
         <p class="footer-copy">© {currentYear} Yuze Guo. {footerText.rights}</p>
@@ -88,5 +95,31 @@ const footerText = {
         </p>
       </div>
     </footer>
+    <script is:inline>
+      (() => {
+        const button = document.querySelector('.back-to-top');
+        if (!button) {
+          return;
+        }
+
+        const showAfter = 220;
+
+        const updateButton = () => {
+          const shouldShow = window.scrollY > showAfter;
+          button.classList.toggle('is-visible', shouldShow);
+        };
+
+        updateButton();
+        window.addEventListener('scroll', updateButton, { passive: true });
+
+        button.addEventListener('click', () => {
+          const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({
+            top: 0,
+            behavior: reduceMotion ? 'auto' : 'smooth',
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

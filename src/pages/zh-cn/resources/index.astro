@@ -122,7 +122,12 @@ const comingLaterBlocks = [
           <p class="resource-category-eyebrow">{block.eyebrow}</p>
           <h3>{block.title}</h3>
           <p>{block.description}</p>
-          {block.link && <a class="resource-entry-link" href={block.link}>{block.linkLabel}</a>}
+          {block.link && (
+            <a class="resource-entry-link" href={block.link}>
+              <span>{block.linkLabel}</span>
+              <Icon name="chevron.right" />
+            </a>
+          )}
         </article>
       </div>
     </section>

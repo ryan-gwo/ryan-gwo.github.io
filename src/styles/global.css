@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     font-family: "SF Pro Text", "SF Pro SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: var(--bg-light);
     color: var(--text-dark);
+    overflow-x: hidden;
 }
 
 body.mobile-menu-open {
@@ -556,6 +558,40 @@ img {
     margin: 0 0 16px;
 }
 
+.hero h1,
+.hero .lead,
+.section-title,
+.section-intro,
+.about-copy p,
+.contact-box p,
+.article-page h1,
+.article-page h2,
+.article-page p,
+.card p,
+.cv-card p,
+.resource-entry-fullname,
+.resource-download-link span {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.button,
+.resource-download-link {
+    max-width: 100%;
+    white-space: normal;
+}
+
+.article-page pre,
+.article-page table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+.article-page pre code {
+    white-space: pre;
+}
+
 .article-page .article-description {
     font-size: 21px;
     line-height: 1.45;
@@ -609,6 +645,17 @@ img {
 
     .nav-inner {
         padding: 0 14px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero h1,
+    .section-title,
+    .article-page h1,
+    .article-page h2 {
+        max-width: 100%;
     }
 
     .mobile-menu {
@@ -860,6 +907,10 @@ img {
     .about-copy p,
     .article-page p {
         font-size: 17px;
+    }
+
+    .resource-download-link {
+        align-items: flex-start;
     }
 
     .footer-copy,

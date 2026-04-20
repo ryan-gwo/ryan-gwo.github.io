@@ -2,31 +2,120 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 import InstitutionLogo from '../components/InstitutionLogo.astro';
+
+const writingModules = import.meta.glob('./writing/*.md', { eager: true });
+const selectedWriting = Object.values(writingModules)
+  .map((entry) => ({
+    frontmatter: entry.frontmatter ?? entry.default?.frontmatter ?? {},
+    url: entry.url ?? entry.default?.url ?? '',
+  }))
+  .filter((entry) => entry.frontmatter?.featured && entry.url)
+  .sort((a, b) => (a.frontmatter?.priority ?? 999) - (b.frontmatter?.priority ?? 999))
+  .slice(0, 3);
 ---
 
 <BaseLayout
-  title="Ryan Guo"
-  description="Ryan Guo's personal website"
+  title="Yuze Guo"
+  description="Yuze Guo's personal website"
   locale="en"
 >
   <section id="overview" class="section-dark hero">
     <div class="container">
-      <p class="eyebrow">Physics • Astrophysics • Gravitational Waves</p>
-      <h1>Studying high-energy astrophysics, cosmology, and the signals of the universe.</h1>
-      <p class="lead">
-        I am Yuze Guo, currently an undergraduate student in physics at Wuhan University.
-        This is my multilingual personal homepage, where I share my academic profile, writing, and resources.
-      </p>
+      <p class="eyebrow">Academic Homepage</p>
+      <h1 class="hero-name">Yuze Guo</h1>
+      <p class="hero-identity">Physics Undergraduate, Wuhan University</p>
+      <p class="hero-focus">Research Focus: Gravitational Waves, Cosmology, and Multi-messenger Astronomy</p>
+      <p class="lead">From observational signals, I study how physical information about the universe can be extracted and interpreted.</p>
       <div class="actions">
-        <a class="button button-primary" href="#about"><Icon name="info.circle" />About</a>
-        <a class="button button-link" href="#writing">Latest writing</a>
+        <a class="button button-primary" href="/research/"><Icon name="info.circle" />Explore research</a>
+        <a class="button button-secondary" href="/writings/">Read writing</a>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section-light content-section">
+  <section id="research" class="section-light content-section featured-research">
     <div class="container">
-      <h2 class="section-title">About</h2>
+      <h2 class="section-title">Research</h2>
+      <p class="section-intro light">
+        My current work centers on extracting reliable physical constraints from observations across three connected directions.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Gravitational Waves</h3>
+          <p>
+            Long-duration signals from compact-object systems, with focus on continuous-wave searches, weak-signal characterization, and the interpretation of marginal candidates.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Cosmology</h3>
+          <p>
+            How assumptions on relativistic spacetime and early-universe physics propagate into parameter inference, especially where theory and observation are only weakly coupled.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Multi-messenger Astronomy</h3>
+          <p>
+            Joint analysis of gravitational and electromagnetic channels to build physically consistent source models and reduce single-channel degeneracies.
+          </p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="button button-link" href="/research/">See full research page</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing" class="section-dark content-section selected-writing">
+    <div class="container">
+      <h2 class="section-title">Selected Writing</h2>
+      <p class="section-intro light">
+        A curated set of essays that best reflects how I think across physics, mathematics, and related ideas.
+      </p>
+      {selectedWriting.length > 0 ? (
+        <div class="selected-writing-list">
+          {selectedWriting.map(({ frontmatter, url }) => (
+            <article class="article-card">
+              <div class="article-meta">{frontmatter.dateText}</div>
+              <h3>{frontmatter.title}</h3>
+              <p>{frontmatter.summary ?? frontmatter.description}</p>
+            </article>
+          ))}
+        </div>
+      ) : null}
+      <div class="selected-writing-actions">
+        <a class="button button-link" href="/writings/">View all writing</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="now" class="section-light content-section now-section">
+    <div class="container">
+      <h2 class="section-title">Now</h2>
+      <p class="section-intro">A stable snapshot of what I am working on now, updated as priorities evolve rather than as a news feed.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-tag">Research Theme</div>
+          <div class="timeline-text">Preparing for doctoral-level work in gravitational-wave data analysis, with emphasis on continuous-wave search pipelines and astrophysical interpretation.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">Learning Focus</div>
+          <div class="timeline-text">Reinforcing statistical inference, signal processing, and computational workflows that support cosmology and multi-messenger studies.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">Writing Plan</div>
+          <div class="timeline-text">Drafting concise notes that connect coursework and research reading, then expanding selected themes into longer essays.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">Application Stage</div>
+          <div class="timeline-text">Organizing materials for the next cycle, including research statements, recommendation coordination, and project summaries.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-dark content-section content-section-spacious brief-about">
+    <div class="container">
+      <h2 class="section-title">Brief About</h2>
       <div class="about-shell">
         <div class="profile-card">
           <img src="/images/prof_pic.jpg" alt="Profile photo of Yuze Guo" />
@@ -41,105 +130,63 @@ import InstitutionLogo from '../components/InstitutionLogo.astro';
             <InstitutionLogo institution="whu">Wuhan University</InstitutionLogo>.
           </p>
           <p>
-            Before this, I completed both my middle and high school studies at <InstitutionLogo institution="hsfz">The Affiliated High School of South China Normal University</InstitutionLogo> as a member of the Physics Olympiad Group.
+            I expect to pursue my PhD in astrophysics at <InstitutionLogo institution="pku">Peking University</InstitutionLogo> starting from fall 2026.
+            My long-term interests lie in high-energy astrophysics, especially gravitational waves, cosmology, and multi-messenger astronomy.
           </p>
           <p>
-            I expect to pursue my PhD degree in astrophysics at <InstitutionLogo institution="pku">Peking University</InstitutionLogo> starting from fall 2026.
-            My research interest lies in high energy astrophysics, specifically gravitational waves,
-            cosmology, and multi-messenger astronomy.
+            Before university, I studied at <InstitutionLogo institution="hsfz">The Affiliated High School of South China Normal University</InstitutionLogo>,
+            where I joined the Physics Olympiad Group and began systematic astronomy training through HFAA.
           </p>
-          <p>
-            I started my systematic learning in astronomy during high school as a part of the activities
-            related to HFAA (The Astronomy Association of Affiliated High School of SCNU). Apart from
-            amateur observations and lectures, I also participated in astronomy olympiads and won gold
-            medals in both national and international competitions.
-          </p>
+          <div class="about-brief-actions">
+            <a class="button button-primary" href="/cv/" rel="noreferrer">View CV</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="research" class="section-dark content-section">
+  <section id="life" class="section-light content-section life-glimpses">
     <div class="container">
-      <h2 class="section-title">Research Interests</h2>
-      <p class="section-intro light">
-        Current areas of focus in astrophysics and related theory.
+      <h2 class="section-title">Beyond Research</h2>
+      <p class="section-intro">
+        A few quiet routines that keep me grounded outside formal work.
       </p>
       <div class="grid">
         <div class="card">
-          <h3>Gravitational Waves</h3>
+          <h3>Stargazing Nights</h3>
           <p>
-            Continuous signals, compact objects, and the astrophysical information encoded in long-duration observations.
+            I still set aside clear evenings for casual sky-watching and simple observing logs.
           </p>
         </div>
         <div class="card">
-          <h3>Cosmology</h3>
+          <h3>Reading Windows</h3>
           <p>
-            Conceptual and theoretical questions in relativistic spacetime, early-universe physics, and cosmic structure.
+            Slow reading in history of science and biography often reshapes how I frame technical questions.
           </p>
         </div>
         <div class="card">
-          <h3>Multi-messenger Astronomy</h3>
+          <h3>Walks and Photography</h3>
           <p>
-            Cross-disciplinary approaches that connect gravitational, electromagnetic, and other observational channels.
+            Campus walks, occasional trips, and a small camera help me notice details I would otherwise miss.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="updates" class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">Updates</h2>
-      <p class="section-intro">Recent updates from this website.</p>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">September 23, 2025</div>
-          <div class="timeline-text">This personal homepage is established!</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="writing" class="section-dark content-section">
-    <div class="container">
-      <h2 class="section-title">Writing</h2>
-      <p class="section-intro light">
-        Notes and essays on physics, mathematics, and related ideas.
-      </p>
-      <div class="article-card">
-        <div class="article-meta">September 23, 2025 • Mechanics / Mathematics</div>
-        <h3>Initial insights into the concept of the metric</h3>
-        <p>
-          A short essay on understanding the metric as a generalization of the Pythagorean theorem
-          for infinitesimal distances.
-        </p>
-        <a class="button button-link" href="/writing/metric/">Read article</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="cv" class="section-light content-section">
-  <div class="container">
-    <h2 class="section-title">CV</h2>
-    <p class="section-intro">
-      The English site should prioritize the English CV, while all other downloadable files are grouped on a separate resources page.
-    </p>
-    <div class="cv-actions">
-      <a class="button button-primary" href="/cv/" rel="noreferrer">View CV</a>
-      <a class="button button-secondary" href="/resources/" rel="noreferrer"><Icon name="download" />Downloads</a>
-    </div>
-  </div>
-  </section>
-
-  <section id="contact" class="section-dark content-section">
+  <section id="contact" class="section-dark content-section content-section-spacious contact-section">
     <div class="container contact-box">
       <h2 class="section-title">Contact</h2>
       <p>
-        Feel free to get in touch via GitHub.
+        Email is the preferred channel for academic communication.
       </p>
       <p>
-        <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub Profile</a>
+        <a class="contact-primary" href="mailto:guoyuze@whu.edu.cn">guoyuze@whu.edu.cn</a>
+      </p>
+      <p class="contact-secondary-links">
+        <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a>
+        <span aria-hidden="true"> · </span>
+        <a href="/resources/" rel="noreferrer"><Icon name="download" />Research materials and downloads</a>
       </p>
     </div>
   </section>

@@ -39,33 +39,28 @@ const categoryBlocks = [
     link: '/zh-cn/resources/training/',
     linkLabel: '进入讲义页面',
   },
+];
+
+const comingLaterBlocks = [
   {
-    id: 'notes',
     eyebrow: '学习笔记',
     title: '笔记资料库',
-    description: '将按主题与年份逐步整理公开。',
-    tone: 'resource-tone-notes',
+    description: '后续将以精选方式公开。',
   },
   {
-    id: 'papers',
     eyebrow: '学术论文',
     title: '论文资料库',
-    description: '将按研究方向整理阅读清单与参考文献。',
-    tone: 'resource-tone-papers',
+    description: '后续将发布按方向整理的阅读参考。',
   },
   {
-    id: 'code',
     eyebrow: '代码项目',
     title: '代码资料库',
-    description: '将按项目版本归档脚本与工具。',
-    tone: 'resource-tone-code',
+    description: '后续将以精选方式公开脚本与工具。',
   },
   {
-    id: 'slides',
     eyebrow: '演示文档',
     title: '演示资料库',
-    description: '按报告场景与时间整理讲稿与幻灯片。',
-    tone: 'resource-tone-slides',
+    description: '后续将补充公开报告讲稿与幻灯片。',
   },
 ];
 ---
@@ -77,15 +72,12 @@ const categoryBlocks = [
         <p class="resource-hero-eyebrow">资源库</p>
         <h1>资源下载</h1>
         <p class="article-description">
-          按大类 section 分层组织，结构与简历页一致。每个大类同级展示，再进入独立页面查看届别与文件。
+          当前已维护资源的精选归档页，优先展示可直接使用的材料。
         </p>
         <nav class="resource-quick-nav" aria-label="资源分类">
           <a href="#competitions">竞赛题库</a>
           <a href="#training">竞赛讲义</a>
-          <a href="#notes">学习笔记</a>
-          <a href="#papers">学术论文</a>
-          <a href="#code">代码项目</a>
-          <a href="#slides">演示文档</a>
+          <a href="#coming-later">更多内容后续开放</a>
         </nav>
       </header>
     </div>
@@ -95,7 +87,7 @@ const categoryBlocks = [
     <div class="container resource-hub">
       <h2 class="section-title">竞赛题库</h2>
       <p class="section-intro">
-        竞赛类按赛事分组。点击卡片进入赛事独立页面，再按年份查看和下载。
+        按赛事分组整理的已维护题库。点击卡片进入独立页面并按年份下载。
       </p>
 
       <div class="resource-major-grid resource-major-grid-3" role="list" aria-label="竞赛卡片">
@@ -121,7 +113,7 @@ const categoryBlocks = [
   </section>
 
   {categoryBlocks.map((block, idx) => (
-    <section id={block.id} class:list={['section-light', 'content-section', 'resource-major-section', idx % 2 === 0 ? 'resource-major-section-base' : 'resource-major-section-alt']}>
+    <section id={block.id} class:list={['section-light', 'content-section', 'content-section-compact', 'resource-major-section', idx % 2 === 0 ? 'resource-major-section-base' : 'resource-major-section-alt']}>
       <div class="container resource-hub">
         <h2 class="section-title">{block.title}</h2>
         <p class="section-intro">{block.description}</p>
@@ -135,4 +127,23 @@ const categoryBlocks = [
       </div>
     </section>
   ))}
+
+  <section id="coming-later" class="section-light content-section content-section-compact resource-major-section resource-major-section-base">
+    <div class="container resource-hub">
+      <h2 class="section-title">更多内容后续开放</h2>
+      <p class="section-intro">
+        下列栏目会在内容达到可用规模后，以精选方式公开。
+      </p>
+
+      <div class="resource-coming-grid" role="list" aria-label="后续开放栏目">
+        {comingLaterBlocks.map((block) => (
+          <article class="resource-major-card resource-major-card-subtle" role="listitem">
+            <p class="resource-category-eyebrow">{block.eyebrow}</p>
+            <h3>{block.title}</h3>
+            <p>{block.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

@@ -2,31 +2,110 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
 import InstitutionLogo from '../../components/InstitutionLogo.astro';
+
+const writingModules = import.meta.glob('./writing/*.md', { eager: true });
+const selectedWriting = Object.values(writingModules)
+  .map((entry) => ({
+    frontmatter: entry.frontmatter ?? entry.default?.frontmatter ?? {},
+    url: entry.url ?? entry.default?.url ?? '',
+  }))
+  .filter((entry) => entry.frontmatter?.featured && entry.url)
+  .sort((a, b) => (a.frontmatter?.priority ?? 999) - (b.frontmatter?.priority ?? 999))
+  .slice(0, 3);
 ---
 
 <BaseLayout
-  title="Ryan Guo"
-  description="Ryan Guo 的个人网站"
+  title="Yuze Guo"
+  description="Yuze Guo 的个人网站"
   locale="zh-cn"
 >
   <section id="overview" class="section-dark hero">
     <div class="container">
-      <p class="eyebrow">物理学 • 天体物理 • 引力波</p>
-      <h1>关注高能天体物理、宇宙学，以及宇宙中可观测信号所携带的信息。</h1>
-      <p class="lead">
-        我是郭雨泽，目前是武汉大学物理学专业本科生。
-        这是我的三语个人主页，用于分享学术经历、写作与资料。
-      </p>
+      <p class="eyebrow">学术个人主页</p>
+      <h1 class="hero-name">郭雨泽</h1>
+      <p class="hero-identity">武汉大学物理学本科生</p>
+      <p class="hero-focus">研究方向：引力波、宇宙学、多信使天文学</p>
+      <p class="lead">我关注如何从观测信号中提取并解释宇宙的物理信息。</p>
       <div class="actions">
-        <a class="button button-primary" href="#about"><Icon name="info.circle" />关于</a>
-        <a class="button button-link" href="#writing">最新文章</a>
+        <a class="button button-primary" href="/zh-cn/research/"><Icon name="info.circle" />了解研究</a>
+        <a class="button button-secondary" href="/zh-cn/writings/">阅读写作</a>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section-light content-section">
+  <section id="research" class="section-light content-section featured-research">
     <div class="container">
-      <h2 class="section-title">关于</h2>
+      <h2 class="section-title">研究</h2>
+      <p class="section-intro light">当前工作围绕从观测中提取可检验的物理约束，主要在三个相互关联的方向展开。</p>
+      <div class="grid">
+        <div class="card">
+          <h3>引力波</h3>
+          <p>研究来自致密天体系统的长时程引力波信号，重点是连续引力波搜寻、弱信号表征以及边缘候选体的天体物理解读。</p>
+        </div>
+        <div class="card">
+          <h3>宇宙学</h3>
+          <p>关注相对论时空与早期宇宙假设如何传递到参数推断，尤其是理论与观测耦合仍较弱的情形。</p>
+        </div>
+        <div class="card">
+          <h3>多信使天文学</h3>
+          <p>通过联合分析引力与电磁观测，构建物理一致的源模型，并缓解单一通道中常见的参数退化。</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="button button-link" href="/zh-cn/research/">查看完整研究页面</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing" class="section-dark content-section selected-writing">
+    <div class="container">
+      <h2 class="section-title">精选写作</h2>
+      <p class="section-intro light">挑选最能体现我思考方式与兴趣结构的写作，而非按时间堆叠的内容列表。</p>
+      {selectedWriting.length > 0 ? (
+        <div class="selected-writing-list">
+          {selectedWriting.map(({ frontmatter, url }) => (
+            <article class="article-card">
+              <div class="article-meta">{frontmatter.dateText}</div>
+              <h3>{frontmatter.title}</h3>
+              <p>{frontmatter.summary ?? frontmatter.description}</p>
+            </article>
+          ))}
+        </div>
+      ) : null}
+      <div class="selected-writing-actions">
+        <a class="button button-link" href="/zh-cn/writings/">查看全部写作</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="now" class="section-light content-section now-section">
+    <div class="container">
+      <h2 class="section-title">现在在做什么</h2>
+      <p class="section-intro">这里记录我当前稳定推进的重点，会随阶段变化调整，但不作为动态消息流。</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-tag">近期研究主题</div>
+          <div class="timeline-text">围绕引力波数据分析做博士前准备，重点放在连续引力波搜寻流程与候选体物理解释。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">学习重点</div>
+          <div class="timeline-text">持续补强统计推断、信号处理与计算工作流，作为宇宙学和多信使研究的基础工具。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">写作计划</div>
+          <div class="timeline-text">先用短笔记整理课程与文献中的核心问题，再把成熟主题扩展成更完整的文章。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">申请阶段状态</div>
+          <div class="timeline-text">按阶段整理申请材料，包括研究陈述、推荐信协同与项目经历归纳。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-dark content-section content-section-spacious brief-about">
+    <div class="container">
+      <h2 class="section-title">简介</h2>
       <div class="about-shell">
         <div class="profile-card">
           <img src="/images/prof_pic.jpg" alt="郭雨泽个人照片" />
@@ -38,88 +117,52 @@ import InstitutionLogo from '../../components/InstitutionLogo.astro';
             嗨！我是郭雨泽，目前是<InstitutionLogo institution="whu">武汉大学</InstitutionLogo>物理科学与技术学院的一名物理学专业本科生。
           </p>
           <p>
-            在此之前，我作为物理竞赛组的一员，在<InstitutionLogo institution="hsfz">华南师范大学附属中学</InstitutionLogo>完成了我的初中和高中学业。
-          </p>
-          <p>
             我预计在 2026 年秋开始在<InstitutionLogo institution="pku">北京大学</InstitutionLogo>物理学院天文学系攻读天体物理博士。
-            我的研究兴趣在于高能天体物理，具体包括引力波、宇宙学和多信使天文学。
+            长期研究兴趣集中在高能天体物理，尤其是引力波、宇宙学和多信使天文学。
           </p>
           <p>
-            我在高中时期作为华附天文社（HFAA）活动的一部分开始了系统的天文学学习。除了业余观测和讲座，我还参加了天文学奥林匹克竞赛，并在国家级和国际级比赛中均获得金牌。
+            在此之前，我作为物理竞赛组的一员，在<InstitutionLogo institution="hsfz">华南师范大学附属中学</InstitutionLogo>完成中学阶段学习，并通过华附天文社（HFAA）系统接触天文学。
           </p>
+          <div class="about-brief-actions">
+            <a class="button button-primary" href="/zh-cn/cv/" rel="noreferrer">查看简历</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="research" class="section-dark content-section">
+  <section id="life" class="section-light content-section life-glimpses">
     <div class="container">
-      <h2 class="section-title">研究兴趣</h2>
-      <p class="section-intro light">目前关注的天体物理与相关理论方向。</p>
+      <h2 class="section-title">研究之外</h2>
+      <p class="section-intro">几段低饱和的日常，不展开，只作为主线旁的轻微留白。</p>
       <div class="grid">
         <div class="card">
-          <h3>引力波</h3>
-          <p>包括连续引力波、致密天体以及长时间尺度观测中蕴含的天体物理信息。</p>
+          <h3>观星夜晚</h3>
+          <p>天气允许时会做一些轻量观测，保留简短记录，维持与天空的长期连接。</p>
         </div>
         <div class="card">
-          <h3>宇宙学</h3>
-          <p>包括相对论时空、早期宇宙以及宏观结构相关的理论与概念问题。</p>
+          <h3>阅读片刻</h3>
+          <p>常读科学史与人物传记，慢节奏阅读经常反过来帮助我组织研究问题。</p>
         </div>
         <div class="card">
-          <h3>多信使天文学</h3>
-          <p>通过引力、电磁辐射及其他观测通道的结合来理解天体物理过程。</p>
+          <h3>行走与摄影</h3>
+          <p>校园散步与偶尔旅行时会拍一些照片，用细节感受来平衡高强度的思考。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="updates" class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">动态</h2>
-      <p class="section-intro">网站近期更新。</p>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2025 年 9 月 23 日</div>
-          <div class="timeline-text">本个人主页建立！</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="writing" class="section-dark content-section">
-    <div class="container">
-      <h2 class="section-title">写作</h2>
-      <p class="section-intro light">关于物理、数学与相关问题的笔记和随笔。</p>
-      <div class="article-card">
-        <div class="article-meta">2025 年 9 月 23 日 • 力学 / 数学</div>
-        <h3>度规概念的初步感悟</h3>
-        <p>
-          从勾股定理出发，理解度规这一概念如何被视为无穷小距离上的推广。
-        </p>
-        <a class="button button-link" href="/zh-cn/writing/metric/">阅读文章</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="cv" class="section-light content-section">
-  <div class="container">
-    <h2 class="section-title">简历</h2>
-    <p class="section-intro">
-      中文页面优先展示简体中文版简历，其它可下载资料统一放到资源下载页面。
-    </p>
-    <div class="cv-actions">
-      <a class="button button-primary" href="/zh-cn/cv/" rel="noreferrer">查看简历</a>
-      <a class="button button-secondary" href="/zh-cn/resources/" rel="noreferrer"><Icon name="download" />资源下载</a>
-    </div>
-  </div>
-  </section>
-
-  <section id="contact" class="section-dark content-section">
+  <section id="contact" class="section-dark content-section content-section-spacious contact-section">
     <div class="container contact-box">
       <h2 class="section-title">联系</h2>
-      <p>欢迎通过 GitHub 与我联系。</p>
+      <p>学术沟通建议优先通过邮箱联系。</p>
       <p>
+        <a class="contact-primary" href="mailto:guoyuze@whu.edu.cn">guoyuze@whu.edu.cn</a>
+      </p>
+      <p class="contact-secondary-links">
         <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub 主页</a>
+        <span aria-hidden="true"> · </span>
+        <a href="/zh-cn/resources/" rel="noreferrer"><Icon name="download" />研究资料与下载</a>
       </p>
     </div>
   </section>

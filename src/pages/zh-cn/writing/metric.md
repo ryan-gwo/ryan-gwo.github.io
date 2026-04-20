@@ -4,6 +4,9 @@ title: 度规概念的初步感悟
 description: 对于度规这一概念的初步理解
 dateText: 2025 年 9 月 23 日
 locale: zh-cn
+featured: true
+priority: 1
+summary: 从勾股定理出发，讨论度规如何成为无穷小距离表达的统一语言。
 ---
 
 前几日拜读中山大学高显教授的新书《经典力学》, 对于「度规」这一概念有了最初步的感悟。

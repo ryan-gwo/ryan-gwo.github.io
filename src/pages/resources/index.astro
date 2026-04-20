@@ -29,34 +29,26 @@ const competitionCards = [
   },
 ];
 
-const categoryBlocks = [
+const comingLaterBlocks = [
   {
-    id: 'notes',
     eyebrow: 'Study Notes',
     title: 'Notes Library',
-    description: 'The notes archive is planned to be organized by topic and release year.',
-    tone: 'resource-tone-notes',
+    description: 'Selected notes will be published here over time.',
   },
   {
-    id: 'papers',
     eyebrow: 'Academic Papers',
     title: 'Paper Collection',
-    description: 'Reading lists and references will be grouped by research direction.',
-    tone: 'resource-tone-papers',
+    description: 'Reading references will be shared as curated lists.',
   },
   {
-    id: 'code',
     eyebrow: 'Code Projects',
     title: 'Code Archive',
-    description: 'Scripts and project releases will be maintained in this category.',
-    tone: 'resource-tone-code',
+    description: 'Reusable scripts and tools will be released in selected batches.',
   },
   {
-    id: 'slides',
     eyebrow: 'Presentation Documents',
     title: 'Slides and Talks',
-    description: 'Talk decks and teaching slides will be sorted by event and timeline.',
-    tone: 'resource-tone-slides',
+    description: 'Talk decks and teaching slides will appear as selected resources.',
   },
 ];
 ---
@@ -68,14 +60,11 @@ const categoryBlocks = [
         <p class="resource-hero-eyebrow">Resource Library</p>
         <h1>Resources</h1>
         <p class="article-description">
-          A category-first library inspired by Apple-style hierarchy: each major section stands on its own, then leads to dedicated pages and year-level files.
+          A deliberately curated archive of materials currently maintained on this site.
         </p>
         <nav class="resource-quick-nav" aria-label="Resource categories">
           <a href="#competitions">Competitions</a>
-          <a href="#notes">Notes</a>
-          <a href="#papers">Papers</a>
-          <a href="#code">Code</a>
-          <a href="#slides">Slides</a>
+          <a href="#coming-later">More coming later</a>
         </nav>
       </header>
     </div>
@@ -85,7 +74,7 @@ const categoryBlocks = [
     <div class="container resource-hub">
       <h2 class="section-title">Competition Archive</h2>
       <p class="section-intro">
-        The competition category is split by olympiad. Open a card to see files grouped year by year.
+        Maintained competition materials grouped by olympiad, then organized year by year.
       </p>
 
       <div class="resource-major-grid resource-major-grid-3" role="list" aria-label="Competition cards">
@@ -110,18 +99,22 @@ const categoryBlocks = [
     </div>
   </section>
 
-  {categoryBlocks.map((block, idx) => (
-    <section id={block.id} class:list={['section-light', 'content-section', 'resource-major-section', idx % 2 === 0 ? 'resource-major-section-base' : 'resource-major-section-alt']}>
-      <div class="container resource-hub">
-        <h2 class="section-title">{block.title}</h2>
-        <p class="section-intro">{block.description}</p>
+  <section id="coming-later" class="section-light content-section content-section-compact resource-major-section resource-major-section-base">
+    <div class="container resource-hub">
+      <h2 class="section-title">More coming later</h2>
+      <p class="section-intro">
+        These collections are intentionally kept low-profile until enough material is ready.
+      </p>
 
-        <article class:list={['resource-major-card', 'resource-major-card-single', block.tone]}>
-          <p class="resource-category-eyebrow">{block.eyebrow}</p>
-          <h3>{block.title}</h3>
-          <p>{block.description}</p>
-        </article>
+      <div class="resource-coming-grid" role="list" aria-label="Upcoming archive areas">
+        {comingLaterBlocks.map((block) => (
+          <article class="resource-major-card resource-major-card-subtle" role="listitem">
+            <p class="resource-category-eyebrow">{block.eyebrow}</p>
+            <h3>{block.title}</h3>
+            <p>{block.description}</p>
+          </article>
+        ))}
       </div>
-    </section>
-  ))}
+    </div>
+  </section>
 </BaseLayout>

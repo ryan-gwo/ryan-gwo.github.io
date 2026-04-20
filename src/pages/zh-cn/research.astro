@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+---
+
+<BaseLayout title="研究" description="研究方向与当前关注问题" locale="zh-cn">
+  <section class="section-light article-page">
+    <div class="container article-body">
+      <h1>研究</h1>
+      <div class="article-description">
+        我的主要关注点是从观测信号中提取天体物理信息，长期兴趣集中在引力波、宇宙学和多信使天文学。
+      </div>
+      <div class="actions">
+        <a class="button button-primary" href="/zh-cn/writings/">阅读写作</a>
+        <a class="button button-link" href="/zh-cn/cv/">查看简历</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="directions" class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">研究方向</h2>
+      <p class="section-intro light">
+        目前正在持续积累的核心方向。
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>引力波</h3>
+          <p>
+            关注连续引力波目标、致密天体及长时间弱信号中的天体物理解释问题。
+          </p>
+        </div>
+        <div class="card">
+          <h3>宇宙学</h3>
+          <p>
+            关注相对论时空、早期宇宙与理论框架和观测推断之间的联系。
+          </p>
+        </div>
+        <div class="card">
+          <h3>多信使天文学</h3>
+          <p>
+            结合引力和电磁等多通道观测，对天体系统进行联合约束与解释。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="questions" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">当前关注问题</h2>
+      <p class="section-intro">
+        我近期重点学习和思考的一些问题。
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-text">如何提升连续引力波搜寻中的灵敏度与结果解释能力。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-text">宇宙学模型假设如何影响高能天体物理观测中的参数推断。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-text">如何将异质观测信号整合为物理上一致的多信使模型。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research-writing" class="section-dark content-section content-section-compact">
+    <div class="container">
+      <h2 class="section-title">精选资料</h2>
+      <p class="section-intro light">
+        与当前学习线索相关的公开材料，保持小规模精选。
+      </p>
+      <div class="actions" style="justify-content: center;">
+        <a class="button button-primary" href="/zh-cn/writings/">打开精选写作</a>
+        <a class="button button-link" href="/zh-cn/resources/">浏览资源归档</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="section-light content-section">
+    <div class="container contact-box">
+      <h2 class="section-title">资料</h2>
+      <p>
+        资源下载继续保留为辅助入口，不作为本站的核心主入口。
+      </p>
+      <p>
+        <a class="button button-link" href="/zh-cn/resources/" rel="noreferrer"><Icon name="download" />打开资源与下载</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

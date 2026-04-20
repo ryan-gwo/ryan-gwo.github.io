@@ -29,34 +29,26 @@ const competitionCards = [
   },
 ];
 
-const categoryBlocks = [
+const comingLaterBlocks = [
   {
-    id: 'notes',
     eyebrow: '學習筆記',
     title: '筆記資料庫',
-    description: '將按主題與年份逐步整理公開。',
-    tone: 'resource-tone-notes',
+    description: '後續將以精選方式公開。',
   },
   {
-    id: 'papers',
     eyebrow: '學術論文',
     title: '論文資料庫',
-    description: '將按研究方向整理閱讀清單與參考文獻。',
-    tone: 'resource-tone-papers',
+    description: '後續將發布按方向整理的閱讀參考。',
   },
   {
-    id: 'code',
     eyebrow: '程式碼專案',
     title: '程式碼資料庫',
-    description: '將按專案版本歸檔腳本與工具。',
-    tone: 'resource-tone-code',
+    description: '後續將以精選方式公開腳本與工具。',
   },
   {
-    id: 'slides',
     eyebrow: '演示文檔',
     title: '演示資料庫',
-    description: '按報告場景與時間整理講稿與簡報。',
-    tone: 'resource-tone-slides',
+    description: '後續將補充公開報告講稿與簡報。',
   },
 ];
 ---
@@ -68,14 +60,11 @@ const categoryBlocks = [
         <p class="resource-hero-eyebrow">資源庫</p>
         <h1>資源下載</h1>
         <p class="article-description">
-          按大類 section 分層組織，結構與簡歷頁一致。每個大類同級展示，再進入獨立頁查看屆次與文件。
+          目前已維護資源的精選歸檔頁，優先展示可直接使用的材料。
         </p>
         <nav class="resource-quick-nav" aria-label="資源分類">
           <a href="#competitions">競賽題庫</a>
-          <a href="#notes">學習筆記</a>
-          <a href="#papers">學術論文</a>
-          <a href="#code">程式碼專案</a>
-          <a href="#slides">演示文檔</a>
+          <a href="#coming-later">更多內容後續開放</a>
         </nav>
       </header>
     </div>
@@ -85,7 +74,7 @@ const categoryBlocks = [
     <div class="container resource-hub">
       <h2 class="section-title">競賽題庫</h2>
       <p class="section-intro">
-        競賽類按賽事分組。點擊卡片進入賽事獨立頁，再按年份查看和下載。
+        按賽事分組整理的已維護題庫。點擊卡片進入獨立頁並按年份下載。
       </p>
 
       <div class="resource-major-grid resource-major-grid-3" role="list" aria-label="競賽卡片">
@@ -110,18 +99,22 @@ const categoryBlocks = [
     </div>
   </section>
 
-  {categoryBlocks.map((block, idx) => (
-    <section id={block.id} class:list={['section-light', 'content-section', 'resource-major-section', idx % 2 === 0 ? 'resource-major-section-base' : 'resource-major-section-alt']}>
-      <div class="container resource-hub">
-        <h2 class="section-title">{block.title}</h2>
-        <p class="section-intro">{block.description}</p>
+  <section id="coming-later" class="section-light content-section content-section-compact resource-major-section resource-major-section-base">
+    <div class="container resource-hub">
+      <h2 class="section-title">更多內容後續開放</h2>
+      <p class="section-intro">
+        下列欄目會在內容達到可用規模後，以精選方式公開。
+      </p>
 
-        <article class:list={['resource-major-card', 'resource-major-card-single', block.tone]}>
-          <p class="resource-category-eyebrow">{block.eyebrow}</p>
-          <h3>{block.title}</h3>
-          <p>{block.description}</p>
-        </article>
+      <div class="resource-coming-grid" role="list" aria-label="後續開放欄目">
+        {comingLaterBlocks.map((block) => (
+          <article class="resource-major-card resource-major-card-subtle" role="listitem">
+            <p class="resource-category-eyebrow">{block.eyebrow}</p>
+            <h3>{block.title}</h3>
+            <p>{block.description}</p>
+          </article>
+        ))}
       </div>
-    </section>
-  ))}
+    </div>
+  </section>
 </BaseLayout>

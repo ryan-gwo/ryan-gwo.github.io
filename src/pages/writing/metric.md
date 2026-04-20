@@ -4,6 +4,9 @@ title: Initial insights into the concept of the metric
 description: Preliminary understanding of the concept of metric
 dateText: September 23, 2025
 locale: en
+featured: true
+priority: 1
+summary: A concise note on seeing the metric as a generalization of the Pythagorean theorem at infinitesimal scales.
 ---
 
 A few days ago, I read Professor Gao Xian's new book "Classical Mechanics", and had my first basic understanding of the concept of "metric".

@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 
-const { title = 'Ryan Guo', description = '', locale = 'en' } = Astro.props;
+const { title = 'Yuze Guo', description = '', locale = 'en' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? 'edPv1gDwvHyP6q_d4ZonnP1z4Taik4vZ43Tx_5-1xTA';
 const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION ?? 'FCAC5D6B1AAEA460C022D6876264FEA5';
@@ -21,6 +21,7 @@ const footerText = {
   en: {
     rights: 'All rights reserved.',
     updated: 'Last updated',
+    contact: 'Contact',
     builtWith: 'Built with',
     hostedOn: 'Hosted on',
     sourceCode: 'Source code',
@@ -28,6 +29,7 @@ const footerText = {
   'zh-cn': {
     rights: '保留所有权利。',
     updated: '最近更新',
+    contact: '联系',
     builtWith: '使用',
     hostedOn: '托管于',
     sourceCode: '源代码',
@@ -35,6 +37,7 @@ const footerText = {
   'zh-hk': {
     rights: '保留所有權利。',
     updated: '最近更新',
+    contact: '聯絡',
     builtWith: '使用',
     hostedOn: '託管於',
     sourceCode: '原始碼',
@@ -42,6 +45,7 @@ const footerText = {
 }[locale] ?? {
   rights: 'All rights reserved.',
   updated: 'Last updated',
+  contact: 'Contact',
   builtWith: 'Built with',
   hostedOn: 'Hosted on',
   sourceCode: 'Source code',
@@ -69,6 +73,11 @@ const footerText = {
     <footer class="site-footer section-light">
       <div class="container footer-inner">
         <p class="footer-copy">© {currentYear} Yuze Guo. {footerText.rights}</p>
+        <p class="footer-copy footer-contact">
+          {footerText.contact}: <a href="mailto:guoyuze@whu.edu.cn">guoyuze@whu.edu.cn</a>
+          {' · '}
+          <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a>
+        </p>
         <p class="footer-copy footer-updated">{footerText.updated}: {lastUpdatedAt}</p>
         <p class="footer-meta">
           {footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>

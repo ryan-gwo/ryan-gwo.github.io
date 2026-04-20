@@ -54,33 +54,36 @@ const localizedPath = (targetLocale) => {
 const text = {
   en: {
     menu: 'Menu',
-    overview: 'Overview',
+    home: 'Home',
+    research: 'Research',
     writing: 'Writing',
     cv: 'CV',
-    resources: 'Downloads',
-    github: 'GitHub',
+    interests: 'Interests',
+    resources: 'Resources',
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
   },
   'zh-cn': {
     menu: '菜单',
-    overview: '概览',
+    home: '首页',
+    research: '研究',
     writing: '写作',
     cv: '简历',
-    resources: '资源下载',
-    github: 'GitHub',
+    interests: '兴趣',
+    resources: '资源库',
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
   },
   'zh-hk': {
     menu: '選單',
-    overview: '概覽',
+    home: '首頁',
+    research: '研究',
     writing: '寫作',
     cv: '履歷',
-    resources: '資源下載',
-    github: 'GitHub',
+    interests: '興趣',
+    resources: '資源庫',
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
@@ -94,17 +97,18 @@ const langLinks = {
 };
 
 const navItems = [
-  { href: `${base}#overview`, label: text.overview },
+  { href: `${base}`, label: text.home },
+  { href: `${base}research/`, label: text.research },
   { href: `${base}writings/`, label: text.writing },
   { href: `${base}cv/`, label: text.cv },
+  { href: `${base}interests/`, label: text.interests },
   { href: `${base}resources/`, label: text.resources },
-  { href: 'https://github.com/ryan-gwo', label: text.github, external: true },
 ];
 ---
 
 <header class="site-nav">
   <div class="nav-inner">
-    <a class="brand" href={base}>Ryan Guo</a>
+    <a class="brand" href={base}>Yuze Guo</a>
 
     <nav class="nav-links">
       {navItems.map((item) => (

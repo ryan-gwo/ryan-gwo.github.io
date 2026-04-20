@@ -4,6 +4,9 @@ title: 度規概念的初步感悟
 description: 對於度規這一概念的初步理解
 dateText: 2025 年 9 月 23 日
 locale: zh-hk
+featured: true
+priority: 1
+summary: 從勾股定理出發，討論度規如何成為無窮小距離表達的統一語言。
 ---
 
 前幾日拜讀中山大學高顯教授的新書《經典力學》，對於「度規」這一概念有了最初步的感悟。

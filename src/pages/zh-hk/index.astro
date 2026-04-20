@@ -2,31 +2,110 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icon from '../../components/Icon.astro';
 import InstitutionLogo from '../../components/InstitutionLogo.astro';
+
+const writingModules = import.meta.glob('./writing/*.md', { eager: true });
+const selectedWriting = Object.values(writingModules)
+  .map((entry) => ({
+    frontmatter: entry.frontmatter ?? entry.default?.frontmatter ?? {},
+    url: entry.url ?? entry.default?.url ?? '',
+  }))
+  .filter((entry) => entry.frontmatter?.featured && entry.url)
+  .sort((a, b) => (a.frontmatter?.priority ?? 999) - (b.frontmatter?.priority ?? 999))
+  .slice(0, 3);
 ---
 
 <BaseLayout
-  title="Ryan Guo"
-  description="Ryan Guo 的個人網站"
+  title="Yuze Guo"
+  description="Yuze Guo 的個人網站"
   locale="zh-hk"
 >
   <section id="overview" class="section-dark hero">
     <div class="container">
-      <p class="eyebrow">物理學 • 天體物理 • 引力波</p>
-      <h1>關注高能天體物理、宇宙學，以及宇宙中可觀測信號所攜帶的信息。</h1>
-      <p class="lead">
-        我是郭雨澤，目前是武漢大學物理學專業本科生。
-        這是我的三語個人主頁，用於分享學術經歷、寫作與資料。
-      </p>
+      <p class="eyebrow">學術個人主頁</p>
+      <h1 class="hero-name">郭雨澤</h1>
+      <p class="hero-identity">武漢大學物理學本科生</p>
+      <p class="hero-focus">研究方向：引力波、宇宙學、多信使天文學</p>
+      <p class="lead">我關注如何從觀測信號中提取並詮釋宇宙的物理信息。</p>
       <div class="actions">
-        <a class="button button-primary" href="#about"><Icon name="info.circle" />關於</a>
-        <a class="button button-link" href="#writing">最新文章</a>
+        <a class="button button-primary" href="/zh-hk/research/"><Icon name="info.circle" />了解研究</a>
+        <a class="button button-secondary" href="/zh-hk/writings/">閱讀寫作</a>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section-light content-section">
+  <section id="research" class="section-light content-section featured-research">
     <div class="container">
-      <h2 class="section-title">關於</h2>
+      <h2 class="section-title">研究</h2>
+      <p class="section-intro light">目前工作圍繞從觀測中提取可檢驗的物理約束，主要在三個相互關聯的方向展開。</p>
+      <div class="grid">
+        <div class="card">
+          <h3>引力波</h3>
+          <p>研究來自緻密天體系統的長時程引力波信號，重點是連續引力波搜尋、弱信號表徵以及邊緣候選體的天體物理解讀。</p>
+        </div>
+        <div class="card">
+          <h3>宇宙學</h3>
+          <p>關注相對論時空與早期宇宙假設如何傳遞到參數推斷，尤其是理論與觀測耦合仍較弱的情形。</p>
+        </div>
+        <div class="card">
+          <h3>多信使天文學</h3>
+          <p>透過聯合分析引力與電磁觀測，建構物理一致的源模型，並緩解單一通道中常見的參數退化。</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="button button-link" href="/zh-hk/research/">查看完整研究頁面</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing" class="section-dark content-section selected-writing">
+    <div class="container">
+      <h2 class="section-title">精選寫作</h2>
+      <p class="section-intro light">挑選最能體現我思考方式與興趣結構的寫作，而非按時間堆疊的內容列表。</p>
+      {selectedWriting.length > 0 ? (
+        <div class="selected-writing-list">
+          {selectedWriting.map(({ frontmatter, url }) => (
+            <article class="article-card">
+              <div class="article-meta">{frontmatter.dateText}</div>
+              <h3>{frontmatter.title}</h3>
+              <p>{frontmatter.summary ?? frontmatter.description}</p>
+            </article>
+          ))}
+        </div>
+      ) : null}
+      <div class="selected-writing-actions">
+        <a class="button button-link" href="/zh-hk/writings/">查看全部寫作</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="now" class="section-light content-section now-section">
+    <div class="container">
+      <h2 class="section-title">現在在做什麼</h2>
+      <p class="section-intro">這裡記錄我當前穩定推進的重點，會隨階段調整，但不作為動態消息流。</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-tag">近期研究主題</div>
+          <div class="timeline-text">圍繞引力波數據分析做博士前準備，重點放在連續引力波搜尋流程與候選體物理解讀。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">學習重點</div>
+          <div class="timeline-text">持續補強統計推斷、信號處理與計算工作流，作為宇宙學與多信使研究的基礎工具。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">寫作計劃</div>
+          <div class="timeline-text">先以短筆記整理課程與文獻中的核心問題，再把成熟主題擴展成更完整的文章。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-tag">申請階段狀態</div>
+          <div class="timeline-text">按階段整理申請材料，包括研究陳述、推薦信協調與項目經歷歸納。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-dark content-section content-section-spacious brief-about">
+    <div class="container">
+      <h2 class="section-title">簡介</h2>
       <div class="about-shell">
         <div class="profile-card">
           <img src="/images/prof_pic.jpg" alt="郭雨澤個人照片" />
@@ -38,88 +117,52 @@ import InstitutionLogo from '../../components/InstitutionLogo.astro';
             嗨！我是郭雨澤，目前是<InstitutionLogo institution="whu">武漢大學</InstitutionLogo>物理科學與技術學院的一名物理學專業本科生。
           </p>
           <p>
-            在此之前，我作爲物理競賽組的一員，在<InstitutionLogo institution="hsfz">華南師範大學附屬中學</InstitutionLogo>完成了我的初中和高中學業。
-          </p>
-          <p>
             我預計在 2026 年秋開始在<InstitutionLogo institution="pku">北京大學</InstitutionLogo>物理學院天文學系攻讀天體物理博士。
-            我的研究興趣在於高能天體物理，具體包括引力波、宇宙學和多信使天文學。
+            長期研究興趣集中在高能天體物理，尤其是引力波、宇宙學和多信使天文學。
           </p>
           <p>
-            我在高中時期作為華附天文社（HFAA）活動的一部分開始了系統的天文學學習。除了業餘觀測和講座，我還參加了天文學奧林匹克競賽，並在國家級和國際級比賽中均獲得金牌。
+            在此之前，我作爲物理競賽組的一員，在<InstitutionLogo institution="hsfz">華南師範大學附屬中學</InstitutionLogo>完成中學階段學習，並透過華附天文社（HFAA）系統接觸天文學。
           </p>
+          <div class="about-brief-actions">
+            <a class="button button-primary" href="/zh-hk/cv/" rel="noreferrer">查看履歷</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="research" class="section-dark content-section">
+  <section id="life" class="section-light content-section life-glimpses">
     <div class="container">
-      <h2 class="section-title">研究興趣</h2>
-      <p class="section-intro light">目前關注的天體物理與相關理論方向。</p>
+      <h2 class="section-title">研究之外</h2>
+      <p class="section-intro">幾段低飽和的日常，不展開，只作為主線旁的輕微留白。</p>
       <div class="grid">
         <div class="card">
-          <h3>引力波</h3>
-          <p>包括連續引力波、緻密天體以及長時間尺度觀測中蘊含的天體物理信息。</p>
+          <h3>觀星夜晚</h3>
+          <p>天氣許可時會做一些輕量觀測，保留簡短記錄，維持與天空的長期連結。</p>
         </div>
         <div class="card">
-          <h3>宇宙學</h3>
-          <p>包括相對論時空、早期宇宙以及宏觀結構相關的理論與概念問題。</p>
+          <h3>閱讀片刻</h3>
+          <p>常讀科學史與人物傳記，慢節奏閱讀經常反過來幫助我整理研究問題。</p>
         </div>
         <div class="card">
-          <h3>多信使天文學</h3>
-          <p>通過引力、電磁輻射及其他觀測通道的結合來理解天體物理過程。</p>
+          <h3>行走與攝影</h3>
+          <p>校園散步與偶爾旅行時會拍一些照片，用細節感受來平衡高強度思考。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="updates" class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">動態</h2>
-      <p class="section-intro">網站近期更新。</p>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2025 年 9 月 23 日</div>
-          <div class="timeline-text">本個人主頁建立！</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="writing" class="section-dark content-section">
-    <div class="container">
-      <h2 class="section-title">寫作</h2>
-      <p class="section-intro light">關於物理、數學與相關問題的筆記和隨筆。</p>
-      <div class="article-card">
-        <div class="article-meta">2025 年 9 月 23 日 • 力學 / 數學</div>
-        <h3>度規概念的初步感悟</h3>
-        <p>
-          從勾股定理出發，理解度規這一概念如何被視為無窮小距離上的推廣。
-        </p>
-        <a class="button button-link" href="/zh-hk/writing/metric/">閱讀文章</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="cv" class="section-light content-section">
-  <div class="container">
-    <h2 class="section-title">履歷</h2>
-    <p class="section-intro">
-      繁體頁面優先展示繁體版履歷，其他可下載資料統一放到資源下載頁面。
-    </p>
-    <div class="cv-actions">
-      <a class="button button-primary" href="/zh-hk/cv/" rel="noreferrer">查看履歷</a>
-      <a class="button button-secondary" href="/zh-hk/resources/" rel="noreferrer"><Icon name="download" />資源下載</a>
-    </div>
-  </div>
-  </section>
-
-  <section id="contact" class="section-dark content-section">
+  <section id="contact" class="section-dark content-section content-section-spacious contact-section">
     <div class="container contact-box">
       <h2 class="section-title">聯絡</h2>
-      <p>歡迎透過 GitHub 與我聯絡。</p>
+      <p>學術溝通建議優先透過電郵聯絡。</p>
       <p>
+        <a class="contact-primary" href="mailto:guoyuze@whu.edu.cn">guoyuze@whu.edu.cn</a>
+      </p>
+      <p class="contact-secondary-links">
         <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub 主頁</a>
+        <span aria-hidden="true"> · </span>
+        <a href="/zh-hk/resources/" rel="noreferrer"><Icon name="download" />研究資料與下載</a>
       </p>
     </div>
   </section>

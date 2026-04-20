@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+
+const sectionCards = [
+  {
+    id: 'essays',
+    eyebrow: '随笔与笔记',
+    title: '公开思考',
+    description: '记录研究之外的随笔、阅读笔记与阶段性想法。',
+    cta: '浏览写作归档',
+    href: '/zh-cn/writings/',
+  },
+  {
+    id: 'projects',
+    eyebrow: '兴趣项目',
+    title: '小型构建与实验',
+    description: '放置个人工具、代码尝试与尚未纳入研究主线的技术项目。',
+    cta: '进入资源库',
+    href: '/zh-cn/resources/',
+  },
+  {
+    id: 'hobbies',
+    eyebrow: '生活兴趣',
+    title: '杂谈与爱好',
+    description: '包括天文科普、学习方法、效率系统与其他长期兴趣。',
+    cta: '更多内容持续更新',
+    href: '#',
+  },
+];
+---
+
+<BaseLayout title="兴趣" description="研究之外的随笔、兴趣项目与个人爱好" locale="zh-cn">
+  <section class="section-light content-section resource-hero-shell">
+    <div class="container resource-hub">
+      <header class="resource-hero">
+        <p class="resource-hero-eyebrow">研究之外</p>
+        <h1>兴趣</h1>
+        <p class="article-description">
+          这个页面集中放置非研究向内容，包括随笔杂谈、兴趣项目和个人长期爱好。
+        </p>
+        <nav class="resource-quick-nav" aria-label="兴趣分类">
+          <a href="#essays">随笔</a>
+          <a href="#projects">项目</a>
+          <a href="#hobbies">爱好</a>
+        </nav>
+      </header>
+    </div>
+  </section>
+
+  <section class="section-light content-section resource-major-section resource-major-section-alt">
+    <div class="container resource-hub">
+      <h2 class="section-title">这里会放什么</h2>
+      <p class="section-intro">
+        以轻量、长期更新为目标，记录研究主线之外但同样重要的内容。
+      </p>
+
+      <div class="resource-coming-grid" role="list" aria-label="兴趣内容概览">
+        {sectionCards.map((card) => (
+          <article id={card.id} class="resource-major-card resource-major-card-subtle" role="listitem">
+            <p class="resource-category-eyebrow">{card.eyebrow}</p>
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+            {card.href === '#' ? (
+              <p class="cv-subtle">{card.cta}</p>
+            ) : (
+              <a class="resource-entry-link" href={card.href}>
+                <span>{card.cta}</span>
+                <Icon name="chevron.right" />
+              </a>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

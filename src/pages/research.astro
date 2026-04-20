@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<BaseLayout title="Research" description="Research directions and current focus" locale="en">
+  <section class="section-light article-page">
+    <div class="container article-body">
+      <h1>Research</h1>
+      <div class="article-description">
+        I focus on astrophysical inference from observations, with particular interests in gravitational waves,
+        cosmology, and multi-messenger astronomy.
+      </div>
+      <div class="actions">
+        <a class="button button-primary" href="/writings/">Read writing</a>
+        <a class="button button-link" href="/cv/">View CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="directions" class="section-dark content-section">
+    <div class="container">
+      <h2 class="section-title">Research Directions</h2>
+      <p class="section-intro light">
+        Main domains where I am building long-term depth.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Gravitational Waves</h3>
+          <p>
+            Continuous-wave targets, compact objects, and the interpretation of weak long-duration signals.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Cosmology</h3>
+          <p>
+            Relativistic spacetime, early-universe problems, and conceptual bridges between theory and observation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Multi-messenger Astronomy</h3>
+          <p>
+            Joint reasoning across gravitational and electromagnetic channels to constrain astrophysical systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="questions" class="section-light content-section">
+    <div class="container">
+      <h2 class="section-title">Current Questions</h2>
+      <p class="section-intro">
+        Representative themes I am currently thinking about and studying.
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-text">How to improve sensitivity and interpretation for continuous gravitational-wave searches.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-text">How cosmological assumptions shape inference from high-energy astrophysical observations.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-text">How to combine heterogeneous signals into physically consistent multi-messenger models.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research-writing" class="section-dark content-section content-section-compact">
+    <div class="container">
+      <h2 class="section-title">Selected Resources</h2>
+      <p class="section-intro light">
+        A concise set of public materials connected to this learning track.
+      </p>
+      <div class="actions" style="justify-content: center;">
+        <a class="button button-primary" href="/writings/">Open selected writing</a>
+        <a class="button button-link" href="/resources/">Browse resource archive</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" class="section-light content-section">
+    <div class="container contact-box">
+      <h2 class="section-title">Materials</h2>
+      <p>
+        Resource downloads remain available as supporting materials, not the primary entry point of this homepage.
+      </p>
+      <p>
+        <a class="button button-link" href="/resources/" rel="noreferrer"><Icon name="download" />Open resources and downloads</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+
+const sectionCards = [
+  {
+    id: 'essays',
+    eyebrow: 'Essays & Notes',
+    title: 'Thinking in Public',
+    description: 'Short-form essays, reading notes, and occasional reflections outside formal research writing.',
+    cta: 'Browse writing archive',
+    href: '/writings/',
+  },
+  {
+    id: 'projects',
+    eyebrow: 'Side Projects',
+    title: 'Builds and Experiments',
+    description: 'Small software experiments, personal utilities, and technical attempts that do not fit into research pages.',
+    cta: 'Open resource library',
+    href: '/resources/',
+  },
+  {
+    id: 'hobbies',
+    eyebrow: 'Interests',
+    title: 'Hobbies and Misc',
+    description: 'Astronomy outreach, productivity systems, and hobby projects that matter in everyday life.',
+    cta: 'More updates coming soon',
+    href: '#',
+  },
+];
+---
+
+<BaseLayout title="Interests" description="Beyond research: essays, side projects, and hobbies" locale="en">
+  <section class="section-light content-section resource-hero-shell">
+    <div class="container resource-hub">
+      <header class="resource-hero">
+        <p class="resource-hero-eyebrow">Beyond Research</p>
+        <h1>Interests</h1>
+        <p class="article-description">
+          A dedicated page for writing, experiments, and personal projects outside my core research profile.
+        </p>
+        <nav class="resource-quick-nav" aria-label="Interests categories">
+          <a href="#essays">Essays</a>
+          <a href="#projects">Projects</a>
+          <a href="#hobbies">Hobbies</a>
+        </nav>
+      </header>
+    </div>
+  </section>
+
+  <section class="section-light content-section resource-major-section resource-major-section-alt">
+    <div class="container resource-hub">
+      <h2 class="section-title">What lives here</h2>
+      <p class="section-intro">
+        This area focuses on non-research content and evolving personal work.
+      </p>
+
+      <div class="resource-coming-grid" role="list" aria-label="Interests overview">
+        {sectionCards.map((card) => (
+          <article id={card.id} class="resource-major-card resource-major-card-subtle" role="listitem">
+            <p class="resource-category-eyebrow">{card.eyebrow}</p>
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+            {card.href === '#' ? (
+              <p class="cv-subtle">{card.cta}</p>
+            ) : (
+              <a class="resource-entry-link" href={card.href}>
+                <span>{card.cta}</span>
+                <Icon name="chevron.right" />
+              </a>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

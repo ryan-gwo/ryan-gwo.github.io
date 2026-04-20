@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import remarkMath from 'remark-math';
 import rehypeMathjax from 'rehype-mathjax/chtml';
 
 export default defineConfig({
   site: 'https://ryan-gwo.github.io',
+  integrations: [sitemap()],
   i18n: {
     locales: ['en', 'zh-cn', 'zh-hk'],
     defaultLocale: 'en',

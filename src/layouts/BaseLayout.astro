@@ -3,6 +3,32 @@ import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 
 const { title = 'Ryan Guo', description = '', locale = 'en' } = Astro.props;
+const currentYear = new Date().getFullYear();
+const footerText = {
+  en: {
+    rights: 'All rights reserved.',
+    builtWith: 'Built with',
+    hostedOn: 'Hosted on',
+    sourceCode: 'Source code',
+  },
+  'zh-cn': {
+    rights: '保留所有权利。',
+    builtWith: '使用',
+    hostedOn: '托管于',
+    sourceCode: '源代码',
+  },
+  'zh-hk': {
+    rights: '保留所有權利。',
+    builtWith: '使用',
+    hostedOn: '託管於',
+    sourceCode: '原始碼',
+  },
+}[locale] ?? {
+  rights: 'All rights reserved.',
+  builtWith: 'Built with',
+  hostedOn: 'Hosted on',
+  sourceCode: 'Source code',
+};
 ---
 
 <!doctype html>
@@ -12,11 +38,24 @@ const { title = 'Ryan Guo', description = '', locale = 'en' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/black-hole.png" />
   </head>
   <body>
     <Nav locale={locale} />
     <main>
       <slot />
     </main>
+    <footer class="site-footer section-light">
+      <div class="container footer-inner">
+        <p class="footer-copy">© {currentYear} Yuze Guo. {footerText.rights}</p>
+        <p class="footer-meta">
+          {footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>
+          {' · '}
+          {footerText.hostedOn} <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a>
+          {' · '}
+          <a href="https://github.com/ryan-gwo/ryan-gwo.github.io" target="_blank" rel="noreferrer">{footerText.sourceCode}</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

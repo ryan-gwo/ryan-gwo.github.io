@@ -330,7 +330,7 @@ img {
 .institution-logo {
     margin-left: 0.28em;
     display: inline;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .institution-logo__mark {

@@ -1,0 +1,413 @@
+---
+import Icon from './Icon.astro';
+
+const { locale = 'en' } = Astro.props;
+
+const localeText = {
+  en: {
+    placeholder: 'Search pages, writing, and resources',
+    helper: 'Use ↑ and ↓ to move, Enter to open, and Esc to close.',
+    empty: 'No results found.',
+    pageLabel: 'Page',
+    writingLabel: 'Writing',
+    resourceLabel: 'Resource',
+    noteLabel: 'Note',
+  },
+  'zh-cn': {
+    placeholder: '搜索页面、写作与资源',
+    helper: '使用 ↑ / ↓ 切换结果，Enter 打开，Esc 关闭。',
+    empty: '没有找到结果。',
+    pageLabel: '页面',
+    writingLabel: '写作',
+    resourceLabel: '资源',
+    noteLabel: '笔记',
+  },
+  'zh-hk': {
+    placeholder: '搜尋頁面、寫作與資源',
+    helper: '使用 ↑ / ↓ 切換結果，Enter 開啟，Esc 關閉。',
+    empty: '未找到結果。',
+    pageLabel: '頁面',
+    writingLabel: '寫作',
+    resourceLabel: '資源',
+    noteLabel: '筆記',
+  },
+}[locale] ?? {
+  placeholder: 'Search pages, writing, and resources',
+  helper: 'Use ↑ and ↓ to move, Enter to open, and Esc to close.',
+  empty: 'No results found.',
+  pageLabel: 'Page',
+  writingLabel: 'Writing',
+  resourceLabel: 'Resource',
+  noteLabel: 'Note',
+};
+
+const pageEntriesByLocale = {
+  en: [
+    { href: '/', title: 'Home', description: 'Academic homepage and overview.', kind: localeText.pageLabel, priority: 0, keywords: 'home overview academic homepage yuze guo' },
+    { href: '/research/', title: 'Research', description: 'Research directions and current focus.', kind: localeText.pageLabel, priority: 1, keywords: 'research gravitational waves x-ray polarization multi-messenger' },
+    { href: '/writings/', title: 'Selected Writing', description: 'Curated notes and essays.', kind: localeText.pageLabel, priority: 2, keywords: 'writing essays notes articles' },
+    { href: '/cv/', title: 'CV', description: 'Curriculum Vitae and background.', kind: localeText.pageLabel, priority: 3, keywords: 'cv resume biography education experience' },
+    { href: '/interests/', title: 'Interests', description: 'Beyond research: essays, side projects, and hobbies.', kind: localeText.pageLabel, priority: 4, keywords: 'interests hobbies projects reading' },
+    { href: '/resources/', title: 'Resources', description: 'Downloadable files and archive pages.', kind: localeText.resourceLabel, priority: 5, keywords: 'resources downloads archive ioaa iao cnao' },
+    { href: '/resources/ioaa/', title: 'IOAA Resources', description: 'Official papers grouped by olympiad edition.', kind: localeText.resourceLabel, priority: 6, keywords: 'ioaa olympiad astronomy resources' },
+    { href: '/resources/iao/', title: 'IAO Resources', description: 'Selected archive and supplementary materials.', kind: localeText.resourceLabel, priority: 7, keywords: 'iao astronomy olympiad resources' },
+    { href: '/resources/cnao/', title: 'CNAO Resources', description: 'National finals archive and Chinese-first documents.', kind: localeText.resourceLabel, priority: 8, keywords: 'cnao national astronomy olympiad resources' },
+  ],
+  'zh-cn': [
+    { href: '/zh-cn/', title: '首页', description: '学术主页与概览。', kind: localeText.pageLabel, priority: 0, keywords: '首页 概览 学术主页 余泽郭' },
+    { href: '/zh-cn/research/', title: '研究', description: '研究方向与当前关注问题。', kind: localeText.pageLabel, priority: 1, keywords: '研究 引力波 X 射线偏振 多信使' },
+    { href: '/zh-cn/writings/', title: '精选写作', description: '精选笔记与文章。', kind: localeText.pageLabel, priority: 2, keywords: '写作 文章 笔记' },
+    { href: '/zh-cn/cv/', title: '简历', description: '个人履历与经历。', kind: localeText.pageLabel, priority: 3, keywords: '简历 履历 教育 经历' },
+    { href: '/zh-cn/interests/', title: '兴趣', description: '研究之外的随笔、项目与爱好。', kind: localeText.pageLabel, priority: 4, keywords: '兴趣 爱好 项目 阅读' },
+    { href: '/zh-cn/resources/', title: '资源下载', description: '可下载的文件和资源页面。', kind: localeText.resourceLabel, priority: 5, keywords: '资源 下载 档案 ioaa iao cnao' },
+    { href: '/zh-cn/resources/ioaa/', title: 'IOAA 资源', description: '国际天文与天体物理奥林匹克资料。', kind: localeText.resourceLabel, priority: 6, keywords: 'ioaa 天文 奥赛 资源' },
+    { href: '/zh-cn/resources/iao/', title: 'IAO 资源', description: '国际天文奥林匹克资料。', kind: localeText.resourceLabel, priority: 7, keywords: 'iao 天文 奥赛 资源' },
+    { href: '/zh-cn/resources/cnao/', title: 'CNAO 资源', description: '全国中学生天文奥赛资料。', kind: localeText.resourceLabel, priority: 8, keywords: 'cnao 天文 奥赛 资源' },
+    { href: '/zh-cn/resources/training/', title: '竞赛讲义', description: '竞赛训练材料按主题和年份整理。', kind: localeText.resourceLabel, priority: 9, keywords: '讲义 训练 竞赛' },
+  ],
+  'zh-hk': [
+    { href: '/zh-hk/', title: '首頁', description: '學術主頁與概覽。', kind: localeText.pageLabel, priority: 0, keywords: '首頁 概覽 學術主頁 余澤郭' },
+    { href: '/zh-hk/research/', title: '研究', description: '研究方向與當前關注問題。', kind: localeText.pageLabel, priority: 1, keywords: '研究 引力波 X 射線偏振 多信使' },
+    { href: '/zh-hk/writings/', title: '精選寫作', description: '精選筆記與文章。', kind: localeText.pageLabel, priority: 2, keywords: '寫作 文章 筆記' },
+    { href: '/zh-hk/cv/', title: '履歷', description: '個人履歷與經歷。', kind: localeText.pageLabel, priority: 3, keywords: '履歷 經歷 教育' },
+    { href: '/zh-hk/interests/', title: '興趣', description: '研究之外的隨筆、項目與愛好。', kind: localeText.pageLabel, priority: 4, keywords: '興趣 愛好 項目 閱讀' },
+    { href: '/zh-hk/resources/', title: '資源下載', description: '可下載的檔案和資源頁面。', kind: localeText.resourceLabel, priority: 5, keywords: '資源 下載 檔案 ioaa iao cnao' },
+    { href: '/zh-hk/resources/ioaa/', title: 'IOAA 資源', description: '國際天文與天體物理奧林匹克資料。', kind: localeText.resourceLabel, priority: 6, keywords: 'ioaa 天文 奧賽 資源' },
+    { href: '/zh-hk/resources/iao/', title: 'IAO 資源', description: '國際天文奧林匹克資料。', kind: localeText.resourceLabel, priority: 7, keywords: 'iao 天文 奧賽 資源' },
+    { href: '/zh-hk/resources/cnao/', title: 'CNAO 資源', description: '全國中學生天文奧賽資料。', kind: localeText.resourceLabel, priority: 8, keywords: 'cnao 天文 奧賽 資源' },
+  ],
+}[locale] ?? [];
+
+const writingModules = import.meta.glob('../pages/**/writing/*.md', { eager: true });
+const writingEntries = Object.values(writingModules)
+  .map((entry) => ({
+    frontmatter: entry.frontmatter ?? entry.default?.frontmatter ?? {},
+    url: entry.url ?? entry.default?.url ?? '',
+  }))
+  .filter((entry) => entry.frontmatter?.locale === locale && entry.url)
+  .map((entry, index) => ({
+    href: entry.url,
+    title: entry.frontmatter?.title ?? localeText.noteLabel,
+    description: entry.frontmatter?.summary ?? entry.frontmatter?.description ?? '',
+    kind: localeText.writingLabel,
+    priority: 20 + index,
+    keywords: [
+      entry.frontmatter?.title,
+      entry.frontmatter?.summary,
+      entry.frontmatter?.description,
+      localeText.writingLabel,
+      localeText.noteLabel,
+    ]
+      .filter(Boolean)
+      .join(' '),
+  }));
+
+const searchEntries = [...pageEntriesByLocale, ...writingEntries];
+---
+
+<div class="search-overlay" id="site-search-overlay" aria-hidden="true">
+  <div class="search-overlay__backdrop" data-search-close></div>
+
+  <section class="search-panel" role="dialog" aria-modal="true" aria-label={localeText.placeholder}>
+    <div class="search-panel__content">
+      <label class="search-field" for="site-search-input">
+        <span class="search-field__icon" aria-hidden="true"><Icon name="search" /></span>
+        <input
+          id="site-search-input"
+          class="search-field__input"
+          type="search"
+          inputmode="search"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          placeholder={localeText.placeholder}
+          aria-label={localeText.placeholder}
+          aria-controls="site-search-results"
+        />
+      </label>
+
+      <div class="search-panel__results-shell">
+        <p class="search-panel__empty" data-search-empty hidden>{localeText.empty}</p>
+
+        <ul class="search-results" id="site-search-results" role="listbox" aria-label={localeText.placeholder}>
+          {searchEntries.map((entry, index) => (
+            <li class="search-results__item" data-search-item>
+              <a
+                class="search-results__link"
+                href={entry.href}
+                data-search-result
+                data-search-title={entry.title}
+                data-search-description={entry.description}
+                data-search-keywords={entry.keywords}
+                data-search-kind={entry.kind}
+                data-search-priority={String(entry.priority)}
+                data-search-index={String(index)}
+              >
+                <span class="search-results__body">
+                  <span class="search-results__title">{entry.title}</span>
+                  {entry.description ? <span class="search-results__description">{entry.description}</span> : null}
+                  <span class="search-results__meta">
+                    <span class="search-results__kind">{entry.kind}</span>
+                    <span class="search-results__path">{entry.href}</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script is:inline>
+  (() => {
+    const overlay = document.getElementById('site-search-overlay');
+    const input = document.getElementById('site-search-input');
+    const results = document.getElementById('site-search-results');
+    const emptyState = overlay?.querySelector('[data-search-empty]');
+    const openers = Array.from(document.querySelectorAll('[data-search-open]'));
+    const closers = Array.from(document.querySelectorAll('[data-search-close]'));
+
+    if (!overlay || !input || !results || openers.length === 0) {
+      return;
+    }
+
+    const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const resultLinks = Array.from(results.querySelectorAll('[data-search-result]'));
+    const state = {
+      isOpen: false,
+      isClosing: false,
+      activeIndex: 0,
+      previousFocus: null,
+      closeTimer: 0,
+    };
+
+    const CLOSE_MS = 280;
+
+    const normalize = (value) => value
+      .toString()
+      .toLowerCase()
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .trim();
+
+    const getVisibleLinks = () => resultLinks.filter((link) => !link.closest('[data-search-item]')?.hidden);
+
+    const setActiveLink = (link) => {
+      resultLinks.forEach((item) => item.classList.remove('is-active'));
+
+      if (!link) {
+        return;
+      }
+
+      link.classList.add('is-active');
+      link.scrollIntoView({ block: 'nearest' });
+    };
+
+    const applyFilter = () => {
+      const query = normalize(input.value);
+      const tokens = query ? query.split(/\s+/).filter(Boolean) : [];
+      const visibleLinks = [];
+
+      resultLinks.forEach((link) => {
+        const item = link.closest('[data-search-item]');
+        const haystack = normalize([
+          link.dataset.searchTitle,
+          link.dataset.searchDescription,
+          link.dataset.searchKeywords,
+          link.dataset.searchKind,
+          link.getAttribute('href'),
+        ]
+          .filter(Boolean)
+          .join(' '));
+
+        const matches = tokens.length === 0 || tokens.every((token) => haystack.includes(token));
+        item.hidden = !matches;
+
+        if (matches) {
+          visibleLinks.push(link);
+        }
+      });
+
+      if (emptyState) {
+        emptyState.hidden = visibleLinks.length > 0;
+      }
+
+      if (visibleLinks.length === 0) {
+        setActiveLink(null);
+        return;
+      }
+
+      if (state.activeIndex >= visibleLinks.length) {
+        state.activeIndex = 0;
+      }
+
+      setActiveLink(visibleLinks[state.activeIndex]);
+    };
+
+    const openSearch = (trigger = null) => {
+      if (state.closeTimer) {
+        window.clearTimeout(state.closeTimer);
+        state.closeTimer = 0;
+      }
+
+      state.previousFocus = trigger instanceof HTMLElement ? trigger : document.activeElement;
+      state.isOpen = true;
+      state.isClosing = false;
+      overlay.classList.add('is-open');
+      overlay.classList.remove('is-closing');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('search-overlay-open');
+      window.dispatchEvent(new CustomEvent('site-search:open'));
+
+      window.requestAnimationFrame(() => {
+        input.focus({ preventScroll: true });
+        input.select();
+      });
+
+      applyFilter();
+    };
+
+    const closeSearch = () => {
+      if (!state.isOpen || state.isClosing) {
+        return;
+      }
+
+      state.isClosing = true;
+      overlay.classList.add('is-closing');
+
+      const finishClose = () => {
+        overlay.classList.remove('is-open', 'is-closing');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('search-overlay-open');
+        state.isOpen = false;
+        state.isClosing = false;
+        input.value = '';
+        state.activeIndex = 0;
+        applyFilter();
+
+        if (state.previousFocus instanceof HTMLElement) {
+          state.previousFocus.focus({ preventScroll: true });
+        }
+      };
+
+      if (reduceMotionQuery.matches) {
+        finishClose();
+        return;
+      }
+
+      state.closeTimer = window.setTimeout(() => {
+        finishClose();
+        state.closeTimer = 0;
+      }, CLOSE_MS);
+    };
+
+    const moveActive = (step) => {
+      const visibleLinks = getVisibleLinks();
+
+      if (visibleLinks.length === 0) {
+        return;
+      }
+
+      state.activeIndex = (state.activeIndex + step + visibleLinks.length) % visibleLinks.length;
+      setActiveLink(visibleLinks[state.activeIndex]);
+    };
+
+    const openActive = () => {
+      const visibleLinks = getVisibleLinks();
+      const activeLink = visibleLinks[state.activeIndex] ?? visibleLinks[0];
+
+      if (!activeLink) {
+        return;
+      }
+
+      activeLink.click();
+    };
+
+    openers.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        openSearch(button);
+      });
+    });
+
+    closers.forEach((button) => {
+      button.addEventListener('click', () => {
+        closeSearch();
+      });
+    });
+
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay || (event.target instanceof HTMLElement && event.target.hasAttribute('data-search-close'))) {
+        closeSearch();
+      }
+    });
+
+    input.addEventListener('input', () => {
+      state.activeIndex = 0;
+      applyFilter();
+    });
+
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        moveActive(1);
+      }
+
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        moveActive(-1);
+      }
+
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        openActive();
+      }
+
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeSearch();
+      }
+    });
+
+    resultLinks.forEach((link) => {
+      link.addEventListener('mouseenter', () => {
+        const visibleLinks = getVisibleLinks();
+        const index = visibleLinks.indexOf(link);
+
+        if (index >= 0) {
+          state.activeIndex = index;
+          setActiveLink(link);
+        }
+      });
+
+      link.addEventListener('click', () => {
+        closeSearch();
+      });
+    });
+
+    window.addEventListener('keydown', (event) => {
+      const modifierKey = event.metaKey || event.ctrlKey;
+      const isShortcut = event.key.toLowerCase() === 'k' && modifierKey && !event.altKey && !event.shiftKey;
+
+      if (isShortcut) {
+        event.preventDefault();
+
+        if (!state.isOpen) {
+          openSearch(document.activeElement);
+        }
+
+        return;
+      }
+
+      if (event.key === 'Escape') {
+        closeSearch();
+      }
+    });
+
+    window.addEventListener('site-search:close', closeSearch);
+
+    applyFilter();
+  })();
+</script>

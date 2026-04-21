@@ -1,4 +1,6 @@
 ---
+import Icon from './Icon.astro';
+
 const { locale = 'en' } = Astro.props;
 
 const base = locale === 'en' ? '/' : `/${locale}/`;
@@ -118,10 +120,16 @@ const navItems = [
       ))}
     </nav>
 
-    <div class="lang-switcher">
-      <a class={locale === 'en' ? 'active' : ''} href={langLinks.en}>{text.en}</a>
-      <a class={locale === 'zh-cn' ? 'active' : ''} href={langLinks['zh-cn']}>{text.zhcn}</a>
-      <a class={locale === 'zh-hk' ? 'active' : ''} href={langLinks['zh-hk']}>{text.zhhk}</a>
+    <div class="nav-actions">
+      <button class="nav-search-trigger" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'} title={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
+        <Icon name="search" />
+      </button>
+
+      <div class="lang-switcher">
+        <a class={locale === 'en' ? 'active' : ''} href={langLinks.en}>{text.en}</a>
+        <a class={locale === 'zh-cn' ? 'active' : ''} href={langLinks['zh-cn']}>{text.zhcn}</a>
+        <a class={locale === 'zh-hk' ? 'active' : ''} href={langLinks['zh-hk']}>{text.zhhk}</a>
+      </div>
     </div>
 
     <details class="mobile-menu">
@@ -133,6 +141,10 @@ const navItems = [
       </summary>
 
       <div class="mobile-menu-panel">
+        <button class="nav-search-trigger nav-search-trigger--mobile" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
+          <Icon name="search" />
+        </button>
+
         <nav class="mobile-menu-links">
           {navItems.map((item) => (
             <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
@@ -209,6 +221,10 @@ const navItems = [
       if (event.key === 'Escape') {
         closeMenu();
       }
+    });
+
+    window.addEventListener('site-search:open', () => {
+      closeMenu();
     });
 
     summary.setAttribute('aria-expanded', menu.open ? 'true' : 'false');

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
+import SearchOverlay from '../components/SearchOverlay.astro';
 
 const { title = 'Yuze Guo', description = '', locale = 'en' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
@@ -71,6 +72,7 @@ const footerText = {
   </head>
   <body>
     <Nav locale={locale} />
+    <SearchOverlay locale={locale} />
     <main>
       <slot />
     </main>

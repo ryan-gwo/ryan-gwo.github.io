@@ -5,169 +5,120 @@ import InstitutionLogo from '../components/InstitutionLogo.astro';
 ---
 
 <BaseLayout title="CV" description="Curriculum Vitae" locale="en">
-  <section class="section-dark hero">
-    <div class="container">
-      <p class="eyebrow">Curriculum Vitae</p>
-      <h1>Physics undergraduate focused on astrophysics, gravitational waves, and cosmology.</h1>
-      <p class="lead">
-        A concise overview of my academic background, research interests, and selected achievements.
-      </p>
-
-      <div class="cv-hero-meta">
-        <span class="cv-pill">Yuze Guo</span>
-        <span class="cv-pill"><InstitutionLogo src="/assets/logos/institutions/whu.png">Wuhan University</InstitutionLogo></span>
-        <span class="cv-pill">Astrophysics</span>
-      </div>
-
-      <div class="actions">
-        <a class="button button-primary" href="/assets/pdf/en-us/cv_en.pdf" target="_blank" rel="noreferrer"><Icon name="download" />Download PDF</a>
-        <a class="button button-link" href="/"><Icon name="chevron.left" />Back to Home</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">Academic Profile</h2>
-      <p class="section-intro">
-        Physics undergraduate at <InstitutionLogo src="/assets/logos/institutions/whu.png">Wuhan University</InstitutionLogo>, with long-term academic focus on astrophysics, cosmology, and gravitational waves.
-      </p>
-
-      <div class="cv-grid">
-        <div class="cv-card">
-          <h3>Current Position</h3>
-          <p>
-            Undergraduate student majoring in Physics at the School of Physics and Technology, <InstitutionLogo src="/assets/logos/institutions/whu.png">Wuhan University</InstitutionLogo>.
-          </p>
-          <p class="cv-subtle">
-            Email: <a href="mailto:guoyuze@whu.edu.cn"><span class="icon icon-envelope-asset" aria-hidden="true"></span>guoyuze@whu.edu.cn</a><br />
-            GitHub: https://github.com/ryan-gwo<br />
-            Phone: (+86) 136-5075-9277<br />
-            Website: https://ryan-gwo.github.io/
-          </p>
+  <section class="section-light cv-document-shell">
+    <div class="container cv-document-container">
+      <header class="cv-document-header">
+        <div class="cv-header-main">
+          <h1 class="cv-name">Yuze Guo</h1>
+          <p class="cv-role">BSc in Physics, <InstitutionLogo src="/assets/logos/institutions/whu.png">Wuhan University</InstitutionLogo> · Incoming PhD in Astrophysics, <InstitutionLogo src="/assets/logos/institutions/pku.png">Peking University</InstitutionLogo> (Fall 2026)</p>
+          <p class="cv-focus">Research focus: high-energy astrophysics, gravitational waves, cosmology, and multi-messenger astronomy.</p>
         </div>
-
-        <div class="cv-card">
-          <h3>Research Interests</h3>
-          <p>
-            High-energy astrophysics, especially gravitational waves, cosmology, and multi-messenger astronomy.
-          </p>
-          <p>
-            Systematic astronomy learning began in high school through HFAA activities, later extended into national and international olympiad competition.
-          </p>
+        <div class="cv-header-links">
+          <a class="cv-quick-link" href="mailto:guoyuze@whu.edu.cn"><span class="icon icon-envelope-asset" aria-hidden="true"></span>Email</a>
+          <a class="cv-quick-link" href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="cv-quick-link" href="/assets/pdf/en-us/cv_en.pdf" target="_blank" rel="noreferrer"><Icon name="download" />PDF</a>
+          <a class="cv-quick-link" href="/">Back Home</a>
         </div>
-      </div>
-    </div>
-  </section>
+      </header>
 
-  <section class="section-dark content-section">
-    <div class="container">
-      <h2 class="section-title">Education</h2>
-      <p class="section-intro light">
-        Formal education and current academic path.
-      </p>
+      <div class="cv-document-layout">
+        <main class="cv-main" aria-label="CV content">
+          <section class="cv-section" aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+            <ol class="cv-timeline">
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3><InstitutionLogo src="/assets/logos/institutions/pku.png">Peking University</InstitutionLogo> · PhD in Astrophysics (Incoming)</h3>
+                  <p class="cv-item-meta">Beijing · Expected to begin in Fall 2026</p>
+                </div>
+                <p>Prospective doctoral study at the Department of Astronomy, School of Physics.</p>
+              </li>
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3><InstitutionLogo src="/assets/logos/institutions/whu.png">Wuhan University</InstitutionLogo> · BSc in Physics</h3>
+                  <p class="cv-item-meta">Wuhan · 2022-2026</p>
+                </div>
+                <p>Selected coursework: Theoretical Mechanics, Electrodynamics, Quantum Mechanics, Statistical Physics, Mathematical Methods for Physicists, Group Theory, General Astronomy, Astrophysics.</p>
+              </li>
+            </ol>
+          </section>
 
-      <div class="cv-grid">
-        <div class="cv-card dark">
-          <h3><InstitutionLogo src="/assets/logos/institutions/pku.png">Peking University</InstitutionLogo></h3>
-          <p class="cv-subtle">PhD in Astrophysics · Beijing · Expected from Fall 2026</p>
-          <p>
-            Prospective doctoral study at the Department of Astronomy, School of Physics.
-          </p>
-        </div>
+          <section class="cv-section" aria-labelledby="interests-title">
+            <h2 id="interests-title">Research Interests</h2>
+            <ul class="cv-bullets">
+              <li>High-energy astrophysics</li>
+              <li>Gravitational-wave astronomy</li>
+              <li>Cosmology</li>
+              <li>Multi-messenger astronomy</li>
+            </ul>
+          </section>
 
-        <div class="cv-card dark">
-          <h3><InstitutionLogo src="/assets/logos/institutions/whu.png">Wuhan University</InstitutionLogo></h3>
-          <p class="cv-subtle">BSc in Physics · Wuhan · 2022–2026</p>
-          <p>
-            Coursework includes General Physics, Theoretical Mechanics, Electrodynamics, Quantum Mechanics,
-            Statistical Physics, Mathematical Methods for Physicists, Group Theory, General Astronomy, and Astrophysics.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <section class="cv-section" aria-labelledby="research-title">
+            <h2 id="research-title">Research Experience / Projects</h2>
+            <ol class="cv-timeline">
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3>Olympiad-driven astronomy training and problem solving</h3>
+                  <p class="cv-item-meta">2019-2021</p>
+                </div>
+                <p>Built systematic foundations in astronomy and astrophysics through advanced olympiad training, with sustained emphasis on quantitative modeling and observation-oriented reasoning.</p>
+              </li>
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3>Undergraduate focus development in astrophysics</h3>
+                  <p class="cv-item-meta">2022-Present</p>
+                </div>
+                <p>Continued structured study of astrophysics and cosmology at Wuhan University, preparing for doctoral-level research in gravitational-wave and related astrophysical topics.</p>
+              </li>
+            </ol>
+          </section>
 
-  <section class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">Honors & Awards</h2>
-      <p class="section-intro">
-        Selected awards recorded across the original resume and About page.
-      </p>
+          <section class="cv-section" aria-labelledby="awards-title">
+            <h2 id="awards-title">Honors & Awards</h2>
+            <ul class="cv-awards">
+              <li><span class="cv-award-year">2024</span><span class="cv-award-text">National Scholarship, Ministry of Education of the People's Republic of China</span></li>
+              <li><span class="cv-award-year">2024</span><span class="cv-award-text">Annual Scholarship of National Astronomical Observatories, Chinese Academy of Sciences</span></li>
+              <li><span class="cv-award-year">2021</span><span class="cv-award-text">IOAA Gold Medal, International Olympiad on Astronomy and Astrophysics</span></li>
+              <li><span class="cv-award-year">2020</span><span class="cv-award-text">CNAO Gold Medal, National Astronomy Olympiad</span></li>
+            </ul>
+          </section>
 
-      <div class="cv-grid">
-        <div class="cv-card">
-          <h3>National Scholarship</h3>
-          <p class="cv-subtle">Ministry of Education of the People’s Republic of China · 2024</p>
-          <p>
-            National-level scholarship awarded for outstanding undergraduate academic performance and comprehensive development.
-          </p>
-        </div>
+          <section class="cv-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <ul class="cv-bullets">
+              <li>LaTeX for academic writing, document preparation, and bibliography workflows</li>
+              <li>Strong mathematics and physics problem-solving training</li>
+            </ul>
+          </section>
 
-        <div class="cv-card">
-          <h3>Annual Scholarship of National Astronomical Observatories, CAS</h3>
-          <p class="cv-subtle">National Astronomical Observatories, Chinese Academy of Sciences · 2024</p>
-          <p>
-            Scholarship awarded to outstanding undergraduate students in astronomy and related disciplines.
-          </p>
-        </div>
+          <section class="cv-section" aria-labelledby="languages-title">
+            <h2 id="languages-title">Languages</h2>
+            <ul class="cv-bullets">
+              <li>Chinese (Native)</li>
+              <li>English (Fluent)</li>
+            </ul>
+          </section>
+        </main>
 
-        <div class="cv-card">
-          <h3>CNAO 2020 Gold Medal</h3>
-          <p class="cv-subtle">National Astronomy Olympiad</p>
-          <p>
-            Gold medal in a national astronomy olympiad competition.
-          </p>
-        </div>
-
-        <div class="cv-card">
-          <h3>IOAA 2021 Gold Medal</h3>
-          <p class="cv-subtle">International Olympiad on Astronomy and Astrophysics</p>
-          <p>
-            Gold medal in an international astronomy olympiad competition.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-dark content-section">
-    <div class="container">
-      <h2 class="section-title">Skills & Languages</h2>
-      <p class="section-intro light">
-        A final section for the core capabilities retained from the original CV data.
-      </p>
-
-      <div class="cv-grid">
-        <div class="cv-card dark">
-          <h3>Technical Skills</h3>
-          <ul class="cv-list">
-            <li>LaTeX — document preparation, academic writing, typesetting, bibliographies</li>
-          </ul>
-        </div>
-
-        <div class="cv-card dark">
-          <h3>Languages</h3>
-          <ul class="cv-list">
-            <li>Chinese — Native speaker</li>
-            <li>English — Fluent</li>
-          </ul>
-        </div>
-
-        <div class="cv-card dark">
-          <h3>Focus Areas</h3>
-          <ul class="cv-list">
-            <li>Astronomy</li>
-            <li>Astrophysics</li>
-            <li>Cosmology</li>
-            <li>Gravitational Waves</li>
-          </ul>
-        </div>
-
-        <div class="cv-card dark">
-          <h3>Location</h3>
-          <p>Wuhan, Hubei, China</p>
-        </div>
+        <aside class="cv-side" aria-label="Quick profile">
+          <section class="cv-side-card">
+            <h2>Current Identity</h2>
+            <ul class="cv-side-list">
+              <li>Physics undergraduate, Wuhan University</li>
+              <li>Incoming PhD student in Astrophysics at Peking University</li>
+              <li>Based in Wuhan, Hubei, China</li>
+            </ul>
+          </section>
+          <section class="cv-side-card">
+            <h2>Directions</h2>
+            <ul class="cv-side-list">
+              <li>Astrophysics</li>
+              <li>Gravitational Waves</li>
+              <li>Cosmology</li>
+              <li>Multi-messenger Astronomy</li>
+            </ul>
+          </section>
+        </aside>
       </div>
     </div>
   </section>

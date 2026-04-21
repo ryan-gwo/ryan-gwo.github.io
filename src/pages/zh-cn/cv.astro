@@ -5,168 +5,120 @@ import InstitutionLogo from '../../components/InstitutionLogo.astro';
 ---
 
 <BaseLayout title="简历" description="个人简历" locale="zh-cn">
-  <section class="section-dark hero">
-    <div class="container">
-      <p class="eyebrow">个人简历</p>
-      <h1>聚焦天体物理、引力波与宇宙学的物理学本科生。</h1>
-      <p class="lead">
-        基于原网站内容重新整理的简历页面，并按 DESIGN.md 所要求的 Apple 风格重新组织。
-      </p>
-
-      <div class="cv-hero-meta">
-        <span class="cv-pill">郭雨泽</span>
-        <span class="cv-pill"><InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo></span>
-        <span class="cv-pill">天体物理方向</span>
-      </div>
-
-      <div class="actions">
-        <a class="button button-primary" href="/assets/pdf/zh-cn/cv_zh.pdf" target="_blank" rel="noreferrer"><Icon name="download" />下载 PDF</a>
-        <a class="button button-link" href="/zh-cn/"><Icon name="chevron.left" />返回首页</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">学术概况</h2>
-      <p class="section-intro">
-        目前就读于<InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo>物理学专业，长期关注天体物理、宇宙学与引力波相关问题。
-      </p>
-
-      <div class="cv-grid">
-        <div class="cv-card">
-          <h3>当前身份</h3>
-          <p>
-            <InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo>物理科学与技术学院物理学专业本科生。
-          </p>
-          <p class="cv-subtle">
-            邮箱：<a href="mailto:guoyuze@whu.edu.cn"><span class="icon icon-envelope-asset" aria-hidden="true"></span>guoyuze@whu.edu.cn</a><br />
-            GitHub：https://github.com/ryan-gwo<br />
-            电话：(+86) 136-5075-9277<br />
-            个人网站：https://ryan-gwo.github.io/
-          </p>
+  <section class="section-light cv-document-shell">
+    <div class="container cv-document-container">
+      <header class="cv-document-header">
+        <div class="cv-header-main">
+          <h1 class="cv-name">郭雨泽</h1>
+          <p class="cv-role"><InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo>物理学本科生 · 2026 年秋季拟入学 <InstitutionLogo src="/assets/logos/institutions/pku.png">北京大学</InstitutionLogo>天体物理博士</p>
+          <p class="cv-focus">研究方向：高能天体物理、引力波、宇宙学与多信使天文学。</p>
         </div>
-
-        <div class="cv-card">
-          <h3>研究兴趣</h3>
-          <p>
-            主要兴趣为高能天体物理，尤其包括引力波、宇宙学与多信使天文学。
-          </p>
-          <p>
-            高中阶段即通过华附天文社相关活动开始系统学习天文学，之后进一步参加国家级与国际级天文奥赛。
-          </p>
+        <div class="cv-header-links">
+          <a class="cv-quick-link" href="mailto:guoyuze@whu.edu.cn"><span class="icon icon-envelope-asset" aria-hidden="true"></span>邮箱</a>
+          <a class="cv-quick-link" href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="cv-quick-link" href="/assets/pdf/zh-cn/cv_zh.pdf" target="_blank" rel="noreferrer"><Icon name="download" />PDF</a>
+          <a class="cv-quick-link" href="/zh-cn/">返回首页</a>
         </div>
-      </div>
-    </div>
-  </section>
+      </header>
 
-  <section class="section-dark content-section">
-    <div class="container">
-      <h2 class="section-title">教育经历</h2>
-      <p class="section-intro light">
-        根据原始简历与个人主页内容重新整理。
-      </p>
+      <div class="cv-document-layout">
+        <main class="cv-main" aria-label="CV 内容">
+          <section class="cv-section" aria-labelledby="education-title">
+            <h2 id="education-title">教育经历</h2>
+            <ol class="cv-timeline">
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3><InstitutionLogo src="/assets/logos/institutions/pku.png">北京大学</InstitutionLogo> · 天体物理学博士（拟）</h3>
+                  <p class="cv-item-meta">北京 · 预计 2026 年秋季起</p>
+                </div>
+                <p>拟在北京大学物理学院天文学系继续开展博士阶段研究。</p>
+              </li>
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3><InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo> · 物理学学士</h3>
+                  <p class="cv-item-meta">武汉 · 2022-2026</p>
+                </div>
+                <p>核心课程：理论力学、电动力学、量子力学、统计物理、数学物理方法、群论、普通天文学、天体物理。</p>
+              </li>
+            </ol>
+          </section>
 
-      <div class="cv-grid">
-        <div class="cv-card dark">
-          <h3><InstitutionLogo src="/assets/logos/institutions/pku.png">北京大学</InstitutionLogo></h3>
-          <p class="cv-subtle">天体物理学博士 · 北京 · 预计 2026 年秋季起</p>
-          <p>
-            拟在北京大学物理学院天文学系继续攻读天体物理博士学位。
-          </p>
-        </div>
+          <section class="cv-section" aria-labelledby="interests-title">
+            <h2 id="interests-title">研究兴趣</h2>
+            <ul class="cv-bullets">
+              <li>高能天体物理</li>
+              <li>引力波天文学</li>
+              <li>宇宙学</li>
+              <li>多信使天文学</li>
+            </ul>
+          </section>
 
-        <div class="cv-card dark">
-          <h3><InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo></h3>
-          <p class="cv-subtle">物理学学士 · 武汉 · 2022–2026</p>
-          <p>
-            核心课程包括普通物理、理论力学、电动力学、量子力学、统计物理、数学物理方法、群论、普通天文学与天体物理。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <section class="cv-section" aria-labelledby="research-title">
+            <h2 id="research-title">研究经历 / 项目</h2>
+            <ol class="cv-timeline">
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3>天文竞赛驱动的系统训练</h3>
+                  <p class="cv-item-meta">2019-2021</p>
+                </div>
+                <p>通过高阶天文竞赛训练建立天文与天体物理基础，重点强化定量建模与观测问题分析能力。</p>
+              </li>
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3>本科阶段天体物理方向深化</h3>
+                  <p class="cv-item-meta">2022-至今</p>
+                </div>
+                <p>在武汉大学持续进行天体物理与宇宙学方向学习，围绕引力波及相关课题准备博士阶段研究。</p>
+              </li>
+            </ol>
+          </section>
 
-  <section class="section-light content-section">
-    <div class="container">
-      <h2 class="section-title">荣誉与奖项</h2>
-      <p class="section-intro">
-        选取原简历和 About 页面中的主要奖项信息。
-      </p>
+          <section class="cv-section" aria-labelledby="awards-title">
+            <h2 id="awards-title">荣誉与奖项</h2>
+            <ul class="cv-awards">
+              <li><span class="cv-award-year">2024</span><span class="cv-award-text">国家奖学金，中华人民共和国教育部</span></li>
+              <li><span class="cv-award-year">2024</span><span class="cv-award-text">中国科学院国家天文台奖学金，中国科学院国家天文台</span></li>
+              <li><span class="cv-award-year">2021</span><span class="cv-award-text">IOAA 金牌，国际天文与天体物理奥林匹克竞赛</span></li>
+              <li><span class="cv-award-year">2020</span><span class="cv-award-text">CNAO 金牌，全国中学生天文知识竞赛</span></li>
+            </ul>
+          </section>
 
-      <div class="cv-grid">
-        <div class="cv-card">
-          <h3>国家奖学金</h3>
-          <p class="cv-subtle">中华人民共和国教育部 · 2024</p>
-          <p>
-            面向普通高校特别优秀学生设立的国家级奖学金。
-          </p>
-        </div>
+          <section class="cv-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">技能</h2>
+            <ul class="cv-bullets">
+              <li>LaTeX：学术写作、文档排版与参考文献管理</li>
+              <li>扎实的数学与物理问题求解训练</li>
+            </ul>
+          </section>
 
-        <div class="cv-card">
-          <h3>中国科学院国家天文台奖学金</h3>
-          <p class="cv-subtle">中国科学院国家天文台 · 2024</p>
-          <p>
-            面向天文及相关专业优秀本科生设立的专项奖学金。
-          </p>
-        </div>
+          <section class="cv-section" aria-labelledby="languages-title">
+            <h2 id="languages-title">语言</h2>
+            <ul class="cv-bullets">
+              <li>中文（母语）</li>
+              <li>英语（流利）</li>
+            </ul>
+          </section>
+        </main>
 
-        <div class="cv-card">
-          <h3>CNAO 2020 金牌</h3>
-          <p class="cv-subtle">全国中学生天文知识竞赛</p>
-          <p>
-            在国家级天文奥赛中获得金牌。
-          </p>
-        </div>
-
-        <div class="cv-card">
-          <h3>IOAA 2021 金牌</h3>
-          <p class="cv-subtle">国际天文与天体物理奥林匹克竞赛</p>
-          <p>
-            在国际天文奥赛中获得金牌。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-dark content-section">
-    <div class="container">
-      <h2 class="section-title">技能与语言</h2>
-      <p class="section-intro light">
-        保留原简历中的核心能力信息，但以更简洁的展示方式呈现。
-      </p>
-
-      <div class="cv-grid">
-        <div class="cv-card dark">
-          <h3>技能</h3>
-          <ul class="cv-list">
-            <li>LaTeX —— 文档准备、学术写作、排版、参考文献整理</li>
-          </ul>
-        </div>
-
-        <div class="cv-card dark">
-          <h3>语言能力</h3>
-          <ul class="cv-list">
-            <li>汉语 —— 母语</li>
-            <li>英语 —— 流利</li>
-          </ul>
-        </div>
-
-        <div class="cv-card dark">
-          <h3>关注领域</h3>
-          <ul class="cv-list">
-            <li>天文学</li>
-            <li>天体物理学</li>
-            <li>宇宙学</li>
-            <li>引力波</li>
-          </ul>
-        </div>
-
-        <div class="cv-card dark">
-          <h3>所在地</h3>
-          <p>中国湖北武汉</p>
-        </div>
+        <aside class="cv-side" aria-label="概要信息">
+          <section class="cv-side-card">
+            <h2>当前身份</h2>
+            <ul class="cv-side-list">
+              <li>武汉大学物理学本科生</li>
+              <li>拟攻读北京大学天体物理博士</li>
+              <li>所在地：中国湖北武汉</li>
+            </ul>
+          </section>
+          <section class="cv-side-card">
+            <h2>研究关键词</h2>
+            <ul class="cv-side-list">
+              <li>Astrophysics</li>
+              <li>Gravitational Waves</li>
+              <li>Cosmology</li>
+              <li>Multi-messenger Astronomy</li>
+            </ul>
+          </section>
+        </aside>
       </div>
     </div>
   </section>

@@ -8,18 +8,37 @@ import InstitutionLogo from '../../components/InstitutionLogo.astro';
   <section class="section-light cv-document-shell">
     <div class="container cv-document-container">
       <header class="cv-document-header">
-        <div class="cv-header-main">
-          <h1 class="cv-name">郭雨泽</h1>
-          <p class="cv-role"><InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo>物理学本科生 · 2026 年秋季拟入学 <InstitutionLogo src="/assets/logos/institutions/pku.png">北京大学</InstitutionLogo>天体物理博士</p>
-          <p class="cv-focus">研究方向：高能天体物理、引力波、宇宙学与多信使天文学。</p>
-        </div>
-        <div class="cv-header-links">
+        <p class="cv-kicker">个人简历</p>
+        <h1 class="cv-name">郭雨泽</h1>
+        <p class="cv-role">
+          <InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo>物理学本科生，
+          2026 年秋季拟入学 <InstitutionLogo src="/assets/logos/institutions/pku.png">北京大学</InstitutionLogo>天体物理博士项目。
+        </p>
+        <p class="cv-focus">研究兴趣：引力波天文学、致密天体与多信使天文学。</p>
+        <div class="cv-header-links" aria-label="简历快捷链接">
+          <a class="cv-quick-link cv-quick-link-primary" href="/assets/pdf/zh-cn/cv_zh.pdf" target="_blank" rel="noreferrer"><Icon name="download" />下载 PDF</a>
           <a class="cv-quick-link" href="mailto:guoyuze@whu.edu.cn"><span class="icon icon-envelope-asset" aria-hidden="true"></span>邮箱</a>
-          <a class="cv-quick-link" href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="cv-quick-link" href="/assets/pdf/zh-cn/cv_zh.pdf" target="_blank" rel="noreferrer"><Icon name="download" />PDF</a>
-          <a class="cv-quick-link" href="/zh-cn/">返回首页</a>
         </div>
       </header>
+
+      <div class="cv-stat-strip" aria-label="简历概要">
+        <div class="cv-stat">
+          <span class="cv-stat-value">3.95/4.0</span>
+          <span class="cv-stat-label">总 GPA</span>
+        </div>
+        <div class="cv-stat">
+          <span class="cv-stat-value">1/236</span>
+          <span class="cv-stat-label">本科排名</span>
+        </div>
+        <div class="cv-stat">
+          <span class="cv-stat-value">2026 秋</span>
+          <span class="cv-stat-label">北大博士入学</span>
+        </div>
+        <div class="cv-stat">
+          <span class="cv-stat-value">IELTS 8.0</span>
+          <span class="cv-stat-label">英语能力</span>
+        </div>
+      </div>
 
       <div class="cv-document-layout">
         <main class="cv-main" aria-label="CV 内容">
@@ -28,95 +47,127 @@ import InstitutionLogo from '../../components/InstitutionLogo.astro';
             <ol class="cv-timeline">
               <li class="cv-item">
                 <div class="cv-item-head">
-                  <h3><InstitutionLogo src="/assets/logos/institutions/pku.png">北京大学</InstitutionLogo> · 天体物理学博士（拟）</h3>
-                  <p class="cv-item-meta">北京 · 预计 2026 年秋季起</p>
+                  <h3><InstitutionLogo src="/assets/logos/institutions/pku.png">北京大学</InstitutionLogo> · 天体物理学博士</h3>
+                  <p class="cv-item-meta">北京 · 2026 年 9 月至今</p>
                 </div>
-                <p>拟在北京大学物理学院天文学系继续开展博士阶段研究。</p>
+                <p>拟攻读天体物理方向博士学位。</p>
               </li>
               <li class="cv-item">
                 <div class="cv-item-head">
                   <h3><InstitutionLogo src="/assets/logos/institutions/whu.png">武汉大学</InstitutionLogo> · 物理学学士</h3>
-                  <p class="cv-item-meta">武汉 · 2022-2026</p>
+                  <p class="cv-item-meta">武汉 · 2022 年 9 月至今</p>
                 </div>
-                <p>核心课程：理论力学、电动力学、量子力学、统计物理、数学物理方法、群论、普通天文学、天体物理。</p>
+                <p>总 GPA：3.95/4.0，排名 1/236。核心课程包括普通物理、数学物理方法、理论力学、电动力学、量子力学、热力学与统计物理学、计算物理、普通天文学和天体物理。</p>
               </li>
             </ol>
-          </section>
-
-          <section class="cv-section" aria-labelledby="interests-title">
-            <h2 id="interests-title">研究兴趣</h2>
-            <ul class="cv-bullets">
-              <li>高能天体物理</li>
-              <li>引力波天文学</li>
-              <li>宇宙学</li>
-              <li>多信使天文学</li>
-            </ul>
           </section>
 
           <section class="cv-section" aria-labelledby="research-title">
-            <h2 id="research-title">研究经历 / 项目</h2>
+            <h2 id="research-title">研究与项目经历</h2>
             <ol class="cv-timeline">
               <li class="cv-item">
                 <div class="cv-item-head">
-                  <h3>天文竞赛驱动的系统训练</h3>
-                  <p class="cv-item-meta">2019-2021</p>
+                  <h3>本科毕业课题</h3>
+                  <p class="cv-item-meta">2025 年 12 月 - 2026 年 4 月</p>
                 </div>
-                <p>通过高阶天文竞赛训练建立天文与天体物理基础，重点强化定量建模与观测问题分析能力。</p>
+                <p class="cv-item-submeta">武汉大学物理科学与技术学院 · 导师：王伟</p>
+                <p class="cv-project-title">黑洞 X 射线双星 Swift J1727.8-1613 的 X 射线偏振研究：盘-冕-喷流几何约束</p>
+                <ul class="cv-bullets">
+                  <li>利用 IXPE 偏振观测分析 Swift J1727.8-1613 从硬中间态到软态过程中的偏振度和偏振角变化。</li>
+                  <li>关注偏振度随能量升高而增强、偏振角整体稳定并大致与喷流方向一致等现象。</li>
+                  <li>将平均偏振解释为可能来自几何取向稳定、非球对称的 Compton 散射区域。</li>
+                </ul>
               </li>
               <li class="cv-item">
                 <div class="cv-item-head">
-                  <h3>本科阶段天体物理方向深化</h3>
-                  <p class="cv-item-meta">2022-至今</p>
+                  <h3>科研训练</h3>
+                  <p class="cv-item-meta">2024 年 4 月至今</p>
                 </div>
-                <p>在武汉大学持续进行天体物理与宇宙学方向学习，围绕引力波及相关课题准备博士阶段研究。</p>
+                <p class="cv-item-submeta">武汉大学物理科学与技术学院 · 导师：王伟</p>
+                <p class="cv-project-title">由磁场引起形变的中子星所产生的连续引力辐射</p>
+                <ul class="cv-bullets">
+                  <li>研究倾斜磁化中子星产生的连续引力波，说明传统只考虑磁形变的模型可能低估快速自转中子星的引力波辐射。</li>
+                  <li>讨论冻结在星体内的环向磁场如何提供有效刚性，使轴对称旋转形变转化为随时间变化的四极矩辐射。</li>
+                  <li>发现毫秒级快速转动中子星的引力波振幅最高可增强约 4 个数量级；文章正在投稿。</li>
+                </ul>
+              </li>
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3>牛津学术英语研究技能</h3>
+                  <p class="cv-item-meta">2023 年 7 月 - 2023 年 8 月</p>
+                </div>
+                <p class="cv-item-submeta">牛津大学语言中心 · 导师：Daniel Worthing</p>
+                <p class="cv-project-title">多信使天文学及其在现代宇宙学研究中的作用</p>
+                <ul class="cv-bullets">
+                  <li>训练自然科学论文结构、文献综述、正确引用、学术汇报与编辑能力。</li>
+                  <li>提出研究问题并完成与专业相关的文献综述，在学术讨论中展示研究成果。</li>
+                  <li>以 A+ 的成绩完成项目课程，并获得推荐信。</li>
+                </ul>
               </li>
             </ol>
           </section>
 
-          <section class="cv-section" aria-labelledby="awards-title">
-            <h2 id="awards-title">荣誉与奖项</h2>
+          <section class="cv-section" aria-labelledby="honors-title">
+            <h2 id="honors-title">荣誉与奖项</h2>
             <ul class="cv-awards">
+              <li><span class="cv-award-year">2026</span><span class="cv-award-text">2026 届优秀本科毕业生，武汉大学</span></li>
+              <li><span class="cv-award-year">2025</span><span class="cv-award-text">蓝月亮奖学金，武汉大学</span></li>
+              <li><span class="cv-award-year">2025</span><span class="cv-award-text">优秀学生乙等奖学金，武汉大学</span></li>
               <li><span class="cv-award-year">2024</span><span class="cv-award-text">国家奖学金，中华人民共和国教育部</span></li>
               <li><span class="cv-award-year">2024</span><span class="cv-award-text">中国科学院国家天文台奖学金，中国科学院国家天文台</span></li>
-              <li><span class="cv-award-year">2021</span><span class="cv-award-text">IOAA 金牌，国际天文与天体物理奥林匹克竞赛</span></li>
-              <li><span class="cv-award-year">2020</span><span class="cv-award-text">CNAO 金牌，全国中学生天文知识竞赛</span></li>
+              <li><span class="cv-award-year">2023 & 2024</span><span class="cv-award-text">优秀学生甲等奖学金，武汉大学</span></li>
+              <li><span class="cv-award-year">2023-2025</span><span class="cv-award-text">校级三好学生，武汉大学</span></li>
+              <li><span class="cv-award-year">2023</span><span class="cv-award-text">第三学期交流奖学金，武汉大学</span></li>
             </ul>
           </section>
 
-          <section class="cv-section" aria-labelledby="skills-title">
-            <h2 id="skills-title">技能</h2>
-            <ul class="cv-bullets">
-              <li>LaTeX：学术写作、文档排版与参考文献管理</li>
-              <li>扎实的数学与物理问题求解训练</li>
+          <section class="cv-section" aria-labelledby="competitions-title">
+            <h2 id="competitions-title">竞赛经历</h2>
+            <ul class="cv-awards">
+              <li><span class="cv-award-year">2021 年 11 月</span><span class="cv-award-text">金牌，第十四届国际天文与天体物理奥林匹克竞赛</span></li>
+              <li><span class="cv-award-year">2024 年 12 月</span><span class="cv-award-text">二等奖，第十届全国大学生物理实验竞赛（创新）</span></li>
+              <li><span class="cv-award-year">2024 年 7 月</span><span class="cv-award-text">一等奖，第九届湖北省大学生物理实验创新设计竞赛</span></li>
+              <li><span class="cv-award-year">2024 年 5 月</span><span class="cv-award-text">特等奖，2024 年全国大学生英语竞赛（湖北赛区）</span></li>
             </ul>
           </section>
 
-          <section class="cv-section" aria-labelledby="languages-title">
-            <h2 id="languages-title">语言</h2>
-            <ul class="cv-bullets">
-              <li>中文（母语）</li>
-              <li>英语（流利）</li>
-            </ul>
+          <section class="cv-section" aria-labelledby="leadership-title">
+            <h2 id="leadership-title">其它经历</h2>
+            <ol class="cv-timeline">
+              <li class="cv-item">
+                <div class="cv-item-head">
+                  <h3>副会长兼学术部部长</h3>
+                  <p class="cv-item-meta">2023 年 5 月 - 2024 年 4 月</p>
+                </div>
+                <p class="cv-item-submeta">武汉大学天文爱好者协会</p>
+                <p>协助会长管理协会，并组织学术部开展天文预报编写、学术科普文章撰写和科学讲座举办等活动。</p>
+              </li>
+            </ol>
           </section>
         </main>
 
         <aside class="cv-side" aria-label="概要信息">
           <section class="cv-side-card">
-            <h2>当前身份</h2>
-            <ul class="cv-side-list">
-              <li>武汉大学物理学本科生</li>
-              <li>拟攻读北京大学天体物理博士</li>
-              <li>所在地：中国湖北武汉</li>
+            <h2>研究关键词</h2>
+            <ul class="cv-chip-list">
+              <li>引力波</li>
+              <li>致密天体</li>
+              <li>X 射线偏振</li>
+              <li>多信使天文学</li>
             </ul>
           </section>
           <section class="cv-side-card">
-            <h2>研究关键词</h2>
+            <h2>技能</h2>
             <ul class="cv-side-list">
-              <li>Astrophysics</li>
-              <li>Gravitational Waves</li>
-              <li>Cosmology</li>
-              <li>Multi-messenger Astronomy</li>
+              <li>计算机编程：C, Python, Mathematica</li>
+              <li>文字排版：Microsoft Office, LaTeX, Markdown</li>
+              <li>语言：中文、英语、粤语</li>
             </ul>
+          </section>
+          <section class="cv-side-card cv-side-card-accent">
+            <h2>完整版本</h2>
+            <p>下载 PDF 以查看可打印版本。</p>
+            <a class="cv-side-link" href="/assets/pdf/zh-cn/cv_zh.pdf" target="_blank" rel="noreferrer"><Icon name="download" />打开 PDF</a>
           </section>
         </aside>
       </div>

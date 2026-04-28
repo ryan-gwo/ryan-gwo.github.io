@@ -1,83 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Icon from '../../components/Icon.astro';
+import CompetitionResourceIndex from '../../components/CompetitionResourceIndex.astro';
+import { getCompetition } from '../../data/competitionResources';
 
-const years = [
-  {
-    label: '2024-2025 Academic Year',
-    links: [
-      { label: 'Final Round Problems (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2025.pdf' },
-      { label: 'Final Round Problems with Answers (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2025_ans.pdf' },
-    ],
-  },
-  {
-    label: '2023-2024 Academic Year',
-    links: [
-      { label: 'Final Round Problems (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2024.pdf' },
-      { label: 'Final Round Problems with Answers (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2024_ans.pdf' },
-    ],
-  },
-  {
-    label: '2022-2023 Academic Year',
-    links: [
-      { label: 'Final Round Problems (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2023.pdf' },
-      { label: 'Final Round Problems with Answers (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2023_ans.pdf' },
-    ],
-  },
-  {
-    label: '2021-2022 Academic Year',
-    links: [
-      { label: 'Final Round Problems (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2022.pdf' },
-      { label: 'Final Round Video (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2022.mp4' },
-    ],
-  },
-  {
-    label: 'Historical Materials',
-    links: [
-      { label: 'CNAO 2002-2020 Problem Set and Partial Solutions (Chinese)', href: '/assets/pdf/zh-cn/CNAO_2002_to_2020.pdf' },
-      { label: 'Browse Chinese resources page', href: '/zh-cn/resources/' },
-    ],
-  },
-];
+const competition = getCompetition('en', 'cnao');
 ---
 
-<BaseLayout title="CNAO Resources" description="CNAO materials organized by year" locale="en">
+<BaseLayout title={competition.title} description={competition.description} locale="en">
   <section class="section-light article-page">
     <div class="container article-body resource-hub">
-      <section class="resource-category-panel resource-detail-shell resource-tone-competition">
-        <header class="resource-detail-header">
-          <div class="resource-detail-main">
-            <img class="resource-detail-main-logo" src="/assets/logos/cnao.png" alt="CNAO logo" loading="lazy" />
-            <div>
-              <p class="resource-category-eyebrow">Competition</p>
-              <h1>CNAO Resources</h1>
-              <p class="resource-detail-description">CNAO files are primarily in Chinese. Entries below are grouped by year for direct access.</p>
-            </div>
-          </div>
-          <a class="resource-back-link" href="/resources/"><Icon name="chevron.left" />Back to resources</a>
-        </header>
-
-        <div class="resource-year-stack">
-          {years.map((year) => (
-            <article class="resource-year-card">
-              <div class="resource-year-top">
-                {year.logo && <img class="resource-year-logo" src={year.logo} alt="" aria-hidden="true" loading="lazy" />}
-                <h2 class="resource-year-heading">{year.label}</h2>
-              </div>
-              <ul class="resource-download-list">
-                {year.links.map((link) => (
-                  <li>
-                    <a class="resource-download-link" href={link.href} target={link.href.startsWith('/assets/') ? '_blank' : undefined} rel={link.href.startsWith('/assets/') ? 'noreferrer' : undefined}>
-                      <Icon name="download" />
-                      <span>{link.label}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
+      <CompetitionResourceIndex locale="en" competition={competition} />
     </div>
   </section>
 </BaseLayout>

@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CompetitionEditionDetail from '../../../components/CompetitionEditionDetail.astro';
+import { getAllEditionPaths } from '../../../data/competitionResources';
+
+export function getStaticPaths() {
+  return getAllEditionPaths('en');
+}
+
+const { locale, competition, edition } = Astro.props;
+---
+
+<BaseLayout title={`${edition.label} · ${competition.title}`} description={competition.description} locale={locale}>
+  <section class="section-light article-page">
+    <div class="container article-body resource-hub resource-edition-hub">
+      <CompetitionEditionDetail locale={locale} competition={competition} edition={edition} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import Icon from './Icon.astro';
+import {
+  getCompetitionBasePath,
+  resourceText,
+  type CompetitionEdition,
+  type CompetitionResource,
+  type ResourceLocale,
+} from '../data/competitionResources';
+
+const { locale, competition, edition } = Astro.props as {
+  locale: ResourceLocale;
+  competition: CompetitionResource;
+  edition: CompetitionEdition;
+};
+
+const text = resourceText[locale];
+const description = text.editionDescription(competition.title, edition.label, edition.downloads.length);
+const summary = edition.summary ?? description;
+---
+
+<section class="resource-category-panel resource-detail-shell resource-tone-competition resource-edition-detail">
+  <header class="resource-detail-header resource-edition-detail-header">
+    <a class="resource-back-link" href={getCompetitionBasePath(locale, competition.slug)}>
+      <Icon name="chevron.left" />{text.competitionHome}
+    </a>
+    <div class="resource-detail-main">
+      {edition.logo && <img class="resource-detail-main-logo" src={edition.logo} alt="" aria-hidden="true" loading="lazy" />}
+      <div>
+        <p class="resource-category-eyebrow">{competition.title}</p>
+        <h1>{edition.label}</h1>
+        <p class="resource-detail-description">{summary}</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="resource-download-panel" aria-labelledby="edition-downloads-title">
+    <div class="resource-download-panel-head">
+      <p class="resource-category-eyebrow">{text.materials}</p>
+      <h2 id="edition-downloads-title">{text.downloadsTitle}</h2>
+      <p>{text.materialCount(edition.downloads.length)}</p>
+    </div>
+    <ul class="resource-edition-downloads">
+      {edition.downloads.map((link) => (
+        <li>
+          <a class="resource-edition-download-link" href={link.href} target={link.href.startsWith('/assets/') ? '_blank' : undefined} rel={link.href.startsWith('/assets/') ? 'noreferrer' : undefined}>
+            <Icon name="download" />
+            <span>{link.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</section>

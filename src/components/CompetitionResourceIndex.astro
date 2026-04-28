@@ -1,0 +1,72 @@
+---
+import Icon from './Icon.astro';
+import {
+  getEditionPath,
+  localePrefixes,
+  resourceText,
+  type CompetitionResource,
+  type ResourceLocale,
+} from '../data/competitionResources';
+
+const { locale, competition } = Astro.props as {
+  locale: ResourceLocale;
+  competition: CompetitionResource;
+};
+
+const text = resourceText[locale];
+const resourceHomeHref = `${localePrefixes[locale]}/resources/`;
+
+const editionMeta = (edition: CompetitionResource['editions'][number]) =>
+  [edition.date, edition.location, edition.format].filter(Boolean).join(' · ');
+---
+
+<section class="resource-category-panel resource-detail-shell resource-tone-competition resource-competition-index">
+  <header class="resource-detail-header">
+    <a class="resource-back-link" href={resourceHomeHref}><Icon name="chevron.left" />{text.resourceHome}</a>
+    <div class="resource-detail-main">
+      <img class="resource-detail-main-logo" src={competition.logo} alt={`${competition.title} logo`} loading="lazy" />
+      <div>
+        <p class="resource-category-eyebrow">{competition.eyebrow}</p>
+        <h1>{competition.title}</h1>
+        <p class="resource-detail-description">{competition.description}</p>
+      </div>
+    </div>
+  </header>
+
+  {(competition.overview || competition.structureNote) && (
+    <section class="resource-profile-panel" aria-labelledby={`${competition.slug}-overview-title`}>
+      <div class="resource-profile-copy">
+        <p id={`${competition.slug}-overview-title`} class="resource-category-eyebrow">{text.overviewTitle}</p>
+        {competition.overview && <p>{competition.overview}</p>}
+        {competition.structureNote && <p>{competition.structureNote}</p>}
+      </div>
+    </section>
+  )}
+
+  <section class="resource-edition-index" aria-labelledby={`${competition.slug}-editions-title`}>
+    <div class="resource-edition-index-head">
+      <p class="resource-category-eyebrow">{text.materials}</p>
+      <h2 id={`${competition.slug}-editions-title`}>{text.editionsTitle}</h2>
+    </div>
+    <div class="resource-edition-index-list" role="list" aria-label={competition.title}>
+    {competition.editions.map((edition) => (
+      <article class:list={['resource-edition-index-row', edition.logo ? '' : 'resource-edition-index-row-no-logo']} role="listitem">
+        <div class="resource-edition-index-identity">
+          {edition.logo && <img class="resource-edition-index-logo" src={edition.logo} alt="" aria-hidden="true" loading="lazy" />}
+          <div class="resource-edition-index-copy">
+            <h3>{edition.label}</h3>
+            {editionMeta(edition) && <p>{editionMeta(edition)}</p>}
+          </div>
+        </div>
+        <div class="resource-edition-index-action">
+          <span>{text.materialCount(edition.downloads.length)}</span>
+          <a class="resource-edition-link" href={getEditionPath(locale, competition.slug, edition)}>
+            <span>{text.viewDetails}</span>
+            <Icon name="chevron.right" />
+          </a>
+        </div>
+      </article>
+    ))}
+    </div>
+  </section>
+</section>

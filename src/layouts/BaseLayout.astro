@@ -2,9 +2,76 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import SearchOverlay from '../components/SearchOverlay.astro';
+import {
+  competitionResources,
+  getCompetitionBasePath,
+  getEditionPath,
+  localePrefixes,
+  type ResourceLocale,
+} from '../data/competitionResources';
 
 const { title = 'Yuze Guo', description = '', locale = 'en' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const normalizeRoute = (route: string) => {
+  if (route === '') {
+    return '/';
+  }
+
+  if (route === '/') {
+    return '/';
+  }
+
+  return route.endsWith('/') ? route : `${route}/`;
+};
+const knownRoutes = new Set<string>();
+const staticPageRoutes = Object.keys(import.meta.glob('../pages/**/*.{astro,md,mdx}'))
+  .filter((filePath) => !filePath.includes('['))
+  .map((filePath) => {
+    const route = filePath.replace('../pages', '').replace(/\.(astro|mdx?|md)$/i, '');
+
+    if (route === '/index') {
+      return '/';
+    }
+
+    return normalizeRoute(route.replace(/\/index$/, ''));
+  })
+  .filter((route) => !route.endsWith('/publications/'));
+
+for (const currentLocale of Object.keys(localePrefixes) as ResourceLocale[]) {
+  for (const competition of Object.values(competitionResources[currentLocale])) {
+    knownRoutes.add(normalizeRoute(getCompetitionBasePath(currentLocale, competition.slug)));
+    for (const edition of competition.editions) {
+      knownRoutes.add(normalizeRoute(getEditionPath(currentLocale, competition.slug, edition)));
+    }
+  }
+}
+
+for (const route of staticPageRoutes) {
+  knownRoutes.add(route);
+}
+
+const currentPath = normalizeRoute(Astro.url.pathname);
+const currentLocalePrefix = currentPath.startsWith('/zh-cn/') || currentPath === '/zh-cn/'
+  ? '/zh-cn'
+  : currentPath.startsWith('/zh-hk/') || currentPath === '/zh-hk/'
+    ? '/zh-hk'
+    : '';
+const pathWithoutLocale = currentLocalePrefix ? currentPath.slice(currentLocalePrefix.length) || '/' : currentPath;
+const localeAlternates = (Object.keys(localePrefixes) as ResourceLocale[])
+  .map((targetLocale) => {
+    const path = normalizeRoute(`${localePrefixes[targetLocale]}${pathWithoutLocale}`);
+
+    return knownRoutes.has(path)
+      ? { locale: targetLocale, href: new URL(path, Astro.site).toString() }
+      : undefined;
+  })
+  .filter((alternate): alternate is { locale: ResourceLocale; href: string } => Boolean(alternate));
+const defaultAlternate = localeAlternates.find((alternate) => alternate.locale === 'en');
+const hreflangMap = {
+  en: 'en',
+  'zh-cn': 'zh-CN',
+  'zh-hk': 'zh-HK',
+} satisfies Record<ResourceLocale, string>;
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? 'edPv1gDwvHyP6q_d4ZonnP1z4Taik4vZ43Tx_5-1xTA';
 const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION ?? 'FCAC5D6B1AAEA460C022D6876264FEA5';
 const buildDate = new Date();
@@ -66,6 +133,10 @@ const footerText = {
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href={canonical} />
+    {localeAlternates.map((alternate) => (
+      <link rel="alternate" hreflang={hreflangMap[alternate.locale]} href={alternate.href} />
+    ))}
+    {defaultAlternate && <link rel="alternate" hreflang="x-default" href={defaultAlternate.href} />}
     <meta name="google-site-verification" content={googleSiteVerification} />
     <meta name="msvalidate.01" content={bingSiteVerification} />
     <link rel="icon" type="image/png" href="/black-hole.png" />

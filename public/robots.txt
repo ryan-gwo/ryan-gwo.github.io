@@ -3,3 +3,6 @@ Allow: /
 
 Sitemap: https://ryan-gwo.github.io/sitemap-index.xml
 Sitemap: https://ryan-gwo.github.io/sitemap.xml
+Sitemap: https://ryan-gwo.github.io/en/sitemap.xml
+Sitemap: https://ryan-gwo.github.io/zh-cn/sitemap.xml
+Sitemap: https://ryan-gwo.github.io/zh-hk/sitemap.xml

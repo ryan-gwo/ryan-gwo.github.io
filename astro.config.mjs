@@ -5,7 +5,11 @@ import rehypeMathjax from 'rehype-mathjax/chtml';
 
 export default defineConfig({
   site: 'https://ryan-gwo.github.io',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => !new URL(page).pathname.endsWith('/publications/'),
+    }),
+  ],
   i18n: {
     locales: ['en', 'zh-cn', 'zh-hk'],
     defaultLocale: 'en',

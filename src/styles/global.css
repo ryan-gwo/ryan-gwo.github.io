@@ -17,10 +17,10 @@
     --radius-pill: 980px;
     --max-width: 980px;
     --line-height-tight: 1.1;
-    --line-height-body: 1.62;
+    --line-height-body: 1.65;
     --line-height-relaxed: 1.7;
-    --space-section-normal: 80px;
-    --space-section-spacious: 104px;
+    --space-section-normal: 120px;
+    --space-section-spacious: 160px;
     --space-card-compact: 20px;
     --space-card-standard: 24px;
     --space-card-featured: 30px;
@@ -928,42 +928,45 @@ img {
 
 .hero h1 {
     font-family: var(--font-display-serif);
-    font-size: clamp(40px, 7vw, 56px);
-    line-height: 1.15;
-    letter-spacing: 0;
+    font-size: clamp(56px, 10vw, 88px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
     font-weight: 600;
-    margin: 0 auto 20px;
-    max-width: 900px;
+    margin: 0 auto 24px;
+    max-width: 1000px;
+    color: var(--text-dark);
 }
 
 .hero .hero-name {
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 12px;
 }
 
 .hero .hero-identity {
-    margin: 0 auto 10px;
-    font-size: 22px;
-    line-height: 1.4;
-    letter-spacing: -0.024em;
-    color: var(--text-light);
-    max-width: 760px;
+    margin: 0 auto 16px;
+    font-size: clamp(24px, 3.5vw, 32px);
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    color: var(--text-dark);
+    max-width: 860px;
 }
 
 .hero .hero-focus {
-    margin: 0 auto 12px;
-    font-size: 16px;
+    margin: 0 auto 16px;
+    font-size: 18px;
     line-height: 1.45;
-    letter-spacing: -0.012em;
+    letter-spacing: -0.01em;
     color: var(--muted-light);
-    max-width: 760px;
+    max-width: 860px;
 }
 
 .hero .lead {
-    font-size: 20px;
-    line-height: 1.56;
-    letter-spacing: -0.022em;
+    font-size: 22px;
+    line-height: 1.58;
+    letter-spacing: -0.01em;
     color: var(--muted-light);
-    max-width: 760px;
+    max-width: 860px;
     margin: 0 auto;
 }
 
@@ -2138,26 +2141,26 @@ img {
 }
 
 .resource-category-panel {
-    margin: 0 0 20px;
-    padding: 30px;
-    border-radius: 30px;
-    background: #f5f5f7;
+    margin: 0;
+    padding: 64px 0;
+    background: transparent;
     border: none;
     box-shadow: none;
     backdrop-filter: none;
 }
 
-.resource-category-panel-soft {
-    background: rgba(246, 248, 252, 0.80);
-}
-
+.resource-category-panel-soft,
 .resource-tone-competition,
 .resource-tone-training,
 .resource-tone-notes,
 .resource-tone-papers,
 .resource-tone-code,
 .resource-tone-slides {
-    background: rgba(246, 247, 250, 0.92);
+    background: transparent;
+}
+
+.resource-category-panel + .resource-category-panel {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .resource-category-head {
@@ -3208,18 +3211,21 @@ img {
 .cv-stat-strip {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1px;
-    overflow: hidden;
-    margin: 0 0 18px;
-    border-radius: 18px;
-    background: rgba(0, 0, 0, 0.08);
+    gap: 12px;
+    margin: 0 0 32px;
 }
 
 .cv-stat {
     min-width: 0;
-    padding: 22px 18px;
+    padding: 24px;
     background: #f5f5f7;
+    border-radius: 20px;
     text-align: center;
+    transition: transform 200ms ease;
+}
+
+.cv-stat:hover {
+    transform: translateY(-2px);
 }
 
 .cv-stat-value {
@@ -3412,24 +3418,28 @@ img {
 }
 
 .cv-side-card {
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.82);
-    padding: 18px;
+    border-radius: 20px;
+    background: rgba(245, 245, 247, 0.72);
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(12px) saturate(180%);
 }
 
 .cv-side-card-accent {
     background: #1d1d1f;
     color: #fff;
+    border: none;
+    backdrop-filter: none;
 }
 
 .cv-side-card h2 {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
     font-family: var(--font-display-serif);
-    font-size: 18px;
-    line-height: 1.24;
-    letter-spacing: -0.017em;
+    font-size: 19px;
+    line-height: 1.25;
+    letter-spacing: 0;
     font-weight: 610;
-    color: rgba(29, 29, 31, 0.92);
+    color: var(--text-dark);
 }
 
 .cv-side-card-accent h2 {
@@ -3439,22 +3449,23 @@ img {
 .cv-side-card p {
     margin: 0 0 14px;
     font-size: 14px;
-    line-height: 1.48;
-    letter-spacing: -0.008em;
-    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.5;
+    color: rgba(29, 29, 31, 0.72);
 }
 
-.cv-side-list {
-    margin: 0;
-    padding-left: 17px;
+.cv-side-card-accent p {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .cv-side-list li {
-    margin: 8px 0;
+    margin: 10px 0;
     font-size: 14px;
-    line-height: 1.48;
-    letter-spacing: -0.008em;
+    line-height: 1.5;
     color: rgba(29, 29, 31, 0.72);
+}
+
+.cv-side-card-accent .cv-side-list li {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .cv-chip-list {

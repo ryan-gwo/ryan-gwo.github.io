@@ -2058,7 +2058,7 @@ img {
     overflow: hidden;
     margin: 0 0 26px;
     padding: 46px 42px;
-    border-radius: 32px;
+    border-radius: var(--radius-card-featured);
     background:
         radial-gradient(760px 280px at -10% -42%, rgba(0, 113, 227, 0.12), rgba(0, 113, 227, 0)),
         radial-gradient(520px 200px at 102% 112%, rgba(10, 132, 255, 0.11), rgba(10, 132, 255, 0)),
@@ -2092,7 +2092,7 @@ img {
 
 .resource-hero-eyebrow {
     margin: 0 0 10px;
-    font-size: 13px;
+    font-size: var(--text-caption);
     line-height: 1.2;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -2109,10 +2109,11 @@ img {
 }
 
 .resource-hero .article-description {
-    font-size: clamp(18px, 2.2vw, 22px);
-    line-height: 1.45;
-    letter-spacing: -0.02em;
+    font-size: var(--text-body);
+    line-height: 1.58;
+    letter-spacing: 0;
     color: rgba(29, 29, 31, 0.8);
+    max-width: 760px;
 }
 
 .resource-quick-nav {
@@ -2127,14 +2128,16 @@ img {
     align-items: center;
     min-height: 34px;
     padding: 7px 14px;
-    border-radius: 980px;
+    border-radius: var(--radius-pill);
     text-decoration: none;
     color: #1d1d1f;
-    background: #f5f5f7;
-    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.78);
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: -0.01em;
+    box-shadow: 0 5px 14px rgba(15, 17, 24, 0.08);
+    backdrop-filter: blur(10px);
     transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
 }
 
@@ -2142,8 +2145,8 @@ img {
 .resource-quick-nav a:focus-visible {
     transform: translateY(-1px);
     border-color: rgba(0, 113, 227, 0.32);
-    background: #ffffff;
-    box-shadow: var(--shadow-soft);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 20px rgba(15, 17, 24, 0.11);
 }
 
 .resource-category-panel {

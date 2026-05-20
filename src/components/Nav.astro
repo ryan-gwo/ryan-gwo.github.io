@@ -65,6 +65,11 @@ const text = {
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
+    theme: 'Theme',
+    themeLight: 'Light',
+    themeDark: 'Dark',
+    themeSystem: 'System',
+    search: 'Search',
   },
   'zh-cn': {
     menu: '菜单',
@@ -77,6 +82,11 @@ const text = {
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
+    theme: '主题',
+    themeLight: '浅色',
+    themeDark: '深色',
+    themeSystem: '系统',
+    search: '搜索',
   },
   'zh-hk': {
     menu: '選單',
@@ -89,6 +99,11 @@ const text = {
     en: 'EN',
     zhcn: '简',
     zhhk: '繁',
+    theme: '主題',
+    themeLight: '淺色',
+    themeDark: '深色',
+    themeSystem: '系統',
+    search: '搜尋',
   },
 }[locale];
 
@@ -106,6 +121,12 @@ const navItems = [
   { href: `${base}interests/`, label: text.interests },
   { href: `${base}resources/`, label: text.resources },
 ];
+
+const themeOptions = [
+  { value: 'light', label: text.themeLight, icon: 'sun' },
+  { value: 'dark', label: text.themeDark, icon: 'moon' },
+  { value: 'system', label: text.themeSystem, icon: 'monitor' },
+];
 ---
 
 <header class="site-nav">
@@ -121,7 +142,22 @@ const navItems = [
     </nav>
 
     <div class="nav-actions">
-      <button class="nav-search-trigger liquid-glass" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'} title={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
+      <div class="theme-switcher liquid-glass" role="group" aria-label={text.theme}>
+        {themeOptions.map((option) => (
+          <button
+            class="theme-option"
+            type="button"
+            data-theme-option={option.value}
+            aria-pressed="false"
+            aria-label={option.label}
+            title={option.label}
+          >
+            <Icon name={option.icon} />
+          </button>
+        ))}
+      </div>
+
+      <button class="nav-search-trigger liquid-glass" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={text.search} title={text.search}>
         <Icon name="search" />
       </button>
 
@@ -141,9 +177,28 @@ const navItems = [
       </summary>
 
       <div class="mobile-menu-panel liquid-glass-strong">
-        <button class="nav-search-trigger nav-search-trigger--mobile liquid-glass" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
-          <Icon name="search" />
-        </button>
+        <div class="mobile-menu-tools">
+          <div class="theme-switcher theme-switcher--mobile liquid-glass" role="group" aria-label={text.theme}>
+            {themeOptions.map((option) => (
+              <button
+                class="theme-option"
+                type="button"
+                data-theme-option={option.value}
+                aria-pressed="false"
+                aria-label={option.label}
+                title={option.label}
+              >
+                <Icon name={option.icon} />
+                <span>{option.label}</span>
+              </button>
+            ))}
+          </div>
+
+          <button class="nav-search-trigger nav-search-trigger--mobile liquid-glass" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={text.search}>
+            <Icon name="search" />
+            <span>{text.search}</span>
+          </button>
+        </div>
 
         <nav class="mobile-menu-links">
           {navItems.map((item) => (
@@ -230,4 +285,71 @@ const navItems = [
     summary.setAttribute('aria-expanded', menu.open ? 'true' : 'false');
     syncBodyState();
   }
+</script>
+
+<script>
+  const themeStorageKey = 'site-theme-preference';
+  const themeButtons = Array.from(document.querySelectorAll('[data-theme-option]'));
+  const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+  const themeMeta = document.querySelector('#theme-color-meta');
+  const validThemes = new Set(['light', 'dark', 'system']);
+
+  const getThemePreference = () => {
+    try {
+      const storedPreference = window.localStorage.getItem(themeStorageKey);
+      return validThemes.has(storedPreference) ? storedPreference : 'system';
+    } catch {
+      return 'system';
+    }
+  };
+
+  const resolveTheme = (preference) => preference === 'system'
+    ? (themeMedia.matches ? 'dark' : 'light')
+    : preference;
+
+  const syncThemeButtons = (preference) => {
+    themeButtons.forEach((button) => {
+      const isActive = button.dataset.themeOption === preference;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+  };
+
+  const applyThemePreference = (preference) => {
+    const normalizedPreference = validThemes.has(preference) ? preference : 'system';
+    const resolvedTheme = resolveTheme(normalizedPreference);
+    document.documentElement.dataset.theme = resolvedTheme;
+    document.documentElement.dataset.themePreference = normalizedPreference;
+    document.documentElement.style.colorScheme = resolvedTheme;
+
+    if (themeMeta) {
+      themeMeta.setAttribute('content', resolvedTheme === 'dark' ? '#15171c' : '#ffffff');
+    }
+
+    if (typeof window.__setSiteTheme === 'function') {
+      window.__setSiteTheme(normalizedPreference);
+    }
+
+    syncThemeButtons(normalizedPreference);
+  };
+
+  themeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const nextPreference = button.dataset.themeOption || 'system';
+      try {
+        window.localStorage.setItem(themeStorageKey, nextPreference);
+      } catch {
+        // Ignore storage failures and keep the in-memory theme change.
+      }
+      applyThemePreference(nextPreference);
+    });
+  });
+
+  applyThemePreference(getThemePreference());
+
+  themeMedia.addEventListener('change', () => {
+    if (getThemePreference() === 'system') {
+      applyThemePreference('system');
+    }
+  });
 </script>

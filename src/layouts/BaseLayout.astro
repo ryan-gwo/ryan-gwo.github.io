@@ -129,6 +129,44 @@ const footerText = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta id="theme-color-meta" name="theme-color" content="#ffffff" />
+    <script is:inline>
+      (() => {
+        const storageKey = 'site-theme-preference';
+        const allowedThemes = new Set(['light', 'dark', 'system']);
+        const root = document.documentElement;
+        const meta = document.querySelector('#theme-color-meta');
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const getPreference = () => {
+          try {
+            const stored = window.localStorage.getItem(storageKey);
+            return allowedThemes.has(stored) ? stored : 'system';
+          } catch {
+            return 'system';
+          }
+        };
+
+        const resolveTheme = (preference) => preference === 'system'
+          ? (media.matches ? 'dark' : 'light')
+          : preference;
+
+        const applyTheme = (preference = getPreference()) => {
+          const resolvedTheme = resolveTheme(preference);
+          root.dataset.theme = resolvedTheme;
+          root.dataset.themePreference = preference;
+          root.style.colorScheme = resolvedTheme;
+
+          if (meta) {
+            meta.setAttribute('content', resolvedTheme === 'dark' ? '#15171c' : '#ffffff');
+          }
+        };
+
+        applyTheme();
+        window.__setSiteTheme = applyTheme;
+      })();
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />

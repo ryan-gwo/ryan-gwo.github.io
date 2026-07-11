@@ -1,24 +1,4 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import WritingsPage from '../components/WritingsPage.astro';
 ---
-
-<BaseLayout title="Selected Writing" description="A curated note" locale="en">
-  <section class="section-light article-page">
-    <div class="container article-body">
-      <h1>Selected Writing</h1>
-      <div class="article-description">
-        A curated note on physics, mathematics, and related ideas.
-      </div>
-
-      <div class="article-card">
-        <div class="article-meta">September 23, 2025 • Mechanics / Mathematics</div>
-        <h3>Initial insights into the concept of the metric</h3>
-        <p>
-          A short essay on understanding the metric as a generalization of the Pythagorean theorem
-          for infinitesimal distances.
-        </p>
-        <a class="button button-link" href="/writing/metric/">Read article</a>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+<WritingsPage locale="en" />

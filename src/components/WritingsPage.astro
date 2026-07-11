@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+import { localizedPath, siteContent, type SiteLocale } from '../data/siteContent';
+const { locale } = Astro.props as { locale: SiteLocale };
+const site = siteContent[locale];
+const copy = site.writings;
+---
+<BaseLayout title={copy.title} description={copy.description} locale={locale}>
+  <section class="page-hero page-hero-compact"><div class="container page-hero-inner"><p class="section-kicker">{site.labels.writing}</p><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
+  <section class="content-section writing-index-section">
+    <div class="container writing-index">
+      <p class="writing-index-label">{copy.listLabel}</p>
+      <article class="writing-row">
+        <div class="writing-row-meta">{copy.articleMeta}</div>
+        <div><h2>{copy.articleTitle}</h2><p>{copy.articleSummary}</p></div>
+        <a class="writing-row-link" href={localizedPath(locale, '/writing/metric/')} aria-label={`${copy.articleCta}: ${copy.articleTitle}`}><span>{copy.articleCta}</span><Icon name="chevron.right" /></a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

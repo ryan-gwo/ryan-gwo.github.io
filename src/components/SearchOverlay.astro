@@ -54,7 +54,7 @@ const pageEntriesByLocale = {
     { href: '/resources/cnao/', title: 'CNAO Resources', description: 'National finals archive and Chinese-first documents.', kind: localeText.resourceLabel, priority: 8, keywords: 'cnao national astronomy olympiad resources' },
   ],
   'zh-cn': [
-    { href: '/zh-cn/', title: '首页', description: '学术主页与概览。', kind: localeText.pageLabel, priority: 0, keywords: '首页 概览 学术主页 余泽郭' },
+    { href: '/zh-cn/', title: '首页', description: '学术主页与概览。', kind: localeText.pageLabel, priority: 0, keywords: '首页 概览 学术主页 郭雨泽 北京大学 天体物理' },
     { href: '/zh-cn/research/', title: '研究', description: '研究方向与当前关注问题。', kind: localeText.pageLabel, priority: 1, keywords: '研究 引力波 X 射线偏振 多信使' },
     { href: '/zh-cn/writings/', title: '精选写作', description: '精选笔记与文章。', kind: localeText.pageLabel, priority: 2, keywords: '写作 文章 笔记' },
     { href: '/zh-cn/cv/', title: '简历', description: '个人履历与经历。', kind: localeText.pageLabel, priority: 3, keywords: '简历 履历 教育 经历' },
@@ -66,7 +66,7 @@ const pageEntriesByLocale = {
     { href: '/zh-cn/resources/training/', title: '竞赛讲义', description: '竞赛训练材料按主题和年份整理。', kind: localeText.resourceLabel, priority: 9, keywords: '讲义 训练 竞赛' },
   ],
   'zh-hk': [
-    { href: '/zh-hk/', title: '首頁', description: '學術主頁與概覽。', kind: localeText.pageLabel, priority: 0, keywords: '首頁 概覽 學術主頁 余澤郭' },
+    { href: '/zh-hk/', title: '首頁', description: '學術主頁與概覽。', kind: localeText.pageLabel, priority: 0, keywords: '首頁 概覽 學術主頁 郭雨澤 北京大學 天體物理' },
     { href: '/zh-hk/research/', title: '研究', description: '研究方向與當前關注問題。', kind: localeText.pageLabel, priority: 1, keywords: '研究 引力波 X 射線偏振 多信使' },
     { href: '/zh-hk/writings/', title: '精選寫作', description: '精選筆記與文章。', kind: localeText.pageLabel, priority: 2, keywords: '寫作 文章 筆記' },
     { href: '/zh-hk/cv/', title: '履歷', description: '個人履歷與經歷。', kind: localeText.pageLabel, priority: 3, keywords: '履歷 經歷 教育' },
@@ -108,9 +108,9 @@ const searchEntries = [...pageEntriesByLocale, ...writingEntries];
 <div class="search-overlay" id="site-search-overlay" aria-hidden="true">
   <div class="search-overlay__backdrop" data-search-close></div>
 
-  <section class="search-panel liquid-glass-strong" role="dialog" aria-modal="true" aria-label={localeText.placeholder}>
+  <section class="search-panel" role="dialog" aria-modal="true" aria-label={localeText.placeholder}>
     <div class="search-panel__content">
-      <label class="search-field liquid-glass" for="site-search-input">
+      <label class="search-field" for="site-search-input">
         <span class="search-field__icon" aria-hidden="true"><Icon name="search" /></span>
         <input
           id="site-search-input"

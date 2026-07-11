@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+import { localizedPath, siteContent, type SiteLocale } from '../data/siteContent';
+
+const { locale } = Astro.props as { locale: SiteLocale };
+const copy = siteContent[locale];
+const home = copy.home;
+const writing = copy.writings;
+---
+
+<BaseLayout title={copy.meta.title} description={copy.meta.description} locale={locale}>
+  <section class="hero editorial-hero">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">{home.eyebrow}</p>
+        <h1 class="hero-name">{home.name}</h1>
+        <p class="hero-identity">{home.role}</p>
+        <p class="hero-focus">{home.focus}</p>
+        <p class="lead">{home.lead}</p>
+        <div class="actions">
+          <a class="button button-primary" href={localizedPath(locale, '/research/')}>{home.researchCta}</a>
+          <a class="button button-secondary" href={localizedPath(locale, '/cv/')}>{home.cvCta}</a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label={home.currentTitle}>
+        <span class="hero-note-orbit" aria-hidden="true"></span>
+        <p class="hero-note-label">{home.currentTitle}</p>
+        <p>{home.currentItems[0].value}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="content-section section-soft featured-research">
+    <div class="container">
+      <header class="section-heading">
+        <p class="section-kicker">01 · {copy.labels.research}</p>
+        <h2 class="section-title">{home.researchTitle}</h2>
+        <p class="section-intro">{home.researchIntro}</p>
+      </header>
+      <div class="editorial-grid">
+        {home.researchCards.map((card, index) => (
+          <article class="editorial-card">
+            <span class="card-index" aria-hidden="true">0{index + 1}</span>
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+          </article>
+        ))}
+      </div>
+      <a class="text-link section-link" href={localizedPath(locale, '/research/')}>{home.researchCta}<Icon name="chevron.right" /></a>
+    </div>
+  </section>
+
+  <section class="content-section profile-section">
+    <div class="container profile-layout">
+      <figure class="profile-portrait">
+        <img src="/images/prof_pic.jpg" alt={home.portraitAlt} />
+        <figcaption>{home.portraitCaption}</figcaption>
+      </figure>
+      <div class="profile-copy">
+        <p class="section-kicker">{home.profileEyebrow}</p>
+        <h2 class="section-title">{home.profileTitle}</h2>
+        {home.profileParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+        <a class="text-link" href={localizedPath(locale, '/cv/')}>{home.cvCta}<Icon name="chevron.right" /></a>
+      </div>
+      <aside class="current-panel">
+        <h3>{home.currentTitle}</h3>
+        {home.currentItems.map((item) => (
+          <div class="current-item">
+            <span>{item.label}</span>
+            <p>{item.value}</p>
+          </div>
+        ))}
+      </aside>
+    </div>
+  </section>
+
+  <section class="content-section section-ink feature-pair-section">
+    <div class="container feature-pair">
+      <article class="feature-panel">
+        <p class="section-kicker">03 · {copy.labels.writing}</p>
+        <h2>{home.writingTitle}</h2>
+        <p>{home.writingIntro}</p>
+        <p class="feature-meta">{writing.articleMeta}</p>
+        <h3>{writing.articleTitle}</h3>
+        <a class="text-link text-link-light" href={localizedPath(locale, '/writing/metric/')}>{home.writingCta}<Icon name="chevron.right" /></a>
+      </article>
+      <article class="feature-panel feature-panel-accent">
+        <p class="section-kicker">04 · {copy.labels.archive}</p>
+        <h2>{home.resourcesTitle}</h2>
+        <p>{home.resourcesDescription}</p>
+        <a class="text-link text-link-light" href={localizedPath(locale, '/resources/')}>{home.resourcesLink}<Icon name="chevron.right" /></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section beyond-section">
+    <div class="container">
+      <header class="section-heading section-heading-inline">
+        <div><p class="section-kicker">05 · {copy.labels.elsewhere}</p><h2 class="section-title">{home.beyondTitle}</h2></div>
+        <p class="section-intro">{home.beyondIntro}</p>
+      </header>
+      <div class="quiet-grid">
+        {home.beyondCards.map((card) => <article><h3>{card.title}</h3><p>{card.description}</p></article>)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

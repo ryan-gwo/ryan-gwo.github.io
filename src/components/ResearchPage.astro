@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+import { localizedPath, siteContent, type SiteLocale } from '../data/siteContent';
+const { locale } = Astro.props as { locale: SiteLocale };
+const site = siteContent[locale];
+const copy = site.research;
+---
+<BaseLayout title={copy.title} description={copy.description} locale={locale}>
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="section-kicker">{site.labels.academicProfile}</p>
+      <h1>{copy.title}</h1>
+      <p class="page-lead">{copy.description}</p>
+      <div class="actions">
+        <a class="button button-primary" href={localizedPath(locale, '/writings/')}>{copy.writingCta}</a>
+        <a class="button button-link" href={localizedPath(locale, '/cv/')}>{copy.cvCta}<Icon name="chevron.right" /></a>
+      </div>
+    </div>
+  </section>
+  <section class="content-section section-soft">
+    <div class="container">
+      <header class="section-heading"><p class="section-kicker">01 · {site.labels.fields}</p><h2 class="section-title">{copy.areasTitle}</h2><p class="section-intro">{copy.areasIntro}</p></header>
+      <div class="editorial-grid">
+        {copy.areas.map((area, index) => <article class="editorial-card"><span class="card-index">0{index + 1}</span><h3>{area.title}</h3><p>{area.description}</p></article>)}
+      </div>
+    </div>
+  </section>
+  <section class="content-section questions-section">
+    <div class="container split-heading-layout">
+      <header><p class="section-kicker">02 · {site.labels.inquiry}</p><h2 class="section-title">{copy.questionsTitle}</h2><p class="section-intro">{copy.questionsIntro}</p></header>
+      <ol class="question-list">{copy.questions.map((question) => <li>{question}</li>)}</ol>
+    </div>
+  </section>
+  <section class="content-section section-ink related-panel-section">
+    <div class="container related-panel">
+      <div><p class="section-kicker">{copy.relatedEyebrow}</p><h2>{copy.relatedTitle}</h2><p>{copy.relatedDescription}</p></div>
+      <div class="actions"><a class="button button-light" href={localizedPath(locale, '/writings/')}>{copy.writingCta}</a><a class="button button-outline-light" href={localizedPath(locale, '/resources/')}>{copy.resourcesCta}</a></div>
+    </div>
+  </section>
+</BaseLayout>

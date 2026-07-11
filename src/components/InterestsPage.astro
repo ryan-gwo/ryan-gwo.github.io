@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+import { siteContent, type SiteLocale } from '../data/siteContent';
+const { locale } = Astro.props as { locale: SiteLocale };
+const site = siteContent[locale];
+const copy = site.interests;
+---
+<BaseLayout title={copy.title} description={copy.description} locale={locale}>
+  <section class="page-hero interests-hero"><div class="container page-hero-inner"><p class="section-kicker">{copy.eyebrow}</p><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
+  <section class="content-section interests-section">
+    <div class="container">
+      <header class="section-heading section-heading-inline"><div><p class="section-kicker">{site.labels.fieldNotes}</p><h2 class="section-title">{copy.sectionTitle}</h2></div><p class="section-intro">{copy.sectionIntro}</p></header>
+      <div class="interest-list">
+        {copy.cards.map((card, index) => (
+          <article class="interest-row">
+            <span class="interest-number">0{index + 1}</span>
+            <div><p class="section-kicker">{card.eyebrow}</p><h3>{card.title}</h3><p>{card.description}</p></div>
+            {card.href && <a class="text-link" href={card.href}>{card.cta}<Icon name="chevron.right" /></a>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

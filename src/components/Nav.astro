@@ -106,6 +106,13 @@ const navItems = [
   { href: `${base}interests/`, label: text.interests },
   { href: `${base}resources/`, label: text.resources },
 ];
+
+const isActiveRoute = (href) => {
+  const normalizedHref = normalizeRoute(href);
+  return normalizedHref === base
+    ? currentPath === normalizedHref
+    : currentPath.startsWith(normalizedHref);
+};
 ---
 
 <header class="site-nav">
@@ -114,14 +121,14 @@ const navItems = [
 
     <nav class="nav-links">
       {navItems.map((item) => (
-        <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
+        <a class={isActiveRoute(item.href) ? 'active' : ''} aria-current={isActiveRoute(item.href) ? 'page' : undefined} href={item.href}>
           {item.label}
         </a>
       ))}
     </nav>
 
     <div class="nav-actions">
-      <button class="nav-search-trigger liquid-glass" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'} title={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
+      <button class="nav-search-trigger" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'} title={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
         <Icon name="search" />
       </button>
 
@@ -140,14 +147,14 @@ const navItems = [
         </span>
       </summary>
 
-      <div class="mobile-menu-panel liquid-glass-strong">
-        <button class="nav-search-trigger nav-search-trigger--mobile liquid-glass" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
+      <div class="mobile-menu-panel">
+        <button class="nav-search-trigger nav-search-trigger--mobile" type="button" data-search-open aria-haspopup="dialog" aria-controls="site-search-overlay" aria-label={locale === 'en' ? 'Search' : locale === 'zh-cn' ? '搜索' : '搜尋'}>
           <Icon name="search" />
         </button>
 
         <nav class="mobile-menu-links">
           {navItems.map((item) => (
-            <a href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
+            <a class={isActiveRoute(item.href) ? 'active' : ''} aria-current={isActiveRoute(item.href) ? 'page' : undefined} href={item.href}>
               {item.label}
             </a>
           ))}

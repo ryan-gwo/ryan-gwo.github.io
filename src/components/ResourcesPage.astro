@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+import { competitionResources, getCompetitionBasePath, type ResourceLocale } from '../data/competitionResources';
+import { siteContent } from '../data/siteContent';
+const { locale } = Astro.props as { locale: ResourceLocale };
+const site = siteContent[locale];
+const copy = site.resources;
+const competitions = Object.values(competitionResources[locale]);
+---
+<BaseLayout title={copy.title} description={copy.description} locale={locale}>
+  <section class="page-hero resource-page-hero"><div class="container page-hero-inner"><p class="section-kicker">{copy.eyebrow}</p><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
+  <section class="content-section section-soft resource-library-section">
+    <div class="container resource-hub">
+      <header class="section-heading"><p class="section-kicker">{site.labels.archive}</p><h2 class="section-title">{copy.sectionTitle}</h2><p class="section-intro">{copy.sectionIntro}</p></header>
+      <div class="resource-major-grid resource-major-grid-3" role="list" aria-label={copy.listLabel}>
+        {competitions.map((competition) => (
+          <article class="resource-entry-card" role="listitem">
+            <div class="resource-entry-head"><div class="resource-entry-logo-stage"><img class="resource-entry-logo" src={competition.logo} alt="" aria-hidden="true" loading="lazy" /></div><span class="resource-entry-tag">{competition.editions.length}</span></div>
+            <h3>{competition.title}</h3><p>{competition.description}</p>
+            <a class="resource-entry-link" href={getCompetitionBasePath(locale, competition.slug)}><span>{copy.openLabel}</span><Icon name="chevron.right" /></a>
+          </article>
+        ))}
+      </div>
+      {copy.trainingTitle && <article class="training-callout"><div><p class="section-kicker">{site.labels.training}</p><h3>{copy.trainingTitle}</h3><p>{copy.trainingDescription}</p></div><a class="button button-secondary" href="/zh-cn/resources/training/">{copy.trainingLabel}</a></article>}
+    </div>
+  </section>
+</BaseLayout>

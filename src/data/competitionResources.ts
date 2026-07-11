@@ -116,7 +116,7 @@ export const competitionResources: Record<ResourceLocale, Record<CompetitionSlug
           logo: '/assets/logos/ioaa/ioaa2025.png',
           date: 'August 11-21, 2025',
           location: 'Mumbai, India',
-          summary: 'The 18th IOAA will be held in Mumbai, India, from August 11 to 21, 2025.',
+          summary: 'The 18th IOAA was held in Mumbai, India, from August 11 to 21, 2025.',
           downloads: [
             { label: 'Data Sheet', href: '/assets/pdf/en-us/IOAA_2025_Data_Sheet.pdf' },
             { label: 'Theory Bundle', href: '/assets/pdf/en-us/IOAA_2025_Theory.pdf' },

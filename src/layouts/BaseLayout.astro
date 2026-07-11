@@ -142,7 +142,7 @@ const footerText = {
     <link rel="icon" type="image/png" href="/black-hole.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+HK:wght@200..900&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+HK:wght@300..700&family=Noto+Sans+SC:wght@300..700&family=Noto+Serif+HK:wght@400..700&family=Noto+Serif+SC:wght@400..700&display=swap" rel="stylesheet">
   </head>
   <body>
     <Nav locale={locale} />
@@ -153,73 +153,13 @@ const footerText = {
     <button class="back-to-top" type="button" aria-label={footerText.backToTop} title={footerText.backToTop}>
       <span class="back-to-top__icon" aria-hidden="true"></span>
     </button>
-    <footer class="site-footer section-light">
+    <footer class="site-footer">
       <div class="container footer-inner">
-        <p class="footer-copy">© {currentYear} Yuze Guo. {footerText.rights}</p>
-        <p class="footer-copy footer-contact">
-          {footerText.contact}: <a href="mailto:guoyuze@whu.edu.cn">guoyuze@whu.edu.cn</a>
-          {' · '}
-          <a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a>
-        </p>
-        <p class="footer-copy footer-updated">{footerText.updated}: {lastUpdatedAt}</p>
-        <p class="footer-meta">
-          {footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>
-          {' · '}
-          {footerText.hostedOn} <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a>
-          {' · '}
-          <a href="https://github.com/ryan-gwo/ryan-gwo.github.io" target="_blank" rel="noreferrer">{footerText.sourceCode}</a>
-        </p>
+        <div class="footer-identity"><p class="footer-name">Yuze Guo</p><p>{footerText.contact}: <a href="mailto:guoyuze@whu.edu.cn">guoyuze@whu.edu.cn</a></p></div>
+        <div class="footer-links"><a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a><a href="https://github.com/ryan-gwo/ryan-gwo.github.io" target="_blank" rel="noreferrer">{footerText.sourceCode}</a></div>
+        <div class="footer-meta"><p>© {currentYear} Yuze Guo. {footerText.rights}</p><p>{footerText.updated}: {lastUpdatedAt}</p><p>{footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a> · {footerText.hostedOn} <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a></p></div>
       </div>
     </footer>
-    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
-      <defs>
-        <filter id="liquid-refraction" x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G" result="displaced" />
-        </filter>
-        <filter id="liquid-refraction-subtle" x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" result="displaced" />
-        </filter>
-      </defs>
-    </svg>
-    <script is:inline>
-      (() => {
-        // Safari & Firefox Fallback Detection
-        const ua = navigator.userAgent.toLowerCase();
-        const isSafari = ua.includes('safari') && !ua.includes('chrome') && !ua.includes('android');
-        const isFirefox = ua.includes('firefox');
-        if (isSafari || isFirefox) {
-          document.documentElement.classList.add('glass-fallback-active');
-        }
-
-        // Dynamic mouse tracking for liquid glass elements
-        const updatePointerCoords = (e) => {
-          const elements = document.querySelectorAll('[data-liquid-glass]');
-          elements.forEach((el) => {
-            const rect = el.getBoundingClientRect();
-            // Only calculate if hover target is inside viewport for optimization
-            if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              el.style.setProperty('--mouse-x', `${x}px`);
-              el.style.setProperty('--mouse-y', `${y}px`);
-            }
-          });
-        };
-
-        // Throttle pointer coords tracking for performance
-        let frameId;
-        document.addEventListener('mousemove', (e) => {
-          if (frameId) {
-            cancelAnimationFrame(frameId);
-          }
-          frameId = requestAnimationFrame(() => {
-            updatePointerCoords(e);
-          });
-        }, { passive: true });
-      })();
-    </script>
     <script is:inline>
       (() => {
         const button = document.querySelector('.back-to-top');

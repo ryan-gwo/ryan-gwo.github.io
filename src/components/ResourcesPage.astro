@@ -9,10 +9,10 @@ const copy = site.resources;
 const competitions = Object.values(competitionResources[locale]);
 ---
 <BaseLayout title={copy.title} description={copy.description} locale={locale}>
-  <section class="page-hero resource-page-hero"><div class="container page-hero-inner"><p class="section-kicker">{copy.eyebrow}</p><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
+  <section class="page-hero resource-page-hero"><div class="container page-hero-inner"><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
   <section class="content-section section-soft resource-library-section">
     <div class="container resource-hub">
-      <header class="section-heading"><p class="section-kicker">{site.labels.archive}</p><h2 class="section-title">{copy.sectionTitle}</h2><p class="section-intro">{copy.sectionIntro}</p></header>
+      <header class="section-heading"><h2 class="section-title">{copy.sectionTitle}</h2><p class="section-intro">{copy.sectionIntro}</p></header>
       <div class="resource-major-grid resource-major-grid-3" role="list" aria-label={copy.listLabel}>
         {competitions.map((competition) => (
           <article class="resource-entry-card" role="listitem">
@@ -22,7 +22,7 @@ const competitions = Object.values(competitionResources[locale]);
           </article>
         ))}
       </div>
-      {copy.trainingTitle && <article class="training-callout"><div><p class="section-kicker">{site.labels.training}</p><h3>{copy.trainingTitle}</h3><p>{copy.trainingDescription}</p></div><a class="button button-secondary" href="/zh-cn/resources/training/">{copy.trainingLabel}</a></article>}
+      {copy.trainingTitle && <article class="training-callout"><div><h3>{copy.trainingTitle}</h3><p>{copy.trainingDescription}</p></div><a class="button button-secondary" href="/zh-cn/resources/training/">{copy.trainingLabel}</a></article>}
     </div>
   </section>
 </BaseLayout>

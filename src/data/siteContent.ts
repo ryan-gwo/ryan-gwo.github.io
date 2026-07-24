@@ -10,6 +10,38 @@ type Card = { title: string; description: string };
 
 type SiteCopy = {
   meta: { title: string; description: string };
+  navigation: {
+    menu: string;
+    search: string;
+    language: string;
+    home: string;
+    research: string;
+    writing: string;
+    cv: string;
+    interests: string;
+    resources: string;
+    locales: Record<SiteLocale, string>;
+  };
+  footer: {
+    role: string;
+    academic: string;
+    writing: string;
+    resources: string;
+    connect: string;
+    research: string;
+    cv: string;
+    selectedWriting: string;
+    interests: string;
+    resourceLibrary: string;
+    email: string;
+    sourceCode: string;
+    language: string;
+    rights: string;
+    updated: string;
+    builtWith: string;
+    hostedOn: string;
+    backToTop: string;
+  };
   labels: { academicProfile: string; research: string; writing: string; archive: string; elsewhere: string; fields: string; inquiry: string; fieldNotes: string; training: string };
   home: {
     eyebrow: string;
@@ -23,6 +55,7 @@ type SiteCopy = {
     profileTitle: string;
     profileEyebrow: string;
     profileParagraphs: string[];
+    heroVisualAlt: string;
     portraitAlt: string;
     portraitCaption: string;
     currentTitle: string;
@@ -89,6 +122,15 @@ type SiteCopy = {
 export const siteContent: Record<SiteLocale, SiteCopy> = {
   en: {
     meta: { title: 'Yuze Guo', description: 'Academic homepage of Yuze Guo, an astrophysics PhD student at Peking University.' },
+    navigation: {
+      menu: 'Menu', search: 'Search', language: 'Language', home: 'Home', research: 'Research', writing: 'Writing', cv: 'CV', interests: 'Interests', resources: 'Resources',
+      locales: { en: 'English', 'zh-cn': '简体中文', 'zh-hk': '繁體中文' },
+    },
+    footer: {
+      role: 'PhD Student in Astrophysics at Peking University', academic: 'Academic', writing: 'Writing', resources: 'Resources', connect: 'Connect',
+      research: 'Research', cv: 'Curriculum Vitae', selectedWriting: 'Selected writing', interests: 'Interests', resourceLibrary: 'Astronomy resource library', email: 'Email', sourceCode: 'Source code', language: 'Language',
+      rights: 'All rights reserved.', updated: 'Last updated', builtWith: 'Built with', hostedOn: 'Hosted on', backToTop: 'Back to top',
+    },
     labels: { academicProfile: 'Academic profile', research: 'Research', writing: 'Writing', archive: 'Archive', elsewhere: 'Elsewhere', fields: 'Fields', inquiry: 'Inquiry', fieldNotes: 'Field notes', training: 'Training' },
     home: {
       eyebrow: 'Astrophysics · Gravitational Waves',
@@ -109,6 +151,7 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
         'I am an astrophysics PhD student at Peking University. My long-term interests lie in high-energy astrophysics, especially gravitational waves, compact objects, cosmology, and multi-messenger astronomy.',
         'I completed my undergraduate studies in physics at Wuhan University, where I worked on continuous gravitational radiation and X-ray polarimetry. Earlier, astronomy olympiad training shaped the way I approach quantitative problems.',
       ],
+      heroVisualAlt: 'Editorial visualization of a magnetized neutron star emitting gravitational waves',
       portraitAlt: 'Portrait of Yuze Guo',
       portraitCaption: 'Balliol College, Oxford, 2023.',
       currentTitle: 'Current direction',
@@ -170,6 +213,15 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
   },
   'zh-cn': {
     meta: { title: '郭雨泽', description: '北京大学天体物理博士生郭雨泽的学术个人主页。' },
+    navigation: {
+      menu: '菜单', search: '搜索', language: '语言', home: '首页', research: '研究', writing: '写作', cv: '简历', interests: '兴趣', resources: '资源库',
+      locales: { en: 'English', 'zh-cn': '简体中文', 'zh-hk': '繁體中文' },
+    },
+    footer: {
+      role: '北京大学天体物理博士生', academic: '学术', writing: '写作', resources: '资源', connect: '联系',
+      research: '研究', cv: '个人简历', selectedWriting: '精选写作', interests: '研究之外', resourceLibrary: '天文资源库', email: '电子邮件', sourceCode: '源代码', language: '语言',
+      rights: '保留所有权利。', updated: '最近更新', builtWith: '使用', hostedOn: '托管于', backToTop: '回到顶部',
+    },
     labels: { academicProfile: '学术主页', research: '研究', writing: '写作', archive: '归档', elsewhere: '研究之外', fields: '方向', inquiry: '问题', fieldNotes: '兴趣札记', training: '训练' },
     home: {
       eyebrow: '天体物理 · 引力波', name: '郭雨泽', role: '北京大学天体物理博士生',
@@ -185,6 +237,7 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
         '我目前是北京大学物理学院天文学系的天体物理博士生，长期兴趣集中在高能天体物理，尤其是引力波、致密天体、宇宙学与多信使天文学。',
         '本科就读于武汉大学物理科学与技术学院，曾开展连续引力辐射与 X 射线偏振研究。更早的天文奥赛训练塑造了我理解定量问题的方式。',
       ],
+      heroVisualAlt: '磁化中子星发射引力波的编辑式科学插画',
       portraitAlt: '郭雨泽个人照片', portraitCaption: '2023 年摄于牛津大学贝利奥尔学院。', currentTitle: '当前方向',
       currentItems: [
         { label: '研究', value: '完善中子星连续引力波信号的理论模型。' },
@@ -235,6 +288,15 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
   },
   'zh-hk': {
     meta: { title: '郭雨澤', description: '北京大學天體物理博士生郭雨澤的學術個人主頁。' },
+    navigation: {
+      menu: '選單', search: '搜尋', language: '語言', home: '首頁', research: '研究', writing: '寫作', cv: '履歷', interests: '興趣', resources: '資源庫',
+      locales: { en: 'English', 'zh-cn': '简体中文', 'zh-hk': '繁體中文' },
+    },
+    footer: {
+      role: '北京大學天體物理博士生', academic: '學術', writing: '寫作', resources: '資源', connect: '聯絡',
+      research: '研究', cv: '個人履歷', selectedWriting: '精選寫作', interests: '研究之外', resourceLibrary: '天文資源庫', email: '電子郵件', sourceCode: '原始碼', language: '語言',
+      rights: '保留所有權利。', updated: '最近更新', builtWith: '使用', hostedOn: '託管於', backToTop: '回到頂部',
+    },
     labels: { academicProfile: '學術主頁', research: '研究', writing: '寫作', archive: '歸檔', elsewhere: '研究之外', fields: '方向', inquiry: '問題', fieldNotes: '興趣札記', training: '訓練' },
     home: {
       eyebrow: '天體物理 · 引力波', name: '郭雨澤', role: '北京大學天體物理博士生',
@@ -250,6 +312,7 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
         '我目前是北京大學物理學院天文學系的天體物理博士生，長期興趣集中在高能天體物理，尤其是引力波、緻密天體、宇宙學與多信使天文學。',
         '本科就讀於武漢大學物理科學與技術學院，曾開展連續引力輻射與 X 射線偏振研究。更早的天文奧賽訓練塑造了我理解定量問題的方式。',
       ],
+      heroVisualAlt: '磁化中子星發射引力波的編輯式科學插畫',
       portraitAlt: '郭雨澤個人照片', portraitCaption: '2023 年攝於牛津大學貝利奧爾學院。', currentTitle: '目前方向',
       currentItems: [
         { label: '研究', value: '完善中子星連續引力波信號的理論模型。' },

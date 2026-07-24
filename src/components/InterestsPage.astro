@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from './Icon.astro';
-import { siteContent, type SiteLocale } from '../data/siteContent';
+import { localizedPath, siteContent, type SiteLocale } from '../data/siteContent';
 const { locale } = Astro.props as { locale: SiteLocale };
 const site = siteContent[locale];
 const copy = site.interests;
 ---
-<BaseLayout title={copy.title} description={copy.description} locale={locale}>
+<BaseLayout title={copy.title} description={copy.description} locale={locale} preloadSerif>
   <section class="page-hero interests-hero"><div class="container page-hero-inner"><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
   <section class="content-section interests-section">
     <div class="container">
@@ -15,7 +15,7 @@ const copy = site.interests;
         {copy.cards.map((card) => (
           <article class="interest-row">
             <div><p class="interest-context">{card.eyebrow}</p><h3>{card.title}</h3><p>{card.description}</p></div>
-            {card.href && <a class="text-link" href={card.href}>{card.cta}<Icon name="chevron.right" /></a>}
+            {card.href && <a class="text-link" href={card.href.startsWith('/') ? localizedPath(locale, card.href) : card.href}>{card.cta}<Icon name="chevron.right" /></a>}
           </article>
         ))}
       </div>

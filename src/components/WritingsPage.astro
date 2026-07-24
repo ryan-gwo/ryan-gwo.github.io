@@ -6,7 +6,7 @@ const { locale } = Astro.props as { locale: SiteLocale };
 const site = siteContent[locale];
 const copy = site.writings;
 ---
-<BaseLayout title={copy.title} description={copy.description} locale={locale}>
+<BaseLayout title={copy.title} description={copy.description} locale={locale} preloadSerif>
   <section class="page-hero page-hero-compact writing-hero"><div class="container page-hero-inner"><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
   <section class="content-section writing-index-section">
     <div class="container writing-index">

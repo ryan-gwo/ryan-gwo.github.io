@@ -1,56 +1,40 @@
-# Project Context: Personal Portfolio & Astronomy Resource Site
+# Repository Guidelines
 
-This project is a high-performance personal portfolio and resource hub built with Astro, featuring a refined design system inspired by Apple and full multi-language support.
+## Project Structure & Module Organization
 
-## 🚀 Project Overview
+This is an Astro static site for `ryan-gwo.github.io`. Source lives in `src/`:
 
-- **Purpose**: A personal website for academic showcase and a centralized repository for international astronomy competition materials (IOAA, IAO, CNAO).
-- **Tech Stack**:
-    - **Framework**: Astro v6+
-    - **Language**: TypeScript
-    - **Styling**: Custom Vanilla CSS (Apple Design System)
-    - **Content**: Markdown/MDX with MathJax support for technical equations.
-    - **i18n**: Supported locales: `en` (default), `zh-cn`, `zh-hk`.
+- `pages/` contains Astro and Markdown routes. English routes are at the root; localized pages are in `zh-cn/` and `zh-hk/`.
+- `components/` provides reusable page sections and UI; `layouts/` contains shared page shells.
+- `data/` holds typed, structured content, notably `competitionResources.ts`; `styles/global.css` is the central design system.
+- `public/` contains directly served images, fonts, PDFs, and SEO files. A file at `public/assets/x.svg` is referenced as `/assets/x.svg`.
+- `scripts/seo-postbuild.mjs` updates generated SEO output after production builds.
 
-## 🛠 Building and Running
+## Build, Test, and Development Commands
 
-| Command | Action |
-| :--- | :--- |
-| `npm install` | Install all dependencies. |
-| `npm run dev` | Start the local development server at `http://localhost:4321`. |
-| `npm run build` | Build the production-ready site into `dist/`. |
-| `npm run postbuild` | Run SEO optimization scripts (located in `scripts/seo-postbuild.mjs`). |
-| `npm run preview` | Preview the production build locally. |
-| `npm run astro ...` | Execute Astro CLI commands. |
+Run commands from the repository root (with Node.js 22.12+):
 
-## 🏗 Architecture & Key Files
+```bash
+npm install          # install dependencies
+npm run dev          # start Astro development server (normally :4321)
+npm run build        # build dist/ and run the SEO postbuild step
+npm run preview      # serve the built site locally
+```
 
-- **`src/pages/`**: Contains the routing structure.
-    - `/` (English/Default)
-    - `/zh-cn/` (Simplified Chinese)
-    - `/zh-hk/` (Traditional Chinese)
-- **`src/data/competitionResources.ts`**: The central data source for astronomy competition materials. Update this file to add new editions or resources.
-- **`src/components/`**: Reusable UI components like `Nav.astro`, `SearchOverlay.astro`, and `Icon.astro`.
-- **`src/styles/global.css`**: The core styling engine, implementing the Apple-inspired design system using CSS variables.
-- **`public/assets/`**: Static resources.
-    - `pdf/`: Categorized by locale (`en-us`, `zh-cn`, `zh-hk`).
-    - `logos/`: Logos for institutions and competitions.
-- **`DESIGN-Apple.md`**: Detailed specification for the project's visual language. **Consult this before any UI changes.**
+There is no separate test suite. Treat `npm run build` as the required validation before handoff. For visual work, inspect representative English, Simplified Chinese, and Traditional Chinese pages at desktop and mobile widths.
 
-## 📏 Development Conventions
+## Coding Style & Naming Conventions
 
-### Design & Styling
-- **Apple Aesthetics**: Adhere strictly to the guidelines in `DESIGN-Apple.md`.
-- **CSS Variables**: Use the variables defined in `global.css` for colors, spacing, and typography.
-- **Layout**: Prefer the `container` class for centered content. Use `section-light` and `section-dark` for alternating background sections.
+Follow existing Astro, TypeScript, and CSS patterns. Use two-space indentation and keep components focused. Name reusable components in PascalCase (for example, `SearchOverlay.astro`), route files in lowercase, and use clear camelCase identifiers in TypeScript. Prefer extending data modules over copying arrays into pages. Keep locale variants aligned whenever navigation, layout, metadata, or public labels change intentionally across languages.
 
-### i18n (Internationalization)
-- **Routing**: Ensure links use the correct locale prefix (`/zh-cn/`, `/zh-hk/`). The default locale (`en`) has no prefix.
-- **Data Sync**: When adding resources to `src/data/competitionResources.ts`, ensure entries are provided for all supported locales to maintain consistency.
+## Content, Design, and SEO
 
-### Academic Content
-- **Math**: Use LaTeX syntax within Markdown files. The project uses `remark-math` and `rehype-mathjax` for rendering.
+Read `DESIGN-Apple.md` and `DESIGN-Claude.md` before substantial visual changes. Preserve the editorial astronomy style and use the shared tokens in `src/styles/global.css`. Avoid modifying canonicals, `hreflang`, sitemaps, robots, or verification metadata unless the task specifically concerns search indexing.
 
-### Performance & SEO
-- **Post-build**: Always run `npm run build` followed by `npm run postbuild` before deployment to ensure SEO scripts are applied.
-- **Images**: Place high-quality assets in `public/assets/` and use appropriate formats (SVG for icons, optimized PNG/JPG for photos).
+## Commits & Pull Requests
+
+Use concise, imperative commit subjects such as `Refactor portfolio content and asset structure` or `Update project README`. Keep commits focused. Pull requests should explain the user-visible change, link relevant issues when available, list validation performed, and include before/after screenshots for visual changes.
+
+## Maintenance
+
+Do not edit `node_modules/` or generated build output. Never use `rm` for bulk deletion; move unneeded files to Trash instead.

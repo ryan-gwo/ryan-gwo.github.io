@@ -2,70 +2,26 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import SearchOverlay from '../components/SearchOverlay.astro';
+import { siteContent, type SiteLocale } from '../data/siteContent';
 import {
-  competitionResources,
-  getCompetitionBasePath,
-  getEditionPath,
   localePrefixes,
   type ResourceLocale,
 } from '../data/competitionResources';
+import { getLocaleAlternates } from '../utils/routes';
 
-const { title = 'Yuze Guo', description = '', locale = 'en' } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site).toString();
-const normalizeRoute = (route: string) => {
-  if (route === '') {
-    return '/';
-  }
-
-  if (route === '/') {
-    return '/';
-  }
-
-  return route.endsWith('/') ? route : `${route}/`;
+const {
+  title = 'Yuze Guo',
+  description = '',
+  locale = 'en',
+  preloadSerif = false,
+} = Astro.props as {
+  title?: string;
+  description?: string;
+  locale?: ResourceLocale;
+  preloadSerif?: boolean;
 };
-const knownRoutes = new Set<string>();
-const staticPageRoutes = Object.keys(import.meta.glob('../pages/**/*.{astro,md,mdx}'))
-  .filter((filePath) => !filePath.includes('['))
-  .map((filePath) => {
-    const route = filePath.replace('../pages', '').replace(/\.(astro|mdx?|md)$/i, '');
-
-    if (route === '/index') {
-      return '/';
-    }
-
-    return normalizeRoute(route.replace(/\/index$/, ''));
-  })
-  .filter((route) => !route.endsWith('/publications/'));
-
-for (const currentLocale of Object.keys(localePrefixes) as ResourceLocale[]) {
-  for (const competition of Object.values(competitionResources[currentLocale])) {
-    knownRoutes.add(normalizeRoute(getCompetitionBasePath(currentLocale, competition.slug)));
-    for (const edition of competition.editions) {
-      knownRoutes.add(normalizeRoute(getEditionPath(currentLocale, competition.slug, edition)));
-    }
-  }
-}
-
-for (const route of staticPageRoutes) {
-  knownRoutes.add(route);
-}
-
-const currentPath = normalizeRoute(Astro.url.pathname);
-const currentLocalePrefix = currentPath.startsWith('/zh-cn/') || currentPath === '/zh-cn/'
-  ? '/zh-cn'
-  : currentPath.startsWith('/zh-hk/') || currentPath === '/zh-hk/'
-    ? '/zh-hk'
-    : '';
-const pathWithoutLocale = currentLocalePrefix ? currentPath.slice(currentLocalePrefix.length) || '/' : currentPath;
-const localeAlternates = (Object.keys(localePrefixes) as ResourceLocale[])
-  .map((targetLocale) => {
-    const path = normalizeRoute(`${localePrefixes[targetLocale]}${pathWithoutLocale}`);
-
-    return knownRoutes.has(path)
-      ? { locale: targetLocale, href: new URL(path, Astro.site).toString() }
-      : undefined;
-  })
-  .filter((alternate): alternate is { locale: ResourceLocale; href: string } => Boolean(alternate));
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const localeAlternates = getLocaleAlternates(Astro.url.pathname, Astro.site);
 const defaultAlternate = localeAlternates.find((alternate) => alternate.locale === 'en');
 const hreflangMap = {
   en: 'en',
@@ -90,43 +46,55 @@ const localeFontPreloads = {
   'zh-cn': ['/fonts/noto-sans-sc-site.woff2'],
   'zh-hk': ['/fonts/noto-sans-hk-site.woff2'],
 }[locale] ?? [];
-const footerText = {
-  en: {
-    rights: 'All rights reserved.',
-    updated: 'Last updated',
-    contact: 'Contact',
-    builtWith: 'Built with',
-    hostedOn: 'Hosted on',
-    sourceCode: 'Source code',
-    backToTop: 'Back to top',
+const serifFontPreloads = preloadSerif
+  ? {
+      en: ['/fonts/eb-garamond-latin.woff2'],
+      'zh-cn': ['/fonts/eb-garamond-latin.woff2', '/fonts/noto-serif-sc-site.woff2'],
+      'zh-hk': ['/fonts/eb-garamond-latin.woff2', '/fonts/noto-serif-hk-site.woff2'],
+    }[locale] ?? []
+  : [];
+const copy = siteContent[locale as SiteLocale];
+const footerText = copy.footer;
+const sitePath = (path: string) => `${localePrefixes[locale]}${path}` || '/';
+const footerGroups = [
+  {
+    title: footerText.academic,
+    links: [
+      { label: footerText.research, href: sitePath('/research/') },
+      { label: footerText.cv, href: sitePath('/cv/') },
+    ],
   },
-  'zh-cn': {
-    rights: '保留所有权利。',
-    updated: '最近更新',
-    contact: '联系',
-    builtWith: '使用',
-    hostedOn: '托管于',
-    sourceCode: '源代码',
-    backToTop: '回到顶部',
+  {
+    title: footerText.writing,
+    links: [
+      { label: footerText.selectedWriting, href: sitePath('/writings/') },
+      { label: footerText.interests, href: sitePath('/interests/') },
+    ],
   },
-  'zh-hk': {
-    rights: '保留所有權利。',
-    updated: '最近更新',
-    contact: '聯絡',
-    builtWith: '使用',
-    hostedOn: '託管於',
-    sourceCode: '原始碼',
-    backToTop: '回到頂部',
+  {
+    title: footerText.resources,
+    links: [
+      { label: footerText.resourceLibrary, href: sitePath('/resources/') },
+      { label: 'IOAA', href: sitePath('/resources/ioaa/') },
+      { label: 'IAO', href: sitePath('/resources/iao/') },
+      { label: 'CNAO', href: sitePath('/resources/cnao/') },
+    ],
   },
-}[locale] ?? {
-  rights: 'All rights reserved.',
-  updated: 'Last updated',
-  contact: 'Contact',
-  builtWith: 'Built with',
-  hostedOn: 'Hosted on',
-  sourceCode: 'Source code',
-  backToTop: 'Back to top',
-};
+  {
+    title: footerText.connect,
+    links: [
+      { label: footerText.email, href: 'mailto:guoyuze@whu.edu.cn' },
+      { label: 'GitHub', href: 'https://github.com/ryan-gwo', external: true },
+      { label: footerText.sourceCode, href: 'https://github.com/ryan-gwo/ryan-gwo.github.io', external: true },
+    ],
+  },
+];
+const footerLocales = (Object.keys(localePrefixes) as SiteLocale[]).map((targetLocale) => ({
+  locale: targetLocale,
+  label: copy.navigation.locales[targetLocale],
+  href: localeAlternates.find((alternate) => alternate.locale === targetLocale)?.href
+    ?? new URL(localePrefixes[targetLocale] ? `${localePrefixes[targetLocale]}/` : '/', Astro.site).toString(),
+}));
 ---
 
 <!doctype html>
@@ -147,8 +115,9 @@ const footerText = {
     <link rel="icon" type="image/png" href="/black-hole.png" />
     <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin />
     {localeFontPreloads.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin />)}
+    {serifFontPreloads.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin />)}
   </head>
-  <body>
+<body>
     <Nav locale={locale} />
     <SearchOverlay locale={locale} />
     <main>
@@ -158,10 +127,52 @@ const footerText = {
       <span class="back-to-top__icon" aria-hidden="true"></span>
     </button>
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-identity"><p class="footer-name">Yuze Guo</p><p>{footerText.contact}: <a href="mailto:guoyuze@whu.edu.cn">guoyuze@whu.edu.cn</a></p></div>
-        <div class="footer-links"><a href="https://github.com/ryan-gwo" target="_blank" rel="noreferrer">GitHub</a><a href="https://github.com/ryan-gwo/ryan-gwo.github.io" target="_blank" rel="noreferrer">{footerText.sourceCode}</a></div>
-        <div class="footer-meta"><p>© {currentYear} Yuze Guo. {footerText.rights}</p><p>{footerText.updated}: {lastUpdatedAt}</p><p>{footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a> · {footerText.hostedOn} <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a></p></div>
+      <div class="footer-inner">
+        <div class="footer-introduction">
+          <p class="footer-name">Yuze Guo</p>
+          <p>{footerText.role}</p>
+        </div>
+
+        <nav class="footer-directory footer-directory--desktop" aria-label={footerText.connect}>
+          {footerGroups.map((group) => (
+            <section class="footer-group">
+              <h2>{group.title}</h2>
+              <ul>
+                {group.links.map((link) => (
+                  <li><a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a></li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </nav>
+
+        <div class="footer-directory footer-directory--mobile">
+          {footerGroups.map((group) => (
+            <details class="footer-group-mobile">
+              <summary>{group.title}<span aria-hidden="true"></span></summary>
+              <ul>
+                {group.links.map((link) => (
+                  <li><a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a></li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+
+        <div class="footer-utility">
+          <div class="footer-locales" aria-label={footerText.language}>
+            <span>{footerText.language}</span>
+            {footerLocales.map((entry) => (
+              <a class={entry.locale === locale ? 'active' : ''} aria-current={entry.locale === locale ? 'true' : undefined} href={entry.href} lang={entry.locale}>{entry.label}</a>
+            ))}
+          </div>
+          <p>{footerText.updated}: {lastUpdatedAt}</p>
+        </div>
+
+        <div class="footer-legal">
+          <p>© {currentYear} Yuze Guo. {footerText.rights}</p>
+          <p>{footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a> · {footerText.hostedOn} <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a></p>
+        </div>
       </div>
     </footer>
     <script is:inline>

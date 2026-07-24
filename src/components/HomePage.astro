@@ -9,10 +9,11 @@ const home = copy.home;
 const writing = copy.writings;
 ---
 
-<BaseLayout title={copy.meta.title} description={copy.meta.description} locale={locale}>
-  <section class="hero editorial-hero">
+<BaseLayout title={copy.meta.title} description={copy.meta.description} locale={locale} preloadSerif>
+  <section class="hero academic-hero">
     <div class="container hero-layout">
       <div class="hero-copy">
+        <p class="hero-eyebrow">{home.eyebrow}</p>
         <h1 class="hero-name">{home.name}</h1>
         <p class="hero-identity">{home.role}</p>
         <p class="hero-focus">{home.focus}</p>
@@ -22,46 +23,60 @@ const writing = copy.writings;
           <a class="text-link" href={localizedPath(locale, '/cv/')}>{home.cvCta}<Icon name="chevron.right" /></a>
         </div>
       </div>
+      <figure class="hero-visual">
+        <img
+          src="/images/neutron-star-hero.webp"
+          alt={home.heroVisualAlt}
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <figcaption class="hero-visual-note">{home.eyebrow}</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="content-section section-soft featured-research">
+  <section class="content-section section-dark featured-research">
     <div class="container">
       <header class="section-heading">
         <h2 class="section-title">{home.researchTitle}</h2>
         <p class="section-intro">{home.researchIntro}</p>
       </header>
-      <div class="editorial-grid">
-        {home.researchCards.map((card) => (
-          <article class="editorial-card">
+      <div class="editorial-grid editorial-grid-dark">
+        {home.researchCards.map((card, index) => (
+          <article class="editorial-card research-index-row">
+            <span class="research-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
             <h3>{card.title}</h3>
             <p>{card.description}</p>
           </article>
         ))}
       </div>
-      <a class="text-link section-link" href={localizedPath(locale, '/research/')}>{home.researchCta}<Icon name="chevron.right" /></a>
+      <a class="text-link text-link-dark section-link" href={localizedPath(locale, '/research/')}>{home.researchCta}<Icon name="chevron.right" /></a>
     </div>
   </section>
 
   <section class="content-section profile-section">
     <div class="container profile-layout">
-      <figure class="profile-portrait">
-        <img src="/images/prof_pic.jpg" alt={home.portraitAlt} />
-        <figcaption>{home.portraitCaption}</figcaption>
-      </figure>
       <div class="profile-copy">
         <h2 class="section-title">{home.profileTitle}</h2>
         {home.profileParagraphs.map((paragraph) => <p>{paragraph}</p>)}
         <a class="text-link" href={localizedPath(locale, '/cv/')}>{home.cvCta}<Icon name="chevron.right" /></a>
       </div>
-      <aside class="current-panel">
-        <h3>{home.currentTitle}</h3>
-        {home.currentItems.map((item) => (
-          <div class="current-item">
-            <span>{item.label}</span>
-            <p>{item.value}</p>
-          </div>
-        ))}
+      <aside class="profile-aside">
+        <figure class="profile-portrait">
+          <img src="/images/prof_pic.jpg" alt={home.portraitAlt} />
+          <figcaption>{home.portraitCaption}</figcaption>
+        </figure>
+        <div class="current-panel">
+          <h3>{home.currentTitle}</h3>
+          {home.currentItems.map((item) => (
+            <div class="current-item">
+              <span>{item.label}</span>
+              <p>{item.value}</p>
+            </div>
+          ))}
+        </div>
       </aside>
     </div>
   </section>

@@ -1,5 +1,11 @@
 ---
 import Icon from './Icon.astro';
+import {
+  competitionResources,
+  getCompetitionBasePath,
+  getEditionPath,
+  type ResourceLocale,
+} from '../data/competitionResources';
 
 const { locale = 'en' } = Astro.props;
 
@@ -102,7 +108,26 @@ const writingEntries = Object.values(writingModules)
       .join(' '),
   }));
 
-const searchEntries = [...pageEntriesByLocale, ...writingEntries];
+const competitionEntries = Object.values(competitionResources[locale as ResourceLocale] ?? {}).flatMap((competition, competitionIndex) => [
+  {
+    href: getCompetitionBasePath(locale as ResourceLocale, competition.slug),
+    title: competition.title,
+    description: competition.description,
+    kind: localeText.resourceLabel,
+    priority: 10 + competitionIndex,
+    keywords: [competition.title, competition.description, competition.eyebrow, competition.slug].join(' '),
+  },
+  ...competition.editions.map((edition, editionIndex) => ({
+    href: getEditionPath(locale as ResourceLocale, competition.slug, edition.slug),
+    title: edition.label,
+    description: edition.summary ?? competition.description,
+    kind: localeText.resourceLabel,
+    priority: 14 + competitionIndex * 10 + editionIndex,
+    keywords: [competition.title, edition.label, edition.location, edition.date, edition.summary].filter(Boolean).join(' '),
+  })),
+]);
+
+const searchEntries = [...pageEntriesByLocale, ...competitionEntries, ...writingEntries];
 ---
 
 <div class="search-overlay" id="site-search-overlay" aria-hidden="true">

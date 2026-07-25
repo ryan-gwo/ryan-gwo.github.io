@@ -26,7 +26,6 @@ const editionMeta = (edition: CompetitionResource['editions'][number]) =>
     <div class="resource-detail-main">
       <img class="resource-detail-main-logo" src={competition.logo} alt={`${competition.title} logo`} loading="lazy" />
       <div>
-        <p class="resource-category-eyebrow">{competition.eyebrow}</p>
         <h1>{competition.title}</h1>
         <p class="resource-detail-description">{competition.description}</p>
       </div>
@@ -34,9 +33,8 @@ const editionMeta = (edition: CompetitionResource['editions'][number]) =>
   </header>
 
   {(competition.overview || competition.structureNote) && (
-    <section class="resource-profile-panel" aria-labelledby={`${competition.slug}-overview-title`}>
+    <section class="resource-profile-panel">
       <div class="resource-profile-copy">
-        <p id={`${competition.slug}-overview-title`} class="resource-category-eyebrow">{text.overviewTitle}</p>
         {competition.overview && <p>{competition.overview}</p>}
         {competition.structureNote && <p>{competition.structureNote}</p>}
       </div>
@@ -45,7 +43,6 @@ const editionMeta = (edition: CompetitionResource['editions'][number]) =>
 
   <section class="resource-edition-index" aria-labelledby={`${competition.slug}-editions-title`}>
     <div class="resource-edition-index-head">
-      <p class="resource-category-eyebrow">{text.materials}</p>
       <h2 id={`${competition.slug}-editions-title`}>{text.editionsTitle}</h2>
     </div>
     <div class="resource-edition-index-list" role="list" aria-label={competition.title}>

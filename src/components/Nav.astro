@@ -1,30 +1,27 @@
 ---
-import Icon from './Icon.astro';
-import { siteContent, type SiteLocale } from '../data/siteContent';
-import { getLocaleAlternates, normalizeRoute, localeHomeLinks } from '../utils/routes';
+import Icon from "./Icon.astro";
+import { siteContent, type SiteLocale } from "../data/siteContent";
+import { getLocaleAlternates, localizedRoute, normalizeRoute } from "../utils/routes";
 
-const { locale = 'en' } = Astro.props as { locale?: SiteLocale };
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const text = siteContent[locale].navigation;
-const base = localeHomeLinks[locale];
 const currentPath = normalizeRoute(Astro.url.pathname);
-const localeEntries = getLocaleAlternates(Astro.url.pathname, Astro.site).map((entry) => ({
+const localeEntries = getLocaleAlternates(Astro.url.pathname, Astro.site ?? new URL("https://ryan-gwo.github.io")).map((entry) => ({
   ...entry,
   label: text.locales[entry.locale],
 }));
-const localeShortLabels: Record<SiteLocale, string> = { en: 'EN', 'zh-cn': '简', 'zh-hk': '繁' };
-
+const localeShortLabels: Record<SiteLocale, string> = { en: "EN", "zh-cn": "简", "zh-hk": "繁" };
 const navItems = [
-  { path: '/', label: text.home },
-  { path: '/research/', label: text.research },
-  { path: '/writings/', label: text.writing },
-  { path: '/cv/', label: text.cv },
-  { path: '/interests/', label: text.interests },
-  { path: '/resources/', label: text.resources },
+  { route: "research" as const, label: text.research },
+  { route: "cv" as const, label: text.cv },
+  { route: "writings" as const, label: text.writing },
+  { route: "interests" as const, label: text.interests },
+  { route: "resources" as const, label: text.resources },
 ];
-
-const isActiveRoute = (path: string) => {
-  const route = path === '/' ? base : `${base}${path.slice(1)}`;
-  return path === '/' ? currentPath === route : currentPath.startsWith(normalizeRoute(route));
+const base = localizedRoute("home", locale);
+const isActive = (route: "research" | "cv" | "writings" | "interests" | "resources") => {
+  const path = localizedRoute(route, locale);
+  return currentPath === path || currentPath.startsWith(path);
 };
 ---
 
@@ -33,11 +30,11 @@ const isActiveRoute = (path: string) => {
     <a class="brand" href={base} aria-label={text.home}>Yuze Guo</a>
 
     <nav class="nav-links" aria-label={text.menu}>
-      {navItems.map((item) => {
-        const href = item.path === '/' ? base : `${base}${item.path.slice(1)}`;
-        const active = isActiveRoute(item.path);
-        return <a class:list={{ active }} aria-current={active ? 'page' : undefined} href={href}>{item.label}</a>;
-      })}
+      {navItems.map((item) => (
+        <a class:list={{ active: isActive(item.route) }} aria-current={isActive(item.route) ? "page" : undefined} href={localizedRoute(item.route, locale)}>
+          {item.label}
+        </a>
+      ))}
     </nav>
 
     <div class="nav-actions">
@@ -47,7 +44,7 @@ const isActiveRoute = (path: string) => {
       <details class="nav-language">
         <summary aria-label={text.language} title={text.language}><span aria-hidden="true">{localeShortLabels[locale]}</span></summary>
         <div class="nav-language-panel">
-          {localeEntries.map((entry) => <a aria-current={entry.locale === locale ? 'true' : undefined} href={entry.href} lang={entry.locale}>{entry.label}</a>)}
+          {localeEntries.map((entry) => <a aria-current={entry.locale === locale ? "true" : undefined} href={entry.href} lang={entry.locale}>{entry.label}</a>)}
         </div>
       </details>
     </div>
@@ -57,18 +54,18 @@ const isActiveRoute = (path: string) => {
         <Icon name="search" />
       </button>
       <details class="mobile-menu">
-        <summary class="mobile-menu-toggle" aria-label={text.menu}><span class="mobile-menu-icon" aria-hidden="true"><span></span><span></span></span></summary>
+        <summary class="mobile-menu-toggle" aria-label={text.menu} aria-expanded="false"><span class="mobile-menu-icon" aria-hidden="true"></span></summary>
         <div class="mobile-menu-panel">
           <nav class="mobile-menu-links" aria-label={text.menu}>
-            {navItems.map((item) => {
-              const href = item.path === '/' ? base : `${base}${item.path.slice(1)}`;
-              const active = isActiveRoute(item.path);
-              return <a class:list={{ active }} aria-current={active ? 'page' : undefined} href={href}>{item.label}</a>;
-            })}
+            {navItems.map((item) => (
+              <a class:list={{ active: isActive(item.route) }} aria-current={isActive(item.route) ? "page" : undefined} href={localizedRoute(item.route, locale)}>
+                {item.label}
+              </a>
+            ))}
           </nav>
           <div class="mobile-menu-langs" aria-label={text.language}>
             <p>{text.language}</p>
-            {localeEntries.map((entry) => <a class:list={{ active: entry.locale === locale }} aria-current={entry.locale === locale ? 'true' : undefined} href={entry.href} lang={entry.locale}>{entry.label}</a>)}
+            {localeEntries.map((entry) => <a class:list={{ active: entry.locale === locale }} aria-current={entry.locale === locale ? "true" : undefined} href={entry.href} lang={entry.locale}>{entry.label}</a>)}
           </div>
         </div>
       </details>
@@ -76,39 +73,36 @@ const isActiveRoute = (path: string) => {
   </div>
 </header>
 
-<script>
-  const menu = document.querySelector('.mobile-menu');
-  const summary = menu?.querySelector('.mobile-menu-toggle');
+<script is:inline>
+  (() => {
+    const menu = document.querySelector(".mobile-menu");
+    const summary = menu?.querySelector(".mobile-menu-toggle");
+    if (!menu || !summary) return;
 
-  if (menu && summary) {
-    summary.addEventListener('click', (event) => {
+    const close = () => {
+      menu.open = false;
+      document.body.classList.remove("mobile-menu-open");
+      summary.setAttribute("aria-expanded", "false");
+    };
+
+    summary.addEventListener("click", (event) => {
       event.preventDefault();
       menu.open = !menu.open;
-      document.body.classList.toggle('mobile-menu-open', menu.open);
-      summary.setAttribute('aria-expanded', String(menu.open));
+      document.body.classList.toggle("mobile-menu-open", menu.open);
+      summary.setAttribute("aria-expanded", String(menu.open));
+    });
+    menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", close));
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") close();
     });
 
-    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-      menu.open = false;
-      document.body.classList.remove('mobile-menu-open');
-    }));
-
-    window.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        menu.open = false;
-        document.body.classList.remove('mobile-menu-open');
+    const languageMenu = document.querySelector(".nav-language");
+    languageMenu?.addEventListener("toggle", () => {
+      if (languageMenu.open) {
+        document.addEventListener("click", (event) => {
+          if (!languageMenu.contains(event.target)) languageMenu.open = false;
+        }, { once: true });
       }
     });
-  }
-
-  const languageMenu = document.querySelector('.nav-language');
-  languageMenu?.addEventListener('toggle', () => {
-    if (languageMenu.open) {
-      document.addEventListener('click', (event) => {
-        if (!languageMenu.contains(event.target as Node)) {
-          languageMenu.open = false;
-        }
-      }, { once: true });
-    }
-  });
+  })();
 </script>

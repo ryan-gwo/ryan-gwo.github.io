@@ -54,6 +54,7 @@ export const resourceText = {
     editionsTitle: 'Edition archive',
     downloadsTitle: 'Available downloads',
     editionInfoTitle: 'Edition notes',
+    simplifiedChinese: 'Simplified Chinese',
   },
   'zh-cn': {
     resourceHome: '返回资源首页',
@@ -67,6 +68,7 @@ export const resourceText = {
     editionsTitle: '届次索引',
     downloadsTitle: '可下载资料',
     editionInfoTitle: '当届信息',
+    simplifiedChinese: '简体中文',
   },
   'zh-hk': {
     resourceHome: '返回資源首頁',
@@ -80,6 +82,7 @@ export const resourceText = {
     editionsTitle: '屆次索引',
     downloadsTitle: '可下載資料',
     editionInfoTitle: '當屆資訊',
+    simplifiedChinese: '簡體中文',
   },
 } satisfies Record<ResourceLocale, {
   resourceHome: string;
@@ -92,6 +95,7 @@ export const resourceText = {
   editionsTitle: string;
   downloadsTitle: string;
   editionInfoTitle: string;
+  simplifiedChinese: string;
 }>;
 
 export const competitionResources: Record<ResourceLocale, Record<CompetitionSlug, CompetitionResource>> = {

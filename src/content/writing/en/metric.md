@@ -1,9 +1,11 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Initial insights into the concept of the metric
 description: Preliminary understanding of the concept of metric
 dateText: September 23, 2025
 locale: en
+translationKey: metric
+slug: metric
+date: 2025-09-23
 featured: true
 priority: 1
 summary: A concise note on seeing the metric as a generalization of the Pythagorean theorem at infinitesimal scales.

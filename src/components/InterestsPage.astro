@@ -1,21 +1,43 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Icon from './Icon.astro';
-import { localizedPath, siteContent, type SiteLocale } from '../data/siteContent';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "./Icon.astro";
+import { siteContent, type SiteLocale } from "../data/siteContent";
+import { localizedRoute } from "../utils/routes";
+
 const { locale } = Astro.props as { locale: SiteLocale };
-const site = siteContent[locale];
-const copy = site.interests;
+const copy = siteContent[locale].interests;
+const routeForCard = (href?: string) => {
+  if (!href) return undefined;
+  if (href.includes("/writings/")) return localizedRoute("writings", locale);
+  if (href.includes("/resources/")) return localizedRoute("resources", locale);
+  return href;
+};
 ---
+
 <BaseLayout title={copy.title} description={copy.description} locale={locale} preloadSerif>
-  <section class="page-hero interests-hero"><div class="container page-hero-inner"><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
-  <section class="content-section interests-section">
-    <div class="container">
-      <header class="section-heading section-heading-inline"><div><h2 class="section-title">{copy.sectionTitle}</h2></div><p class="section-intro">{copy.sectionIntro}</p></header>
-      <div class="interest-list">
-        {copy.cards.map((card) => (
-          <article class="interest-row">
-            <div><p class="interest-context">{card.eyebrow}</p><h3>{card.title}</h3><p>{card.description}</p></div>
-            {card.href && <a class="text-link" href={card.href.startsWith('/') ? localizedPath(locale, card.href) : card.href}>{card.cta}<Icon name="chevron.right" /></a>}
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <h1>{copy.title}</h1>
+      <p class="page-lead">{copy.description}</p>
+    </div>
+  </section>
+  <section class="section section-muted">
+    <div class="container-wide">
+      <header class="narrative-band__header">
+        <div><h2>{copy.sectionTitle}</h2></div>
+        <p>{copy.sectionIntro}</p>
+      </header>
+      <div class="narrative-rows">
+        {copy.cards.map((card, index) => (
+          <article class="narrative-row">
+            <span class="narrative-row__number">{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <h3>{card.title}</h3>
+            </div>
+            <div>
+              <p>{card.description}</p>
+              {routeForCard(card.href) && <a class="text-link" href={routeForCard(card.href)}>{card.cta}<Icon name="chevron.right" /></a>}
+            </div>
           </article>
         ))}
       </div>

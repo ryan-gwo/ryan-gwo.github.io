@@ -1,8 +1,9 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import type { SiteLocale } from '../utils/routes';
 
 const { frontmatter } = Astro.props;
-const locale = frontmatter.locale ?? 'en';
+const locale = (frontmatter.locale ?? 'en') as SiteLocale;
 
 const writingIndexByLocale = {
   en: '/writings/',

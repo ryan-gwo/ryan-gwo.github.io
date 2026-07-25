@@ -151,7 +151,7 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
         'I am an astrophysics PhD student at Peking University. My long-term interests lie in high-energy astrophysics, especially gravitational waves, compact objects, cosmology, and multi-messenger astronomy.',
         'I completed my undergraduate studies in physics at Wuhan University, where I worked on continuous gravitational radiation and X-ray polarimetry. Earlier, astronomy olympiad training shaped the way I approach quantitative problems.',
       ],
-      heroVisualAlt: 'Editorial visualization of a magnetized neutron star emitting gravitational waves',
+      heroVisualAlt: 'Multiwavelength view of the Crab Nebula, a supernova remnant',
       portraitAlt: 'Portrait of Yuze Guo',
       portraitCaption: 'Balliol College, Oxford, 2023.',
       currentTitle: 'Current direction',
@@ -237,7 +237,7 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
         '我目前是北京大学物理学院天文学系的天体物理博士生，长期兴趣集中在高能天体物理，尤其是引力波、致密天体、宇宙学与多信使天文学。',
         '本科就读于武汉大学物理科学与技术学院，曾开展连续引力辐射与 X 射线偏振研究。更早的天文奥赛训练塑造了我理解定量问题的方式。',
       ],
-      heroVisualAlt: '磁化中子星发射引力波的编辑式科学插画',
+      heroVisualAlt: '蟹状星云的多波段图像，一处超新星遗迹',
       portraitAlt: '郭雨泽个人照片', portraitCaption: '2023 年摄于牛津大学贝利奥尔学院。', currentTitle: '当前方向',
       currentItems: [
         { label: '研究', value: '完善中子星连续引力波信号的理论模型。' },
@@ -312,7 +312,7 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
         '我目前是北京大學物理學院天文學系的天體物理博士生，長期興趣集中在高能天體物理，尤其是引力波、緻密天體、宇宙學與多信使天文學。',
         '本科就讀於武漢大學物理科學與技術學院，曾開展連續引力輻射與 X 射線偏振研究。更早的天文奧賽訓練塑造了我理解定量問題的方式。',
       ],
-      heroVisualAlt: '磁化中子星發射引力波的編輯式科學插畫',
+      heroVisualAlt: '蟹狀星雲的多波段圖像，一處超新星遺跡',
       portraitAlt: '郭雨澤個人照片', portraitCaption: '2023 年攝於牛津大學貝利奧爾學院。', currentTitle: '目前方向',
       currentItems: [
         { label: '研究', value: '完善中子星連續引力波信號的理論模型。' },
@@ -361,5 +361,3 @@ export const siteContent: Record<SiteLocale, SiteCopy> = {
     },
   },
 };
-
-export const localizedPath = (locale: SiteLocale, path: string) => `${localePrefixes[locale]}${path}` || '/';

@@ -1,91 +1,63 @@
 ---
-import '../styles/global.css';
-import Nav from '../components/Nav.astro';
-import SearchOverlay from '../components/SearchOverlay.astro';
-import { siteContent, type SiteLocale } from '../data/siteContent';
-import {
-  localePrefixes,
-  type ResourceLocale,
-} from '../data/competitionResources';
-import { getLocaleAlternates } from '../utils/routes';
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import SearchOverlay from "../components/SearchOverlay.astro";
+import { siteContent, type SiteLocale } from "../data/siteContent";
+import { getCompetitionBasePath, localePrefixes } from "../data/competitionResources";
+import { getLocaleAlternates, localizedRoute } from "../utils/routes";
 
 const {
-  title = 'Yuze Guo',
-  description = '',
-  locale = 'en',
+  title = "Yuze Guo",
+  description = "",
+  locale = "en",
   preloadSerif = false,
 } = Astro.props as {
   title?: string;
   description?: string;
-  locale?: ResourceLocale;
+  locale?: SiteLocale;
   preloadSerif?: boolean;
 };
-const canonical = new URL(Astro.url.pathname, Astro.site).toString();
-const localeAlternates = getLocaleAlternates(Astro.url.pathname, Astro.site);
-const defaultAlternate = localeAlternates.find((alternate) => alternate.locale === 'en');
-const hreflangMap = {
-  en: 'en',
-  'zh-cn': 'zh-CN',
-  'zh-hk': 'zh-HK',
-} satisfies Record<ResourceLocale, string>;
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? 'edPv1gDwvHyP6q_d4ZonnP1z4Taik4vZ43Tx_5-1xTA';
-const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION ?? 'FCAC5D6B1AAEA460C022D6876264FEA5';
-const buildDate = new Date();
+
+const site = Astro.site ?? new URL("https://ryan-gwo.github.io");
+const canonical = new URL(Astro.url.pathname, site).toString();
+const localeAlternates = getLocaleAlternates(Astro.url.pathname, site);
+const defaultAlternate = localeAlternates.find((alternate) => alternate.locale === "en");
+const hreflangMap = { en: "en", "zh-cn": "zh-CN", "zh-hk": "zh-HK" } satisfies Record<SiteLocale, string>;
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? "edPv1gDwvHyP6q_d4ZonnP1z4Taik4vZ43Tx_5-1xTA";
+const bingSiteVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION ?? "FCAC5D6B1AAEA460C022D6876264FEA5";
 const currentYear = new Date().getFullYear();
-const dateLocale = {
-  en: 'en-US',
-  'zh-cn': 'zh-CN',
-  'zh-hk': 'zh-HK',
-}[locale] ?? 'en-US';
-const lastUpdatedAt = new Intl.DateTimeFormat(dateLocale, {
-  year: 'numeric',
-  month: 'long',
-}).format(buildDate);
-const localeFontPreloads = {
-  en: [],
-  'zh-cn': ['/fonts/noto-sans-sc-site.woff2'],
-  'zh-hk': ['/fonts/noto-sans-hk-site.woff2'],
-}[locale] ?? [];
-const serifFontPreloads = preloadSerif
-  ? {
-      en: ['/fonts/eb-garamond-latin.woff2'],
-      'zh-cn': ['/fonts/eb-garamond-latin.woff2', '/fonts/noto-serif-sc-site.woff2'],
-      'zh-hk': ['/fonts/eb-garamond-latin.woff2', '/fonts/noto-serif-hk-site.woff2'],
-    }[locale] ?? []
-  : [];
-const copy = siteContent[locale as SiteLocale];
+const copy = siteContent[locale];
 const footerText = copy.footer;
-const sitePath = (path: string) => `${localePrefixes[locale]}${path}` || '/';
 const footerGroups = [
   {
     title: footerText.academic,
     links: [
-      { label: footerText.research, href: sitePath('/research/') },
-      { label: footerText.cv, href: sitePath('/cv/') },
+      { label: footerText.research, href: localizedRoute("research", locale) },
+      { label: footerText.cv, href: localizedRoute("cv", locale) },
     ],
   },
   {
     title: footerText.writing,
     links: [
-      { label: footerText.selectedWriting, href: sitePath('/writings/') },
-      { label: footerText.interests, href: sitePath('/interests/') },
+      { label: footerText.selectedWriting, href: localizedRoute("writings", locale) },
+      { label: footerText.interests, href: localizedRoute("interests", locale) },
     ],
   },
   {
     title: footerText.resources,
     links: [
-      { label: footerText.resourceLibrary, href: sitePath('/resources/') },
-      { label: 'IOAA', href: sitePath('/resources/ioaa/') },
-      { label: 'IAO', href: sitePath('/resources/iao/') },
-      { label: 'CNAO', href: sitePath('/resources/cnao/') },
+      { label: footerText.resourceLibrary, href: localizedRoute("resources", locale) },
+      { label: "IOAA", href: getCompetitionBasePath(locale, "ioaa") },
+      { label: "IAO", href: getCompetitionBasePath(locale, "iao") },
+      { label: "CNAO", href: getCompetitionBasePath(locale, "cnao") },
     ],
   },
   {
     title: footerText.connect,
     links: [
-      { label: footerText.email, href: 'mailto:guoyuze@whu.edu.cn' },
-      { label: 'GitHub', href: 'https://github.com/ryan-gwo', external: true },
-      { label: footerText.sourceCode, href: 'https://github.com/ryan-gwo/ryan-gwo.github.io', external: true },
+      { label: footerText.email, href: "mailto:guoyuze@whu.edu.cn" },
+      { label: "GitHub", href: "https://github.com/ryan-gwo", external: true },
+      { label: footerText.sourceCode, href: "https://github.com/ryan-gwo/ryan-gwo.github.io", external: true },
     ],
   },
 ];
@@ -93,7 +65,7 @@ const footerLocales = (Object.keys(localePrefixes) as SiteLocale[]).map((targetL
   locale: targetLocale,
   label: copy.navigation.locales[targetLocale],
   href: localeAlternates.find((alternate) => alternate.locale === targetLocale)?.href
-    ?? new URL(localePrefixes[targetLocale] ? `${localePrefixes[targetLocale]}/` : '/', Astro.site).toString(),
+    ?? new URL(localizedRoute("home", targetLocale), site).toString(),
 }));
 ---
 
@@ -106,100 +78,72 @@ const footerLocales = (Object.keys(localePrefixes) as SiteLocale[]).map((targetL
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href={canonical} />
-    {localeAlternates.map((alternate) => (
-      <link rel="alternate" hreflang={hreflangMap[alternate.locale]} href={alternate.href} />
-    ))}
+    {localeAlternates.map((alternate) => <link rel="alternate" hreflang={hreflangMap[alternate.locale]} href={alternate.href} />)}
     {defaultAlternate && <link rel="alternate" hreflang="x-default" href={defaultAlternate.href} />}
     <meta name="google-site-verification" content={googleSiteVerification} />
     <meta name="msvalidate.01" content={bingSiteVerification} />
     <link rel="icon" type="image/png" href="/black-hole.png" />
     <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin />
-    {localeFontPreloads.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin />)}
-    {serifFontPreloads.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin />)}
+    {locale === "zh-cn" && <link rel="preload" href="/fonts/noto-sans-sc-site.woff2" as="font" type="font/woff2" crossorigin />}
+    {locale === "zh-hk" && <link rel="preload" href="/fonts/noto-sans-hk-site.woff2" as="font" type="font/woff2" crossorigin />}
+    {preloadSerif && <link rel="preload" href="/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin />}
   </head>
-<body>
+  <body>
     <Nav locale={locale} />
     <SearchOverlay locale={locale} />
-    <main>
+    <main data-pagefind-body data-pagefind-filter={`language:${locale}`}>
       <slot />
     </main>
     <button class="back-to-top" type="button" aria-label={footerText.backToTop} title={footerText.backToTop}>
       <span class="back-to-top__icon" aria-hidden="true"></span>
     </button>
-    <footer class="site-footer">
+    <footer class="site-footer" data-pagefind-ignore>
       <div class="footer-inner">
         <div class="footer-introduction">
           <p class="footer-name">Yuze Guo</p>
           <p>{footerText.role}</p>
         </div>
-
         <nav class="footer-directory footer-directory--desktop" aria-label={footerText.connect}>
           {footerGroups.map((group) => (
             <section class="footer-group">
               <h2>{group.title}</h2>
               <ul>
-                {group.links.map((link) => (
-                  <li><a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a></li>
-                ))}
+                {group.links.map((link) => <li><a href={link.href} target={link.external ? "_blank" : undefined} rel={link.external ? "noreferrer" : undefined}>{link.label}</a></li>)}
               </ul>
             </section>
           ))}
         </nav>
-
         <div class="footer-directory footer-directory--mobile">
           {footerGroups.map((group) => (
             <details class="footer-group-mobile">
               <summary>{group.title}<span aria-hidden="true"></span></summary>
               <ul>
-                {group.links.map((link) => (
-                  <li><a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a></li>
-                ))}
+                {group.links.map((link) => <li><a href={link.href} target={link.external ? "_blank" : undefined} rel={link.external ? "noreferrer" : undefined}>{link.label}</a></li>)}
               </ul>
             </details>
           ))}
         </div>
-
         <div class="footer-utility">
           <div class="footer-locales" aria-label={footerText.language}>
             <span>{footerText.language}</span>
-            {footerLocales.map((entry) => (
-              <a class={entry.locale === locale ? 'active' : ''} aria-current={entry.locale === locale ? 'true' : undefined} href={entry.href} lang={entry.locale}>{entry.label}</a>
-            ))}
+            {footerLocales.map((entry) => <a class:list={{ active: entry.locale === locale }} aria-current={entry.locale === locale ? "true" : undefined} href={entry.href} lang={entry.locale}>{entry.label}</a>)}
           </div>
-          <p>{footerText.updated}: {lastUpdatedAt}</p>
+          <p>{footerText.updated}: {new Intl.DateTimeFormat(locale === "en" ? "en-US" : locale === "zh-cn" ? "zh-CN" : "zh-HK", { year: "numeric", month: "long" }).format(new Date())}</p>
         </div>
-
         <div class="footer-legal">
           <p>© {currentYear} Yuze Guo. {footerText.rights}</p>
           <p>{footerText.builtWith} <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a> · {footerText.hostedOn} <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a></p>
         </div>
       </div>
     </footer>
-    <script is:inline>
-      (() => {
-        const button = document.querySelector('.back-to-top');
-        if (!button) {
-          return;
-        }
-
-        const showAfter = 220;
-
-        const updateButton = () => {
-          const shouldShow = window.scrollY > showAfter;
-          button.classList.toggle('is-visible', shouldShow);
-        };
-
-        updateButton();
-        window.addEventListener('scroll', updateButton, { passive: true });
-
-        button.addEventListener('click', () => {
-          const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          window.scrollTo({
-            top: 0,
-            behavior: reduceMotion ? 'auto' : 'smooth',
-          });
-        });
-      })();
-    </script>
   </body>
 </html>
+
+<script is:inline>
+  (() => {
+    const button = document.querySelector(".back-to-top");
+    if (!button) return;
+    window.addEventListener("scroll", () => button.classList.toggle("is-visible", window.scrollY > 520), { passive: true });
+    button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  })();
+</script>

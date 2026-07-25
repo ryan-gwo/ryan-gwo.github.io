@@ -27,7 +27,6 @@ const summary = edition.summary ?? description;
     <div class="resource-detail-main">
       {edition.logo && <img class="resource-detail-main-logo" src={edition.logo} alt="" aria-hidden="true" loading="lazy" />}
       <div>
-        <p class="resource-category-eyebrow">{competition.title}</p>
         <h1>{edition.label}</h1>
         <p class="resource-detail-description">{summary}</p>
       </div>
@@ -36,7 +35,6 @@ const summary = edition.summary ?? description;
 
   <section class="resource-download-panel" aria-labelledby="edition-downloads-title">
     <div class="resource-download-panel-head">
-      <p class="resource-category-eyebrow">{text.materials}</p>
       <h2 id="edition-downloads-title">{text.downloadsTitle}</h2>
       <p>{text.materialCount(edition.downloads.length)}</p>
     </div>
@@ -45,7 +43,7 @@ const summary = edition.summary ?? description;
         <li>
           <a class="resource-edition-download-link" href={link.href} target={link.href.startsWith('/assets/') ? '_blank' : undefined} rel={link.href.startsWith('/assets/') ? 'noreferrer' : undefined}>
             <Icon name="download" />
-            <span>{link.label}</span>
+            <span>{link.label}{link.href.includes('/zh-cn/') && locale !== 'zh-cn' ? ` (${text.simplifiedChinese})` : ''}</span>
           </a>
         </li>
       ))}

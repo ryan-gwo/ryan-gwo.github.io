@@ -1,9 +1,11 @@
 ---
-layout: ../../../layouts/PostLayout.astro
 title: 度规概念的初步感悟
 description: 对于度规这一概念的初步理解
 dateText: 2025 年 9 月 23 日
 locale: zh-cn
+translationKey: metric
+slug: metric
+date: 2025-09-23
 featured: true
 priority: 1
 summary: 从勾股定理出发，讨论度规如何成为无穷小距离表达的统一语言。

@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "./Icon.astro";
+import InstitutionLogo from "./InstitutionLogo.astro";
+import { cvContent } from "../data/cvContent";
+import type { SiteLocale } from "../utils/routes";
+
+const { locale } = Astro.props as { locale: SiteLocale };
+const copy = cvContent[locale];
+const choose = (value: Record<SiteLocale, string>) => value[locale];
+---
+
+<BaseLayout title={copy.kicker} description={copy.focus} locale={locale} preloadSerif>
+  <section class="cv-document-shell">
+    <div class="container-wide cv-document-container">
+      <header class="cv-document-header">
+        <h1 class="cv-name">{copy.name}</h1>
+        <p class="cv-role">{copy.role}</p>
+        <p class="cv-focus">{copy.focus}</p>
+        <div class="cv-header-links" aria-label={copy.kicker}>
+          <a class="cv-quick-link cv-quick-link-primary" href={copy.pdf} target="_blank" rel="noreferrer"><Icon name="download" />{copy.download}</a>
+          <a class="cv-quick-link" href="mailto:guoyuze@whu.edu.cn"><span class="icon icon-envelope-asset" aria-hidden="true"></span>{copy.email}</a>
+        </div>
+      </header>
+
+      <div class="cv-stat-strip" aria-label={copy.kicker}>
+        {copy.stats.map((stat) => <div class="cv-stat"><span class="cv-stat-value">{stat.value}</span><span class="cv-stat-label">{stat.label}</span></div>)}
+      </div>
+
+      <div class="cv-document-layout">
+        <main class="cv-main" aria-label={copy.kicker}>
+          <section class="cv-section" id="education">
+            <h2>{copy.sections.education}</h2>
+            <ol class="cv-timeline">
+              {copy.education.map((item, index) => (
+                <li class="cv-item">
+                  <div class="cv-item-head">
+                    <h3>{index === 0 ? <InstitutionLogo src="/assets/logos/institutions/pku.png">{choose(item.title)}</InstitutionLogo> : <InstitutionLogo src="/assets/logos/institutions/whu.png">{choose(item.title)}</InstitutionLogo>}</h3>
+                    <p class="cv-item-meta">{choose(item.date)}</p>
+                  </div>
+                  {item.description && <p>{choose(item.description)}</p>}
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section class="cv-section" id="research">
+            <h2>{copy.sections.research}</h2>
+            <ol class="cv-timeline">
+              {copy.research.map((item) => (
+                <li class="cv-item">
+                  <div class="cv-item-head"><h3>{choose(item.title)}</h3><p class="cv-item-meta">{choose(item.date)}</p></div>
+                  {item.meta && <p class="cv-item-submeta">{choose(item.meta)}</p>}
+                  {item.project && <p class="cv-project-title">{choose(item.project)}</p>}
+                  {item.bullets && <ul class="cv-bullets">{item.bullets.map((bullet) => <li>{choose(bullet)}</li>)}</ul>}
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section class="cv-section" id="honors">
+            <h2>{copy.sections.honors}</h2>
+            <ul class="cv-awards">{copy.honors.map((item) => <li><span class="cv-award-year">{item.year}</span><span class="cv-award-text">{item.text}</span></li>)}</ul>
+          </section>
+
+          <section class="cv-section" id="competitions">
+            <h2>{copy.sections.competitions}</h2>
+            <ul class="cv-awards">{copy.competitions.map((item) => <li><span class="cv-award-year">{item.year}</span><span class="cv-award-text">{item.text}</span></li>)}</ul>
+          </section>
+
+          <section class="cv-section" id="leadership">
+            <h2>{copy.sections.leadership}</h2>
+            <ol class="cv-timeline">
+              {copy.leadership.map((item) => (
+                <li class="cv-item">
+                  <div class="cv-item-head"><h3>{choose(item.title)}</h3><p class="cv-item-meta">{choose(item.date)}</p></div>
+                  {item.meta && <p class="cv-item-submeta">{choose(item.meta)}</p>}
+                  {item.description && <p>{choose(item.description)}</p>}
+                </li>
+              ))}
+            </ol>
+          </section>
+        </main>
+
+        <aside class="cv-side" aria-label={copy.sections.keywords}>
+          <section class="cv-side-card"><h2>{copy.sections.keywords}</h2><ul class="cv-chip-list">{copy.keywords.map((keyword) => <li>{keyword}</li>)}</ul></section>
+          <section class="cv-side-card"><h2>{copy.sections.skills}</h2><ul class="cv-side-list">{copy.skills.map((skill) => <li>{skill}</li>)}</ul></section>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

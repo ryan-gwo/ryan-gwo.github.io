@@ -1,21 +1,39 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Icon from './Icon.astro';
-import { localizedPath, siteContent, type SiteLocale } from '../data/siteContent';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "./Icon.astro";
+import { getCollection } from "astro:content";
+import { siteContent, type SiteLocale } from "../data/siteContent";
+import { localizedPath } from "../utils/routes";
+
 const { locale } = Astro.props as { locale: SiteLocale };
-const site = siteContent[locale];
-const copy = site.writings;
+const copy = siteContent[locale].writings;
+const entries = (await getCollection("writing", ({ data }) => data.locale === locale))
+  .sort((left, right) => right.data.date.getTime() - left.data.date.getTime());
 ---
+
 <BaseLayout title={copy.title} description={copy.description} locale={locale} preloadSerif>
-  <section class="page-hero page-hero-compact writing-hero"><div class="container page-hero-inner"><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
-  <section class="content-section writing-index-section">
-    <div class="container writing-index">
-      <p class="writing-index-label">{copy.listLabel}</p>
-      <article class="writing-row">
-        <div class="writing-row-meta">{copy.articleMeta}</div>
-        <div><h2>{copy.articleTitle}</h2><p>{copy.articleSummary}</p></div>
-        <a class="writing-row-link" href={localizedPath(locale, '/writing/metric/')} aria-label={`${copy.articleCta}: ${copy.articleTitle}`}><span>{copy.articleCta}</span><Icon name="chevron.right" /></a>
-      </article>
+  <section class="page-hero page-hero-compact">
+    <div class="container page-hero-inner">
+      <h1>{copy.title}</h1>
+      <p class="page-lead">{copy.description}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container-wide">
+      <div class="flat-index">
+        {entries.map((entry) => (
+          <article class="flat-row">
+            <div class="flat-row__meta">{entry.data.dateText}</div>
+            <div>
+              <h3>{entry.data.title}</h3>
+              <p>{entry.data.summary}</p>
+            </div>
+            <a class="writing-row-link" href={localizedPath("writing", locale, { slug: entry.data.slug })} aria-label={`${copy.articleCta}: ${entry.data.title}`}>
+              <span>{copy.articleCta}</span><Icon name="chevron.right" />
+            </a>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>

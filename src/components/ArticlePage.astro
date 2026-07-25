@@ -1,0 +1,22 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { SiteLocale } from "../utils/routes";
+import { localizedRoute } from "../utils/routes";
+
+const { entry, locale } = Astro.props as { entry: CollectionEntry<"writing">; locale: SiteLocale };
+const { Content } = await render(entry);
+const backLabel = locale === "en" ? "Back to selected writing" : locale === "zh-cn" ? "返回精选写作" : "返回精選寫作";
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.description} locale={locale} preloadSerif>
+  <section class="article-page">
+    <article class="container article-body">
+      <a class="article-back-link" href={localizedRoute("writings", locale)}><span aria-hidden="true">←</span>{backLabel}</a>
+      <h1>{entry.data.title}</h1>
+      <div class="article-description">{entry.data.description}</div>
+      <div class="article-date">{entry.data.dateText}</div>
+      <Content />
+    </article>
+  </section>
+</BaseLayout>

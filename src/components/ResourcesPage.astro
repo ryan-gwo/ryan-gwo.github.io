@@ -2,12 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from './Icon.astro';
 import { competitionResources, getCompetitionBasePath, type ResourceLocale } from '../data/competitionResources';
-import { localizedPath, siteContent } from '../data/siteContent';
+import { siteContent } from '../data/siteContent';
+import { localizedPath } from '../utils/routes';
 const { locale } = Astro.props as { locale: ResourceLocale };
 const site = siteContent[locale];
 const copy = site.resources;
 const competitions = Object.values(competitionResources[locale]);
-const trainingHref = locale === 'zh-cn' ? localizedPath(locale, '/resources/training/') : undefined;
+const trainingHref = locale === 'zh-cn' ? localizedPath('training', locale) : undefined;
 ---
 <BaseLayout title={copy.title} description={copy.description} locale={locale}>
   <section class="page-hero resource-page-hero"><div class="container page-hero-inner"><h1>{copy.title}</h1><p class="page-lead">{copy.description}</p></div></section>
@@ -23,7 +24,7 @@ const trainingHref = locale === 'zh-cn' ? localizedPath(locale, '/resources/trai
           </article>
         ))}
       </div>
-      {copy.trainingTitle && trainingHref && <article class="training-callout"><div><h3>{copy.trainingTitle}</h3><p>{copy.trainingDescription}</p></div><a class="button button-secondary" href={trainingHref}>{copy.trainingLabel}</a></article>}
     </div>
+    {copy.trainingTitle && trainingHref && <section class="training-band"><div class="container resource-training-inner"><div><h2>{copy.trainingTitle}</h2><p>{copy.trainingDescription}</p></div><a class="button button-secondary" href={trainingHref}>{copy.trainingLabel}</a></div></section>}
   </section>
 </BaseLayout>

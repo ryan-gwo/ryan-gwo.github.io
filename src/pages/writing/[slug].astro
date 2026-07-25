@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import ArticlePage from "../../components/ArticlePage.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("writing", ({ data }) => data.locale === "en");
+  return entries.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+---
+
+<ArticlePage entry={entry} locale="en" />

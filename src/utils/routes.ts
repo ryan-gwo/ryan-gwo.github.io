@@ -3,30 +3,55 @@ import {
   getCompetitionBasePath,
   getEditionPath,
   localePrefixes,
+  type CompetitionEdition,
+  type CompetitionSlug,
   type ResourceLocale,
-} from '../data/competitionResources';
+} from "../data/competitionResources";
 
 export type SiteLocale = ResourceLocale;
+export type RouteId =
+  | "home"
+  | "research"
+  | "cv"
+  | "writings"
+  | "writing"
+  | "writingMetric"
+  | "interests"
+  | "resources"
+  | "training"
+  | "publications";
 
 export const normalizeRoute = (route: string) => {
-  if (!route || route === '/') {
-    return '/';
-  }
-
-  return route.endsWith('/') ? route : `${route}/`;
+  if (!route || route === "/") return "/";
+  const withLeadingSlash = route.startsWith("/") ? route : `/${route}`;
+  return withLeadingSlash.endsWith("/") ? withLeadingSlash : `${withLeadingSlash}/`;
 };
 
-const staticRoutes = Object.keys(import.meta.glob('../pages/**/*.{astro,md,mdx}', { eager: true }))
-  .filter((filePath) => !filePath.includes('['))
+const routePaths: Record<RouteId, string> = {
+  home: "/",
+  research: "/research/",
+  cv: "/cv/",
+  writings: "/writings/",
+  writing: "/writing/",
+  writingMetric: "/writing/metric/",
+  interests: "/interests/",
+  resources: "/resources/",
+  training: "/resources/training/",
+  publications: "/publications/",
+};
+
+const staticRoutes = Object.keys(import.meta.glob("../pages/**/*.{astro,md,mdx}", { eager: true }))
+  .filter((filePath) => !filePath.includes("["))
   .map((filePath) => {
-    const route = filePath.replace('../pages', '').replace(/\.(astro|mdx?|md)$/i, '');
-    return normalizeRoute(route.replace(/\/index$/, ''));
+    const route = filePath.replace("../pages", "").replace(/\.(astro|mdx?|md)$/i, "");
+    return normalizeRoute(route.replace(/\/index$/, ""));
   })
-  .filter((route) => !route.endsWith('/publications/'));
+  .filter((route) => !route.endsWith("/publications/"));
 
 export const knownRoutes = new Set<string>(staticRoutes);
 
 for (const locale of Object.keys(localePrefixes) as SiteLocale[]) {
+  knownRoutes.add(normalizeRoute(`${localePrefixes[locale]}/writing/metric/`));
   for (const competition of Object.values(competitionResources[locale])) {
     knownRoutes.add(normalizeRoute(getCompetitionBasePath(locale, competition.slug)));
     for (const edition of competition.editions) {
@@ -36,42 +61,63 @@ for (const locale of Object.keys(localePrefixes) as SiteLocale[]) {
 }
 
 export const localeHomeLinks: Record<SiteLocale, string> = {
-  en: '/',
-  'zh-cn': '/zh-cn/',
-  'zh-hk': '/zh-hk/',
+  en: "/",
+  "zh-cn": "/zh-cn/",
+  "zh-hk": "/zh-hk/",
 };
 
 export const getLocalePrefix = (locale: SiteLocale) => localePrefixes[locale];
 
+export const getRoutePath = (route: RouteId) => routePaths[route];
+
 export const getCurrentLocalePrefix = (pathname: string) => {
   const path = normalizeRoute(pathname);
-
-  if (path.startsWith('/zh-cn/')) {
-    return '/zh-cn';
-  }
-
-  if (path.startsWith('/zh-hk/')) {
-    return '/zh-hk';
-  }
-
-  return '';
+  if (path.startsWith("/zh-cn/")) return "/zh-cn";
+  if (path.startsWith("/zh-hk/")) return "/zh-hk";
+  return "";
 };
 
-export const localizedPath = (pathname: string, targetLocale: SiteLocale) => {
-  const currentPrefix = getCurrentLocalePrefix(pathname);
-  const pathWithoutLocale = currentPrefix ? normalizeRoute(pathname).slice(currentPrefix.length) || '/' : normalizeRoute(pathname);
-  const candidate = normalizeRoute(`${getLocalePrefix(targetLocale)}${pathWithoutLocale}`);
-
-  return knownRoutes.has(candidate) ? candidate : localeHomeLinks[targetLocale];
+const stripLocalePrefix = (pathname: string) => {
+  const normalized = normalizeRoute(pathname);
+  const prefix = getCurrentLocalePrefix(normalized);
+  return prefix ? normalized.slice(prefix.length) || "/" : normalized;
 };
 
 export const exactLocalizedPath = (pathname: string, targetLocale: SiteLocale) => {
-  const currentPrefix = getCurrentLocalePrefix(pathname);
-  const pathWithoutLocale = currentPrefix
-    ? normalizeRoute(pathname).slice(currentPrefix.length) || '/'
-    : normalizeRoute(pathname);
-  return normalizeRoute(`${getLocalePrefix(targetLocale)}${pathWithoutLocale}`);
+  const pathWithoutLocale = stripLocalePrefix(pathname);
+  const prefix = getLocalePrefix(targetLocale);
+  return normalizeRoute(`${prefix}${pathWithoutLocale}`);
 };
+
+type RouteParams = {
+  slug?: string;
+  competition?: CompetitionSlug;
+  edition?: CompetitionEdition;
+};
+
+export const localizedPath = (
+  route: RouteId,
+  targetLocale: SiteLocale,
+  params: RouteParams = {},
+) => {
+  if (route === "writing") {
+    if (!params.slug) throw new Error("A writing slug is required.");
+    return normalizeRoute(`${getLocalePrefix(targetLocale)}/writing/${params.slug}/`);
+  }
+
+  if (params.competition && params.edition) {
+    return getEditionPath(targetLocale, params.competition, params.edition);
+  }
+
+  if (params.competition) {
+    return getCompetitionBasePath(targetLocale, params.competition);
+  }
+
+  const candidate = normalizeRoute(`${getLocalePrefix(targetLocale)}${getRoutePath(route)}`);
+  return knownRoutes.has(candidate) || route === "publications" ? candidate : localeHomeLinks[targetLocale];
+};
+
+export const localizedRoute = (route: RouteId, targetLocale: SiteLocale) => localizedPath(route, targetLocale);
 
 export const getLocaleAlternates = (pathname: string, site: URL) => {
   return (Object.keys(localePrefixes) as SiteLocale[])

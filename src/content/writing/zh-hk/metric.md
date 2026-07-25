@@ -1,9 +1,11 @@
 ---
-layout: ../../../layouts/PostLayout.astro
 title: 度規概念的初步感悟
 description: 對於度規這一概念的初步理解
 dateText: 2025 年 9 月 23 日
 locale: zh-hk
+translationKey: metric
+slug: metric
+date: 2025-09-23
 featured: true
 priority: 1
 summary: 從勾股定理出發，討論度規如何成為無窮小距離表達的統一語言。

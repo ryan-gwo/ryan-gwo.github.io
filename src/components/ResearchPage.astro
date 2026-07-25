@@ -1,40 +1,65 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Icon from './Icon.astro';
-import { localizedPath, siteContent, type SiteLocale } from '../data/siteContent';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "./Icon.astro";
+import { siteContent, type SiteLocale } from "../data/siteContent";
+import { localizedRoute } from "../utils/routes";
+
 const { locale } = Astro.props as { locale: SiteLocale };
-const site = siteContent[locale];
-const copy = site.research;
+const copy = siteContent[locale].research;
 ---
+
 <BaseLayout title={copy.title} description={copy.description} locale={locale} preloadSerif>
-  <section class="page-hero research-hero section-dark">
+  <section class="page-hero research-hero">
     <div class="container page-hero-inner">
       <h1>{copy.title}</h1>
       <p class="page-lead">{copy.description}</p>
       <div class="actions">
-        <a class="button button-primary" href={localizedPath(locale, '/writings/')}>{copy.writingCta}</a>
-        <a class="button button-link button-link-dark" href={localizedPath(locale, '/cv/')}>{copy.cvCta}<Icon name="chevron.right" /></a>
+        <a class="button button-primary" href={localizedRoute("writings", locale)}>{copy.writingCta}<Icon name="chevron.right" /></a>
+        <a class="text-link" href={localizedRoute("cv", locale)}>{copy.cvCta}<Icon name="chevron.right" /></a>
       </div>
     </div>
   </section>
-  <section class="content-section section-soft">
-    <div class="container">
-      <header class="section-heading"><h2 class="section-title">{copy.areasTitle}</h2><p class="section-intro">{copy.areasIntro}</p></header>
-      <div class="editorial-grid">
-        {copy.areas.map((area) => <article class="editorial-card"><h3>{area.title}</h3><p>{area.description}</p></article>)}
+
+  <section class="narrative-band">
+    <div class="container-wide">
+      <header class="narrative-band__header">
+        <div><h2>{copy.areasTitle}</h2></div>
+        <p>{copy.areasIntro}</p>
+      </header>
+      <div class="narrative-rows">
+        {copy.areas.map((area, index) => (
+          <article class="narrative-row">
+            <span class="narrative-row__number">{String(index + 1).padStart(2, "0")}</span>
+            <h3>{area.title}</h3>
+            <p>{area.description}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
-  <section class="content-section questions-section">
-    <div class="container split-heading-layout">
-      <header><h2 class="section-title">{copy.questionsTitle}</h2><p class="section-intro">{copy.questionsIntro}</p></header>
-      <ul class="question-list">{copy.questions.map((question) => <li>{question}</li>)}</ul>
+
+  <section class="section section-muted">
+    <div class="container-wide split-heading-layout">
+      <header>
+        <h2>{copy.questionsTitle}</h2>
+        <p class="section-heading">{copy.questionsIntro}</p>
+      </header>
+      <ol class="question-list">
+        {copy.questions.map((question) => <li>{question}</li>)}
+      </ol>
     </div>
   </section>
-  <section class="content-section section-soft related-panel-section">
-    <div class="container related-panel">
-      <div><h2>{copy.relatedTitle}</h2><p>{copy.relatedDescription}</p></div>
-      <div class="actions"><a class="text-link" href={localizedPath(locale, '/writings/')}>{copy.writingCta}<Icon name="chevron.right" /></a><a class="text-link" href={localizedPath(locale, '/resources/')}>{copy.resourcesCta}<Icon name="chevron.right" /></a></div>
+
+  <section class="section">
+    <div class="container-wide related-panel">
+      <div>
+        <h2>{copy.relatedTitle}</h2>
+        <p>{copy.relatedDescription}</p>
+      </div>
+      <div class="actions">
+        <a class="text-link" href={localizedRoute("writings", locale)}>{copy.writingCta}<Icon name="chevron.right" /></a>
+        <a class="text-link" href={localizedRoute("resources", locale)}>{copy.resourcesCta}<Icon name="chevron.right" /></a>
+      </div>
     </div>
   </section>
 </BaseLayout>

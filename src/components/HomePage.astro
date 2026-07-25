@@ -85,7 +85,6 @@ const route = (name: "research" | "cv" | "writings" | "resources" | "interests")
       <div class="profile-copy">
         <h2>{home.profileTitle}</h2>
         {home.profileParagraphs.map((paragraph) => <p>{paragraph}</p>)}
-        <p class="profile-fact">{home.portraitCaption}</p>
         <a class="text-link" href={route("cv")}>{home.cvCta}<Icon name="chevron.right" /></a>
       </div>
       <aside class="profile-aside">

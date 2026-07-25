@@ -464,8 +464,7 @@ p { margin: 0; }
 .profile-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); gap: 96px; align-items: start; }
 .profile-copy > h2 + p { margin-top: var(--space-title-body); }
 .profile-copy p + p { margin-top: var(--space-copy); }
-.profile-copy p.profile-fact { margin-top: 30px; color: var(--ink-soft); font-size: 14px; }
-.profile-copy .text-link { margin-top: 48px; }
+.profile-copy .text-link { margin-top: 44px; }
 .current-panel { padding-top: 20px; border-top: 1px solid var(--line); }
 .current-panel h3 { font-family: var(--font-sans); font-size: 14px; font-weight: 650; }
 .current-panel h3 + .current-item { margin-top: 12px; }
